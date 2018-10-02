@@ -16,6 +16,9 @@
 
 COMMON_PATH := device/motorola/exynos9610-common
 
+# Soong namespaces
+PRODUCT_SOONG_NAMESPACES += $(COMMON_PATH)
+
 # Include path
 TARGET_SPECIFIC_HEADER_PATH := $(COMMON_PATH)/include
 
