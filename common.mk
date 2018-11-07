@@ -24,8 +24,7 @@ $(call inherit-product-if-exists, vendor/motorola/exynos9610-common/exynos9610-c
 DEVICE_PACKAGE_OVERLAYS += $(COMMON_PATH)/overlay
 
 # RRO (Runtime Resource Overlay)
-PRODUCT_ENFORCE_RRO_TARGETS := \
-    framework-res
+PRODUCT_ENFORCE_RRO_TARGETS += *
 
 # A/B
 AB_OTA_UPDATER := true
