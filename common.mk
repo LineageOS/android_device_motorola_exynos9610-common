@@ -314,6 +314,10 @@ PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/configs/thermal/exynos-thermal-kane-retin.conf:$(TARGET_COPY_OUT_VENDOR)/exynos-thermal-kane-retin.conf \
     $(COMMON_PATH)/configs/thermal/exynos-thermal-troika.conf:$(TARGET_COPY_OUT_VENDOR)/exynos-thermal-troika.conf
 
+# Trust HAL
+PRODUCT_PACKAGES += \
+    vendor.lineage.trust@1.0-service
+
 # USB
 PRODUCT_PACKAGES += \
     android.hardware.usb@1.1-service.exynos9610
