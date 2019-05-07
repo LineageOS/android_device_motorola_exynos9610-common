@@ -29,6 +29,16 @@ TARGET_BOARD_PLATFORM := exynos9610
 TARGET_SOC := exynos9610
 TARGET_BOOTLOADER_BOARD_NAME := exynos9610
 
+# A/B
+AB_OTA_UPDATER := true
+
+AB_OTA_PARTITIONS += \
+    boot \
+    dtbo \
+    system \
+    vbmeta \
+    vendor
+
 # Architecture
 TARGET_ARCH := arm64
 TARGET_ARCH_VARIANT := armv8-a
