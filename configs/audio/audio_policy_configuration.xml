@@ -14,7 +14,7 @@
      limitations under the License.
 -->
 
-<audioPolicyConfiguration version="1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+<audioPolicyConfiguration version="7.0" xmlns:xi="http://www.w3.org/2001/XInclude">
     <globalConfiguration speaker_drc_enabled="false"/>
 
     <modules>
@@ -34,17 +34,17 @@
                 <!-- Playback(Output) Streams -->
                 <mixPort name="primary output" role="source" flags="AUDIO_OUTPUT_FLAG_PRIMARY">
                     <profile name="primary_out" format="AUDIO_FORMAT_PCM_16_BIT"
-                             samplingRates="44100,48000" channelMasks="AUDIO_CHANNEL_OUT_STEREO"/>
+                             samplingRates="44100 48000" channelMasks="AUDIO_CHANNEL_OUT_STEREO"/>
                 </mixPort>
 
-                <mixPort name="mmap_no_irq_out" role="source" flags="AUDIO_OUTPUT_FLAG_DIRECT|AUDIO_OUTPUT_FLAG_MMAP_NOIRQ">
+                <mixPort name="mmap_no_irq_out" role="source" flags="AUDIO_OUTPUT_FLAG_DIRECT AUDIO_OUTPUT_FLAG_MMAP_NOIRQ">
                     <profile name="" format="AUDIO_FORMAT_PCM_16_BIT"
                              samplingRates="48000" channelMasks="AUDIO_CHANNEL_OUT_STEREO"/>
                 </mixPort>
 
                 <mixPort name="deep_buffer" role="source" flags="AUDIO_OUTPUT_FLAG_DEEP_BUFFER">
                     <profile name="deep_out" format="AUDIO_FORMAT_PCM_16_BIT"
-                             samplingRates="8000,16000,32000,44100,48000"
+                             samplingRates="8000 16000 32000 44100 48000"
                              channelMasks="AUDIO_CHANNEL_OUT_STEREO"/>
                 </mixPort>
 
@@ -56,33 +56,33 @@
                 <mixPort name="incall_music_uplink" role="source"
                         flags="AUDIO_OUTPUT_FLAG_INCALL_MUSIC">
                     <profile name="" format="AUDIO_FORMAT_PCM_16_BIT"
-                             samplingRates="8000,16000,48000"
+                             samplingRates="8000 16000 48000"
                              channelMasks="AUDIO_CHANNEL_OUT_STEREO"/>
                 </mixPort>
 
                 <!-- Capture(Input) Streams -->
                 <mixPort name="primary input" role="sink">
                     <profile name="primary_in" format="AUDIO_FORMAT_PCM_16_BIT"
-                             samplingRates="8000,16000,32000,48000"
-                             channelMasks="AUDIO_CHANNEL_IN_MONO,AUDIO_CHANNEL_IN_STEREO,AUDIO_CHANNEL_IN_FRONT_BACK"/>
+                             samplingRates="8000 16000 32000 48000"
+                             channelMasks="AUDIO_CHANNEL_IN_MONO AUDIO_CHANNEL_IN_STEREO AUDIO_CHANNEL_IN_FRONT_BACK"/>
                 </mixPort>
 
                 <mixPort name="fm input" role="sink">
                     <profile name="" format="AUDIO_FORMAT_PCM_16_BIT"
-                             samplingRates="8000,16000,32000,48000"
-                             channelMasks="AUDIO_CHANNEL_IN_MONO,AUDIO_CHANNEL_IN_STEREO,AUDIO_CHANNEL_IN_FRONT_BACK"/>
+                             samplingRates="8000 16000 32000 48000"
+                             channelMasks="AUDIO_CHANNEL_IN_MONO AUDIO_CHANNEL_IN_STEREO AUDIO_CHANNEL_IN_FRONT_BACK"/>
                 </mixPort>
 
                 <mixPort name="fast input" role="sink" flags="AUDIO_INPUT_FLAG_FAST">
                     <profile name="" format="AUDIO_FORMAT_PCM_8_24_BIT"
                              samplingRates="48000"
-                             channelMasks="AUDIO_CHANNEL_IN_MONO,AUDIO_CHANNEL_IN_STEREO,AUDIO_CHANNEL_IN_FRONT_BACK"/>
+                             channelMasks="AUDIO_CHANNEL_IN_MONO AUDIO_CHANNEL_IN_STEREO AUDIO_CHANNEL_IN_FRONT_BACK"/>
                 </mixPort>
 
                 <mixPort name="mmap_no_irq_in" role="sink" flags="AUDIO_INPUT_FLAG_MMAP_NOIRQ">
                     <profile name="" format="AUDIO_FORMAT_PCM_16_BIT"
-                             samplingRates="8000,11025,12000,16000,22050,24000,32000,44100,48000"
-                             channelMasks="AUDIO_CHANNEL_IN_MONO,AUDIO_CHANNEL_IN_STEREO,AUDIO_CHANNEL_IN_FRONT_BACK,AUDIO_CHANNEL_INDEX_MASK_3"/>
+                             samplingRates="8000 11025 12000 16000 22050 24000 32000 44100 48000"
+                             channelMasks="AUDIO_CHANNEL_IN_MONO AUDIO_CHANNEL_IN_STEREO AUDIO_CHANNEL_IN_FRONT_BACK AUDIO_CHANNEL_INDEX_MASK_3"/>
                 </mixPort>
             </mixPorts>
 
@@ -165,7 +165,7 @@
                              samplingRates="16000"
                              channelMasks="AUDIO_CHANNEL_IN_MONO"/>
                 </mixPort>
-                <mixPort name="trigger" role="sink" flags="AUDIO_INPUT_FLAG_HW_HOTWORD|AUDIO_INPUT_FLAG_CAPTURE_TRIGGER_AUDIO">
+                <mixPort name="trigger" role="sink" flags="AUDIO_INPUT_FLAG_HW_HOTWORD AUDIO_INPUT_FLAG_CAPTURE_TRIGGER_AUDIO">
                     <profile name="" format="AUDIO_FORMAT_PCM_16_BIT"
                              samplingRates="16000"
                              channelMasks="AUDIO_CHANNEL_IN_MONO"/>
@@ -189,7 +189,10 @@
         <xi:include href="usb_audio_policy_configuration.xml"/>
 
         <!-- A2dp Audio HAL -->
-        <xi:include href="a2dp_audio_policy_configuration.xml"/>
+        <xi:include href="a2dp_in_audio_policy_configuration_7_0.xml"/>
+
+        <!-- Bluetooth Audio HAL -->
+        <xi:include href="bluetooth_audio_policy_configuration_7_0.xml"/>
 
         <!-- Remote Submix Audio HAL -->
         <xi:include href="r_submix_audio_policy_configuration.xml"/>
