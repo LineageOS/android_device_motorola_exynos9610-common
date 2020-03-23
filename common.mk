@@ -76,7 +76,10 @@ TARGET_SCREEN_WIDTH := 1080
 
 # bootctrl
 PRODUCT_PACKAGES += \
-    android.hardware.boot@1.0
+    android.hardware.boot@1.0 \
+    android.hardware.boot@1.0-service \
+    android.hardware.boot@1.0-impl.exynos9610 \
+    android.hardware.boot@1.0-impl.exynos9610.recovery
 
 # camera
 PRODUCT_PACKAGES += \
@@ -199,10 +202,6 @@ PRODUCT_COPY_FILES += \
 # Public Libraries
 PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/configs/public.libraries.txt:$(TARGET_COPY_OUT_VENDOR)/etc/public.libraries.txt
-
-# Recovery
-PRODUCT_PACKAGES += \
-    android.hardware.boot@1.0-impl.exynos.recovery
 
 # ril
 PRODUCT_PACKAGES += \
