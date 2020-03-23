@@ -105,10 +105,6 @@ vendor/lib64/vendor.dolby.hardware.dms@1.0.so
 vendor/etc/bluetooth/bt_did.conf
 vendor/etc/bt_stack_level6.conf
 
-# bootctrl
-vendor/lib/hw/bootctrl.exynos9610.so
-vendor/lib64/hw/bootctrl.exynos9610.so
-
 # camera
 vendor/lib/libENF.so
 vendor/lib/libexynoscamera_hifi_plugin.so
