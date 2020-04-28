@@ -46,7 +46,7 @@ TARGET_2ND_CPU_VARIANT_RUNTIME := cortex-a53
 TARGET_USES_64_BIT_BINDER := true
 
 # Extracted with libbootimg
-BOARD_KERNEL_CMDLINE := loop.max_part=7
+BOARD_KERNEL_CMDLINE := loop.max_part=7 androidboot.selinux=permissive
 BOARD_KERNEL_BASE := 0x10000000
 BOARD_KERNEL_OFFSET := 0x00008000
 BOARD_RAMDISK_OFFSET := 0x00000000
