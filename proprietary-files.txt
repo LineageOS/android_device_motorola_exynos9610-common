@@ -1,3 +1,7 @@
+# Bluetooth (aptX)
+lib64/libaptXHD_encoder.so
+lib64/libaptX_encoder.so
+
 # HotwordEnrollment
 -priv-app/HotwordEnrollmentOKGoogleCS47L35/HotwordEnrollmentOKGoogleCS47L35.apk
 -priv-app/HotwordEnrollmentTGoogleCS47L35/HotwordEnrollmentTGoogleCS47L35.apk
