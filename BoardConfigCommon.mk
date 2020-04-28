@@ -99,5 +99,8 @@ BOARD_VNDK_VERSION := current
 # Audio
 USE_XML_AUDIO_POLICY_CONF := 1
 
+# sepolicy
+BOARD_PLAT_PRIVATE_SEPOLICY_DIR := $(COMMON_PATH)/sepolicy/private
+
 # Inherit from the proprietary version
 -include vendor/motorola/exynos9610-common/BoardConfigVendor.mk

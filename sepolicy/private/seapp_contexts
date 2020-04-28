@@ -1,0 +1,2 @@
+user=radio seinfo=platform name=com.shannon.imsservice domain=vendor_ims_app
+user=radio seinfo=platform name=com.shannon.imsservice:remote domain=vendor_ims_app
