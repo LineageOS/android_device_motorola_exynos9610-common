@@ -6,3 +6,10 @@ lib64/libaptX_encoder.so
 -priv-app/HotwordEnrollmentOKGoogleCS47L35/HotwordEnrollmentOKGoogleCS47L35.apk
 -priv-app/HotwordEnrollmentTGoogleCS47L35/HotwordEnrollmentTGoogleCS47L35.apk
 -priv-app/HotwordEnrollmentXGoogleCS47L35/HotwordEnrollmentXGoogleCS47L35.apk
+
+# IMS
+# ShannonIms.apk is modified to include IEPdgConnection* classes from stock's framework.jar
+-app/ShannonIms/ShannonIms.apk|dd21afcb739938249e29d24cde3151fa1580bd2c
+lib64/libmediaadaptor.so
+lib64/libmedia.so:lib64/libmedia_ims.so
+lib64/libePdgJni.so
