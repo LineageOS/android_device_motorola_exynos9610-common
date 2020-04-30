@@ -1,0 +1,12 @@
+persist.demo.hdmirotationlock=false
+qemu.hw.mainkeys=0
+persist.sys.bootanim.play_sound=true
+init.svc.vendor.pktrouter=1
+ro.vendor.cscsupported=1
+ril.ecclist=911,112
+ril.ecclist1=911,112
+ro.crypto.volume.filenames_mode=aes-256-cts
+ro.crypto.allow_encrypt_override=true
+ro.surface_flinger.use_color_management=1
+media.settings.xml=/vendor/etc/media_profiles_vendor.xml
+persist.audio.endcall.delay=250
