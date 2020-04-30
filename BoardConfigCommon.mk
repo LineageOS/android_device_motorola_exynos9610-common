@@ -102,5 +102,8 @@ USE_XML_AUDIO_POLICY_CONF := 1
 # sepolicy
 BOARD_PLAT_PRIVATE_SEPOLICY_DIR := $(COMMON_PATH)/sepolicy/private
 
+# Properties
+TARGET_SYSTEM_PROP += $(COMMON_PATH)/system.prop
+
 # Inherit from the proprietary version
 -include vendor/motorola/exynos9610-common/BoardConfigVendor.mk
