@@ -14,6 +14,30 @@
 <!-- These resources are around just to allow their values to be customized
      for different hardware and product builds.  Do not translate. -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <!-- The bounding path of the cutout region of the main built-in display.
+         Must either be empty if there is no cutout region, or a string that is parsable by
+         {@link android.util.PathParser}.
+         The path is assumed to be specified in display coordinates with pixel units and in
+         the display's native orientation, with the origin of the coordinate system at the
+         center top of the display.
+         To facilitate writing device-independent emulation overlays, the marker `@dp` can be
+         appended after the path string to interpret coordinates in dp instead of px units.
+         Note that a physical cutout should be configured in pixels for the best results.
+         -->
+    <string translatable="false" name="config_mainBuiltInDisplayCutout">
+        M -496,0
+        L -376,0
+        L -376,158
+        L -496,158
+        Z
+    </string>
+
+    <dimen name="quick_qs_offset_height">165.0px</dimen>
+    <dimen name="status_bar_height">165.0px</dimen>
+    <dimen name="status_bar_height_landscape">24.0dip</dimen>
+    <dimen name="status_bar_height_portrait">165.0px</dimen>
+    <dimen name="status_bar_icon_size">24.0dip</dimen>
+
     <!-- ComponentName of a dream to show whenever the system would otherwise have
          gone to sleep.  When the PowerManager is asked to go to sleep, it will instead
          try to start this dream if possible.  The dream should typically call startDozing()
