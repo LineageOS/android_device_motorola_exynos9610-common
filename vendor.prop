@@ -59,3 +59,5 @@ ro.vendor.sensors.mot_ltv=true
 drm.service.enabled=true
 media.settings.xml=/vendor/etc/media_profiles_vendor_V1.xml
 persist.vendor.lte.pco_supported=true
+persist.dbg.volte_avail_ovr=1
+persist.dbg.wfc_avail_ovr=1
