@@ -65,6 +65,9 @@ setup_vendor "${DEVICE_COMMON}" "${VENDOR}" "${LINEAGE_ROOT}" true "${CLEAN_VEND
 extract "${MY_DIR}/proprietary-files.txt" "${SRC}" \
         "${KANG}" --section "${SECTION}"
 
+extract "${MY_DIR}/proprietary-files-vendor.txt" "${SRC}" \
+        "${KANG}" --section "${SECTION}"
+
 # Fix proprietary blobs
 BLOB_ROOT="$LINEAGE_ROOT"/vendor/"$VENDOR"/"$DEVICE_COMMON"/proprietary
 patchelf --replace-needed libmedia.so libmedia_ims.so $BLOB_ROOT/lib64/libmediaadaptor.so
