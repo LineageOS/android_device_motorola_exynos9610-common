@@ -1,0 +1,15 @@
+
+on early-init && property:ro.bootmode=mot-factory
+    mkdir /mnt/vendor/efsbk 0755 root system
+
+on fs && property:ro.bootmode=mot-factory
+	mount_all /vendor/etc/fstab.mptool
+
+on post-fs-data && property:ro.bootmode=mot-factory
+    restorecon_recursive /mnt/vendor/efsbk
+    chmod 750 /mnt/vendor/efsbk
+
+on boot && property:ro.bootmode=mot-factory
+	class_start factory
+
+

@@ -1,0 +1,7 @@
+# VC daemon
+    service VC-daemon /vendor/bin/vcd
+    class late_start
+    user system
+    group system
+    seclabel u:r:vcd:s0
+    disabled
