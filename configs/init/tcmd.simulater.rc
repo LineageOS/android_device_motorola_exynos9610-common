@@ -1,0 +1,6 @@
+
+service tcmd_simulater /vendor/bin/tcmd_simulater
+    class simulater
+    user root
+    group root system bluetooth radio misc
+

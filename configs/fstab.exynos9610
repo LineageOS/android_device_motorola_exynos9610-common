@@ -1,0 +1,19 @@
+# Android fstab file.
+#<src>                  <mnt_point>         <type>    <mnt_flags and options>                               <fs_mgr_flags>
+# The filesystem that contains the filesystem checker binary (typically /system) cannot
+# specify MF_CHECK, and must come before any filesystems that do specify MF_CHECK
+
+
+/dev/block/bootdevice/by-name/system     /                     ext4    ro                                                  wait,slotselect
+/dev/block/bootdevice/by-name/userdata   /data                 f2fs    rw,discard,nosuid,nodev,noatime,nodiratime,nobarrier,inline_xattr,inline_data,reserve_root=32768,resgid=1065   wait,check,formattable,fileencryption=aes-256-xts,quota,reservedsize=128M
+/dev/block/bootdevice/by-name/efs        /mnt/vendor/efs       ext4    noatime,nosuid,nodev,barrier=1,rw                   wait
+/dev/block/bootdevice/by-name/persist    /mnt/vendor/persist   ext4    noatime,nosuid,nodev,barrier=1,data=ordered,nodelalloc,nomblk_io_submit,errors=panic wait,notrim
+/dev/block/bootdevice/by-name/misc       /misc                 emmc    defaults                                            defaults
+/dev/block/bootdevice/by-name/slotinfo   /slotinfo             emmc    defaults                                            defaults
+/dev/block/bootdevice/by-name/persist2   /mnt/product/persist  ext4    noatime,nosuid,nodev,barrier=1                      wait,formattable,nofail
+/dev/block/zram0                         none                  swap    defaults                                            zramsize=2147483648,max_comp_streams=8
+
+# VOLD
+/devices/platform/13550000.dwmmc2/mmc_host*             auto    auto    default voldmanaged=sdcard1:auto,encryptable=userdata
+/devices/platform/13200000.usb*				auto	vfat	default	voldmanaged=usb1:auto
+/devices/platform/13200000.usb/13200000.dwc3*		auto	vfat	default	voldmanaged=usb2:auto
