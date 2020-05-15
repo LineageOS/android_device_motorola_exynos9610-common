@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<audio_platform_info>
+
+<pcm_ids>
+	<usecase name="USECASE_MOTVR_COMMAND" type="in" id="23" />
+	<usecase name="USECASE_MOTVR_TRACE" type="in" id="24" />
+	<usecase name="USECASE_ADSPD_DSP1_TEXT" type="in" id="27" />
+	<usecase name="USECASE_ADSPD_DSP2_TEXT" type="in" id="25" />
+	<usecase name="USECASE_ADSPD_DSP3_TEXT" type="in" id="26" />
+</pcm_ids>
+
+</audio_platform_info>
