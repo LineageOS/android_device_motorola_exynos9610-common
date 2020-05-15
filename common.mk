@@ -39,6 +39,22 @@ AB_OTA_POSTINSTALL_CONFIG += \
     FILESYSTEM_TYPE_system=ext4 \
     POSTINSTALL_OPTIONAL_system=true
 
+
+# Audio
+PRODUCT_COPY_FILES += \
+    frameworks/av/services/audiopolicy/config/a2dp_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/a2dp_audio_policy_configuration.xml \
+    $(COMMON_PATH)/configs/audio/aov_ec_mixer_paths.xml:$(TARGET_COPY_OUT_VENDOR)/etc/aov_ec_mixer_paths.xml \
+    $(COMMON_PATH)/configs/audio/audio_effects.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_effects.xml \
+    $(COMMON_PATH)/configs/audio/audio_ext_spkr.conf:$(TARGET_COPY_OUT_VENDOR)/etc/audio_ext_spkr.conf \
+    $(COMMON_PATH)/configs/audio/audio_platform_info.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_platform_info.xml \
+    $(COMMON_PATH)/configs/audio/audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_policy_configuration.xml \
+    $(COMMON_PATH)/configs/audio/audio_policy_volumes.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_policy_volumes.xml \
+    $(COMMON_PATH)/configs/audio/mixer_paths.retin.xml:$(TARGET_COPY_OUT_VENDOR)/etc/mixer_paths.retin.xml \
+    $(COMMON_PATH)/configs/audio/mixer_paths.xml:$(TARGET_COPY_OUT_VENDOR)/etc/mixer_paths.xml \
+    frameworks/av/services/audiopolicy/config/default_volume_tables.xml:$(TARGET_COPY_OUT_VENDOR)/etc/default_volume_tables.xml \
+    frameworks/av/services/audiopolicy/config/r_submix_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/r_submix_audio_policy_configuration.xml \
+    frameworks/av/services/audiopolicy/config/usb_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/usb_audio_policy_configuration.xml
+
 # Update engine
 PRODUCT_PACKAGES += \
     update_engine \
@@ -59,6 +75,11 @@ PRODUCT_PACKAGES += \
     FMRadio \
     libfmjni
 
+# GPS
+PRODUCT_COPY_FILES += \
+    $(COMMON_PATH)/configs/gps/gps.cfg:$(TARGET_COPY_OUT_VENDOR)/etc/gnss/gps.cfg
+
+
 # Graphics
 # Device uses high-density artwork where available
 PRODUCT_AAPT_CONFIG := xlarge
@@ -74,12 +95,28 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/configs/init/init.recovery.exynos9610.rc:$(TARGET_COPY_OUT_ROOT)/init.recovery.exynos9610.rc
 
+# Media
+PRODUCT_COPY_FILES += \
+    $(COMMON_PATH)/configs/media/media_codecs.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs.xml \
+    $(COMMON_PATH)/configs/media/media_codecs_dolby_audio.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_dolby_audio.xml \
+    $(COMMON_PATH)/configs/media/media_codecs_google_audio.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_google_audio.xml \
+    $(COMMON_PATH)/configs/media/media_codecs_google_telephony.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_google_telephony.xml \
+    $(COMMON_PATH)/configs/media/media_codecs_google_video.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_google_video.xml \
+    $(COMMON_PATH)/configs/media/media_codecs_performance.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_performance.xml \
+    $(COMMON_PATH)/configs/media/media_profiles_V1_0.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_profiles_V1_0.xml \
+    $(COMMON_PATH)/configs/media/media_profiles_vendor.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_profiles_vendor.xml \
+    $(COMMON_PATH)/configs/media/media_profiles_vendor_V1.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_profiles_vendor_V1.xml
+
 # NFC
 PRODUCT_PACKAGES += \
     NfcNci \
     Tag \
     SecureElement \
     com.android.nfc_extras
+
+PRODUCT_COPY_FILES += \
+    $(COMMON_PATH)/configs/nfc/libnfc-nci.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libnfc-nci.conf \
+    $(COMMON_PATH)/configs/nfc/libnfc-sec-vendor.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libnfc-sec-vendor.conf
 
 # Permissions
 PRODUCT_COPY_FILES += \
@@ -122,6 +159,32 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.nfc.hce.xml:system/etc/permissions/android.hardware.nfc.hce.xml \
     frameworks/native/data/etc/android.hardware.nfc.hce.xml:system/etc/permissions/android.hardware.nfc.hcef.xml
 
+# Public Libraries
+PRODUCT_COPY_FILES += \
+    $(COMMON_PATH)/configs/public.libraries.txt:$(TARGET_COPY_OUT_VENDOR)/etc/public.libraries.txt
+
+# Recovery
+PRODUCT_PACKAGES += \
+    android.hardware.boot@1.0-impl.exynos.recovery
+
+# Seccomp
+PRODUCT_COPY_FILES += \
+    $(COMMON_PATH)/configs/seccomp/configstore@1.1.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/configstore@1.1.policy \
+    $(COMMON_PATH)/configs/seccomp/mediacodec.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/mediacodec.policy
+
+# Sensors
+PRODUCT_COPY_FILES += \
+    $(COMMON_PATH)/configs/sensors/hals.conf:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/hals.conf \
+    $(COMMON_PATH)/configs/sensors/mot_sensor_settings.json:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/mot_sensor_settings.json
+
+# Thermal
+PRODUCT_COPY_FILES += \
+    $(COMMON_PATH)/configs/thermal/exynos-thermal.conf:$(TARGET_COPY_OUT_VENDOR)/exynos-thermal.conf \
+    $(COMMON_PATH)/configs/thermal/exynos-thermal.env:$(TARGET_COPY_OUT_VENDOR)/exynos-thermal.env \
+    $(COMMON_PATH)/configs/thermal/exynos-thermal-kane.conf:$(TARGET_COPY_OUT_VENDOR)/exynos-thermal-kane.conf \
+    $(COMMON_PATH)/configs/thermal/exynos-thermal-kane-retin.conf:$(TARGET_COPY_OUT_VENDOR)/exynos-thermal-kane-retin.conf \
+    $(COMMON_PATH)/configs/thermal/exynos-thermal-troika.conf:$(TARGET_COPY_OUT_VENDOR)/exynos-thermal-troika.conf
+
 # WiFi
 PRODUCT_PACKAGES += \
     android.hardware.wifi@1.0-service \
@@ -132,3 +195,8 @@ PRODUCT_PACKAGES += \
     libwpa_client \
     wpa_supplicant \
     wpa_supplicant.conf \
+
+PRODUCT_COPY_FILES += \
+    $(COMMON_PATH)/configs/wifi/p2p_supplicant.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/p2p_supplicant.conf \
+    $(COMMON_PATH)/configs/wifi/wpa_supplicant.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/wpa_supplicant.conf
+
