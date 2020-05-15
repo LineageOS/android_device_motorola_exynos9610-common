@@ -1,0 +1,30 @@
+{
+  "chopchop params": {
+      "max_gyro_rotation": 102.0,
+      "max_chop_duration_ms": 350,
+      "first_accel_threshold": 36.0,
+      "second_accel_threshold": 20.0,
+      "min_magnitude_percentage": 0.25,
+      "max_xy_percentage": 0.45,
+      "gyroless": false
+  },
+  "glance params": {
+      "motion_threshold": 0.04,
+      "cool_time": 3000,
+      "gesture_allow": 23,
+      "uncover_timeout": 900
+  },
+  "ltv params": {
+      "min_accel_rotation_deg": 19.0,
+      "accel_fast_alpha": 0.25,
+      "accel_slow_alpha": 0.0625,
+      "land_conv_cnt": 3,
+      "min_accel_rotation_wake_deg": 8.0,
+      "non_accel_rotation_ff_deg": 4.0,
+      "rearm_non_rotation_deg": 8.0,
+      "rearm_accel_rotation_deg": 30.0,
+      "rearm_forced_accel_rot_deg": 80.0,
+      "rearm_conv_cnt": 30,
+      "raw_accel_margin": 4.2
+  }
+}

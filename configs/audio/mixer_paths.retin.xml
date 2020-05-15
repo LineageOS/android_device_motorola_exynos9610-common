@@ -1,0 +1,2807 @@
+<mixer>
+  <!-- These paths are for ERD with Exynos9610 -->
+
+  <!-- Board Device Connections -->
+  <!-- UAIF0 - CODEC for normal Playback and Capture -->
+  <!-- UAIF1 - None -->
+  <!-- UAIF2 - Echo Reference from Codec -->
+  <!-- UAIF3 - None -->
+  <!-- UAIF4 - Loopback -->
+  <!-- SPDY  - FM Radio -->
+
+  <!-- Exynos A-Box Term -->
+  <!-- SIFS0 : Mixer for Playback -->
+  <!-- SIFS1 : Mux1 for Playback -->
+  <!-- SIFS2 : Mux2 for Playback -->
+  <!-- RSRC0 : Recording Source 0 -->
+  <!-- RSRC1 : Recording Source 1 -->
+  <!-- NSRC0 : Capture Source 0 -->
+  <!-- NSRC1 : Capture Source 1 -->
+  <!-- NSRC2 : Capture Source 2 -->
+  <!-- NSRC3 : Capture Source 3 -->
+
+  <!-- Initial Mixer control configurations -->
+    <ctl name="ABOX Sampling Rate Mixer" value="48000" />
+    <ctl name="ABOX Sampling Rate Out1" value="48000" />
+    <ctl name="ABOX Sampling Rate Out2" value="48000" />
+
+    <ctl name="ABOX SPUS ASRC0" value="On" />
+    <ctl name="ABOX SPUS ASRC1" value="On" />
+    <ctl name="ABOX SPUS ASRC2" value="On" />
+    <ctl name="ABOX SPUS ASRC3" value="On" />
+    <ctl name="ABOX SPUS ASRC4" value="On" />
+    <ctl name="ABOX SPUS ASRC5" value="On" />
+    <ctl name="ABOX SPUS ASRC6" value="On" />
+    <ctl name="ABOX SPUS ASRC7" value="On" />
+
+    <ctl name="ABOX SPUS OUT0" value="SIFS0" />
+    <ctl name="ABOX SPUS OUT1" value="SIFS0" />
+    <ctl name="ABOX SPUS OUT2" value="SIFS0" />
+    <ctl name="ABOX SPUS OUT3" value="SIFS0" />
+    <ctl name="ABOX SPUS OUT4" value="SIFS0" />
+    <ctl name="ABOX SPUS OUT5" value="SIFS0" />
+    <ctl name="ABOX SPUS OUT6" value="SIFS2" />
+    <ctl name="ABOX SPUS OUT7" value="SIFS1" />
+
+    <ctl name="ABOX SIFS1" value="SPUS OUT7" />
+    <ctl name="ABOX SIFS2" value="SPUS OUT6" />
+
+    <ctl name="ABOX UAIF1 SPK" value="SIFS2" />
+
+    <ctl name="ABOX Sampling Rate Recp" value="48000" />
+    <ctl name="ABOX Sampling Rate Inmux0" value="48000" />
+    <ctl name="ABOX Sampling Rate Inmux1" value="48000" />
+    <ctl name="ABOX Sampling Rate Inmux2" value="48000" />
+    <ctl name="ABOX Sampling Rate Inmux3" value="48000" />
+    <ctl name="ABOX Sampling Rate Inmux4" value="48000" />
+
+    <ctl name="ABOX SPUM ASRC0" value="On" />
+    <ctl name="ABOX SPUM ASRC1" value="On" />
+    <ctl name="ABOX SPUM ASRC2" value="On" />
+    <ctl name="ABOX SPUM ASRC3" value="On" />
+    <ctl name="ABOX RECP PIFS0" value="0" />
+    <ctl name="ABOX RECP PIFS1" value="0" />
+
+    <ctl name="ABOX SIFM0" value="WDMA" />
+    <ctl name="ABOX SIFM1" value="WDMA" />
+    <ctl name="ABOX SIFM2" value="WDMA" />
+    <ctl name="ABOX SIFM3" value="WDMA" />
+
+    <ctl name="ABOX NSRC0" value="RESERVED" />
+    <ctl name="ABOX NSRC1" value="RESERVED" />
+    <ctl name="ABOX NSRC2" value="RESERVED" />
+    <ctl name="ABOX NSRC3" value="RESERVED" />
+
+    <ctl name="ABOX ERAP info FM Radio On" value="0" />
+    <ctl name="ABOX PCM ext VPCMIN ON" value="0" />
+    <ctl name="ABOX ERAP info ICM On" value="0" />
+
+  <!-- Initial Codec control configurations -->
+    <ctl name="IN1L Mux" value="A" />
+    <ctl name="IN1R Mux" value="B" />
+    <ctl name="IN1L Volume" value="18" />
+    <ctl name="IN1R Volume" value="18" />
+    <ctl name="IN2L Volume" value="18" />
+    <ctl name="IN2R Volume" value="18" />
+    <ctl name="IN1L Digital Volume" value="128" />
+    <ctl name="IN1R Digital Volume" value="128" />
+    <ctl name="IN2L Digital Volume" value="128" />
+    <ctl name="IN2R Digital Volume" value="128" />
+    <ctl name="IN HPF Cutoff Frequency" value="40Hz" />
+    <ctl name="IN1L HPF Switch" value="1" />
+    <ctl name="IN1R HPF Switch" value="1" />
+    <ctl name="IN2L HPF Switch" value="1" />
+    <ctl name="IN2R HPF Switch" value="1" />
+    <ctl name="SLIMTX1 Input 1" value="None" />
+    <ctl name="SLIMTX2 Input 1" value="None" />
+    <ctl name="SLIMTX3 Input 1" value="None" />
+    <ctl name="SLIMTX5 Input 1" value="None" />
+    <ctl name="SLIMTX6 Input 1" value="None" />
+    <ctl name="Input Ramp Up" value="8ms/6dB" />
+    <ctl name="Input Ramp Down" value="8ms/6dB" />
+    <ctl name="AIF1TX1 Input 1" value="None" />
+    <ctl name="AIF1TX1 Input 2" value="None" />
+    <ctl name="AIF1TX1 Input 3" value="None" />
+    <ctl name="AIF1TX1 Input 1 Volume" value="32" />
+    <ctl name="AIF1TX1 Input 2 Volume" value="32" />
+    <ctl name="AIF1TX1 Input 3 Volume" value="32" />
+    <ctl name="AIF1TX2 Input 1" value="None" />
+    <ctl name="AIF1TX2 Input 2" value="None" />
+    <ctl name="AIF1TX2 Input 3" value="None" />
+    <ctl name="AIF1TX2 Input 1 Volume" value="32" />
+    <ctl name="AIF1TX2 Input 2 Volume" value="32" />
+    <ctl name="AIF1TX2 Input 3 Volume" value="32" />
+    <ctl name="HPOUT1L Input 1" value="None" />
+    <ctl name="HPOUT1R Input 1" value="None" />
+    <ctl name="HPOUT1 Digital Volume" id="0" value="0" />
+    <ctl name="HPOUT1 Digital Volume" id="1" value="0" />
+    <ctl name="HPOUT1 Digital Switch" id="0" value="0" />
+    <ctl name="HPOUT1 Digital Switch" id="1" value="0" />
+    <ctl name="DSP2 Firmware" value="frontend" />
+    <ctl name="DSP3 Firmware" value="aov" />
+    <ctl name="Sample Rate 2" value="16kHz" />
+    <ctl name="Sample Rate 3" value="48kHz" />
+    <ctl name="In Rate" value="SYNCCLK rate 3" />
+    <ctl name="FX Rate" value="SYNCCLK rate 2" />
+    <ctl name="ISRC1 FSH" value="SYNCCLK rate 3" />
+    <ctl name="ISRC1 FSL" value="SYNCCLK rate 2" />
+    <ctl name="LHPF1 Input 1" value="None" />
+    <ctl name="LHPF1 Mode" value="High-pass" />
+    <ctl name="LHPF1 Coefficients" id="0" value="0xF0" />
+    <ctl name="LHPF1 Coefficients" id="1" value="0xC4" />
+    <ctl name="DSP2L Input 1" value="LHPF1" />
+    <ctl name="DSP2L Input 1 Volume" value="48" />
+    <ctl name="LHPF2 Input 1" value="None" />
+    <ctl name="LHPF2 Mode" value="High-pass" />
+    <ctl name="LHPF2 Coefficients" id="0" value="0xF0" />
+    <ctl name="LHPF2 Coefficients" id="1" value="0xC4" />
+    <ctl name="DSP2 Aux 1" value="LHPF2" />
+    <ctl name="LHPF3 Input 1" value="None" />
+    <ctl name="LHPF3 Mode" value="High-pass" />
+    <ctl name="LHPF3 Coefficients" id="0" value="0xF0" />
+    <ctl name="LHPF3 Coefficients" id="1" value="0xC4" />
+    <ctl name="DSP2R Input 1" value="LHPF3" />
+    <ctl name="DSP2R Input 1 Volume" value="48" />
+    <ctl name="LHPF4 Input 1" value="None" />
+    <ctl name="LHPF4 Mode" value="High-pass" />
+    <ctl name="LHPF4 Coefficients" id="0" value="0xF0" />
+    <ctl name="LHPF4 Coefficients" id="1" value="0xC4" />
+    <ctl name="DSP2 Aux 2" value="LHPF4" />
+    <ctl name="DSP2 Aux 5" value="None" />
+    <ctl name="LHPF1 Input 1" value="ISRC1DEC1" />
+    <ctl name="LHPF2 Input 1" value="ISRC1DEC2" />
+    <ctl name="LHPF3 Input 1" value="ISRC1DEC3" />
+    <ctl name="DRC1R Input 1" value="None" />
+    <ctl name="DRC1L Input 1" value="None" />
+    <ctl name="DRC1" id="0" value="0x01" />
+    <ctl name="DRC1" id="1" value="0x78" />
+    <ctl name="DRC1" id="2" value="0x07" />
+    <ctl name="DRC1" id="3" value="0x30" />
+    <ctl name="DRC1" id="4" value="0x08" />
+    <ctl name="DRC1" id="5" value="0x20" />
+    <ctl name="DRC1" id="6" value="0x00" />
+    <ctl name="DRC1" id="7" value="0xc2" />
+    <ctl name="DRC1" id="8" value="0x01" />
+    <ctl name="DRC1" id="9" value="0x6d" />
+    <ctl name="HPOUT1L Input 2" value="None" />
+    <ctl name="HPOUT1R Input 2" value="None" />
+    <ctl name="HPOUT1 Demux" value="HPOUT" />
+    <ctl name="EQ1 Input 1" value="None" />
+    <ctl name="HPOUT1L Input 2 Volume" value="32" />
+    <ctl name="HPOUT1R Input 2 Volume" value="32" />
+    <ctl name="DSP3L Input 1" value="None" />
+    <ctl name="DSP3R Input 1" value="None" />
+    <ctl name="DSP3 Aux 5" value="None" />
+    <ctl name="DSP3 Aux 6" value="None" />
+    <ctl name="DRC2R Input 1" value="None" />
+    <ctl name="DRC2L Input 1" value="None" />
+    <ctl name="DRC2" id="0" value="0x01" />
+    <ctl name="DRC2" id="1" value="0x78" />
+    <ctl name="DRC2" id="2" value="0x09" />
+    <ctl name="DRC2" id="3" value="0x30" />
+    <ctl name="DRC2" id="4" value="0x08" />
+    <ctl name="DRC2" id="5" value="0x28" />
+    <ctl name="DRC2" id="6" value="0x00" />
+    <ctl name="DRC2" id="7" value="0x42" />
+    <ctl name="DRC2" id="8" value="0x01" />
+    <ctl name="DRC2" id="9" value="0xbf" />
+    <ctl name="AIF2TX1 Input 1 Volume" value="32" />
+    <ctl name="AIF2TX2 Input 1 Volume" value="32" />
+
+    <!-- AOV default settings -->
+    <!-- AOV default sample rate settings -->
+    <ctl name="Sample Rate 2" value="16kHz" />
+    <ctl name="Sample Rate 3" value="48kHz" />
+    <ctl name="In Rate" value="SYNCCLK rate 2" />
+    <ctl name="FX Rate" value="SYNCCLK rate 2" />
+    <ctl name="ISRC1 FSH" value="SYNCCLK rate 3" />
+    <ctl name="ISRC1 FSL" value="SYNCCLK rate 2" />
+    <ctl name="ISRC2 FSH" value="SYNCCLK rate 3" />
+    <ctl name="ISRC2 FSL" value="SYNCCLK rate 2" />
+    <!-- AOV default microphone 1 settings -->
+    <ctl name="LHPF1 Input 1" value="None" />
+    <ctl name="LHPF1 Mode" value="High-pass" />
+    <ctl name="LHPF1 Coefficients" id="0" value="0xF0" />
+    <ctl name="LHPF1 Coefficients" id="1" value="0xC4" />
+    <ctl name="DSP2L Input 1" value="LHPF1" />
+    <ctl name="DSP2L Input 1 Volume" value="48" />
+    <!-- AOV default microphone 2 settings -->
+    <ctl name="LHPF2 Input 1" value="None" />
+    <ctl name="LHPF2 Mode" value="High-pass" />
+    <ctl name="LHPF2 Coefficients" id="0" value="0xF0" />
+    <ctl name="LHPF2 Coefficients" id="1" value="0xC4" />
+    <ctl name="DSP2 Aux 1" value="LHPF2" />
+    <!-- AOV default headset microphone settings -->
+    <ctl name="DSP2 Aux 5" value="None" />
+    <!-- AOV default settings end -->
+
+    <ctl name="SPK AMP PCM Gain" value="0" />
+    <ctl name="SPK PCM Soft Ramp" value="4ms" />
+    <ctl name="SPK AMP Enable Switch" value="0" />
+    <ctl name="SPK PCM Source" value="ASP" />
+
+        <!-- DRC1 Parameters for Mono and Stereo input -->
+    <path name="drc1-mono">
+        <ctl name="DRC1" id="0" value="0x01" />
+        <ctl name="DRC1" id="1" value="0x2A" />
+        <ctl name="DRC1" id="2" value="0x0A" />
+        <ctl name="DRC1" id="3" value="0xE5" />
+        <ctl name="DRC1" id="4" value="0x75" />
+        <ctl name="DRC1" id="5" value="0x52" />
+        <ctl name="DRC1" id="6" value="0x01" />
+        <ctl name="DRC1" id="7" value="0x88" />
+        <ctl name="DRC1" id="8" value="0x02" />
+        <ctl name="DRC1" id="9" value="0x4A" />
+    </path>
+
+    <path name="drc1-stereo">
+        <ctl name="DRC1" id="0" value="0x01" />
+        <ctl name="DRC1" id="1" value="0x2B" />
+        <ctl name="DRC1" id="2" value="0x0A" />
+        <ctl name="DRC1" id="3" value="0xE5" />
+        <ctl name="DRC1" id="4" value="0x75" />
+        <ctl name="DRC1" id="5" value="0x52" />
+        <ctl name="DRC1" id="6" value="0x01" />
+        <ctl name="DRC1" id="7" value="0x88" />
+        <ctl name="DRC1" id="8" value="0x02" />
+        <ctl name="DRC1" id="9" value="0x4A" />
+    </path>
+
+  <!-- Common control configurations -->
+    <path name="route-playback">
+        <!-- Calliope Mixer controls-->
+        <!-- Calliope Routing Matrix controls-->
+        <ctl name="ABOX UAIF0 SPK" value="SIFS0" />
+    </path>
+
+    <path name="route-spkamp-playback">
+    </path>
+
+    <path name="route-incall-reference">
+        <ctl name="ABOX NSRC2" value="UAIF2" />
+        <ctl name="ABOX SIFM2" value="WDMA" />
+    </path>
+
+    <path name="route-incall-bt-sco-reference">
+        <ctl name="ABOX NSRC2" value="UAIF4" />
+        <ctl name="ABOX SIFM2" value="WDMA" />
+    </path>
+
+    <path name="route-feedback">
+        <ctl name="ABOX NSRC2" value="UAIF2" />
+        <ctl name="ABOX SIFM2" value="WDMA" />
+    </path>
+
+    <path name="route-bt-sco-playback">
+        <!-- Calliope Mixer controls-->
+        <!-- Calliope Routing Matrix controls-->
+        <ctl name="ABOX RECP PIFS0" value="1" />
+        <ctl name="ABOX RSRC0" value="SIFS0" />
+        <ctl name="ABOX RECP PIFS1" value="0" />
+        <ctl name="ABOX RSRC1" value="RESERVED" />
+        <ctl name="BT SCO SPK Enable" value="1" />
+    </path>
+
+    <path name="route-ap-record">
+        <!-- Calliope Mixer controls-->
+        <!-- Calliope Routing Matrix controls-->
+        <ctl name="ABOX NSRC0" value="UAIF0" />
+    </path>
+
+    <path name="route-cp-tx">
+        <!-- Calliope Mixer controls-->
+        <!-- Calliope Routing Matrix controls-->
+        <ctl name="ABOX NSRC1" value="UAIF0" />
+    </path>
+
+    <path name="route-ap-bt-sco-record">
+        <!-- Calliope Mixer controls-->
+        <!-- Calliope Routing Matrix controls-->
+        <ctl name="ABOX NSRC0" value="SIFS2" />
+    </path>
+
+    <path name="route-cp-bt-sco-tx">
+        <!-- Calliope Mixer controls-->
+        <!-- Calliope Routing Matrix controls-->
+        <ctl name="ABOX NSRC1" value="SIFS2" />
+    </path>
+
+    <path name="route-loop-record">
+        <!-- Calliope Mixer controls-->
+        <!-- Calliope Routing Matrix controls-->
+    </path>
+
+    <path name="route-bt-sco-tx">
+        <!-- Calliope Mixer controls-->
+        <!-- Calliope Routing Matrix controls-->
+        <ctl name="ABOX SPUS OUT6" value="SIFS2" />
+        <ctl name="ABOX SIFS2" value="SPUS OUT6" />
+        <ctl name="BT SCO MIC Enable" value="1" />
+    </path>
+
+    <path name="route-ap-music-to-cp-tx">
+        <!-- Calliope Mixer controls-->
+        <!-- Calliope Routing Matrix controls-->
+        <ctl name="ABOX SPUS OUT7" value="SIFS1" />
+        <ctl name="ABOX SIFS1" value="SPUS OUT7" />
+        <ctl name="ABOX NSRC3" value="SIFS1" />
+        <ctl name="ABOX SIFM3" value="WDMA" />
+    </path>
+
+    <path name="route-codec-handset">
+        <!-- Cirrus Logic CS47L3 RCV path control -->
+        <ctl name="HPOUT1L Input 1" value="AIF1RX1" />
+        <ctl name="HPOUT1R Input 1" value="AIF1RX2" />
+        <ctl name="Noise Gate Switch" value="0" />
+        <ctl name="HPOUT1 Digital Volume" id="0" value="118" />
+        <ctl name="HPOUT1 Digital Volume" id="1" value="118" />
+        <ctl name="HPOUT1 Digital Switch" id="0" value="1" />
+        <ctl name="HPOUT1 Digital Switch" id="1" value="1" />
+        <ctl name="HPOUT1 Demux" value="EPOUT" />
+        <ctl name="HPOUT1 Mono Switch" value="1" />
+    </path>
+
+    <path name="route-codec-speaker">
+        <!-- Cirrus Logic CS47L3 Speaker path control -->
+        <ctl name="AIF2TX1 Input 1" value="AIF1RX1" />
+        <ctl name="AIF2TX2 Input 1" value="AIF1RX2" />
+    </path>
+
+    <path name="route-codec-headset">
+        <!-- Cirrus Logic CS47L3 HP path control -->
+        <ctl name="HPOUT1L Input 1" value="AIF1RX1" />
+        <ctl name="HPOUT1R Input 1" value="AIF1RX2" />
+        <ctl name="HPOUT1 Digital Volume" id="0" value="116" />
+        <ctl name="HPOUT1 Digital Volume" id="1" value="116" />
+        <ctl name="HPOUT1 Digital Switch" id="0" value="1" />
+        <ctl name="HPOUT1 Digital Switch" id="1" value="1" />
+        <ctl name="HPOUT1 Demux" value="HPOUT" />
+        <ctl name="HPOUT1 Mono Switch" value="0" />
+    </path>
+
+    <path name="route-codec-handset-feedback">
+        <!-- Cirrus Logic CS47L3 RCV path control -->
+        <ctl name="AIF3TX1 Input 1" value="AIF1RX1" />
+    </path>
+
+    <path name="route-codec-speaker-feedback">
+        <!-- Cirrus Logic CS47L3 RCV path control -->
+        <ctl name="AIF3TX1 Input 1" value="AIF1RX1" />
+    </path>
+
+    <path name="route-codec-headset-feedback">
+        <!-- Cirrus Logic CS47L3 RCV path control -->
+        <ctl name="AIF3TX1 Input 1" value="AIF1RX1" />
+    </path>
+
+    <path name="AOV">
+        <!-- Set ADC sample rate to 48kHz -->
+        <ctl name="In Rate" value="SYNCCLK rate 3" />
+        <!-- Microphone 1 settings -->
+        <ctl name="LHPF1 Input 1" value="ISRC1DEC1" />
+        <!-- Microphone 2 settings -->
+        <ctl name="LHPF2 Input 1" value="ISRC1DEC2" />
+        <!-- AOV default headset microphone settings -->
+        <ctl name="DSP2 Aux 5" value="ISRC2DEC1" />
+    </path>
+
+    <path name="route-codec-main-mic">
+        <!-- Cirrus Logic CS47L3 Main MIC path control -->
+        <ctl name="AIF1TX1 Input 1" value="IN1L" />
+    </path>
+
+    <path name="route-codec-main-mic-L">
+        <ctl name="AIF1TX1 Input 1" value="IN1L" />
+    </path>
+    <path name="route-codec-main-mic-R">
+        <ctl name="AIF1TX2 Input 1" value="IN1L" />
+    </path>
+    <path name="route-codec-sub-mic">
+        <!-- Cirrus Logic CS47L3 Sub MIC path control -->
+        <ctl name="AIF1TX1 Input 1" value="IN2L" />
+    </path>
+
+    <path name="route-codec-sub-mic-L">
+        <ctl name="AIF1TX1 Input 1" value="IN2L" />
+    </path>
+
+    <path name="route-codec-sub-mic-R">
+        <ctl name="AIF1TX2 Input 1" value="IN2L" />
+    </path>
+    <path name="route-codec-sub-mic-R-channel">
+        <!-- Cirrus Logic CS47L3 Sub MIC path control -->
+        <ctl name="AIF1TX2 Input 1" value="IN2L" />
+    </path>
+
+    <path name="route-codec-headset-mic">
+        <!-- Cirrus Logic CS47L3 HeadSet MIC path control -->
+        <ctl name="AIF1TX1 Input 1" value="IN1R" />
+    </path>
+
+    <path name="route-fm">
+        <!-- Calliope Mixer controls-->
+        <!-- Calliope Routing Matrix controls-->
+        <ctl name="ABOX ERAP info FM Radio On" value="1" />
+        <ctl name="ABOX PCM ext VPCMIN ON" value="1" />
+        <ctl name="ABOX Sampling Rate Inmux1" value="40000" />
+        <ctl name="ABOX NSRC1" value="SPDY" />
+    </path>
+
+  <!-- BT SCO Sampling Rate Settings -->
+    <path name="set-bt-sco-rx-rate-nb">
+    </path>
+
+    <path name="set-bt-sco-tx-rate-nb">
+    </path>
+
+    <path name="set-bt-sco-rx-rate-wb">
+    </path>
+
+    <path name="set-bt-sco-tx-rate-wb">
+    </path>
+
+  <!-- Output mixer settings -->
+    <!-- Playback paths -->
+    <path name="media-handset">
+        <path name="route-playback" />
+        <path name="route-codec-handset" />
+    </path>
+
+    <path name="media-speaker0">
+        <path name="route-playback" />
+        <path name="route-codec-speaker" />
+    </path>
+
+    <path name="media-speaker1">
+        <path name="route-playback" />
+        <path name="route-codec-speaker" />
+    </path>
+
+    <path name="media-headset">
+        <path name="route-playback" />
+        <path name="route-codec-headset" />
+    </path>
+
+    <path name="media-headphone">
+        <path name="media-headset" />
+    </path>
+
+    <!-- Lineout path routing is similar to Headphone-->
+    <path name="media-lineout">
+        <path name="route-playback" />
+        <path name="route-codec-headset" />
+    </path>
+
+    <path name="media-speaker0-headset">
+        <path name="route-playback" />
+        <path name="route-codec-speaker" />
+        <path name="route-codec-headset" />
+    </path>
+
+    <path name="media-speaker1-headset">
+        <path name="route-playback" />
+        <path name="route-codec-speaker" />
+        <path name="route-codec-headset" />
+    </path>
+
+    <path name="media-speaker0-headphone">
+        <path name="media-speaker0-headset" />
+    </path>
+
+    <path name="media-speaker1-headphone">
+        <path name="media-speaker1-headset" />
+    </path>
+
+    <path name="media-speaker0-lineout">
+        <path name="route-playback" />
+        <path name="route-codec-speaker" />
+        <path name="route-codec-headset" />
+    </path>
+
+    <path name="media-speaker1-lineout">
+        <path name="route-playback" />
+        <path name="route-codec-speaker" />
+        <path name="route-codec-headset" />
+    </path>
+
+    <path name="media-bt-sco-headset">
+        <!-- Calliope Mixer controls-->
+        <!-- Calliope Routing Matrix controls-->
+        <path name="route-playback" />
+        <path name="route-bt-sco-playback" />
+    </path>
+
+    <path name="fm_radio-bt-sco-headset">
+        <!-- Calliope Mixer controls-->
+        <!-- Calliope Routing Matrix controls-->
+        <path name="route-playback" />
+        <path name="route-bt-sco-playback" />
+    </path>
+
+    <path name="media-speaker0-bt-sco-headset">
+        <!-- Calliope Mixer controls-->
+        <!-- Calliope Routing Matrix controls-->
+        <path name="route-playback" />
+        <path name="route-codec-speaker" />
+        <path name="route-bt-sco-playback" />
+    </path>
+
+    <path name="media-speaker1-bt-sco-headset">
+        <!-- Calliope Mixer controls-->
+        <!-- Calliope Routing Matrix controls-->
+        <path name="route-playback" />
+        <path name="route-codec-speaker" />
+        <path name="route-bt-sco-playback" />
+    </path>
+
+    <path name="media_ringtone-handset">
+        <path name="media-handset" />
+    </path>
+
+    <path name="media_ringtone-speaker0">
+        <path name="media-speaker0" />
+    </path>
+
+    <path name="media_ringtone-speaker1">
+        <path name="media-speaker1" />
+    </path>
+
+    <path name="media_ringtone-headset">
+        <path name="media-headset" />
+    </path>
+
+    <path name="media_ringtone-headphone">
+        <path name="media-headphone" />
+    </path>
+
+    <path name="media_ringtone-lineout">
+        <path name="media-lineout" />
+    </path>
+
+    <path name="media_ringtone-speaker0-headset">
+        <path name="media-speaker0-headset" />
+    </path>
+
+    <path name="media_ringtone-speaker1-headset">
+        <path name="media-speaker1-headset" />
+    </path>
+
+    <path name="media_ringtone-speaker0-headphone">
+        <path name="media-speaker0-headphone" />
+    </path>
+
+    <path name="media_ringtone-speaker1-headphone">
+        <path name="media-speaker1-headphone" />
+    </path>
+
+    <path name="media_ringtone-bt-sco-headset">
+        <path name="media-bt-sco-headset" />
+    </path>
+
+    <path name="media_ringtone-speaker0-bt-sco-headset">
+        <path name="media-speaker0-bt-sco-headset" />
+    </path>
+
+    <path name="media_ringtone-speaker1-bt-sco-headset">
+        <path name="media-speaker1-bt-sco-headset" />
+    </path>
+
+    <path name="media_ringtone-speaker0-lineout">
+        <path name="media-speaker0-lineout" />
+    </path>
+
+    <path name="media_ringtone-speaker1-lineout">
+        <path name="media-speaker1-lineout" />
+    </path>
+
+    <path name="media_notification-handset">
+        <path name="media-handset" />
+    </path>
+
+    <path name="media_notification-speaker0">
+        <path name="media-speaker0" />
+    </path>
+
+    <path name="media_notification-speaker1">
+        <path name="media-speaker1" />
+    </path>
+
+    <path name="media_notification-headset">
+        <path name="media-headset" />
+    </path>
+
+    <path name="media_notification-headphone">
+        <path name="media-headphone" />
+    </path>
+
+    <path name="media_notification-lineout">
+        <path name="media-lineout" />
+    </path>
+
+    <path name="media_notification-speaker0-headset">
+        <path name="media-speaker0-headset" />
+    </path>
+
+    <path name="media_notification-speaker1-headset">
+        <path name="media-speaker1-headset" />
+    </path>
+
+    <path name="media_notification-speaker0-headphone">
+        <path name="media-speaker0-headphone" />
+    </path>
+
+    <path name="media_notification-speaker1-headphone">
+        <path name="media-speaker1-headphone" />
+    </path>
+
+    <path name="media_notification-bt-sco-headset">
+        <path name="media-bt-sco-headset" />
+    </path>
+
+    <path name="media_notification-speaker0-bt-sco-headset">
+        <path name="media-speaker0-bt-sco-headset" />
+    </path>
+
+    <path name="media_notification-speaker1-bt-sco-headset">
+        <path name="media-speaker1-bt-sco-headset" />
+    </path>
+
+    <path name="media_notification-speaker0-lineout">
+        <path name="media-speaker0-lineout" />
+    </path>
+
+    <path name="media_notification-speaker1-lineout">
+        <path name="media-speaker1-lineout" />
+    </path>
+
+    <!-- VoiceCall paths -->
+    <path name="incall_nb-handset">
+        <path name="route-playback" />
+        <path name="route-codec-handset" />
+        <path name="route-codec-handset-feedback" />
+        <path name="route-incall-reference" />
+        <ctl name="ABOX Sound Type" value="VOICE" />
+    </path>
+
+    <path name="incall_nb_hac-handset">
+        <path name="incall_nb-handset" />
+    </path>
+
+    <path name="incall_nb-speaker0">
+        <path name="route-playback" />
+        <path name="route-spkamp-playback" />
+        <path name="route-codec-speaker" />
+        <path name="route-codec-speaker-feedback" />
+        <path name="route-incall-reference" />
+        <ctl name="ABOX Sound Type" value="SPEAKER" />
+    </path>
+
+    <path name="incall_nb-speaker1">
+        <path name="route-playback" />
+        <path name="route-spkamp-playback" />
+        <path name="route-codec-speaker" />
+        <path name="route-codec-speaker-feedback" />
+        <path name="route-incall-reference" />
+        <ctl name="ABOX Sound Type" value="SPEAKER" />
+    </path>
+
+    <path name="incall_nb_hac-speaker0">
+        <path name="incall_nb-speaker0" />
+    </path>
+
+    <path name="incall_nb_hac-speaker1">
+        <path name="incall_nb-speaker1" />
+    </path>
+
+    <path name="incall_nb-headset">
+        <path name="route-playback" />
+        <path name="route-codec-headset" />
+        <path name="route-codec-headset-feedback" />
+        <path name="route-incall-reference" />
+        <ctl name="ABOX Sound Type" value="HEADSET" />
+    </path>
+
+    <path name="incall_nb_hac-headset">
+        <path name="incall_nb-headset" />
+    </path>
+
+    <path name="incall_nb-headphone">
+        <path name="incall_nb-headset" />
+    </path>
+
+    <path name="incall_nb_hac-headphone">
+        <path name="incall_nb-headset" />
+    </path>
+
+    <path name="incall_nb-lineout">
+        <path name="route-playback" />
+        <path name="route-codec-headset" />
+        <path name="route-codec-headset-feedback" />
+        <path name="route-incall-reference" />
+        <ctl name="ABOX Sound Type" value="LINEOUT" />
+    </path>
+
+    <path name="incall_nb_hac-lineout">
+        <path name="incall_nb-lineout" />
+    </path>
+
+    <path name="incall_nb-bt-sco-headset">
+        <path name="route-playback" />
+        <path name="route-bt-sco-playback" />
+        <path name="route-incall-bt-sco-reference" />
+        <ctl name="ABOX Sound Type" value="BTVOICE" />
+    </path>
+
+    <path name="incall_nb_hac-bt-sco-headset">
+        <path name="incall_nb-bt-sco-headset" />
+    </path>
+
+    <path name="incall_wb-handset">
+        <path name="incall_nb-handset" />
+    </path>
+
+    <path name="incall_wb_hac-handset">
+        <path name="incall_wb-handset" />
+    </path>
+
+    <path name="incall_wb-speaker0">
+        <path name="incall_nb-speaker0" />
+    </path>
+
+    <path name="incall_wb-speaker1">
+        <path name="incall_nb-speaker1" />
+    </path>
+
+    <path name="incall_wb_hac-speaker0">
+        <path name="incall_wb-speaker0" />
+    </path>
+
+    <path name="incall_wb_hac-speaker1">
+        <path name="incall_wb-speaker1" />
+    </path>
+
+    <path name="incall_wb-headset">
+        <path name="incall_nb-headset" />
+    </path>
+
+    <path name="incall_wb_hac-headset">
+        <path name="incall_wb-headset" />
+    </path>
+
+    <path name="incall_wb-headphone">
+        <path name="incall_wb-headset" />
+    </path>
+
+    <path name="incall_wb_hac-headphone">
+        <path name="incall_wb-headset" />
+    </path>
+
+    <path name="incall_wb-lineout">
+        <path name="incall_nb-lineout" />
+    </path>
+
+    <path name="incall_wb_hac-lineout">
+        <path name="incall_nb-lineout" />
+    </path>
+
+    <path name="incall_wb-bt-sco-headset">
+        <path name="incall_nb-bt-sco-headset" />
+    </path>
+
+    <path name="incall_wb_hac-bt-sco-headset">
+        <path name="incall_wb-bt-sco-headset" />
+    </path>
+
+    <!-- Incall Music path -->
+    <path name="incall_music-handset">
+        <path name="incall_nb-handset" />
+        <ctl name="ABOX ERAP info ICM On" value="1" />
+    </path>
+
+    <path name="incall_music_hac-handset">
+        <path name="incall_music-handset" />
+    </path>
+
+    <path name="incall_music-speaker0">
+        <path name="incall_nb-speaker0" />
+        <ctl name="ABOX ERAP info ICM On" value="1" />
+    </path>
+
+    <path name="incall_music-speaker1">
+        <path name="incall_nb-speaker1" />
+        <ctl name="ABOX ERAP info ICM On" value="1" />
+    </path>
+
+    <path name="incall_music_hac-speaker0">
+        <path name="incall_music-speaker0" />
+    </path>
+
+    <path name="incall_music_hac-speaker1">
+        <path name="incall_music-speaker1" />
+    </path>
+
+    <path name="incall_music-headset">
+        <path name="incall_nb-headset" />
+        <ctl name="ABOX ERAP info ICM On" value="1" />
+    </path>
+
+    <path name="incall_music_hac-headset">
+        <path name="incall_music-headset" />
+    </path>
+    <path name="incall_music-headphone">
+        <path name="incall_music-headset" />
+    </path>
+
+    <path name="incall_music_hac-headphone">
+        <path name="incall_music-headset" />
+    </path>
+
+    <path name="incall_music-lineout">
+        <path name="incall_nb-lineout" />
+        <ctl name="ABOX ERAP info ICM On" value="1" />
+    </path>
+
+    <path name="incall_music_hac-lineout">
+        <path name="incall_music-lineout" />
+    </path>
+
+    <path name="incall_music-bt-sco-headset">
+        <path name="incall_nb-bt-sco-headset" />
+        <ctl name="ABOX ERAP info ICM On" value="1" />
+    </path>
+
+    <path name="incall_music_hac-bt-sco-headset">
+        <path name="incall_music-bt-sco-headset" />
+    </path>
+
+    <!-- Communication Playback paths -->
+    <path name="communication-handset">
+        <path name="route-playback" />
+        <path name="route-feedback" />
+        <path name="route-codec-handset" />
+        <path name="route-codec-handset-feedback" />
+        <ctl name="ABOX Speech Param" value="8" />
+    </path>
+
+    <path name="communication-speaker0">
+        <path name="route-playback" />
+        <path name="route-feedback" />
+        <path name="route-spkamp-playback" />
+        <path name="route-codec-speaker" />
+        <path name="route-codec-speaker-feedback" />
+        <ctl name="ABOX Speech Param" value="9" />
+    </path>
+
+    <path name="communication-speaker1">
+        <path name="route-playback" />
+        <path name="route-feedback" />
+        <path name="route-spkamp-playback" />
+        <path name="route-codec-speaker" />
+        <path name="route-codec-speaker-feedback" />
+        <ctl name="ABOX Speech Param" value="9" />
+    </path>
+
+    <path name="communication-headset">
+        <path name="route-playback" />
+        <path name="route-feedback" />
+        <path name="route-codec-headset" />
+        <path name="route-codec-headset-feedback" />
+        <ctl name="ABOX Speech Param" value="11" />
+    </path>
+
+    <path name="communication-headphone">
+        <path name="route-playback" />
+        <path name="route-feedback" />
+        <path name="route-codec-headset" />
+        <path name="route-codec-headset-feedback" />
+        <ctl name="ABOX Speech Param" value="10" />
+    </path>
+
+    <path name="communication-lineout">
+        <path name="route-playback" />
+        <path name="route-feedback" />
+        <path name="route-codec-headset" />
+        <path name="route-codec-headset-feedback" />
+        <ctl name="ABOX Speech Param" value="12" />
+    </path>
+
+    <path name="communication-speaker0-headset">
+        <path name="route-playback" />
+        <path name="route-feedback" />
+        <path name="route-spkamp-playback" />
+        <path name="route-codec-speaker" />
+        <path name="route-codec-speaker-feedback" />
+        <path name="route-codec-headset" />
+        <ctl name="ABOX Speech Param" value="11" />
+    </path>
+
+    <path name="communication-speaker1-headset">
+        <path name="route-playback" />
+        <path name="route-feedback" />
+        <path name="route-spkamp-playback" />
+        <path name="route-codec-speaker" />
+        <path name="route-codec-speaker-feedback" />
+        <path name="route-codec-headset" />
+        <ctl name="ABOX Speech Param" value="11" />
+    </path>
+
+    <path name="communication-speaker0-headphone">
+        <path name="communication-speaker0-headset" />
+    </path>
+
+    <path name="communication-speaker1-headphone">
+        <path name="communication-speaker1-headset" />
+    </path>
+
+    <path name="communication-speaker0-lineout">
+        <path name="route-playback" />
+        <path name="route-feedback" />
+        <path name="route-spkamp-playback" />
+        <path name="route-codec-speaker" />
+        <path name="route-codec-speaker-feedback" />
+        <path name="route-codec-headset" />
+    </path>
+
+    <path name="communication-speaker1-lineout">
+        <path name="route-playback" />
+        <path name="route-feedback" />
+        <path name="route-spkamp-playback" />
+        <path name="route-codec-speaker" />
+        <path name="route-codec-speaker-feedback" />
+        <path name="route-codec-headset" />
+    </path>
+
+    <path name="communication-bt-sco-headset">
+        <!-- Calliope Mixer controls-->
+        <!-- Calliope Routing Matrix controls-->
+        <path name="route-playback" />
+        <path name="route-feedback" />
+        <path name="route-bt-sco-playback" />
+	<ctl name="ABOX Speech Param" value="6" />
+    </path>
+
+    <!-- voip Playback paths -->
+    <path name="voip-handset">
+        <path name="route-playback" />
+        <path name="route-feedback" />
+        <path name="route-codec-handset" />
+        <path name="route-codec-handset-feedback" />
+        <ctl name="ABOX Speech Param" value="8" />
+    </path>
+
+    <path name="voip-speaker0">
+        <path name="route-playback" />
+        <path name="route-feedback" />
+        <path name="route-spkamp-playback" />
+        <path name="route-codec-speaker" />
+        <path name="route-codec-speaker-feedback" />
+        <ctl name="ABOX Speech Param" value="9" />
+    </path>
+
+    <path name="voip-speaker1">
+        <path name="route-playback" />
+        <path name="route-feedback" />
+        <path name="route-spkamp-playback" />
+        <path name="route-codec-speaker" />
+        <path name="route-codec-speaker-feedback" />
+        <ctl name="ABOX Speech Param" value="9" />
+    </path>
+
+    <path name="voip-headset">
+        <path name="route-playback" />
+        <path name="route-feedback" />
+        <path name="route-codec-headset" />
+        <path name="route-codec-headset-feedback" />
+        <ctl name="ABOX Speech Param" value="11" />
+    </path>
+
+    <path name="voip-headphone">
+        <path name="route-playback" />
+        <path name="route-feedback" />
+        <path name="route-codec-headset" />
+        <path name="route-codec-headset-feedback" />
+        <ctl name="ABOX Speech Param" value="10" />
+    </path>
+
+    <path name="voip-lineout">
+        <path name="route-playback" />
+        <path name="route-feedback" />
+        <path name="route-codec-headset" />
+        <path name="route-codec-headset-feedback" />
+        <ctl name="ABOX Speech Param" value="12" />
+    </path>
+
+    <path name="voip-speaker0-headset">
+        <path name="route-playback" />
+        <path name="route-feedback" />
+        <path name="route-spkamp-playback" />
+        <path name="route-codec-speaker" />
+        <path name="route-codec-speaker-feedback" />
+        <path name="route-codec-headset" />
+        <ctl name="ABOX Speech Param" value="11" />
+    </path>
+
+    <path name="voip-speaker1-headset">
+        <path name="route-playback" />
+        <path name="route-feedback" />
+        <path name="route-spkamp-playback" />
+        <path name="route-codec-speaker" />
+        <path name="route-codec-speaker-feedback" />
+        <path name="route-codec-headset" />
+        <ctl name="ABOX Speech Param" value="11" />
+    </path>
+
+    <path name="voip-speaker0-headphone">
+        <path name="route-playback" />
+        <path name="route-feedback" />
+        <path name="route-spkamp-playback" />
+        <path name="route-codec-speaker" />
+        <path name="route-codec-speaker-feedback" />
+        <path name="route-codec-headset" />
+        <ctl name="ABOX Speech Param" value="10" />
+    </path>
+
+    <path name="voip-speaker1-headphone">
+        <path name="route-playback" />
+        <path name="route-feedback" />
+        <path name="route-spkamp-playback" />
+        <path name="route-codec-speaker" />
+        <path name="route-codec-speaker-feedback" />
+        <path name="route-codec-headset" />
+        <ctl name="ABOX Speech Param" value="10" />
+    </path>
+
+    <path name="voip-speaker0-lineout">
+        <path name="route-playback" />
+        <path name="route-feedback" />
+        <path name="route-spkamp-playback" />
+        <path name="route-codec-speaker" />
+        <path name="route-codec-speaker-feedback" />
+        <path name="route-codec-headset" />
+    </path>
+
+    <path name="voip-speaker1-lineout">
+        <path name="voip-speaker0-lineout" />
+    </path>
+    <path name="voip-bt-sco-headset">
+        <!-- Calliope Mixer controls-->
+        <!-- Calliope Routing Matrix controls-->
+        <path name="route-playback" />
+        <path name="route-feedback" />
+        <path name="route-bt-sco-playback" />
+	<ctl name="ABOX Speech Param" value="6" />
+    </path>
+
+    <!-- FM Radio Playback paths -->
+    <path name="fm_radio-speaker0">
+        <path name="media-speaker0" />
+    </path>
+
+    <path name="fm_radio-speaker1">
+        <path name="media-speaker1" />
+    </path>
+
+    <path name="fm_radio-headphone">
+        <path name="media-headphone" />
+    </path>
+
+    <path name="fm_radio-headset">
+        <path name="media-headset" />
+    </path>
+
+    <path name="fm_radio-lineout">
+        <path name="media-lineout" />
+    </path>
+
+  <!-- Input mixer settings -->
+    <!-- Capture paths -->
+    <path name="media-mic">
+        <path name="AOV" />
+        <path name="route-ap-record" />
+        <path name="route-codec-main-mic-L" />
+    </path>
+
+    <path name="media-headset-mic">
+        <path name="AOV" />
+        <path name="route-ap-record" />
+        <path name="route-codec-headset-mic" />
+    </path>
+
+    <path name="recording-mic">
+        <path name="AOV" />
+        <path name="route-ap-record" />
+        <ctl name="AIF1TX1 Input 1" value="IN1L" />
+        <ctl name="AIF1TX2 Input 1" value="IN2L" />
+    </path>
+
+    <path name="recording-mic1">
+        <path name="AOV" />
+        <path name="route-ap-record" />
+	<ctl name="AIF1TX1 Input 1" value="IN1L" />
+    </path>
+
+    <path name="recording-mic2">
+        <path name="AOV" />
+        <path name="route-ap-record" />
+        <ctl name="AIF1TX1 Input 1" value="IN2L" />
+    </path>
+
+    <path name="media-2nd-mic">
+        <path name="AOV" />
+        <path name="route-ap-record" />
+        <path name="route-codec-sub-mic-L" />
+    </path>
+
+    <path name="recording-2nd-mic">
+        <path name="AOV" />
+        <path name="route-ap-record" />
+        <ctl name="AIF1TX1 Input 1" value="IN2L" />
+    </path>
+
+    <path name="camcorder-mic">
+        <path name="AOV" />
+        <path name="route-ap-record" />
+        <ctl name="ISRC2DEC1 Input 1" value="IN1L" />
+        <ctl name="DRC1L Input 1" value="ISRC2DEC1" />
+        <ctl name="ISRC2INT1 Input 1" value="DRC1L" />
+        <path name="drc1-mono" />
+        <ctl name="AIF1TX1 Input 1" value="ISRC2INT1" />
+    </path>
+
+    <path name="camcorder-2nd-mic">
+        <path name="AOV" />
+        <path name="route-ap-record" />
+        <ctl name="ISRC2DEC1 Input 1" value="IN2L" />
+        <ctl name="DRC1L Input 1" value="ISRC2DEC1" />
+        <ctl name="ISRC2INT1 Input 1" value="DRC1L" />
+        <path name="drc1-mono" />
+        <ctl name="AIF1TX1 Input 1" value="ISRC2INT1" />
+    </path>
+
+    <path name="camcorder-dualmic">
+        <path name="AOV" />
+        <path name="route-ap-record" />
+        <ctl name="AIF1TX1 Input 1" value="IN2L" />
+        <ctl name="AIF1TX2 Input 1" value="IN1L" />
+    </path>
+
+    <path name="recording-headset-mic">
+        <path name="AOV" />
+        <path name="route-ap-record" />
+        <ctl name="AIF1TX1 Input 1" value="IN1R" />
+        <ctl name="AIF1TX2 Input 1" value="IN1R" />
+    </path>
+
+    <path name="media-bt-sco-mic">
+        <path name="route-bt-sco-tx" />
+        <path name="route-ap-bt-sco-record" />
+    </path>
+
+    <path name="recording-bt-sco-headset-in">
+        <path name="media-bt-sco-mic" />
+    </path>
+
+    <!-- Recognition Input paths -->
+    <path name="recognition-mic">
+        <path name="media-mic" />
+    </path>
+
+    <path name="recognition-2nd-mic">
+        <path name="media-2nd-mic" />
+    </path>
+
+    <path name="recognition-headset-mic">
+        <path name="recording-headset-mic" />
+    </path>
+
+    <path name="recognition-headphone-mic">
+        <path name="recognition-mic" />
+    </path>
+
+    <path name="recognition-lineout-mic">
+        <path name="recognition-mic" />
+    </path>
+
+    <path name="recognition-bt-sco-headset-in">
+        <path name="media-bt-sco-mic" />
+    </path>
+
+    <!-- VoiceCall paths -->
+    <path name="incall_nb-handset-mic">
+        <ctl name="ABOX ERAP info FM Radio On" value="0" />
+        <ctl name="ABOX PCM ext VPCMIN ON" value="0" />
+        <ctl name="ABOX Sampling Rate Inmux1" value="48000" />
+        <path name="route-cp-tx" />
+        <path name="route-loop-record" />
+        <path name="route-codec-main-mic-L" />
+        <path name="route-codec-sub-mic-R" />
+    </path>
+
+    <path name="incall_nb_hac-handset-mic">
+        <path name="incall_nb-handset-mic" />
+    </path>
+
+    <path name="incall_nb-speaker0-mic">
+        <ctl name="ABOX ERAP info FM Radio On" value="0" />
+        <ctl name="ABOX PCM ext VPCMIN ON" value="0" />
+        <ctl name="ABOX Sampling Rate Inmux1" value="48000" />
+        <path name="route-cp-tx" />
+        <path name="route-loop-record" />
+        <path name="route-codec-main-mic-R" />
+        <path name="route-codec-sub-mic-L" />
+    </path>
+
+    <path name="incall_nb-speaker1-mic">
+        <ctl name="ABOX ERAP info FM Radio On" value="0" />
+        <ctl name="ABOX PCM ext VPCMIN ON" value="0" />
+        <ctl name="ABOX Sampling Rate Inmux1" value="48000" />
+        <path name="route-cp-tx" />
+        <path name="route-loop-record" />
+        <path name="route-codec-main-mic-R" />
+        <path name="route-codec-sub-mic-L" />
+    </path>
+
+    <path name="incall_nb-headphone-mic">
+        <path name="incall_nb-speaker0-mic" />
+    </path>
+
+    <path name="incall_nb_hac-headphone-mic">
+        <path name="incall_nb_hac-speaker0-mic" />
+    </path>
+
+    <path name="incall_nb-lineout-mic">
+        <path name="incall_nb-speaker0-mic" />
+    </path>
+
+    <path name="incall_nb_hac-lineout-mic">
+        <path name="incall_nb_hac-speaker0-mic" />
+    </path>
+
+    <path name="incall_nb_hac-speaker0-mic">
+        <path name="incall_nb-speaker0-mic" />
+    </path>
+
+    <path name="incall_nb_hac-speaker1-mic">
+        <path name="incall_nb-speaker1-mic" />
+    </path>
+
+    <path name="incall_nb-headset-mic">
+        <ctl name="ABOX ERAP info FM Radio On" value="0" />
+        <ctl name="ABOX PCM ext VPCMIN ON" value="0" />
+        <ctl name="ABOX Sampling Rate Inmux1" value="48000" />
+        <path name="route-cp-tx" />
+        <path name="route-loop-record" />
+        <path name="route-codec-headset-mic" />
+    </path>
+
+    <path name="incall_nb_hac-headset-mic">
+        <path name="incall_nb-headset-mic" />
+    </path>
+
+    <path name="incall_nb-bt-sco-headset-in">
+        <ctl name="ABOX ERAP info FM Radio On" value="0" />
+        <ctl name="ABOX PCM ext VPCMIN ON" value="0" />
+        <ctl name="ABOX Sampling Rate Inmux1" value="48000" />
+        <path name="route-bt-sco-tx" />
+        <path name="route-cp-bt-sco-tx" />
+    </path>
+
+    <path name="incall_nb_hac-bt-sco-headset-in">
+        <path name="incall_nb-bt-sco-headset-in" />
+    </path>
+
+    <!-- Incall Music Mic path -->
+    <path name="route-incall-music-uplink">
+        <!-- CP Rx to AP Tx routing-->
+        <path name="route-ap-music-to-cp-tx" />
+    </path>
+
+    <path name="incall_music-handset-mic">
+        <path name="incall_nb-handset-mic" />
+        <path name="route-incall-music-uplink" />
+    </path>
+
+    <path name="incall_music_hac-handset-mic">
+        <path name="incall_music-handset-mic" />
+    </path>
+
+    <path name="incall_music-headphone-mic">
+        <path name="incall_music-handset-mic" />
+    </path>
+
+    <path name="incall_music_hac-headphone-mic">
+        <path name="incall_music-handset-mic" />
+    </path>
+
+    <path name="incall_music-lineout-mic">
+        <path name="incall_music-handset-mic" />
+    </path>
+
+    <path name="incall_music_hac-lineout-mic">
+        <path name="incall_music-handset-mic" />
+    </path>
+
+    <path name="incall_music-speaker0-mic">
+        <path name="incall_nb-speaker0-mic" />
+        <path name="route-incall-music-uplink" />
+    </path>
+
+    <path name="incall_music-speaker1-mic">
+        <path name="incall_nb-speaker1-mic" />
+        <path name="route-incall-music-uplink" />
+    </path>
+
+    <path name="incall_music_hac-speaker0-mic">
+        <path name="incall_music-speaker0-mic" />
+    </path>
+
+    <path name="incall_music_hac-speaker1-mic">
+        <path name="incall_music-speaker1-mic" />
+    </path>
+
+    <path name="incall_music-headset-mic">
+        <path name="incall_nb-headset-mic" />
+        <path name="route-incall-music-uplink" />
+    </path>
+
+    <path name="incall_music_hac-headset-mic">
+        <path name="incall_music-headset-mic" />
+    </path>
+
+    <path name="incall_music-bt-sco-headset-in">
+        <path name="incall_nb-bt-sco-headset-in" />
+        <path name="route-incall-music-uplink" />
+    </path>
+
+    <path name="incall_music_hac-bt-sco-headset-in">
+        <path name="incall_music-bt-sco-headset-in" />
+    </path>
+
+    <!-- Communication Capture paths -->
+
+    <path name="communication-handset-mic">
+        <ctl name="ABOX OEM AP Call BW" value="0x000201" />
+        <ctl name="ABOX OEM AP Call type" value="8" />
+        <ctl name="ABOX OEM NXP Mode" value="1" />
+        <ctl name="ABOX Speech Param" value="8" />
+        <path name="AOV" />
+        <path name="route-ap-record" />
+        <path name="route-codec-main-mic-L" />
+        <path name="route-codec-sub-mic-R" />
+    </path>
+
+    <path name="communication-headphone-mic">
+        <ctl name="ABOX OEM AP Call BW" value="0x000201" />
+        <ctl name="ABOX OEM AP Call type" value="10" />
+        <ctl name="ABOX OEM NXP Mode" value="1" />
+        <ctl name="ABOX Speech Param" value="10" />
+        <path name="AOV" />
+        <path name="route-ap-record" />
+        <path name="route-codec-main-mic-R" />
+        <path name="route-codec-sub-mic-L" />
+    </path>
+
+    <path name="communication-lineout-mic">
+        <ctl name="ABOX OEM AP Call BW" value="0x000201" />
+        <ctl name="ABOX OEM AP Call type" value="12" />
+        <ctl name="ABOX OEM NXP Mode" value="1" />
+        <ctl name="ABOX Speech Param" value="12" />
+        <path name="AOV" />
+        <path name="route-ap-record" />
+        <path name="route-codec-main-mic-R" />
+        <path name="route-codec-sub-mic-L" />
+    </path>
+
+    <path name="communication-2nd-mic">
+        <path name="media-2nd-mic" />
+    </path>
+
+    <path name="communication-headset-mic">
+        <path name="AOV" />
+        <path name="route-ap-record" />
+        <path name="route-codec-headset-mic" />
+              <ctl name="ABOX OEM AP Call BW" value="0x010101" />
+              <ctl name="ABOX OEM AP Call type" value="11" />
+              <ctl name="ABOX OEM NXP Mode" value="1" />
+              <ctl name="ABOX Speech Param" value="11" />
+    </path>
+
+    <path name="communication-speaker0-mic">
+        <ctl name="ABOX OEM AP Call BW" value="0x020201" />
+        <ctl name="ABOX OEM AP Call type" value="9" />
+        <ctl name="ABOX OEM NXP Mode" value="1" />
+        <ctl name="ABOX Speech Param" value="9" />
+        <path name="AOV" />
+        <path name="route-ap-record" />
+        <path name="route-codec-main-mic-R" />
+        <path name="route-codec-sub-mic-L" />
+    </path>
+
+    <path name="communication-speaker1-mic">
+        <ctl name="ABOX OEM AP Call BW" value="0x020201" />
+        <ctl name="ABOX OEM AP Call type" value="9" />
+        <ctl name="ABOX OEM NXP Mode" value="1" />
+        <ctl name="ABOX Speech Param" value="9" />
+        <path name="AOV" />
+        <path name="route-ap-record" />
+        <path name="route-codec-main-mic-R" />
+        <path name="route-codec-sub-mic-L" />
+    </path>
+
+    <path name="communication-bt-sco-headset-in">
+        <path name="route-bt-sco-tx" />
+        <path name="route-ap-bt-sco-record" />
+        <ctl name="ABOX OEM AP Call BW" value="0x030101" />
+        <ctl name="ABOX OEM AP Call type" value="6" />
+        <ctl name="ABOX OEM NXP Mode" value="1" />
+        <ctl name="ABOX Speech Param" value="6" />
+    </path>
+
+    <!-- voip Capture paths -->
+    <path name="voip-mic">
+        <path name="AOV" />
+        <path name="route-ap-record" />
+        <path name="route-codec-main-mic-L" />
+        <path name="route-codec-sub-mic-R" />
+    </path>
+
+    <path name="voip-handset-mic">
+        <path name="voip-mic" />
+        <ctl name="ABOX OEM AP Call BW" value="0x000201" />
+        <ctl name="ABOX OEM AP Call type" value="8" />
+        <ctl name="ABOX OEM NXP Mode" value="1" />
+        <ctl name="ABOX Speech Param" value="8" />
+    </path>
+
+    <path name="voip-headphone-mic">
+        <path name="voip-mic" />
+        <ctl name="ABOX OEM AP Call BW" value="0x000201" />
+        <ctl name="ABOX OEM AP Call type" value="10" />
+        <ctl name="ABOX OEM NXP Mode" value="1" />
+        <ctl name="ABOX Speech Param" value="10" />
+    </path>
+
+    <path name="voip-lineout-mic">
+        <path name="voip-mic" />
+        <ctl name="ABOX OEM AP Call BW" value="0x000201" />
+        <ctl name="ABOX OEM AP Call type" value="12" />
+        <ctl name="ABOX OEM NXP Mode" value="1" />
+        <ctl name="ABOX Speech Param" value="12" />
+    </path>
+    <path name="voip-2nd-mic">
+        <path name="media-2nd-mic" />
+    </path>
+
+    <path name="voip-headset-mic">
+        <path name="AOV" />
+        <path name="route-ap-record" />
+        <path name="route-codec-headset-mic" />
+        <ctl name="ABOX OEM AP Call BW" value="0x010101" />
+        <ctl name="ABOX OEM AP Call type" value="11" />
+        <ctl name="ABOX OEM NXP Mode" value="1" />
+        <ctl name="ABOX Speech Param" value="11" />
+    </path>
+
+    <path name="voip-speaker0-mic">
+        <path name="voip-mic" />
+        <ctl name="ABOX OEM AP Call BW" value="0x020201" />
+        <ctl name="ABOX OEM AP Call type" value="9" />
+        <ctl name="ABOX OEM NXP Mode" value="1" />
+        <ctl name="ABOX Speech Param" value="9" />
+    </path>
+
+    <path name="voip-speaker1-mic">
+        <path name="voip-mic" />
+        <ctl name="ABOX OEM AP Call BW" value="0x020201" />
+        <ctl name="ABOX OEM AP Call type" value="9" />
+        <ctl name="ABOX OEM NXP Mode" value="1" />
+        <ctl name="ABOX Speech Param" value="9" />
+    </path>
+
+    <path name="voip-bt-sco-headset-in">
+        <path name="route-bt-sco-tx" />
+        <path name="route-ap-bt-sco-record" />
+        <ctl name="ABOX OEM AP Call BW" value="0x030101" />
+        <ctl name="ABOX OEM AP Call type" value="6" />
+        <ctl name="ABOX OEM NXP Mode" value="1" />
+        <ctl name="ABOX Speech Param" value="6" />
+    </path>
+    <!-- FM Radio Capture paths -->
+    <path name="fm_radio-fm-tuner">
+        <path name="route-fm" />
+        <path name="route-ap-record" />
+        <path name="route-codec-main-mic-L" />
+    </path>
+
+    <path name="recording-fm-tuner">
+        <path name="route-fm" />
+        <!-- headset Mic path -->
+        <path name="route-ap-record" />
+        <path name="route-codec-main-mic-L" />
+    </path>
+
+    <!-- TTY mode paths -->
+    <path name="tty_mode-headset">
+        <!-- TTY mode VCO & FULL mode Playback paths -->
+        <path name="route-playback" />
+        <path name="route-codec-headset" />
+        <path name="route-codec-headset-feedback" />
+        <path name="route-incall-reference" />
+        <ctl name="ABOX Sound Type" value="HEADSET" />
+    </path>
+
+    <path name="tty_mode-handset">
+        <!-- TTY mode HCO mode Playback paths -->
+        <path name="route-playback" />
+        <path name="route-codec-handset" />
+        <path name="route-codec-handset-feedback" />
+        <path name="route-incall-reference" />
+        <ctl name="ABOX Sound Type" value="VOICE" />
+    </path>
+
+    <path name="tty_mode-speaker0">
+        <path name="incall_nb-speaker0" />
+    </path>
+
+    <path name="tty_mode-speaker1">
+        <path name="incall_nb-speaker1" />
+    </path>
+
+    <path name="tty_mode-full-mic">
+        <!-- TTY mode FULL mode MIC -->
+        <ctl name="ABOX ERAP info FM Radio On" value="0" />
+        <ctl name="ABOX PCM ext VPCMIN ON" value="0" />
+        <path name="route-cp-tx" />
+        <path name="route-loop-record" />
+        <path name="AOV" />
+        <path name="route-codec-headset-mic" />
+    </path>
+
+    <path name="tty_mode-handset-mic">
+        <!-- TTY mode HCO MIC paths -->
+        <ctl name="ABOX ERAP info FM Radio On" value="0" />
+        <ctl name="ABOX PCM ext VPCMIN ON" value="0" />
+        <path name="route-cp-tx" />
+        <path name="route-loop-record" />
+        <path name="AOV" />
+        <path name="route-codec-headset-mic" />
+    </path>
+
+    <path name="tty_mode-hco-mic">
+        <path name="tty_mode-handset-mic" />
+    </path>
+
+    <path name="tty_mode-vco-mic">
+        <!-- TTY mode VCO MIC paths -->
+        <ctl name="ABOX ERAP info FM Radio On" value="0" />
+        <ctl name="ABOX PCM ext VPCMIN ON" value="0" />
+        <path name="route-cp-tx" />
+        <path name="route-loop-record" />
+        <path name="AOV" />
+        <path name="route-codec-main-mic-L" />
+    </path>
+
+  <!-- media gain controls for each path -->
+    <!-- Play paths gain controls -->
+    <path name="gain-media-handset">
+        <ctl name="HPOUT1L Input 1 Volume" value="32" />
+        <ctl name="HPOUT1R Input 1 Volume" value="32" />
+        <ctl name="HPOUT1 Digital Volume" value="128 128" />
+    </path>
+
+    <path name="gain-media-speaker0">
+        <ctl name="SPK DSP1 Firmware" value="protectionsp_indmusic_qisheng" />
+        <ctl name="SPK PCM Source" value="DSP" />
+        <ctl name="AIF2TX1 Input 1 Volume" value="32" />
+        <ctl name="AIF2TX2 Input 1 Volume" value="32" />
+        <ctl name="SPK AMP PCM Gain" value="17" />
+        <ctl name="SPK AMP Enable Switch" value="1" />
+    </path>
+
+    <path name="gain-media-speaker1">
+        <ctl name="SPK DSP1 Firmware" value="protectionsp_indmusic_aac" />
+        <ctl name="SPK PCM Source" value="DSP" />
+        <ctl name="AIF2TX1 Input 1 Volume" value="32" />
+        <ctl name="AIF2TX2 Input 1 Volume" value="32" />
+        <ctl name="SPK AMP PCM Gain" value="17" />
+        <ctl name="SPK AMP Enable Switch" value="1" />
+    </path>
+
+    <path name="gain-media-headset">
+        <ctl name="HPOUT1L Input 1 Volume" value="32" />
+        <ctl name="HPOUT1R Input 1 Volume" value="32" />
+        <ctl name="HPOUT1 Digital Volume" value="104 104" />
+    </path>
+
+    <path name="gain-media-headset-fm">
+        <ctl name="HPOUT1L Input 1 Volume" value="32" />
+        <ctl name="HPOUT1R Input 1 Volume" value="32" />
+        <ctl name="HPOUT1 Digital Volume" value="113 113" />
+    </path>
+
+    <path name="gain-media-speaker0-headset">
+        <path name="gain-media-speaker0" />
+        <path name="gain-media-headset" />
+    </path>
+
+    <path name="gain-media-speaker1-headset">
+        <path name="gain-media-speaker1" />
+        <path name="gain-media-headset" />
+    </path>
+
+    <path name="gain-media-bt-sco-headset">
+        <path name="gain-media-headset" />
+    </path>
+
+    <path name="gain-media-headphone">
+        <path name="gain-media-headset" />
+    </path>
+
+    <path name="gain-media-lineout">
+        <ctl name="HPOUT1L Input 1 Volume" value="32" />
+        <ctl name="HPOUT1R Input 1 Volume" value="32" />
+        <ctl name="HPOUT1 Digital Volume" value="124 124" />
+    </path>
+
+    <path name="gain-media-speaker0-headphone">
+        <path name="gain-media-headset" />
+        <path name="gain-media-speaker0" />
+    </path>
+
+    <path name="gain-media-speaker1-headphone">
+        <path name="gain-media-headset" />
+        <path name="gain-media-speaker1" />
+    </path>
+
+    <path name="gain-media-speaker0-lineout">
+        <path name="gain-media-lineout" />
+        <path name="gain-media-speaker0" />
+    </path>
+
+    <path name="gain-media-speaker1-lineout">
+        <path name="gain-media-lineout" />
+        <path name="gain-media-speaker1" />
+    </path>
+
+    <path name="gain-media-speaker0-bt-sco-headset">
+        <path name="gain-media-speaker0" />
+    </path>
+
+    <path name="gain-media-speaker1-bt-sco-headset">
+        <path name="gain-media-speaker1" />
+    </path>
+
+    <path name="gain-media_ringtone-handset">
+        <ctl name="HPOUT1L Input 1 Volume" value="32" />
+        <ctl name="HPOUT1R Input 1 Volume" value="32" />
+        <ctl name="HPOUT1 Digital Volume" value="128 128" />
+    </path>
+
+    <path name="gain-media_ringtone-speaker0">
+        <ctl name="SPK DSP1 Firmware" value="protectionsp_ringtone_qisheng" />
+        <ctl name="SPK PCM Source" value="DSP" />
+        <ctl name="AIF2TX1 Input 1 Volume" value="32" />
+        <ctl name="AIF2TX2 Input 1 Volume" value="32" />
+        <ctl name="SPK AMP PCM Gain" value="17" />
+        <ctl name="SPK AMP Enable Switch" value="1" />
+    </path>
+
+    <path name="gain-media_ringtone-speaker1">
+        <ctl name="SPK DSP1 Firmware" value="protectionsp_ringtone_aac" />
+        <ctl name="SPK PCM Source" value="DSP" />
+        <ctl name="AIF2TX1 Input 1 Volume" value="32" />
+        <ctl name="AIF2TX2 Input 1 Volume" value="32" />
+        <ctl name="SPK AMP PCM Gain" value="17" />
+        <ctl name="SPK AMP Enable Switch" value="1" />
+    </path>
+
+    <path name="gain-media_ringtone-headset">
+        <path name="gain-media-headset" />
+    </path>
+
+    <path name="gain-media_ringtone-speaker0-headset">
+        <path name="gain-media_ringtone-headset" />
+        <path name="gain-media_ringtone-speaker0" />
+    </path>
+
+    <path name="gain-media_ringtone-speaker1-headset">
+        <path name="gain-media_ringtone-headset" />
+        <path name="gain-media_ringtone-speaker1" />
+    </path>
+
+    <path name="gain-media_ringtone-bt-sco-headset">
+    </path>
+
+    <path name="gain-media_ringtone-headphone">
+        <path name="gain-media_ringtone-headset" />
+    </path>
+
+    <path name="gain-media_ringtone-lineout">
+        <path name="gain-media-lineout" />
+    </path>
+
+    <path name="gain-media_ringtone-speaker0-headphone">
+        <path name="gain-media_ringtone-headset" />
+        <path name="gain-media_ringtone-speaker0" />
+    </path>
+
+    <path name="gain-media_ringtone-speaker1-headphone">
+        <path name="gain-media_ringtone-headset" />
+        <path name="gain-media_ringtone-speaker1" />
+    </path>
+
+    <path name="gain-media_ringtone-speaker0-bt-sco-headset">
+        <path name="gain-media_ringtone-speaker0" />
+    </path>
+
+    <path name="gain-media_ringtone-speaker1-bt-sco-headset">
+        <path name="gain-media_ringtone-speaker1" />
+    </path>
+
+    <path name="gain-media_ringtone-speaker0-lineout">
+        <path name="gain-media_ringtone-lineout" />
+        <path name="gain-media_ringtone-speaker0" />
+    </path>
+
+    <path name="gain-media_ringtone-speaker1-lineout">
+        <path name="gain-media_ringtone-lineout" />
+        <path name="gain-media_ringtone-speaker1" />
+    </path>
+
+    <path name="gain-media_notification-handset">
+        <ctl name="HPOUT1L Input 1 Volume" value="32" />
+        <ctl name="HPOUT1R Input 1 Volume" value="32" />
+        <ctl name="HPOUT1 Digital Volume" value="128 128" />
+    </path>
+
+    <path name="gain-media_notification-speaker0">
+        <ctl name="SPK DSP1 Firmware" value="protectionsp_notification_qisheng" />
+        <ctl name="SPK PCM Source" value="DSP" />
+        <ctl name="AIF2TX1 Input 1 Volume" value="32" />
+        <ctl name="AIF2TX2 Input 1 Volume" value="32" />
+        <ctl name="SPK AMP PCM Gain" value="17" />
+        <ctl name="SPK AMP Enable Switch" value="1" />
+    </path>
+
+    <path name="gain-media_notification-speaker1">
+        <ctl name="SPK DSP1 Firmware" value="protectionsp_notification_aac" />
+        <ctl name="SPK PCM Source" value="DSP" />
+        <ctl name="AIF2TX1 Input 1 Volume" value="32" />
+        <ctl name="AIF2TX2 Input 1 Volume" value="32" />
+        <ctl name="SPK AMP PCM Gain" value="17" />
+        <ctl name="SPK AMP Enable Switch" value="1" />
+    </path>
+
+    <path name="gain-media_notification-headset">
+        <path name="gain-media-headset" />
+    </path>
+
+    <path name="gain-media_notification-speaker0-headset">
+        <path name="gain-media_notification-headset" />
+        <path name="gain-media_notification-speaker0" />
+    </path>
+
+    <path name="gain-media_notification-speaker1-headset">
+        <path name="gain-media_notification-headset" />
+        <path name="gain-media_notification-speaker1" />
+    </path>
+
+    <path name="gain-media_notification-bt-sco-headset">
+        <path name="gain-media_notification-headset" />
+    </path>
+
+    <path name="gain-media_notification-headphone">
+        <path name="gain-media_notification-headset" />
+    </path>
+
+    <path name="gain-media_notification-lineout">
+        <path name="gain-media-lineout" />
+    </path>
+
+    <path name="gain-media_notification-speaker0-headphone">
+        <path name="gain-media_notification-headset" />
+        <path name="gain-media_notification-speaker0" />
+    </path>
+
+    <path name="gain-media_notification-speaker1-headphone">
+        <path name="gain-media_notification-speaker1" />
+    </path>
+
+    <path name="gain-media_notification-speaker0-bt-sco-headset">
+        <path name="gain-media_notification-speaker0" />
+    </path>
+
+    <path name="gain-media_notification-speaker1-bt-sco-headset">
+        <path name="gain-media_notification-speaker1" />
+    </path>
+
+    <path name="gain-media_notification-speaker0-lineout">
+        <path name="gain-media_notification-lineout" />
+        <path name="gain-media_notification-speaker0" />
+    </path>
+
+    <path name="gain-media_notification-speaker1-lineout">
+        <path name="gain-media_notification-lineout" />
+        <path name="gain-media_notification-speaker1" />
+    </path>
+
+    <!-- Capture paths gain controls -->
+    <path name="gain-media-main-mic">
+        <ctl name="IN1L Volume" value="31" />
+        <ctl name="IN1R Volume" value="31" />
+        <ctl name="IN2L Volume" value="31" />
+        <ctl name="IN2R Volume" value="31" />
+        <ctl name="IN1L Digital Volume" value="128" />
+        <ctl name="IN1R Digital Volume" value="128" />
+        <ctl name="IN2L Digital Volume" value="128" />
+        <ctl name="IN2R Digital Volume" value="128" />
+    </path>
+
+    <path name="gain-media-sub-mic">
+        <ctl name="IN1L Volume" value="31" />
+        <ctl name="IN1R Volume" value="31" />
+        <ctl name="IN2L Volume" value="31" />
+        <ctl name="IN2R Volume" value="31" />
+        <ctl name="IN1L Digital Volume" value="128" />
+        <ctl name="IN1R Digital Volume" value="128" />
+        <ctl name="IN2L Digital Volume" value="128" />
+        <ctl name="IN2R Digital Volume" value="128" />
+    </path>
+
+    <path name="gain-media-headset-mic">
+        <ctl name="IN1L Volume" value="31" />
+        <ctl name="IN1R Volume" value="31" />
+        <ctl name="IN2L Volume" value="31" />
+        <ctl name="IN2R Volume" value="31" />
+        <ctl name="IN1L Digital Volume" value="128" />
+        <ctl name="IN1R Digital Volume" value="128" />
+        <ctl name="IN2L Digital Volume" value="128" />
+        <ctl name="IN2R Digital Volume" value="128" />
+    </path>
+
+    <path name="gain-recording-mic">
+        <ctl name="IN1L Volume" value="31"/>
+        <ctl name="IN1L Digital Volume" value="128" />
+        <ctl name="IN2L Volume" value="31"/>
+        <ctl name="IN2L Digital Volume" value="128" />
+    </path>
+
+    <path name="gain-recording-mic1">
+        <ctl name="IN1L Volume" value="31"/>
+        <ctl name="IN1L Digital Volume" value="128" />
+    </path>
+
+    <path name="gain-recording-mic2">
+        <ctl name="IN2L Volume" value="31"/>
+        <ctl name="IN2L Digital Volume" value="128" />
+    </path>
+
+    <path name="gain-recording-2nd-mic">
+        <ctl name="IN2L Volume" value="31"/>
+        <ctl name="IN2L Digital Volume" value="128" />
+    </path>
+
+    <path name="gain-camcorder-mic">
+        <ctl name="IN1L Volume" value="12"/>
+        <ctl name="IN1L Digital Volume" value="128" />
+    </path>
+
+    <path name="gain-camcorder-2nd-mic">
+        <ctl name="IN2L Volume" value="12"/>
+        <ctl name="IN2L Digital Volume" value="128" />
+    </path>
+
+    <path name="gain-media-bt-sco-mic">
+    </path>
+
+    <path name="gain-media-headphone-mic">
+       <path name="gain-media-main-mic" />
+    </path>
+
+    <path name="gain-media-lineout-mic">
+       <path name="gain-media-main-mic" />
+    </path>
+
+    <path name="gain-recording-headset-mic">
+        <ctl name="IN1R Volume" value="31"/>
+        <ctl name="IN1R Digital Volume" value="128" />
+    </path>
+
+    <path name="gain-recording-bt-sco-headset-in">
+    </path>
+
+    <path name="gain-camcorder-dualmic">
+        <ctl name="IN1L Volume" value="9" />
+        <ctl name="IN2L Volume" value="9" />
+        <ctl name="IN1L Digital Volume" value="128" />
+        <ctl name="IN2L Digital Volume" value="128" />
+    </path>
+
+    <!-- recognition input volume -->
+    <path name="gain-recognition-mic">
+        <path name="gain-media-main-mic" />
+    </path>
+
+    <path name="gain-recognition-2nd-mic">
+        <path name="gain-media-sub-mic" />
+    </path>
+
+    <path name="gain-recognition-headset-mic">
+        <path name="gain-media-headset-mic" />
+    </path>
+
+    <path name="gain-recognition-headphone-mic">
+        <path name="gain-media-main-mic" />
+    </path>
+
+    <path name="gain-recognition-lineout-mic">
+        <path name="gain-media-main-mic" />
+    </path>
+
+    <path name="gain-recognition-bt-sco-headset-in">
+    </path>
+
+    <!-- Communication gain controls for each path -->
+    <!-- Play paths gain controls -->
+    <path name="gain-communication-handset">
+        <!-- Rx paths gain controls -->
+        <ctl name="HPOUT1L Input 1 Volume" value="32" />
+        <ctl name="HPOUT1R Input 1 Volume" value="32" />
+        <ctl name="HPOUT1 Digital Volume" value="128 128" />
+    </path>
+
+    <path name="gain-communication-speaker0">
+        <ctl name="SPK DSP1 Firmware" value="protectionsp_voice_qisheng" />
+        <ctl name="SPK PCM Source" value="DSP" />
+        <ctl name="AIF2TX1 Input 1 Volume" value="32" />
+        <ctl name="AIF2TX2 Input 1 Volume" value="32" />
+        <ctl name="SPK AMP PCM Gain" value="17" />
+        <ctl name="SPK AMP Enable Switch" value="1" />
+    </path>
+
+    <path name="gain-communication-speaker1">
+        <ctl name="SPK DSP1 Firmware" value="protectionsp_voice_aac" />
+        <ctl name="SPK PCM Source" value="DSP" />
+        <ctl name="AIF2TX1 Input 1 Volume" value="32" />
+        <ctl name="AIF2TX2 Input 1 Volume" value="32" />
+        <ctl name="SPK AMP PCM Gain" value="17" />
+        <ctl name="SPK AMP Enable Switch" value="1" />
+    </path>
+
+    <path name="gain-communication-headset">
+        <ctl name="HPOUT1L Input 1 Volume" value="32" />
+        <ctl name="HPOUT1R Input 1 Volume" value="32" />
+        <ctl name="HPOUT1 Digital Volume" value="128 128" />
+    </path>
+    <path name="gain-communication-headphone">
+        <ctl name="HPOUT1L Input 1 Volume" value="32" />
+        <ctl name="HPOUT1R Input 1 Volume" value="32" />
+        <ctl name="HPOUT1 Digital Volume" value="128 128" />
+    </path>
+
+    <path name="gain-communication-lineout">
+        <ctl name="HPOUT1L Input 1 Volume" value="32" />
+        <ctl name="HPOUT1R Input 1 Volume" value="32" />
+        <ctl name="HPOUT1 Digital Volume" value="130 130" />
+    </path>
+
+    <path name="gain-communication-speaker0-headset">
+        <ctl name="SPK DSP1 Firmware" value="protectionsp_voice_qisheng" />
+        <ctl name="SPK PCM Source" value="DSP" />
+        <ctl name="HPOUT1L Input 1 Volume" value="32" />
+        <ctl name="HPOUT1R Input 1 Volume" value="32" />
+        <ctl name="HPOUT1 Digital Volume" value="130 130" />
+        <ctl name="SPK AMP PCM Gain" value="17" />
+        <ctl name="SPK AMP Enable Switch" value="1" />
+    </path>
+
+    <path name="gain-communication-speaker1-headset">
+        <ctl name="SPK DSP1 Firmware" value="protectionsp_voice_aac" />
+        <ctl name="SPK PCM Source" value="DSP" />
+        <ctl name="HPOUT1L Input 1 Volume" value="32" />
+        <ctl name="HPOUT1R Input 1 Volume" value="32" />
+        <ctl name="HPOUT1 Digital Volume" value="130 130" />
+        <ctl name="SPK AMP PCM Gain" value="17" />
+        <ctl name="SPK AMP Enable Switch" value="1" />
+    </path>
+
+    <path name="gain-communication-speaker0-lineout">
+        <ctl name="SPK DSP1 Firmware" value="protectionsp_voice_qisheng" />
+        <ctl name="SPK PCM Source" value="DSP" />
+        <ctl name="HPOUT1L Input 1 Volume" value="32" />
+        <ctl name="HPOUT1R Input 1 Volume" value="32" />
+        <ctl name="HPOUT1 Digital Volume" value="130 130" />
+        <ctl name="SPK AMP PCM Gain" value="17" />
+        <ctl name="SPK AMP Enable Switch" value="1" />
+    </path>
+
+    <path name="gain-communication-speaker1-lineout">
+        <ctl name="SPK DSP1 Firmware" value="protectionsp_voice_aac" />
+        <ctl name="SPK PCM Source" value="DSP" />
+        <ctl name="HPOUT1L Input 1 Volume" value="32" />
+        <ctl name="HPOUT1R Input 1 Volume" value="32" />
+        <ctl name="HPOUT1 Digital Volume" value="130 130" />
+        <ctl name="SPK AMP PCM Gain" value="17" />
+        <ctl name="SPK AMP Enable Switch" value="1" />
+    </path>
+
+    <path name="gain-communication-bt-sco-headset">
+    </path>
+
+    <!-- Capture paths gain controls -->
+
+
+    <path name="gain-communication-headset-mic">
+        <ctl name="IN1L Volume" value="21" />
+        <ctl name="IN1R Volume" value="21" />
+        <ctl name="IN2L Volume" value="21" />
+        <ctl name="IN2R Volume" value="21" />
+        <ctl name="IN1L Digital Volume" value="128" />
+        <ctl name="IN1R Digital Volume" value="128" />
+        <ctl name="IN2L Digital Volume" value="128" />
+        <ctl name="IN2R Digital Volume" value="128" />
+    </path>
+    <path name="gain-communication-headphone-mic">
+        <ctl name="IN1L Volume" value="18" />
+        <ctl name="IN1R Volume" value="18" />
+        <ctl name="IN2L Volume" value="18" />
+        <ctl name="IN2R Volume" value="18" />
+        <ctl name="IN1L Digital Volume" value="134" />
+        <ctl name="IN1R Digital Volume" value="134" />
+        <ctl name="IN2L Digital Volume" value="148" />
+        <ctl name="IN2R Digital Volume" value="148" />
+    </path>
+
+
+    <path name="gain-communication-lineout-mic">
+        <ctl name="IN1L Volume" value="18" />
+        <ctl name="IN1R Volume" value="18" />
+        <ctl name="IN2L Volume" value="18" />
+        <ctl name="IN2R Volume" value="18" />
+        <ctl name="IN1L Digital Volume" value="134" />
+        <ctl name="IN1R Digital Volume" value="134" />
+        <ctl name="IN2L Digital Volume" value="148" />
+        <ctl name="IN2R Digital Volume" value="148" />
+    </path>
+
+    <path name="gain-communication-bt-sco-headset-in">
+    </path>
+
+    <path name="gain-communication-handset-mic">
+        <ctl name="IN1L Volume" value="18" />
+        <ctl name="IN1R Volume" value="18" />
+        <ctl name="IN2L Volume" value="18" />
+        <ctl name="IN2R Volume" value="18" />
+        <ctl name="IN1L Digital Volume" value="134" />
+        <ctl name="IN1R Digital Volume" value="134" />
+        <ctl name="IN2L Digital Volume" value="134" />
+        <ctl name="IN2R Digital Volume" value="134" />
+    </path>
+
+    <path name="gain-communication-speaker0-mic">
+        <ctl name="IN1L Volume" value="18" />
+        <ctl name="IN1R Volume" value="18" />
+        <ctl name="IN2L Volume" value="18" />
+        <ctl name="IN2R Volume" value="18" />
+        <ctl name="IN1L Digital Volume" value="134" />
+        <ctl name="IN1R Digital Volume" value="134" />
+        <ctl name="IN2L Digital Volume" value="148" />
+        <ctl name="IN2R Digital Volume" value="148" />
+    </path>
+
+    <path name="gain-communication-speaker1-mic">
+        <ctl name="IN1L Volume" value="18" />
+        <ctl name="IN1R Volume" value="18" />
+        <ctl name="IN2L Volume" value="18" />
+        <ctl name="IN2R Volume" value="18" />
+        <ctl name="IN1L Digital Volume" value="134" />
+        <ctl name="IN1R Digital Volume" value="134" />
+        <ctl name="IN2L Digital Volume" value="148" />
+        <ctl name="IN2R Digital Volume" value="148" />
+    </path>
+
+    <!-- voip gain controls for each path -->
+    <!-- Play paths gain controls -->
+    <path name="gain-voip-handset">
+        <path name="gain-media-handset" />
+    </path>
+
+    <path name="gain-voip-speaker0">
+        <path name="gain-media-speaker0" />
+    </path>
+
+    <path name="gain-voip-speaker1">
+        <path name="gain-media-speaker1" />
+    </path>
+
+    <path name="gain-voip-headset">
+        <path name="gain-media-headset" />
+    </path>
+
+    <path name="gain-voip-speaker0-headset">
+        <path name="gain-media-speaker0" />
+        <path name="gain-media-headset" />
+    </path>
+
+    <path name="gain-voip-speaker1-headset">
+        <path name="gain-media-speaker1" />
+        <path name="gain-media-headset" />
+    </path>
+
+    <path name="gain-voip-bt-sco-headset">
+    </path>
+
+    <!-- Capture paths gain controls -->
+    <path name="gain-voip-main-mic">
+        <path name="gain-media-main-mic" />
+    </path>
+
+    <path name="gain-voip-sub-mic">
+        <path name="gain-media-sub-mic" />
+    </path>
+
+    <path name="gain-voip-headset-mic">
+        <path name="gain-media-headset-mic" />
+    </path>
+
+    <path name="gain-voip-bt-sco-headset-in">
+    </path>
+
+    <path name="gain-voip-handset-mic">
+        <ctl name="IN1L Volume" value="32" />
+        <ctl name="IN1R Volume" value="32" />
+        <ctl name="IN2L Volume" value="32" />
+        <ctl name="IN2R Volume" value="32" />
+        <ctl name="IN1L Digital Volume" value="124" />
+        <ctl name="IN1R Digital Volume" value="124" />
+        <ctl name="IN2L Digital Volume" value="124" />
+        <ctl name="IN2R Digital Volume" value="124" />
+    </path>
+
+    <path name="gain-voip-speaker0-mic">
+        <path name="gain-media-main-mic" />
+    </path>
+
+    <path name="gain-voip-speaker1-mic">
+        <path name="gain-media-main-mic" />
+    </path>
+
+  <!-- Voice Call gain controls for each path -->
+    <!-- Play paths gain controls -->
+    <path name="gain-incall_nb-handset">
+        <!-- Rx paths gain controls -->
+        <ctl name="HPOUT1L Input 1 Volume" value="32" />
+        <ctl name="HPOUT1R Input 1 Volume" value="32" />
+        <ctl name="HPOUT1 Digital Volume" value="136 136" />
+    </path>
+
+    <path name="gain-incall_nb_hac-handset">
+        <!-- Rx paths gain controls -->
+        <path name="gain-incall_nb-handset" />
+    </path>
+
+    <path name="gain-incall_music-handset">
+        <!-- Rx paths gain controls -->
+        <path name="gain-incall_nb-handset" />
+    </path>
+
+    <path name="gain-incall_nb-handset-mic">
+        <!-- Tx paths gain controls -->
+        <ctl name="IN1L Volume" value="18" />
+        <ctl name="IN1R Volume" value="18" />
+        <ctl name="IN2L Volume" value="18" />
+        <ctl name="IN2R Volume" value="18" />
+        <ctl name="IN1L Digital Volume" value="128" />
+        <ctl name="IN1R Digital Volume" value="128" />
+        <ctl name="IN2L Digital Volume" value="128" />
+        <ctl name="IN2R Digital Volume" value="128" />
+    </path>
+
+    <path name="gain-incall_nb_hac-handset-mic">
+        <path name="gain-incall_nb-handset-mic" />
+    </path>
+
+    <path name="gain-incall_music-handset-mic">
+    </path>
+
+    <path name="gain-incall_nb-headset">
+        <!-- Rx paths gain controls -->
+        <ctl name="HPOUT1L Input 1 Volume" value="32" />
+        <ctl name="HPOUT1R Input 1 Volume" value="32" />
+        <ctl name="HPOUT1 Digital Volume" value="128 128" />
+    </path>
+
+    <path name="gain-incall_nb_hac-headset">
+        <!-- Rx paths gain controls -->
+        <ctl name="HPOUT1L Input 1 Volume" value="32" />
+        <ctl name="HPOUT1R Input 1 Volume" value="32" />
+        <ctl name="HPOUT1 Digital Volume" value="130 130" />
+    </path>
+
+    <path name="gain-incall_nb-headset-mic">
+        <!-- Tx paths gain controls -->
+        <ctl name="IN1L Volume" value="18" />
+        <ctl name="IN1R Volume" value="18" />
+        <ctl name="IN2L Volume" value="18" />
+        <ctl name="IN2R Volume" value="18" />
+        <ctl name="IN1L Digital Volume" value="140" />
+        <ctl name="IN1R Digital Volume" value="140" />
+        <ctl name="IN2L Digital Volume" value="140" />
+        <ctl name="IN2R Digital Volume" value="140" />
+    </path>
+
+    <path name="gain-incall_nb_hac-headset-mic">
+        <path name="gain-incall_nb-headset-mic" />
+    </path>
+
+    <path name="gain-incall_nb-headphone">
+        <!-- Rx paths gain controls -->
+        <ctl name="HPOUT1L Input 1 Volume" value="32" />
+        <ctl name="HPOUT1R Input 1 Volume" value="32" />
+        <ctl name="HPOUT1 Digital Volume" value="128 128" />
+    </path>
+
+    <path name="gain-incall_nb_hac-headphone">
+        <!-- Rx paths gain controls -->
+        <ctl name="HPOUT1L Input 1 Volume" value="32" />
+        <ctl name="HPOUT1R Input 1 Volume" value="32" />
+        <ctl name="HPOUT1 Digital Volume" value="130 130" />
+    </path>
+
+    <path name="gain-incall_nb-lineout">
+        <!-- Rx paths gain controls -->
+        <ctl name="HPOUT1L Input 1 Volume" value="32" />
+        <ctl name="HPOUT1R Input 1 Volume" value="32" />
+        <ctl name="HPOUT1 Digital Volume" value="130 130" />
+    </path>
+
+    <path name="gain-incall_nb_hac-lineout">
+        <!-- Rx paths gain controls -->
+        <ctl name="HPOUT1L Input 1 Volume" value="32" />
+        <ctl name="HPOUT1R Input 1 Volume" value="32" />
+        <ctl name="HPOUT1 Digital Volume" value="130 130" />
+    </path>
+
+    <path name="gain-incall_nb-headphone-mic">
+        <!-- Tx paths gain controls -->
+        <ctl name="IN1L Volume" value="18" />
+        <ctl name="IN1R Volume" value="18" />
+        <ctl name="IN2L Volume" value="18" />
+        <ctl name="IN2R Volume" value="18" />
+        <ctl name="IN1L Digital Volume" value="134" />
+        <ctl name="IN1R Digital Volume" value="134" />
+        <ctl name="IN2L Digital Volume" value="148" />
+        <ctl name="IN2R Digital Volume" value="148" />
+    </path>
+
+    <path name="gain-incall_nb_hac-headphone-mic">
+        <path name="gain-incall_nb-headphone-mic" />
+    </path>
+
+    <path name="gain-incall_nb-lineout-mic">
+        <!-- Tx paths gain controls -->
+        <ctl name="IN1L Volume" value="18" />
+        <ctl name="IN1R Volume" value="18" />
+        <ctl name="IN2L Volume" value="18" />
+        <ctl name="IN2R Volume" value="18" />
+        <ctl name="IN1L Digital Volume" value="134" />
+        <ctl name="IN1R Digital Volume" value="134" />
+        <ctl name="IN2L Digital Volume" value="148" />
+        <ctl name="IN2R Digital Volume" value="148" />
+    </path>
+
+    <path name="gain-incall_nb_hac-lineout-mic">
+        <path name="gain-incall_nb-lineout-mic" />
+    </path>
+
+    <path name="gain-incall_nb-bt-sco-headset">
+    </path>
+
+    <path name="gain-incall_nb_hac-bt-sco-headset">
+    </path>
+
+    <path name="gain-incall_nb-bt-sco-headset-in">
+    </path>
+
+    <path name="gain-incall_nb_hac-bt-sco-headset-in">
+    </path>
+
+
+    <path name="gain-incall_nb-speaker0">
+        <!-- Tx paths gain controls -->
+        <ctl name="SPK DSP1 Firmware" value="protectionsp_voice_qisheng" />
+        <ctl name="SPK PCM Source" value="DSP" />
+        <ctl name="AIF2TX1 Input 1 Volume" value="32" />
+        <ctl name="AIF2TX2 Input 1 Volume" value="32" />
+        <ctl name="SPK AMP PCM Gain" value="17" />
+        <ctl name="SPK AMP Enable Switch" value="1" />
+        <!-- Rx paths gain controls -->
+    </path>
+
+    <path name="gain-incall_nb-speaker1">
+        <!-- Rx paths gain controls -->
+        <ctl name="SPK DSP1 Firmware" value="protectionsp_voice_aac" />
+        <ctl name="SPK PCM Source" value="DSP" />
+        <ctl name="AIF2TX1 Input 1 Volume" value="32" />
+        <ctl name="AIF2TX2 Input 1 Volume" value="32" />
+        <ctl name="SPK AMP PCM Gain" value="17" />
+        <ctl name="SPK AMP Enable Switch" value="1" />
+    </path>
+
+    <path name="gain-incall_nb_hac-speaker0">
+        <path name="gain-incall_nb-speaker0" />
+    </path>
+
+    <path name="gain-incall_nb_hac-speaker1">
+        <path name="gain-incall_nb-speaker1" />
+    </path>
+
+    <path name="gain-incall_nb-speaker0-mic">
+        <ctl name="IN1L Volume" value="18" />
+        <ctl name="IN1R Volume" value="18" />
+        <ctl name="IN2L Volume" value="18" />
+        <ctl name="IN2R Volume" value="18" />
+        <ctl name="IN1L Digital Volume" value="134" />
+        <ctl name="IN1R Digital Volume" value="134" />
+        <ctl name="IN2L Digital Volume" value="148" />
+        <ctl name="IN2R Digital Volume" value="148" />
+    </path>
+
+    <path name="gain-incall_nb-speaker1-mic">
+        <ctl name="IN1L Volume" value="18" />
+        <ctl name="IN1R Volume" value="18" />
+        <ctl name="IN2L Volume" value="18" />
+        <ctl name="IN2R Volume" value="18" />
+        <ctl name="IN1L Digital Volume" value="134" />
+        <ctl name="IN1R Digital Volume" value="134" />
+        <ctl name="IN2L Digital Volume" value="148" />
+        <ctl name="IN2R Digital Volume" value="148" />
+    </path>
+
+    <path name="gain-incall_nb_hac-speaker0-mic">
+        <path name="gain-incall_nb-speaker0-mic" />
+    </path>
+
+    <path name="gain-incall_nb_hac-speaker1-mic">
+        <path name="gain-incall_nb-speaker1-mic" />
+    </path>
+
+    <path name="gain-incall_wb-handset">
+        <!-- Rx paths gain controls -->
+        <ctl name="HPOUT1L Input 1 Volume" value="32" />
+        <ctl name="HPOUT1R Input 1 Volume" value="32" />
+        <ctl name="HPOUT1 Digital Volume" value="124 124" />
+    </path>
+
+    <path name="gain-incall_wb_hac-handset">
+        <!-- Rx paths gain controls -->
+        <ctl name="HPOUT1L Input 1 Volume" value="32" />
+        <ctl name="HPOUT1R Input 1 Volume" value="32" />
+        <ctl name="HPOUT1 Digital Volume" value="124 124" />
+    </path>
+
+    <path name="gain-incall_wb-handset-mic">
+        <!-- Tx paths gain controls -->
+        <ctl name="IN1L Volume" value="18" />
+        <ctl name="IN1R Volume" value="18" />
+        <ctl name="IN2L Volume" value="18" />
+        <ctl name="IN2R Volume" value="18" />
+        <ctl name="IN1L Digital Volume" value="128" />
+        <ctl name="IN1R Digital Volume" value="128" />
+        <ctl name="IN2L Digital Volume" value="128" />
+        <ctl name="IN2R Digital Volume" value="128" />
+    </path>
+
+    <path name="gain-incall_wb_hac-handset-mic">
+        <path name="gain-incall_wb-handset-mic" />
+    </path>
+
+    <path name="gain-incall_wb-headset">
+        <!-- Rx paths gain controls -->
+        <ctl name="HPOUT1L Input 1 Volume" value="32" />
+        <ctl name="HPOUT1R Input 1 Volume" value="32" />
+        <ctl name="HPOUT1 Digital Volume" value="106 106" />
+    </path>
+
+    <path name="gain-incall_wb_hac-headset">
+        <!-- Rx paths gain controls -->
+        <ctl name="HPOUT1L Input 1 Volume" value="32" />
+        <ctl name="HPOUT1R Input 1 Volume" value="32" />
+        <ctl name="HPOUT1 Digital Volume" value="106 106" />
+    </path>
+
+    <path name="gain-incall_wb-headset-mic">
+        <!-- Tx paths gain controls -->
+        <ctl name="IN1L Volume" value="18" />
+        <ctl name="IN1R Volume" value="18" />
+        <ctl name="IN2L Volume" value="18" />
+        <ctl name="IN2R Volume" value="18" />
+        <ctl name="IN1L Digital Volume" value="128" />
+        <ctl name="IN1R Digital Volume" value="128" />
+        <ctl name="IN2L Digital Volume" value="128" />
+        <ctl name="IN2R Digital Volume" value="128" />
+    </path>
+
+    <path name="gain-incall_wb_hac-headset-mic">
+        <path name="gain-incall_wb-headset-mic" />
+    </path>
+
+    <path name="gain-incall_wb-headphone">
+        <!-- Rx paths gain controls -->
+        <ctl name="HPOUT1L Input 1 Volume" value="32" />
+        <ctl name="HPOUT1R Input 1 Volume" value="32" />
+        <ctl name="HPOUT1 Digital Volume" value="106 106" />
+    </path>
+
+    <path name="gain-incall_wb_hac-headphone">
+        <!-- Rx paths gain controls -->
+        <ctl name="HPOUT1L Input 1 Volume" value="32" />
+        <ctl name="HPOUT1R Input 1 Volume" value="32" />
+        <ctl name="HPOUT1 Digital Volume" value="106 106" />
+    </path>
+
+    <path name="gain-incall_wb-lineout">
+        <!-- Rx paths gain controls -->
+        <ctl name="HPOUT1L Input 1 Volume" value="32" />
+        <ctl name="HPOUT1R Input 1 Volume" value="32" />
+        <ctl name="HPOUT1 Digital Volume" value="106 106" />
+    </path>
+
+    <path name="gain-incall_wb_hac-lineout">
+        <!-- Rx paths gain controls -->
+        <ctl name="HPOUT1L Input 1 Volume" value="32" />
+        <ctl name="HPOUT1R Input 1 Volume" value="32" />
+        <ctl name="HPOUT1 Digital Volume" value="106 106" />
+    </path>
+
+    <path name="gain-incall_wb-headphone-mic">
+        <!-- Tx paths gain controls -->
+        <ctl name="IN1L Volume" value="18" />
+        <ctl name="IN1R Volume" value="18" />
+        <ctl name="IN2L Volume" value="18" />
+        <ctl name="IN2R Volume" value="18" />
+        <ctl name="IN1L Digital Volume" value="128" />
+        <ctl name="IN1R Digital Volume" value="128" />
+        <ctl name="IN2L Digital Volume" value="128" />
+        <ctl name="IN2R Digital Volume" value="128" />
+    </path>
+
+    <path name="gain-incall_wb_hac-headphone-mic">
+        <path name="gain-incall_wb-headphone-mic" />
+    </path>
+
+    <path name="gain-incall_wb-lineout-mic">
+        <!-- Tx paths gain controls -->
+        <ctl name="IN1L Volume" value="18" />
+        <ctl name="IN1R Volume" value="18" />
+        <ctl name="IN2L Volume" value="18" />
+        <ctl name="IN2R Volume" value="18" />
+        <ctl name="IN1L Digital Volume" value="128" />
+        <ctl name="IN1R Digital Volume" value="128" />
+        <ctl name="IN2L Digital Volume" value="128" />
+        <ctl name="IN2R Digital Volume" value="128" />
+    </path>
+
+    <path name="gain-incall_wb_hac-lineout-mic">
+        <path name="gain-incall_wb-lineout-mic" />
+    </path>
+
+    <path name="gain-incall_wb-bt-sco-headset">
+    </path>
+
+    <path name="gain-incall_wb_hac-bt-sco-headset">
+    </path>
+
+    <path name="gain-incall_wb-bt-sco-headset-in">
+    </path>
+
+    <path name="gain-incall_wb_hac-bt-sco-headset-in">
+    </path>
+
+    <path name="gain-incall_wb-speaker0">
+        <!-- Tx paths gain controls -->
+        <ctl name="IN1L Volume" value="18" />
+        <ctl name="IN1R Volume" value="18" />
+        <ctl name="IN2L Volume" value="18" />
+        <ctl name="IN2R Volume" value="18" />
+        <ctl name="IN1L Digital Volume" value="128" />
+        <ctl name="IN1R Digital Volume" value="128" />
+        <ctl name="IN2L Digital Volume" value="128" />
+        <ctl name="IN2R Digital Volume" value="128" />
+        <!-- Rx paths gain controls -->
+    </path>
+
+    <path name="gain-incall_wb-speaker1">
+        <!-- Tx paths gain controls -->
+        <ctl name="IN1L Volume" value="31" />
+        <ctl name="IN1R Volume" value="31" />
+        <ctl name="IN2L Volume" value="31" />
+        <ctl name="IN2R Volume" value="31" />
+        <ctl name="IN1L Digital Volume" value="128" />
+        <ctl name="IN1R Digital Volume" value="128" />
+        <ctl name="IN2L Digital Volume" value="128" />
+        <ctl name="IN2R Digital Volume" value="128" />
+        <!-- Rx paths gain controls -->
+    </path>
+
+    <path name="gain-incall_wb_hac-speaker0">
+        <path name="gain-incall_wb-speaker0" />
+    </path>
+
+    <path name="gain-incall_wb_hac-speaker1">
+        <path name="gain-incall_wb-speaker1" />
+    </path>
+
+    <path name="gain-incall_wb-speaker0-mic">
+        <path name="gain-incall_nb-speaker0-mic" />
+    </path>
+
+    <path name="gain-incall_wb-speaker1-mic">
+        <path name="gain-incall_nb-speaker1-mic" />
+    </path>
+
+    <path name="gain-incall_wb_hac-speaker0-mic">
+        <path name="gain-incall_nb_hac-speaker0-mic" />
+    </path>
+
+    <path name="gain-incall_wb_hac-speaker1-mic">
+        <path name="gain-incall_nb_hac-speaker1-mic" />
+    </path>
+
+    <!-- tty paths gain controls -->
+    <path name="gain-tty_mode-headset">
+        <!-- TTY mode VCO & FULL mode Playback paths -->
+        <!-- Tx paths gain controls -->
+        <ctl name="IN1L Volume" value="25" />
+        <ctl name="IN1R Volume" value="25" />
+        <ctl name="IN2L Volume" value="25" />
+        <ctl name="IN2R Volume" value="25" />
+        <ctl name="IN1L Digital Volume" value="104" />
+        <ctl name="IN1R Digital Volume" value="104" />
+        <ctl name="IN2L Digital Volume" value="104" />
+        <ctl name="IN2R Digital Volume" value="104" />
+        <!-- Rx paths gain controls -->
+        <ctl name="HPOUT1L Input 1 Volume" value="25" />
+        <ctl name="HPOUT1R Input 1 Volume" value="25" />
+        <ctl name="HPOUT1 Digital Volume" value="110 110" />
+    </path>
+
+    <!-- FM Radio Playback paths gain control -->
+    <path name="gain-fm_radio-speaker0">
+        <path name="gain-media-speaker0" />
+    </path>
+
+    <path name="gain-fm_radio-speaker1">
+        <path name="gain-media-speaker1" />
+    </path>
+
+    <path name="gain-fm_radio-headphone">
+        <path name="gain-media-headset-fm" />
+    </path>
+
+    <path name="gain-fm_radio-headset">
+        <path name="gain-media-headset-fm" />
+    </path>
+
+    <path name="gain-fm_radio-lineout">
+        <path name="gain-media-lineout" />
+    </path>
+
+    <path name="gain-tty_mode-full-mic">
+        <!-- TTY mode FULL mode MIC -->
+        <!-- Tx paths gain controls -->
+        <ctl name="IN1L Volume" value="25" />
+        <ctl name="IN1R Volume" value="25" />
+        <ctl name="IN2L Volume" value="25" />
+        <ctl name="IN2R Volume" value="25" />
+        <ctl name="IN1L Digital Volume" value="104" />
+        <ctl name="IN1R Digital Volume" value="104" />
+        <ctl name="IN2L Digital Volume" value="104" />
+        <ctl name="IN2R Digital Volume" value="104" />
+        <!-- Rx paths gain controls -->
+        <ctl name="HPOUT1L Input 1 Volume" value="25" />
+        <ctl name="HPOUT1R Input 1 Volume" value="25" />
+        <ctl name="HPOUT1 Digital Volume" value="110 110" />
+    </path>
+
+    <path name="gain-tty_mode-handset">
+        <!-- TTY mode HCO mode Playback paths -->
+        <!-- Tx paths gain controls -->
+        <ctl name="IN1L Volume" value="25" />
+        <ctl name="IN1R Volume" value="25" />
+        <ctl name="IN2L Volume" value="25" />
+        <ctl name="IN2R Volume" value="25" />
+        <ctl name="IN1L Digital Volume" value="104" />
+        <ctl name="IN1R Digital Volume" value="104" />
+        <ctl name="IN2L Digital Volume" value="104" />
+        <ctl name="IN2R Digital Volume" value="104" />
+        <!-- Rx paths gain controls -->
+        <ctl name="HPOUT1L Input 1 Volume" value="32" />
+        <ctl name="HPOUT1R Input 1 Volume" value="32" />
+        <ctl name="HPOUT1 Digital Volume" value="110 110" />
+    </path>
+
+    <path name="gain-tty_mode-speaker0">
+        <path name="gain-incall_nb-speaker0" />
+    </path>
+
+    <path name="gain-tty_mode-speaker1">
+        <path name="gain-incall_nb-speaker1" />
+    </path>
+
+    <path name="gain-tty_mode-handset-mic">
+        <!-- TTY mode HCO MIC paths -->
+        <!-- Tx paths gain controls -->
+        <ctl name="IN1L Volume" value="25" />
+        <ctl name="IN1R Volume" value="25" />
+        <ctl name="IN2L Volume" value="25" />
+        <ctl name="IN2R Volume" value="25" />
+        <ctl name="IN1L Digital Volume" value="104" />
+        <ctl name="IN1R Digital Volume" value="104" />
+        <ctl name="IN2L Digital Volume" value="104" />
+        <ctl name="IN2R Digital Volume" value="104" />
+        <!-- Rx paths gain controls -->
+        <ctl name="HPOUT1L Input 1 Volume" value="32" />
+        <ctl name="HPOUT1R Input 1 Volume" value="32" />
+        <ctl name="HPOUT1 Digital Volume" value="110 110" />
+    </path>
+
+    <path name="gain-tty_mode-hco-mic">
+        <path name="gain-tty_mode-handset-mic" />
+    </path>
+
+    <path name="gain-tty_mode-vco-mic">
+        <!-- TTY mode VCO MIC paths -->
+        <!-- Tx paths gain controls -->
+        <ctl name="IN1L Volume" value="25" />
+        <ctl name="IN1R Volume" value="25" />
+        <ctl name="IN2L Volume" value="25" />
+        <ctl name="IN2R Volume" value="25" />
+        <ctl name="IN1L Digital Volume" value="104" />
+        <ctl name="IN1R Digital Volume" value="104" />
+        <ctl name="IN2L Digital Volume" value="104" />
+        <ctl name="IN2R Digital Volume" value="104" />
+        <!-- Rx paths gain controls -->
+        <ctl name="HPOUT1L Input 1 Volume" value="32" />
+        <ctl name="HPOUT1R Input 1 Volume" value="32" />
+        <ctl name="HPOUT1 Digital Volume" value="110 110" />
+    </path>
+
+    <path name="gain-incall_music-handset">
+        <path name="gain-incall_nb-handset" />
+    </path>
+
+    <path name="gain-incall_music_hac-handset">
+        <path name="gain-incall_music-handset" />
+    </path>
+
+    <path name="gain-incall_music-speaker0">
+        <path name="gain-incall_nb-speaker0" />
+    </path>
+
+    <path name="gain-incall_music-speaker1">
+        <path name="gain-incall_nb-speaker1" />
+    </path>
+
+    <path name="gain-incall_music_hac-speaker0">
+        <path name="gain-incall_music-speaker0" />
+    </path>
+
+    <path name="gain-incall_music_hac-speaker1">
+        <path name="gain-incall_music-speaker1" />
+    </path>
+
+    <path name="gain-incall_music-headset">
+        <path name="gain-incall_nb-headset" />
+    </path>
+
+    <path name="gain-incall_music_hac-headset">
+        <path name="gain-incall_music-headset" />
+    </path>
+
+    <path name="gain-incall_music-headphone">
+        <path name="gain-incall_music-headset" />
+    </path>
+
+    <path name="gain-incall_music_hac-headphone">
+        <path name="gain-incall_music-headset" />
+    </path>
+
+    <path name="gain-incall_music-lineout">
+        <path name="gain-incall_nb-lineout" />
+    </path>
+
+    <path name="gain-incall_music_hac-lineout">
+        <path name="gain-incall_music-lineout" />
+    </path>
+
+    <path name="gain-incall_music-bt-sco-headset">
+        <path name="gain-incall_nb-bt-sco-headset" />
+    </path>
+
+    <path name="gain-incall_music_hac-bt-sco-headset">
+        <path name="gain-incall_music-bt-sco-headset" />
+    </path>
+
+    <path name="gain-incall_music-handset-mic">
+        <path name="gain-incall_nb-handset-mic" />
+    </path>
+
+    <path name="gain-incall_music_hac-handset-mic">
+        <path name="gain-incall_music-handset-mic" />
+    </path>
+
+    <path name="gain-incall_music-headphone-mic">
+        <path name="gain-incall_nb-headphone-mic" />
+    </path>
+
+    <path name="gain-incall_music_hac-headphone-mic">
+        <path name="gain-incall_music-headphone-mic" />
+    </path>
+
+    <path name="gain-incall_music-lineout-mic">
+        <path name="gain-incall_nb-lineout-mic" />
+    </path>
+
+    <path name="gain-incall_music_hac-lineout-mic">
+        <path name="gain-incall_music-lineout-mic" />
+    </path>
+
+    <path name="gain-incall_music-speaker0-mic">
+        <path name="gain-incall_nb-speaker0-mic" />
+    </path>
+
+    <path name="gain-incall_music-speaker1-mic">
+        <path name="gain-incall_nb-speaker1-mic" />
+    </path>
+
+    <path name="gain-incall_music_hac-speaker0-mic">
+        <path name="gain-incall_music-speaker0-mic" />
+    </path>
+
+    <path name="gain-incall_music_hac-speaker1-mic">
+        <path name="gain-incall_music-speaker1-mic" />
+    </path>
+
+    <path name="gain-incall_music-headset-mic">
+        <path name="gain-incall_nb-headset-mic" />
+    </path>
+
+    <path name="gain-incall_music_hac-headset-mic">
+        <path name="gain-incall_music-headset-mic" />
+    </path>
+
+    <path name="gain-incall_music-bt-sco-headset-in">
+        <path name="gain-incall_nb-bt-sco-headset-in" />
+    </path>
+
+    <path name="gain-incall_music_hac-bt-sco-headset-in">
+        <path name="gain-incall_music-bt-sco-headset-in" />
+    </path>
+
+    <path name="media-speaker-ar">
+        <path name="route-playback" />
+        <path name="route-codec-speaker" />
+    </path>
+
+    <path name="media_ringtone-speaker-ar">
+        <path name="route-playback" />
+        <path name="route-codec-speaker" />
+    </path>
+
+    <path name="gain-media-speaker-ar">
+        <ctl name="SPK PCM Source" value="ASP" />
+        <ctl name="AIF2TX1 Input 1 Volume" value="32" />
+        <ctl name="AIF2TX2 Input 1 Volume" value="32" />
+        <ctl name="SPK AMP PCM Gain" value="17" />
+        <ctl name="SPK AMP Enable Switch" value="1" />
+    </path>
+
+    <path name="gain-media_ringtone-speaker-ar">
+        <ctl name="SPK PCM Source" value="ASP" />
+        <ctl name="AIF2TX1 Input 1 Volume" value="32" />
+        <ctl name="AIF2TX2 Input 1 Volume" value="32" />
+        <ctl name="SPK AMP PCM Gain" value="17" />
+        <ctl name="SPK AMP Enable Switch" value="1" />
+    </path>
+</mixer>
