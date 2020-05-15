@@ -1,0 +1,34 @@
+
+##off = 0
+##on = 1
+##default 0
+on property:persist.mptool.dumplog.on=*
+	setprop mptool.dumplog.on ${persist.mptool.dumplog.on}
+
+#default 1024
+on property:persist.mptool.log.buffer.size=*
+	setprop mptool.log.buffer.size ${persist.mptool.log.buffer.size}
+
+#verbose	-	0
+#debug	-	1
+#info	-	2
+#warn	-	3
+##default 2
+on property:persist.mptool.log.severity=*
+	setprop mptool.log.severity ${persist.mptool.log.severity}
+
+##off = 0
+##on = 1
+#default 0
+on property:persist.mptool.log.on=*
+	setprop mptool.log.on ${persist.mptool.log.on}
+
+#smcd 0x00010000
+#swcnd 0x00001000
+#spad 0x00000010
+#sctd 0x00000001
+#sfmd 0x00000100
+on property:persist.mptool.log.catgory=*
+	setprop mptool.log.catgory ${persist.mptool.log.catgory}
+
+

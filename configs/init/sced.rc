@@ -1,0 +1,6 @@
+service SCE-daemon /vendor/bin/sced
+    class main
+    user system
+    group system
+    capabilities NET_ADMIN NET_RAW
+    seclabel u:r:sced:s0

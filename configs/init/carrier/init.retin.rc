@@ -1,0 +1,2 @@
+on early-fs
+    setprop ro.telephony.default_network 10,10

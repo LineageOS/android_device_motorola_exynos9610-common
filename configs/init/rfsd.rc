@@ -1,0 +1,6 @@
+# RFS daemon
+    service RFS-daemon /vendor/bin/rfsd -d
+    class main
+    user root
+    group radio cache inet misc audio sdcard_rw log
+    seclabel u:r:rfsd:s0
