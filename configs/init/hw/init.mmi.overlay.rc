@@ -18,16 +18,6 @@ on boot
    chown system camera /mnt/vendor/persist/camera/dualcal/module_id.bin
    chmod 0664 /mnt/vendor/persist/camera/dualcal/dual_cal_data.bin
    chmod 0664 /mnt/vendor/persist/camera/dualcal/module_id.bin
-   start ufs_ffu
-
-service capsense_reset /vendor/bin/capsense_reset
-    class core
-    user system
-    group system input
-    disabled
-
-on property:sys.boot_completed=1
-  start capsense_reset
 
 on property:ro.carrier=tmo
   write /sys/class/power_supply/battery/device/force_max_chrg_temp 55
@@ -35,11 +25,3 @@ on property:ro.carrier=tmo
 on property:ro.carrier=metropcs
   write /sys/class/power_supply/battery/device/force_max_chrg_temp 55
 
-service ufs_ffu /vendor/bin/ufs_ffu.sh
-    user root
-    class core
-    oneshot
-    disabled
-
-on property:vendor.ufs_need_ffu=1
-    setprop sys.dbg.ufs_ffu_start 1
