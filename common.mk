@@ -41,6 +41,10 @@ AB_OTA_POSTINSTALL_CONFIG += \
 
 
 # Audio
+PRODUCT_PACKAGES += \
+    libtinycompress \
+    libaudioroute
+
 PRODUCT_COPY_FILES += \
     frameworks/av/services/audiopolicy/config/a2dp_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/a2dp_audio_policy_configuration.xml \
     $(COMMON_PATH)/configs/audio/aov_ec_mixer_paths.xml:$(TARGET_COPY_OUT_VENDOR)/etc/aov_ec_mixer_paths.xml \
@@ -69,6 +73,14 @@ TARGET_BOOTANIMATION_PRELOAD := true
 TARGET_BOOTANIMATION_TEXTURE_CACHE := true
 TARGET_SCREEN_HEIGHT := 2520
 TARGET_SCREEN_WIDTH := 1080
+
+# bootctrl
+PRODUCT_PACKAGES += \
+    android.hardware.boot@1.0
+
+# camera
+PRODUCT_PACKAGES += \
+    libsensorndkbridge
 
 # FM radio
 PRODUCT_PACKAGES += \
@@ -112,11 +124,18 @@ PRODUCT_PACKAGES += \
     NfcNci \
     Tag \
     SecureElement \
-    com.android.nfc_extras
+    com.android.nfc_extras \
+    android.hardware.nfc@1.0 \
+    android.hardware.nfc@1.1 \
+    android.hardware.nfc@1.2
 
 PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/configs/nfc/libnfc-nci.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libnfc-nci.conf \
     $(COMMON_PATH)/configs/nfc/libnfc-sec-vendor.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libnfc-sec-vendor.conf
+
+# OMX
+PRODUCT_PACKAGES += \
+    libstagefright_softomx
 
 # Permissions
 PRODUCT_COPY_FILES += \
@@ -167,9 +186,21 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     android.hardware.boot@1.0-impl.exynos.recovery
 
+# ril
+PRODUCT_PACKAGES += \
+    android.hardware.radio.config@1.0 \
+    android.hardware.radio.config@1.1 \
+    android.hardware.radio.config@1.2 \
+    android.hardware.radio@1.0 \
+    android.hardware.radio@1.1 \
+    android.hardware.radio@1.2 \
+    android.hardware.radio@1.3 \
+    android.hardware.radio@1.4 \
+    android.hardware.radio.deprecated@1.0 \
+    
+
 # Seccomp
 PRODUCT_COPY_FILES += \
-    $(COMMON_PATH)/configs/seccomp/configstore@1.1.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/configstore@1.1.policy \
     $(COMMON_PATH)/configs/seccomp/mediacodec.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/mediacodec.policy
 
 # Sensors
