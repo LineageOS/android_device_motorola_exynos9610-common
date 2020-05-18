@@ -4,23 +4,6 @@ import /vendor/etc/init/hw/init.mmi.chipset.rc
 # Target-specific file
 import /vendor/etc/init/hw/init.mmi.overlay.rc
 
-# Moto USB configuration
-#import /vendor/etc/init/hw/init.mmi.usb.rc
-# Moto debugging
-import /vendor/etc/init/hw/init.mmi.debug.rc
-
-
-
-#import /vendor/etc/init/hw/init.oem.rc
-#import /vendor/etc/init/hw/init.mmi.common.rc
-#import /vendor/etc/init/hw/init.mmi.nonab.rc
-
-# Moto verified boot extension
-#import /vendor/etc/init/hw/init.mmi.hab.rc
-
-# Test commands
-import /vendor/etc/init/hw/init.mmi.tcmd.rc
-
 # Carrier specific script
 # Begin moto, huangzye 2019.08.29 IKSWQ-7064
 import /vendor/etc/init/carrier/init.${ro.boot.carrier}.rc
@@ -281,35 +264,6 @@ on boot
    chmod 0666 sys/devices/system/cpu/cpufreq/policy0/scaling_max_freq
    chmod 0666 sys/devices/system/cpu/cpufreq/policy4/scaling_max_freq
 
-service vendor.mmi-block-perm /vendor/bin/init.mmi.block_perm.sh
-    class main
-    user root
-    oneshot
-
-
-service vendor.pstore_annotate /vendor/bin/pstore_annotate.sh build
-    class main
-    group log
-    oneshot
-
-service vendor.apanic_copy /vendor/bin/apanic_copy.sh
-    class late_start
-    group log
-    oneshot
-    disabled
-
-service vendor.bl_logs_copy /vendor/bin/apanic_copy.sh -i
-    class late_start
-    group log
-    oneshot
-    disabled
-
-on property:sys.boot_completed=1 && property:ro.bootmode=bp-tools
-   start VC-daemon
-
-on property:sys.boot_completed=1 && property:ro.bootmode=mot-factory
-   start VC-daemon
-
 # For not to impact boot completed broadcast, set cpusets after broadcast.
 on property:sys.bootbroadcast_completed=1
     write /dev/cpuset/foreground/cpus 0-7
@@ -346,67 +300,10 @@ on moto-charger
     start batt_health
     start thermal-com
 
-service vendor.apanic_annotate /vendor/bin/apanic_save.sh build
-    class late_start
-    group log
-    oneshot
-    disabled
-
-#service vendor.batt_health /vendor/bin/batt_health
-#    class late_start
-#    user vendor_pwric
-#    group vendor_pwric cache net_admin log
-#    disabled
-
-on property:ro.vendor.bootreason=coldboot
-    start vendor.apanic_copy
-
-on property:ro.vendor.bootreason=watchdog
-    stop surfaceflinger
-    stop zygote
-    stop zygote_secondary
-    stop sensors
-    start vendor.apanic_annotate
-
-on property:ro.vendor.bootreason=pmic_watchdog
-    stop surfaceflinger
-    stop zygote
-    stop zygote_secondary
-    stop sensors
-    start vendor.apanic_annotate
-
-on property:ro.vendor.bootreason=kernel_panic
-    stop surfaceflinger
-    stop zygote
-    stop zygote_secondary
-    stop sensors
-    start vendor.apanic_annotate
-
-on property:persist.vendor.log.aplogd.enable=1
-    start vendor.aplogd
-
-on property:persist.vendor.log.aplogd.enable=0
-    stop vendor.aplogd
-
-service vendor.aplogd /vendor/bin/aplogd
-    class late_start
-    #user log
-    #group log system sdcard_rw sdcard_r media_rw mount
-    # The user and group definitions above are intentionally disabled and left
-    # only as documentation. It actually starts as root and immediately drops
-    # to log plus those groups after preserving CAP_SYS_ADMIN, which is required
-    # for kernel logging.
-    disabled
-
 # from P onwards aplogd cannot read vold.post_fs_data_done so a new property
 # shall be used to allow aplogd checking if FBE has finished /data decryption
 on property:vold.post_fs_data_done=*
      setprop vendor.vold.post_fs_data_done ${vold.post_fs_data_done}
-
-service vendor.mmi-boot-sh /vendor/bin/init.mmi.boot.sh
-    class core
-    user root
-    oneshot
 
 on property:ro.vendor.hw.dualsim=true
    setprop persist.radio.multisim.config dsds
@@ -414,103 +311,7 @@ on property:ro.vendor.hw.dualsim=true
 on property:ro.vendor.hw.dualsim=false
    setprop persist.radio.multisim.config ""
 
-service vendor.mbm_spy /vendor/bin/mbm_spy
-    class late_start
-    user system
-    group system
-    oneshot
-    disabled
-
-on property:sys.boot_completed=1
-    start vendor.mbm_spy
-
-service dropboxd /vendor/bin/dropboxd
-    class late_start
-    user diag
-    group diag
-
-service vendor.hw_revs /vendor/bin/hardware_revisions.sh
-    class late_start
-    user system
-    group system
-    oneshot
-
-service vendor.mmi-touch-sh /vendor/bin/init.mmi.touch.sh
-    class core
-    user root
-    oneshot
-
-service vendor.oem-hw-sh /vendor/bin/init.oem.hw.sh
-    class core
-    user root
-    oneshot
-    disabled
-
-#service vendor.touch-dead-sh /vendor/bin/init.oem.hw.sh -f
-#    class main
-#    user root
-#    oneshot
-#    disabled
-
-#service vendor.touch-ready-sh /vendor/bin/init.oem.hw.sh -r
-#    class main
-#    user root
-#    oneshot
-#    disabled
-
-#service vendor.oem-hw-config-sh /vendor/bin/init.oem.hw.sh -p
-#    class main
-#    user root
-#    oneshot
-#    disabled
-
-#on property:vendor.hw.touch.status="dead"
-#    start vendor.touch-dead-sh
-
-#on property:vendor.hw.touch.status="ready"
-#    start vendor.touch-ready-sh
-
 service vendor.charge_only_mode /vendor/bin/charge_only_mode
     user root
     group graphics system input
     disabled
-
-#service vendor.thermal-com /vendor/bin/thermal-engine --minimode
-#    class main
-#    user root
-#    disabled
-
-
-# bugreport is triggered by holding down volume down, volume up and power
-service bugreport /system/bin/dumpstate -d -p -B -z \
-        -o /data/user_de/0/com.android.shell/files/bugreports/bugreport
-    class main
-    disabled
-    oneshot
-    keycodes 114 115 116
-
-
-#on property:vendor.wifi.tethering=false
-#    write /sys/module/wlan/parameters/fwpath apdown
-
-# Override the AOSP sensor HAL service definition to add input group access
-#service vendor.sensors-hal-1-0 /vendor/bin/hw/android.hardware.sensors@1.0-service
-#    class hal
-#    user system
-#    group system input wakelock
-#    capabilities BLOCK_SUSPEND
-#    rlimit rtprio 10 10
-
-#Override fwpath string when wpa_supplicant server was killed
-#on property:init.svc.wpa_supplicant=running
-#    write /sys/module/wlan/parameters/fwpath sta
-
-#on property:init.svc.wpa_supplicant=stopped
-#    write /sys/module/wlan/parameters/fwpath wpadown
-
-# androidboot.hardware.sku represents the SKU name being used for Regulatory approval (e.g. XT1101-01).
-# This property is used in AOSP for the Settings app to display an appropriate Regulatory E-Label
-# androidboot.product.hardware.sku represents a SKU name to assist the vendor image in determining
-# a unique HW form factor for purposes of determining a unique VINTF manifest
-#on property:ro.boot.hardware.sku=*
-#    setprop ro.boot.product.hardware.sku ${ro.boot.hardware.sku}

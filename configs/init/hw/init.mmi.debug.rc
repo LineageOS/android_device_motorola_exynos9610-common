@@ -1,3 +1,0 @@
-on boot && property:ro.boot.adb_early=1
-    start vendor.mmi-usb-sh
-
