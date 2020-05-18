@@ -1,5 +1,0 @@
-service TCMDReceiver /vendor/bin/tcmd_receiver
-    class factory
-    user root
-    group system
-

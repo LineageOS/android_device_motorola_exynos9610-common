@@ -1,3 +1,13 @@
+on post-fs-data
+    mkdir /data/vendor/log/cbd 0775 root system
+
+# Modem boot daemon
+service cpboot-daemon /vendor/bin/cbd -p /dev/block/platform/13520000.ufs/by-name/modem${ro.boot.slot_suffix}
+    class main
+    user root
+    group radio cache inet misc audio sdcard_rw log system diag
+    seclabel u:r:cbd:s0
+
 service ril-daemon /vendor/bin/hw/rild_exynos
     class main
     user radio

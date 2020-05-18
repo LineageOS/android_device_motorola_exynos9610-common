@@ -1,5 +1,0 @@
-service smcd /vendor/bin/smcd -m ${mptool.smcd.mode:-vcd} -t ${mptool.smcd.timeout:-60}
-    class factory
-    user system
-    group system radio
-

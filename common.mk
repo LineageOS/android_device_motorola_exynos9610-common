@@ -107,30 +107,17 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/configs/init/carrier/init.default.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/carrier/init.default.rc \
     $(COMMON_PATH)/configs/init/carrier/init.retin.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/carrier/init.retin.rc \
-    $(COMMON_PATH)/configs/init/hw/init.mmi.debug.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.mmi.debug.rc \
     $(COMMON_PATH)/configs/init/hw/init.mmi.overlay.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.mmi.overlay.rc \
-    $(COMMON_PATH)/configs/init/dmd.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/dmd.rc \
     $(COMMON_PATH)/configs/init/init.ets.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.ets.rc \
     $(COMMON_PATH)/configs/init/init.exynos.sensorhub.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.exynos.sensorhub.rc \
     $(COMMON_PATH)/configs/init/init.exynos9610.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.exynos9610.rc \
     $(COMMON_PATH)/configs/init/init.exynos9610.usb.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.exynos9610.usb.rc \
     $(COMMON_PATH)/configs/init/init.mmi.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.mmi.rc \
-    $(COMMON_PATH)/configs/init/init.mot-factory.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.mot-factory.rc \
     $(COMMON_PATH)/configs/init/init.nfc.sec.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.nfc.sec.rc \
     $(COMMON_PATH)/configs/init/init.recovery.exynos9610.rc:$(TARGET_COPY_OUT_ROOT)/init.recovery.exynos9610.rc \
     $(COMMON_PATH)/configs/init/mobicore.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/mobicore.rc \
-    $(COMMON_PATH)/configs/init/mplog.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/mplog.rc \
-    $(COMMON_PATH)/configs/init/rfsd.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/rfsd.rc \
     $(COMMON_PATH)/configs/init/rild.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/rild.rc \
-    $(COMMON_PATH)/configs/init/sced.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/sced.rc \
-    $(COMMON_PATH)/configs/init/sctd.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/sctd.rc \
-    $(COMMON_PATH)/configs/init/smcd.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/smcd.rc \
-    $(COMMON_PATH)/configs/init/spad.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/spad.rc \
-    $(COMMON_PATH)/configs/init/swcnd.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/swcnd.rc \
-    $(COMMON_PATH)/configs/init/tcmd.receiver.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/tcmd.receiver.rc \
-    $(COMMON_PATH)/configs/init/tcmd.simulater.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/tcmd.simulater.rc \
     $(COMMON_PATH)/configs/init/ueventd.rc:$(TARGET_COPY_OUT_VENDOR)/ueventd.rc \
-    $(COMMON_PATH)/configs/init/vcd.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vcd.rc \
     $(COMMON_PATH)/configs/init/vendor.mmi.carrier.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.mmi.carrier.rc \
     $(COMMON_PATH)/configs/fstab.exynos9610:$(TARGET_COPY_OUT_VENDOR)/etc/fstab.exynos9610
 
