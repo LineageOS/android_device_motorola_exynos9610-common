@@ -237,10 +237,6 @@ vendor/lib64/libmpp.so
 vendor/lib/hw/keystore.exynos9610.so
 vendor/lib64/hw/keystore.exynos9610.so
 
-# lights
-vendor/lib/hw/lights.exynos9610.so
-vendor/lib64/hw/lights.exynos9610.so
-
 # mobicore
 vendor/app/mcRegistry/00060308060501020000000000000000.tlbin
 vendor/app/mcRegistry/07010000000000000000000000000000.tlbin
