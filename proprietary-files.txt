@@ -10,6 +10,7 @@ lib64/libaptX_encoder.so
 # IMS
 # ShannonIms.apk is modified to include IEPdgConnection* classes from stock's framework.jar
 -app/ShannonIms/ShannonIms.apk|dd21afcb739938249e29d24cde3151fa1580bd2c
+bin/wfc-pkt-router
 lib64/libmediaadaptor.so
 lib64/libmedia.so:lib64/libmedia_ims.so
 lib64/libePdgJni.so
