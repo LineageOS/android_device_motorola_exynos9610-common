@@ -71,5 +71,6 @@ extract "${MY_DIR}/proprietary-files-vendor.txt" "${SRC}" \
 # Fix proprietary blobs
 BLOB_ROOT="$LINEAGE_ROOT"/vendor/"$VENDOR"/"$DEVICE_COMMON"/proprietary
 patchelf --replace-needed libmedia.so libmedia_ims.so $BLOB_ROOT/lib64/libmediaadaptor.so
+patchelf --add-needed libaudioproxy_shim.so $BLOB_ROOT/vendor/lib/libaudioproxy.so
 
 "${MY_DIR}/setup-makefiles.sh"
