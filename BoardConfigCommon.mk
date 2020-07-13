@@ -19,6 +19,8 @@ COMMON_PATH := device/motorola/exynos9610-common
 # Include path
 TARGET_SPECIFIC_HEADER_PATH := $(COMMON_PATH)/include
 
+BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := hardware/samsung_slsi/libbt/include
+
 # Platform
 TARGET_BOARD_PLATFORM := exynos5
 TARGET_SOC := exynos9610
@@ -102,6 +104,8 @@ BOARD_HOSTAPD_DRIVER             := NL80211
 BOARD_HOSTAPD_PRIVATE_LIB        := lib_driver_cmd_slsi
 WIFI_HIDL_FEATURE_AWARE          := true
 WIFI_HIDL_FEATURE_DUAL_INTERFACE := true
+
+BOARD_HAVE_BLUETOOTH_SLSI := true
 
 # Properties
 BOARD_PROPERTY_OVERRIDES_SPLIT_ENABLED := true

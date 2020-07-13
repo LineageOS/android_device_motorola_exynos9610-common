@@ -101,10 +101,6 @@ vendor/lib64/soundfx/libswdap.so
 vendor/lib64/vendor.dolby.hardware.dms@1.0-impl.so
 vendor/lib64/vendor.dolby.hardware.dms@1.0.so
 
-# bluetooth
-vendor/etc/bluetooth/bt_did.conf
-vendor/etc/bt_stack_level6.conf
-
 # camera
 vendor/lib/libENF.so
 vendor/lib/libexynoscamera_hifi_plugin.so

@@ -68,6 +68,13 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     otapreopt_script
 
+# Bluetooth
+PRODUCT_COPY_FILES += \
+    hardware/samsung_slsi/libbt/conf/bt_did.conf:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth/bt_did.conf
+
+PRODUCT_PACKAGES += \
+    libbt-vendor
+
 # Boot animation
 TARGET_BOOTANIMATION_PRELOAD := true
 TARGET_BOOTANIMATION_TEXTURE_CACHE := true
