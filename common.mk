@@ -42,8 +42,15 @@ AB_OTA_POSTINSTALL_CONFIG += \
 
 # Audio
 PRODUCT_PACKAGES += \
+    android.hardware.audio.effect@4.0-impl \
+    android.hardware.audio@2.0-service \
+    android.hardware.audio@4.0-impl \
+    android.hardware.soundtrigger@2.0-impl \
+    audio.r_submix.default \
+    audio.usb.default \
     libtinycompress \
-    libaudioroute
+    libaudioroute \
+    libgui_vendor
 
 PRODUCT_COPY_FILES += \
     frameworks/av/services/audiopolicy/config/a2dp_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/a2dp_audio_policy_configuration.xml \
@@ -73,6 +80,8 @@ PRODUCT_COPY_FILES += \
     hardware/samsung_slsi/libbt/conf/bt_did.conf:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth/bt_did.conf
 
 PRODUCT_PACKAGES += \
+    android.hardware.bluetooth@1.0-impl \
+    android.hardware.bluetooth@1.0-service \
     libbt-vendor
 
 # Boot animation
@@ -90,12 +99,37 @@ PRODUCT_PACKAGES += \
 
 # camera
 PRODUCT_PACKAGES += \
+    android.hardware.camera.provider@2.4-impl \
+    android.hardware.camera.provider@2.4-service \
     libsensorndkbridge
+
+# configstore
+PRODUCT_PACKAGES += \
+    android.hardware.configstore@1.1-service
+
+
+# Display
+PRODUCT_PACKAGES += \
+    android.hardware.graphics.allocator@2.0-impl \
+    android.hardware.graphics.allocator@2.0-service \
+    android.hardware.graphics.composer@2.2-service \
+    android.hardware.graphics.mapper@2.0-impl \
+
+# DRM
+PRODUCT_PACKAGES += \
+    android.hardware.drm@1.0-impl \
+    android.hardware.drm@1.0-service \
+    android.hardware.drm@1.2-service.clearkey
 
 # FM radio
 PRODUCT_PACKAGES += \
     FMRadio \
     libfmjni
+
+# Gatekeeper
+PRODUCT_PACKAGES += \
+    android.hardware.gatekeeper@1.0-impl \
+    android.hardware.gatekeeper@1.0-service
 
 # GPS
 PRODUCT_COPY_FILES += \
@@ -108,6 +142,10 @@ PRODUCT_AAPT_CONFIG := xlarge
 PRODUCT_AAPT_PREF_CONFIG := xxxhdpi
 # A list of dpis to select prebuilt apk, in precedence order.
 PRODUCT_AAPT_PREBUILT_DPI := xxxhdpi xxhdpi xhdpi hdpi
+
+# Health
+PRODUCT_PACKAGES += \
+    android.hardware.health@2.0-service
 
 # HotwordEnrollement
 PRODUCT_COPY_FILES += \
@@ -131,6 +169,11 @@ PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/configs/init/vendor.mmi.carrier.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.mmi.carrier.rc \
     $(COMMON_PATH)/configs/fstab.exynos9610:$(TARGET_COPY_OUT_VENDOR)/etc/fstab.exynos9610
 
+# Keymaster
+PRODUCT_PACKAGES += \
+    android.hardware.keymaster@3.0-impl \
+    android.hardware.keymaster@3.0-service
+
 # Lights
 PRODUCT_PACKAGES += \
     android.hardware.light@2.0-service.exynos9610
@@ -147,6 +190,11 @@ PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/configs/media/media_profiles_vendor.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_profiles_vendor.xml \
     $(COMMON_PATH)/configs/media/media_profiles_vendor_V1.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_profiles_vendor_V1.xml
 
+# Memtrack
+PRODUCT_PACKAGES += \
+    android.hardware.memtrack@1.0-impl \
+    android.hardware.memtrack@1.0-service
+
 # NFC
 PRODUCT_PACKAGES += \
     NfcNci \
@@ -161,8 +209,13 @@ PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/configs/nfc/libnfc-nci.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libnfc-nci.conf \
     $(COMMON_PATH)/configs/nfc/libnfc-sec-vendor.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libnfc-sec-vendor.conf
 
+# Neuralnetworks
+PRODUCT_PACKAGES += \
+    android.hardware.neuralnetworks@1.2-service-sample-all
+
 # OMX
 PRODUCT_PACKAGES += \
+    android.hardware.media.omx@1.0-service \
     libstagefright_softomx
 
 # Permissions
@@ -206,6 +259,11 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.nfc.hce.xml:system/etc/permissions/android.hardware.nfc.hce.xml \
     frameworks/native/data/etc/android.hardware.nfc.hce.xml:system/etc/permissions/android.hardware.nfc.hcef.xml
 
+# Power
+PRODUCT_PACKAGES += \
+    android.hardware.power@1.0-impl \
+    android.hardware.power@1.0-service
+
 # Public Libraries
 PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/configs/public.libraries.txt:$(TARGET_COPY_OUT_VENDOR)/etc/public.libraries.txt
@@ -223,11 +281,19 @@ PRODUCT_PACKAGES += \
     android.hardware.radio.deprecated@1.0 \
     
 
+# RenderScript HAL
+PRODUCT_PACKAGES += \
+    android.hardware.renderscript@1.0-impl
+
 # Seccomp
 PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/configs/seccomp/mediacodec.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/mediacodec.policy
 
 # Sensors
+PRODUCT_PACKAGES += \
+    android.hardware.sensors@1.0-impl \
+    android.hardware.sensors@1.0-service
+
 PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/configs/sensors/hals.conf:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/hals.conf \
     $(COMMON_PATH)/configs/sensors/mot_sensor_settings.json:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/mot_sensor_settings.json
@@ -237,6 +303,10 @@ PRODUCT_PACKAGES += \
     libaudioproxy_shim
 
 # Thermal
+PRODUCT_PACKAGES += \
+    android.hardware.thermal@1.0-impl \
+    android.hardware.thermal@1.0-service \
+
 PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/configs/thermal/exynos-thermal.conf:$(TARGET_COPY_OUT_VENDOR)/exynos-thermal.conf \
     $(COMMON_PATH)/configs/thermal/exynos-thermal.env:$(TARGET_COPY_OUT_VENDOR)/exynos-thermal.env \
