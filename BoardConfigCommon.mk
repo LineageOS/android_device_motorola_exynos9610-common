@@ -128,5 +128,8 @@ TARGET_SYSTEM_PROP += $(COMMON_PATH)/system.prop
 # FMRadio
 BOARD_HAVE_SLSI_FM := true
 
+# Filesystem
+TARGET_FS_CONFIG_GEN += $(COMMON_PATH)/config.fs
+
 # Inherit from the proprietary version
 -include vendor/motorola/exynos9610-common/BoardConfigVendor.mk
