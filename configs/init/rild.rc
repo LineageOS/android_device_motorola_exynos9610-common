@@ -6,7 +6,6 @@ service cpboot-daemon /vendor/bin/cbd -p /dev/block/platform/13520000.ufs/by-nam
     class main
     user root
     group radio cache inet misc audio sdcard_rw log system diag
-    seclabel u:r:cbd:s0
 
 service ril-daemon /vendor/bin/hw/rild_exynos
     class main
