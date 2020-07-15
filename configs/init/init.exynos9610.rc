@@ -474,7 +474,6 @@ service abox /vendor/bin/main_abox 14a50000.abox /data/vendor/log/abox
     group system inet net_raw wakelock
     capabilities BLOCK_SUSPEND
     ioprio be 0
-    seclabel u:r:gpsd:s0
 
 #service charger /system/bin/charger
 #    class charger
@@ -553,7 +552,6 @@ service charonservice /vendor/bin/charon
         class main
         user root
         disabled
-        seclabel u:r:charonservice:s0
 
 on property:vendor.charon=1
     rm /data/vendor/misc/vpn/charon.pid
@@ -603,7 +601,6 @@ service exynos-thermald /vendor/bin/exynos-thermald
 	group system root
 #	oneshot
 	file /sys/class/thermal/thermal_zone0 "r"
-	seclabel u:r:exynos-thermald:s0
 
 # Set watchdog timer to 30 seconds and pet it every 10 seconds to get a 20 second margin
 service watchdogd /sbin/watchdogd 10 20
