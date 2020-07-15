@@ -499,8 +499,8 @@ on property:ro.boot.wifimacaddr=*
 
 # WiFi wpa suppplicant service
 service wpa_supplicant /vendor/bin/hw/wpa_supplicant -ddd -t \
-    -ip2p0  -Dnl80211 -c/data/vendor/wifi/wpa/p2p_supplicant.conf -N \
-    -iwlan0 -Dnl80211 -c/data/vendor/wifi/wpa/wpa_supplicant.conf \
+    -ip2p0  -Dnl80211 -c/vendor/etc/wifi/p2p_supplicant.conf -N \
+    -iwlan0 -Dnl80211 -c/vendor/etc/wifi/wpa_supplicant.conf \
     -O/data/vendor/wifi/wpa/sockets \
     -e/data/misc/wifi/entropy.bin -g@android:wpa_wlan0
     #   we will start as root and wpa_supplicant will switch to user wifi
