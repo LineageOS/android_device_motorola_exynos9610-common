@@ -69,13 +69,9 @@ vendor/lib64/omx/libOMX.Exynos.VP9.Encoder.so
 vendor/lib64/omx/libOMX.Exynos.WMV.Decoder.so
 
 # Sensors
-vendor/lib/hw/sensors.troika_sprout.so
 vendor/lib/libhubconnection.so
-vendor/lib/sensors.chub.so
 vendor/lib/sensors.rp.so
-vendor/lib64/hw/sensors.troika_sprout.so
 vendor/lib64/libhubconnection.so
-vendor/lib64/sensors.chub.so
 vendor/lib64/sensors.rp.so
 
 # audio
