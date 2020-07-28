@@ -12,6 +12,6 @@ allow gpsd hal_exynos_rild_hwservice:hwservice_manager find;
 
 binder_call(gpsd, rild)
 
-get_prop(gpsd, exported3_radio_prop)
+get_prop(gpsd, radio_control_prop)
 
 wakelock_use(gpsd)
