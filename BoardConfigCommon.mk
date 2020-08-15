@@ -110,6 +110,8 @@ WIFI_HIDL_FEATURE_DUAL_INTERFACE := true
 
 BOARD_HAVE_BLUETOOTH_SLSI := true
 
+PRODUCT_CFI_INCLUDE_PATHS += hardware/samsung_slsi/scsc_wifibt/wpa_supplicant_lib
+
 # Properties
 BOARD_PROPERTY_OVERRIDES_SPLIT_ENABLED := true
 
