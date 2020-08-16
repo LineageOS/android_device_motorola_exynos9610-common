@@ -344,10 +344,6 @@ vendor/bin/exynos-thermald
 vendor/lib/hw/thermal.exynos9610.so
 vendor/lib64/hw/thermal.exynos9610.so
 
-# usb
-vendor/bin/hw/android.hardware.usb@1.1-service.exynos9610
-vendor/etc/init/android.hardware.usb@1.1-service.exynos9610.rc
-
 # wifi
 vendor/etc/wifi/mx
 vendor/etc/wifi/mx140.bin
