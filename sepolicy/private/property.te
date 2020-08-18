@@ -1,1 +1,1 @@
-type vendor_exported_system_prop, property_type;
+system_public_prop(vendor_exported_system_prop)
