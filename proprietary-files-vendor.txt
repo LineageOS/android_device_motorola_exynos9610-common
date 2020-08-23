@@ -87,13 +87,9 @@ vendor/lib/libdapparamstorage.so
 vendor/lib/libmotaudioutils.so
 
 vendor/lib/libunshorten.so
-vendor/lib/soundfx/libspeakerbundle.so
-vendor/lib/soundfx/libswdap.so
 vendor/lib/vendor.dolby.hardware.dms@1.0.so
 vendor/lib64/libdapparamstorage.so
 vendor/lib64/libdlbdsservice.so
-vendor/lib64/soundfx/libspeakerbundle.so
-vendor/lib64/soundfx/libswdap.so
 vendor/lib64/vendor.dolby.hardware.dms@1.0-impl.so
 vendor/lib64/vendor.dolby.hardware.dms@1.0.so
 
