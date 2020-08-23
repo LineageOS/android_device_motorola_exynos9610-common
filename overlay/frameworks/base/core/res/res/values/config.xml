@@ -24,19 +24,13 @@
          appended after the path string to interpret coordinates in dp instead of px units.
          Note that a physical cutout should be configured in pixels for the best results.
          -->
-    <string translatable="false" name="config_mainBuiltInDisplayCutout">
-        M -496,0
-        L -376,0
-        L -376,158
-        L -496,158
-        Z
-    </string>
+    <string translatable="false" name="config_mainBuiltInDisplayCutout">M 0,0 H 49.25 V 41.25  H 0 V 0 Z @dp @left</string>
 
-    <dimen name="quick_qs_offset_height">165.0px</dimen>
-    <dimen name="status_bar_height">165.0px</dimen>
-    <dimen name="status_bar_height_landscape">24.0dip</dimen>
-    <dimen name="status_bar_height_portrait">165.0px</dimen>
-    <dimen name="status_bar_icon_size">24.0dip</dimen>
+    <dimen name="quick_qs_offset_height">165px</dimen>
+    <dimen name="status_bar_height">165px</dimen>
+    <dimen name="status_bar_height_landscape">24dp</dimen>
+    <dimen name="status_bar_height_portrait">165px</dimen>
+    <dimen name="status_bar_icon_size">24dp</dimen>
 
     <!-- ComponentName of a dream to show whenever the system would otherwise have
          gone to sleep.  When the PowerManager is asked to go to sleep, it will instead
@@ -79,4 +73,163 @@
          May be less than the minimum allowed brightness setting
          that can be set by the user. -->
     <integer name="config_screenBrightnessDoze">17</integer>
+
+    <!--  Flag indicating whether we should enable the automatic brightness in Settings.
+             Software implementation will be used if config_hardware_auto_brightness_available is not set  -->
+    <bool name="config_automatic_brightness_available">true</bool>
+
+    <array name="config_autoBrightnessDisplayValuesNits">
+        <item>3</item>
+        <item>32</item>
+        <item>64</item>
+        <item>100</item>
+        <item>118</item>
+        <item>136</item>
+        <item>162</item>
+        <item>162</item>
+        <item>162</item>
+        <item>162</item>
+        <item>206</item>
+        <item>246</item>
+        <item>270</item>
+        <item>284</item>
+        <item>312</item>
+        <item>324</item>
+        <item>360</item>
+        <item>400</item>
+        <item>450</item>
+        <item>450</item>
+        <item>450</item>
+        <item>562</item>
+    </array>
+    <array name="config_autoBrightnessLevels">
+        <item>5</item>
+        <item>10</item>
+        <item>50</item>
+        <item>90</item>
+        <item>100</item>
+        <item>150</item>
+        <item>200</item>
+        <item>300</item>
+        <item>400</item>
+        <item>500</item>
+        <item>800</item>
+        <item>1000</item>
+        <item>1300</item>
+        <item>1500</item>
+        <item>1600</item>
+        <item>1800</item>
+        <item>2000</item>
+        <item>3000</item>
+        <item>4000</item>
+        <item>8000</item>
+        <item>10000</item>
+    </array>
+    <array name="config_availableColorModes">
+        <item>@null</item>
+        <item>1</item>
+        <item>2</item>
+    </array>
+    <array name="config_defaultPinnerServiceFiles">
+        <item>/system/framework/arm64/boot-framework.art</item>
+        <item>/system/framework/oat/arm64/services.odex</item>
+        <item>/vendor/lib64/egl/libGLES_mali.so</item>
+    </array>
+    <array name="config_mobile_tcp_buffers">
+        <item>1xrtt:16384,32768,32768,4096,8096,65536</item>
+        <item>lte:2097152,4194304,8388608,262144,524288,1048576</item>
+    </array>
+    <array name="config_oemUsbModeOverride">
+        <item>bp-tools:adb:rndis,acm,dm,adb:adb</item>
+        <item>bp-tools:mtp:rndis,acm,dm:mtp</item>
+        <item>bp-tools:mtp,adb:rndis,acm,dm,adb:mtp,adb</item>
+        <item>bp-tools:ptp:rndis,acm,dm:ptp</item>
+        <item>bp-tools:ptp,adb:rndis,acm,dm,adb:ptp,adb</item>
+        <item>bp-tools:rndis:rndis,acm,dm:mtp</item>
+        <item>bp-tools:rndis,adb:rndis,acm,dm,adb:mtp,adb</item>
+        <item>normal:mtp:mtp:mtp</item>
+        <item>normal:mtp,adb:mtp,adb:mtp,adb</item>
+        <item>mot-factory:mtp:usbnet:mtp</item>
+        <item>mot-factory:mtp,adb:usbnet,adb:mtp,adb</item>
+        <item>mot-factory:adb:usbnet,adb:adb</item>
+    </array>
+    <array name="config_screenBrightnessBacklight">
+        <item>@null</item>
+        <item>2</item>
+        <item>18</item>
+        <item>36</item>
+        <item>57</item>
+        <item>67</item>
+        <item>77</item>
+        <item>92</item>
+        <item>117</item>
+        <item>139</item>
+        <item>153</item>
+        <item>161</item>
+        <item>177</item>
+        <item>184</item>
+        <item>204</item>
+        <item>227</item>
+        <item>255</item>
+    </array>
+    <array name="config_screenBrightnessNits">
+        <item>@null</item>
+        <item>3</item>
+        <item>32</item>
+        <item>64</item>
+        <item>100</item>
+        <item>118</item>
+        <item>136</item>
+        <item>162</item>
+        <item>206</item>
+        <item>246</item>
+        <item>270</item>
+        <item>284</item>
+        <item>312</item>
+        <item>324</item>
+        <item>360</item>
+        <item>400</item>
+        <item>450</item>
+    </array>
+    <array name="config_tether_bluetooth_regexs">
+        <item>bt-pan</item>
+    </array>
+    <array name="config_tether_usb_regexs">
+        <item>rndis0</item>
+    </array>
+    <array name="config_tether_wifi_regexs">
+        <item>wlan0</item>
+    </array>
+    <array name="config_virtualKeyVibePattern">
+        <item>@null</item>
+        <item>26</item>
+    </array>
+
+    <bool name="config_bluetooth_hfp_inband_ringing_support">true</bool>
+    <bool name="config_dynamic_bind_ims">true</bool>
+    <bool name="config_hotswapCapable">true</bool>
+    <bool name="config_setColorTransformAccelerated">true</bool>
+    <bool name="config_showNavigationBar">true</bool>
+    <bool name="config_supportSystemNavigationKeys">true</bool>
+    <bool name="config_unplugTurnsOnScreen">true</bool>
+    <bool name="config_useDevInputEventForAudioJack">true</bool>
+    <bool name="config_wifi_background_scan_support">true</bool>
+    <bool name="config_wifi_connected_mac_randomization_supported">true</bool>
+    <bool name="config_wifi_dual_band_support">true</bool>
+    <bool name="config_wifi_fast_bss_transition_enabled">true</bool>
+    <bool name="config_wifi_p2p_mac_randomization_supported">true</bool>
+    <bool name="config_wifi_softap_acs_supported">true</bool>
+    <bool name="skip_restoring_network_selection">true</bool>
+
+    <integer name="config_cameraLaunchGestureSensorType">65540</integer>
+    <integer name="config_multiuserMaximumUsers">4</integer>
+    <integer name="config_safe_media_volume_index">9</integer>
+    <integer name="config_screenBrightnessDark">2</integer>
+    <integer name="config_screenBrightnessDim">2</integer>
+    <integer name="config_screenBrightnessSettingMinimum">2</integer>
+
+    <string name="config_cameraLaunchGestureSensorStringType">com.motorola.sensor.camera_activate</string>
+    <string name="config_ims_package">com.shannon.imsservice</string>
+    <string name="config_radio_access_family">GSM|CDMA|EVDO|WCDMA|LTE</string>
+    <string name="config_wifi_tcp_buffers">2097152,4194304,8388608,2097152,4194304,8388608</string>
 </resources>
