@@ -178,6 +178,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.light@2.0-service.exynos9610
 
+# LineageActions
+PRODUCT_PACKAGES += \
+    LineageActions
+
 # Media
 PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/configs/media/media_codecs.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs.xml \
