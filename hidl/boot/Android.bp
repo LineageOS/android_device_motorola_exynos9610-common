@@ -23,7 +23,6 @@ cc_library_shared {
     shared_libs: [
         "libbase",
         "libhidlbase",
-        "libhidltransport",
         "libhardware",
         "libutils",
         "android.hardware.boot@1.0",
