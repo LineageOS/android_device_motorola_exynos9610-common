@@ -72,5 +72,6 @@ extract "${MY_DIR}/proprietary-files-vendor.txt" "${SRC}" \
 BLOB_ROOT="$LINEAGE_ROOT"/vendor/"$VENDOR"/"$DEVICE_COMMON"/proprietary
 patchelf --replace-needed libmedia.so libmedia_ims.so $BLOB_ROOT/lib64/libmediaadaptor.so
 patchelf --add-needed libaudioproxy_shim.so $BLOB_ROOT/vendor/lib/libaudioproxy.so
+patchelf --add-needed libmemset.so $BLOB_ROOT/vendor/bin/charge_only_mode
 
 "${MY_DIR}/setup-makefiles.sh"
