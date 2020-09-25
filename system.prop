@@ -10,3 +10,5 @@ ro.crypto.allow_encrypt_override=true
 ro.surface_flinger.use_color_management=1
 media.settings.xml=/vendor/etc/media_profiles_vendor.xml
 persist.audio.endcall.delay=250
+wifi.direct.interface=p2p0
+ro.boot.wificountrycode=00
