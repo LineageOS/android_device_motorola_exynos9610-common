@@ -1,5 +1,4 @@
 ro.hardware.soc.manufacturer=slsi
-ro.radio.imei.sv=13
 ro.mot.android_one=true
 ro.config.ringtone=Moto.ogg
 ro.config.ringtone_2=Moto.ogg
