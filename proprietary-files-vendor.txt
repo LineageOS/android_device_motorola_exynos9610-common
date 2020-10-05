@@ -299,7 +299,6 @@ vendor/etc/database/EccTable_DEFAULT.xml
 vendor/etc/database/EccTable_ICCID.xml
 vendor/etc/sim_configuration.xml
 vendor/lib/libaudio-ril.so
-vendor/lib/libril_sitril.so
 vendor/lib/libsitril-audio.so
 vendor/lib/libsitril-client.so
 vendor/lib/libsitril-gps.so
@@ -309,13 +308,11 @@ vendor/lib/libsitril-psensor.so
 vendor/lib/libsitril-sar.so
 vendor/lib/libsitril-se.so
 vendor/lib/libsitril-wlan.so
-vendor/lib/libsitril.so
 vendor/lib/vendor.samsung_slsi.telephony.hardware.oemservice@1.0.so
 vendor/lib/vendor.samsung_slsi.telephony.hardware.radio@1.0.so
 vendor/lib/vendor.samsung_slsi.telephony.hardware.radio@1.1.so
 vendor/lib/vendor.samsung_slsi.telephony.hardware.radioExternal@1.0.so
 vendor/lib64/libadropbox.so
-vendor/lib64/libril_sitril.so
 vendor/lib64/libsitril-audio.so
 vendor/lib64/libsitril-client.so
 vendor/lib64/libsitril-gps.so
@@ -325,7 +322,6 @@ vendor/lib64/libsitril-psensor.so
 vendor/lib64/libsitril-sar.so
 vendor/lib64/libsitril-se.so
 vendor/lib64/libsitril-wlan.so
-vendor/lib64/libsitril.so
 vendor/lib64/vendor.samsung_slsi.telephony.hardware.oemservice@1.0.so
 vendor/lib64/vendor.samsung_slsi.telephony.hardware.radio@1.0.so
 vendor/lib64/vendor.samsung_slsi.telephony.hardware.radio@1.1.so
