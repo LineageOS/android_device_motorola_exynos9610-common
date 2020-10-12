@@ -142,9 +142,6 @@
 # Secure MEM driver
 /dev/s5p-smem             0660   drm        drmrpc
 
-#temporary
-/data/modem.bin           0400   radio      system
-
 # Diag and AT
 /dev/umts_dm0             0660   system     system
 /dev/umts_router          0660   system     system
