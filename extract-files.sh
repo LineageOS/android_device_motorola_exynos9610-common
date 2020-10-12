@@ -134,4 +134,6 @@ patchelf --remove-needed libhwbinder.so $BLOB_ROOT/vendor/lib64/vendor.samsung_s
 patchelf --remove-needed libhwbinder.so $BLOB_ROOT/vendor/lib64/vendor.samsung_slsi.telephony.hardware.radio@1.1.so
 patchelf --remove-needed libhwbinder.so $BLOB_ROOT/vendor/lib64/vendor.samsung_slsi.telephony.hardware.radioExternal@1.0.so
 
+patchelf --replace-needed libprotobuf-cpp-lite.so libprotobuf-cpp-lite-v29.so $BLOB_ROOT/vendor/lib/libwvhidl.so
+
 "${MY_DIR}/setup-makefiles.sh"
