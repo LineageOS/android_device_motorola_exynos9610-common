@@ -113,3 +113,6 @@ dev.usbsetting.embedded=on
 
 ## Wi-Fi
 wifi.interface=wlan0
+
+# Zygote
+zygote.critical_window.minute=10
