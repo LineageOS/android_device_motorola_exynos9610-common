@@ -1,4 +1,4 @@
-# Common proprietary files - from motorola/troika_retail/troika_sprout:10/QSBS30.62-29-7/0ea60, unless pinned
+# Common proprietary files - from motorola/troika_retail/troika_sprout:10/QSBS30.62-29-9/d809e, unless pinned
 
 # DRM
 vendor/lib/liboemcrypto.so
