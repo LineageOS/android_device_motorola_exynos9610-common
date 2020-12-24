@@ -21,6 +21,6 @@
     },
     {
         "repository": "android_kernel_motorola_exynos9610",
-        "target_path": "kernel/motorola/exynos9610-common"
+        "target_path": "kernel/motorola/exynos9610"
     }
 ]
