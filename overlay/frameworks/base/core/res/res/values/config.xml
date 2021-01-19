@@ -142,6 +142,7 @@
         <item>/system/framework/arm64/boot-framework.art</item>
         <item>/system/framework/oat/arm64/services.odex</item>
         <item>/vendor/lib64/egl/libGLES_mali.so</item>
+        <item>/system/bin/surfaceflinger</item>
     </string-array>
     <string-array name="config_mobile_tcp_buffers">
         <item>1xrtt:16384,32768,32768,4096,8096,65536</item>
