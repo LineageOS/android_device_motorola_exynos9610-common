@@ -61,11 +61,21 @@ extract "${MY_DIR}/proprietary-files-vendor.txt" "${SRC}" "${KANG}" --section "$
 
 # Fix proprietary blobs
 BLOB_ROOT="$ANDROID_ROOT"/vendor/"$VENDOR"/"$DEVICE_COMMON"/proprietary
+
 "${PATCHELF}" --replace-needed libmedia.so libmedia_ims.so $BLOB_ROOT/lib64/libmediaadaptor.so
-"${PATCHELF}" --add-needed libaudioproxy_shim.so $BLOB_ROOT/vendor/lib/libaudioproxy.so
-"${PATCHELF}" --add-needed libmemset.so $BLOB_ROOT/vendor/bin/charge_only_mode
-"${PATCHELF}" --add-needed libdemangle.so $BLOB_ROOT/vendor/lib/libhifills.so
-"${PATCHELF}" --add-needed libdemangle.so $BLOB_ROOT/vendor/lib64/libhifills.so
+
+for LIBAUDIOPROXY_SHIM in $(grep -L "libaudioproxy_shim.so" "$BLOB_ROOT/vendor/lib/libaudioproxy.so"); do
+    "${PATCHELF}" --add-needed libaudioproxy_shim.so $BLOB_ROOT/vendor/lib/libaudioproxy.so
+done
+for LIBMEMSET in $(grep -L "libmemset.so" "$BLOB_ROOT/vendor/bin/charge_only_mode"); do
+    "${PATCHELF}" --add-needed libmemset.so $BLOB_ROOT/vendor/bin/charge_only_mode
+done
+for LIBDEMANGLE in $(grep -L "libdemangle.so" "$BLOB_ROOT/vendor/lib/libhifills.so"); do
+    "${PATCHELF}" --add-needed libdemangle.so $BLOB_ROOT/vendor/lib/libhifills.so
+done
+for LIBDEMANGLE64 in $(grep -L "libdemangle.so" "$BLOB_ROOT/vendor/lib64/libhifills.so"); do
+    "${PATCHELF}" --add-needed libdemangle.so $BLOB_ROOT/vendor/lib64/libhifills.so
+done
 
 # Remove libhidltransport dependency
 "${PATCHELF}" --remove-needed libhidltransport.so $BLOB_ROOT/vendor/bin/hw/android.hardware.biometrics.fingerprint@2.1-service-rbs
