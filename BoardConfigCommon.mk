@@ -151,4 +151,4 @@ DEVICE_MANIFEST_FILE := $(COMMON_PATH)/manifest.xml
 TARGET_SCREEN_DENSITY := 480
 
 # Inherit from the proprietary version
--include vendor/motorola/exynos9610-common/BoardConfigVendor.mk
+include vendor/motorola/exynos9610-common/BoardConfigVendor.mk
