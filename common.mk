@@ -216,9 +216,7 @@ PRODUCT_PACKAGES += \
     Tag \
     SecureElement \
     com.android.nfc_extras \
-    android.hardware.nfc@1.0 \
-    android.hardware.nfc@1.1 \
-    android.hardware.nfc@1.2
+    android.hardware.nfc@1.2-service.samsung
 
 PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/configs/nfc/libnfc-nci.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libnfc-nci.conf \
