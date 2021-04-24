@@ -34,11 +34,7 @@ vendor/lib/hw/memtrack.exynos9610.so
 vendor/lib64/hw/memtrack.exynos9610.so
 
 # NFC
-vendor/bin/hw/android.hardware.nfc@1.2-service.sec
-vendor/etc/init/android.hardware.nfc@1.2-service.sec.rc
 vendor/etc/sec_s3nrn82_rfreg.bin
-vendor/lib/nfc_nci_sec.so
-vendor/lib64/nfc_nci_sec.so
 
 # OMX
 vendor/lib/libExynosOMX_Core.so

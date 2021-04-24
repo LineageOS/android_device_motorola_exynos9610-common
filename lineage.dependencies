@@ -4,6 +4,10 @@
         "target_path": "hardware/motorola"
     },
     {
+        "repository": "android_hardware_samsung_nfc",
+        "target_path": "hardware/samsung/nfc"
+    },
+    {
         "repository": "android_hardware_samsung_slsi_fm",
         "target_path": "hardware/samsung_slsi/fm"
     },
