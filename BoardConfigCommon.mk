@@ -128,6 +128,9 @@ BOARD_VNDK_VERSION := current
 USE_XML_AUDIO_POLICY_CONF := 1
 
 # sepolicy
+BOARD_SEPOLICY_TEE_FLAVOR := mobicore
+include device/samsung_slsi/sepolicy/sepolicy.mk
+
 BOARD_PLAT_PRIVATE_SEPOLICY_DIR := $(COMMON_PATH)/sepolicy/private
 
 # Properties
