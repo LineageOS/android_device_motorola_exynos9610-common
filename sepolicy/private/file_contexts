@@ -1,0 +1,15 @@
+####################################
+# Daemons
+#
+
+/system/bin/clean_scratch_files     u:object_r:clean_scratch_files_exec:s0
+/system/bin/wfc-pkt-router          u:object_r:netutils_wrapper_exec:s0
+
+##########################
+# Devices
+#
+
+/dev/umts_wfc0                      u:object_r:pktrouter_device:s0
+/dev/umts_wfc1                      u:object_r:pktrouter_device:s0
+/dev/radio0                         u:object_r:fm_device:s0
+
