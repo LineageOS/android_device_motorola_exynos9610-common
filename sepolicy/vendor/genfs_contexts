@@ -1,0 +1,67 @@
+####################################
+# DebugFS
+#
+
+genfscon debugfs /mali/                                                                                                 u:object_r:debugfs_mali:s0
+genfscon debugfs /mali/mem/                                                                                             u:object_r:debugfs_mali_mem:s0
+genfscon debugfs /ion                                                                                                   u:object_r:debugfs_ion:s0
+genfscon debugfs /dma_buf                                                                                               u:object_r:debugfs_ion_dma:s0
+
+####################################
+# Proc
+#
+
+genfscon proc /last_kmsg                                                                                                u:object_r:proc_last_kmsg:s0
+genfscon proc /sys/kernel/printk                                                                                        u:object_r:proc_printk:s0
+genfscon proc /sys/vm/reap_mem_on_sigkill                                                                               u:object_r:proc_reap_mem_on_sigkill:s0
+genfscon proc /sys/vm/swappiness                                                                                        u:object_r:proc_swappiness:s0
+
+####################################
+# Sysfs
+#
+
+genfscon sysfs /class/power_supply/battery/charge_temp                                                                  u:object_r:sysfs_battery_writable:s0
+genfscon sysfs /devices/platform/11500000.mali/dvfs_max_lock                                                            u:object_r:sysfs_mali_writable:s0
+genfscon sysfs /devices/platform/11500000.mali/dvfs_min_lock                                                            u:object_r:sysfs_mali_writable:s0
+genfscon sysfs /devices/platform/11a10000.speedy/i2c-6/6-0000/s2mpu09-rtc/rtc/rtc0/hctosys                              u:object_r:sysfs_rtc:s0
+genfscon sysfs /devices/platform/11a10000.speedy/i2c-7/7-0000/s2mpu09-rtc/rtc/rtc0/hctosys                              u:object_r:sysfs_rtc:s0
+genfscon sysfs /devices/platform/11c30000.adc/iio:device1/11c30000.adc:battery_thermistor/hwmon/hwmon1/temp1_input      u:object_r:sysfs_thermal:s0
+genfscon sysfs /devices/platform/11c30000.adc/iio:device1/11c30000.adc:board_thermistor/hwmon/hwmon3/temp1_input        u:object_r:sysfs_thermal:s0
+genfscon sysfs /devices/platform/11c30000.adc/iio:device1/11c30000.adc:cpu_thermistor/hwmon/hwmon0/temp1_input          u:object_r:sysfs_thermal:s0
+genfscon sysfs /devices/platform/11c30000.adc/iio:device1/11c30000.adc:pa_thermistor/hwmon/hwmon2/temp1_input           u:object_r:sysfs_thermal:s0
+genfscon sysfs /devices/platform/11c30000.adc/iio:device1/11c30000.adc:usb_con_thermistor/hwmon/hwmon4/temp1_input      u:object_r:sysfs_thermal:s0
+genfscon sysfs /devices/platform/11d40000.hsi2c/i2c-1/1-005a/leds/vibrator                                              u:object_r:sysfs_vibrator:s0
+genfscon sysfs /devices/platform/12c30000.mfc0/video4linux/video6/name                                                  u:object_r:sysfs_v4l:s0
+genfscon sysfs /devices/platform/12c30000.mfc0/video4linux/video7/name                                                  u:object_r:sysfs_v4l:s0
+genfscon sysfs /devices/platform/13520000.ufs/host0/target0:0:0/0:0:0:0/block/sda/queue/scheduler                       u:object_r:sysfs_scheduler:s0
+genfscon sysfs /devices/platform/13830000.i2c/i2c-7/7-003b/power_supply                                                 u:object_r:sysfs_battery:s0
+genfscon sysfs /devices/platform/13830000.i2c/i2c-7/7-003c/power_supply                                                 u:object_r:sysfs_battery:s0
+genfscon sysfs /devices/platform/13830000.i2c/i2c-8/8-003b/power_supply                                                 u:object_r:sysfs_battery:s0
+genfscon sysfs /devices/platform/13840000.i2c/i2c-8/8-003d/s2mu00x-battery/power_supply                                 u:object_r:sysfs_battery:s0
+genfscon sysfs /devices/platform/13840000.i2c/i2c-8/8-003d/s2mu00x-battery/power_supply/battery/charge_control_limit    u:object_r:sysfs_battery_writable:s0
+genfscon sysfs /devices/platform/13840000.i2c/i2c-8/8-003d/s2mu00x-battery/power_supply/battery/technology              u:object_r:sysfs_battery_writable:s0
+genfscon sysfs /devices/platform/13840000.i2c/i2c-8/8-003d/s2mu00x-battery/power_supply/battery/temp                    u:object_r:sysfs_battery_writable:s0
+genfscon sysfs /devices/platform/13840000.i2c/i2c-8/8-003d/s2mu106-charger/power_supply                                 u:object_r:sysfs_battery:s0
+genfscon sysfs /devices/platform/13840000.i2c/i2c-8/8-003d/s2mu106-powermeter/power_supply/s2mu106_pmeter/type          u:object_r:sysfs_battery:s0
+genfscon sysfs /devices/platform/13840000.i2c/i2c-8/8-0041/power_supply/s2mcs02-charger/type                            u:object_r:sysfs_battery:s0
+genfscon sysfs /devices/platform/13840000.i2c/i2c-9/9-003d/s2mu00x-battery/factory_charge_upper                         u:object_r:sysfs_battery:s0
+genfscon sysfs /devices/platform/13840000.i2c/i2c-9/9-003d/s2mu00x-battery/power_supply                                 u:object_r:sysfs_battery:s0
+genfscon sysfs /devices/platform/13840000.i2c/i2c-9/9-003d/s2mu00x-battery/power_supply/battery/charge_control_limit    u:object_r:sysfs_battery_writable:s0
+genfscon sysfs /devices/platform/13840000.i2c/i2c-9/9-003d/s2mu00x-battery/power_supply/battery/technology              u:object_r:sysfs_battery_writable:s0
+genfscon sysfs /devices/platform/13840000.i2c/i2c-9/9-003d/s2mu00x-battery/power_supply/battery/temp                    u:object_r:sysfs_battery_writable:s0
+genfscon sysfs /devices/platform/13840000.i2c/i2c-9/9-003d/s2mu106-charger/power_supply                                 u:object_r:sysfs_battery:s0
+genfscon sysfs /devices/platform/13840000.i2c/i2c-9/9-003d/s2mu106-powermeter/power_supply/s2mu106_pmeter/type          u:object_r:sysfs_battery:s0
+genfscon sysfs /devices/platform/14490000.fimc_is/debug/fixed_sensor_fps                                                u:object_r:sysfs_fimc_writable:s0
+genfscon sysfs /devices/platform/148b0000.decon_f/psr_info                                                              u:object_r:sysfs_decon:s0
+genfscon sysfs /devices/platform/148b0000.decon_f/vsync                                                                 u:object_r:sysfs_decon_writable:s0
+genfscon sysfs /devices/platform/148e0000.dsim/panel/panel/max_brightness                                               u:object_r:sysfs_backlight_writable:s0
+genfscon sysfs /devices/platform/14a50000.abox/service                                                                  u:object_r:sysfs_abox_writable:s0
+genfscon sysfs /devices/platform/egis_input/navigation_event                                                            u:object_r:sysfs_rbs:s0
+genfscon sysfs /devices/soc0/machine                                                                                    u:object_r:sysfs_socinfo:s0
+genfscon sysfs /devices/soc0/revision                                                                                   u:object_r:sysfs_socinfo:s0
+genfscon sysfs /devices/system/chip-id/revision                                                                         u:object_r:sysfs_chipid:s0
+genfscon sysfs /devices/virtual/backlight/backlight_0/brightness                                                        u:object_r:sysfs_backlight_writable:s0
+genfscon sysfs /devices/virtual/backlight/backlight_0/max_brightness                                                    u:object_r:sysfs_backlight_writable:s0
+genfscon sysfs /devices/virtual/nanohub/nanohub/sensortype                                                              u:object_r:sysfs_nanohub:s0
+genfscon sysfs /module/scsc_bt/parameters/bluetooth_address                                                             u:object_r:sysfs_bt_writable:s0
+genfscon sysfs /power/cpuhp/set_online_cpu                                                                              u:object_r:sysfs_cpuhotplug_writable:s0
