@@ -1,0 +1,2 @@
+type fm_device, dev_type;
+type pktrouter_device, dev_type;
