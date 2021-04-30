@@ -1,0 +1,2 @@
+init_daemon_domain(netutils_wrapper)
+allow netutils_wrapper pktrouter_device:chr_file rw_file_perms;
