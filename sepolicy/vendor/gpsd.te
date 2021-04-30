@@ -1,0 +1,17 @@
+allow gpsd gnss_device:chr_file rw_file_perms;
+
+allow gpsd gps_vendor_data_file:dir create_dir_perms;
+allow gpsd gps_vendor_data_file:file create_file_perms;
+allow gpsd gps_vendor_data_file:fifo_file create_file_perms;
+
+allow gpsd self:capability net_raw;
+
+allow gpsd sysfs_socinfo:file r_file_perms;
+
+allow gpsd hal_exynos_rild_hwservice:hwservice_manager find;
+
+binder_call(gpsd, rild)
+
+get_prop(gpsd, exported3_radio_prop)
+
+wakelock_use(gpsd)
