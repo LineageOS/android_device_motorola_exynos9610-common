@@ -1,0 +1,5 @@
+allow domain {
+    debugfs_mali
+    debugfs_mali_mem
+    debugfs_ion_dma
+}:dir search;

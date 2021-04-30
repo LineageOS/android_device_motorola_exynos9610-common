@@ -1,0 +1,12 @@
+r_dir_file(hal_audio_default, persist_audio_file)
+
+allow hal_audio_default hal_exynos_rild_hwservice:hwservice_manager find;
+
+allow hal_audio_default {
+    mnt_vendor_file
+    persist_file
+}:dir search;
+
+binder_call(hal_audio_default, rild)
+
+vndbinder_use(hal_audio_default);

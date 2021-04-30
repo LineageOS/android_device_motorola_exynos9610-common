@@ -1,0 +1,12 @@
+allow tee log_vendor_data_file:dir search;
+
+allow tee {
+    mnt_vendor_file
+    persist_file
+}:dir search;
+
+r_dir_file(tee, mobicore_data_registry_file)
+r_dir_file(tee, persist_mobicore_file)
+
+allow tee log_vendor_data_file:file create_file_perms;
+allow tee log_vendor_data_file:dir rw_dir_perms;
