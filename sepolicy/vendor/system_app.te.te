@@ -1,0 +1,11 @@
+r_dir_file(system_app, proc_pagetypeinfo)
+r_dir_file(system_app, proc_vmallocinfo)
+
+allow system_app sysfs_zram:dir search;
+
+allow system_app sysfs_zram:file rw_file_perms;
+
+dontaudit system_app system_suspend_control_service:service_manager find;
+
+binder_call(system_app, update_engine)
+binder_call(system_app, wificond)
