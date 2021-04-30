@@ -74,22 +74,15 @@ vendor/lib64/sensors.rp.so
 
 # audio
 vendor/bin/main_abox
-vendor/bin/hw/vendor.dolby.hardware.dms@1.0-service
 vendor/etc/ap_gain_mmul.bin
 vendor/etc/dolby/dax-default.xml
-vendor/etc/init/vendor.dolby.hardware.dms@1.0-service.rc
 vendor/lib/hw/audio.primary.exynos9610.so
 vendor/lib/libalsautils_sec.so
 vendor/lib/libaudioproxy.so
 vendor/lib/libdapparamstorage.so
 vendor/lib/libmotaudioutils.so
-
 vendor/lib/libunshorten.so
-vendor/lib/vendor.dolby.hardware.dms@1.0.so
 vendor/lib64/libdapparamstorage.so
-vendor/lib64/libdlbdsservice.so
-vendor/lib64/vendor.dolby.hardware.dms@1.0-impl.so
-vendor/lib64/vendor.dolby.hardware.dms@1.0.so
 
 # camera
 vendor/lib/libENF.so
