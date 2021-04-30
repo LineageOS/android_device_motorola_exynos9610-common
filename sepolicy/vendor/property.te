@@ -1,0 +1,6 @@
+type vendor_audio_prop, property_type;
+type vendor_camera_prop, property_type;
+type vendor_hwc_prop, property_type;
+type moto_boot_prop, property_type;
+type rmnet_mux_prop, property_type;
+type vendor_wifi_prop, property_type;
