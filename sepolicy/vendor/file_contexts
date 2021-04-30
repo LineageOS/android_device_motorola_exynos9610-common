@@ -1,0 +1,114 @@
+####################################
+# Daemons
+#
+
+/(vendor|system/vendor)/bin/main_abox                                                   u:object_r:abox_exec:s0
+/(vendor|system/vendor)/bin/charge_only_mode                                            u:object_r:charge_only_exec:s0
+/(vendor|system/vendor)/bin/charon                                                      u:object_r:charonservice_exec:s0
+/(vendor|system/vendor)/bin/exynos-thermald                                             u:object_r:exynos-thermald_exec:s0
+/(vendor|system/vendor)/bin/mcDriverDaemon                                              u:object_r:tee_exec:s0
+/(vendor|system/vendor)/bin/hw/rild_exynos                                              u:object_r:rild_exec:s0
+/(vendor|system/vendor)/bin/hw/gpsd                                                     u:object_r:gpsd_exec:s0
+
+####################################
+# Data Files
+
+/data/vendor/camera(/.*)?                                                               u:object_r:camera_vendor_data_file:s0
+/data/vendor/mediadrm(/.*)?                                                             u:object_r:mediadrm_vendor_data_file:s0
+/data/vendor/sensor(/.*)?                                                               u:object_r:sensor_vendor_data_file:s0
+/data/vendor/rild(/.*)?                                                                 u:object_r:rild_vendor_data_file:s0
+/data/vendor/mcRegistry(/.*)?                                                           u:object_r:mobicore_data_registry_file:s0
+/data/nfc(/.*)?                                                                         u:object_r:nfc_data_file:s0
+/data/chargeonlymode(/.*)?                                                              u:object_r:chargeonly_data_file:s0
+
+##########################
+# Devices
+#
+
+/dev/block/(.*/)?by-name/boot(_[ab])?                                                   u:object_r:boot_block_device:s0
+/dev/block/(.*/)?by-name/bootloader(_[ab])?                                             u:object_r:bootloader_block_device:s0
+/dev/block/(.*/)?by-name/carrier                                                        u:object_r:carrier_block_device:s0
+/dev/block/(.*/)?by-name/cid                                                            u:object_r:cid_block_device:s0
+/dev/block/(.*/)?by-name/dtbo(_[ab])?                                                   u:object_r:dtbo_block_device:s0
+/dev/block/(.*/)?by-name/efsbk                                                          u:object_r:efs_block_device:s0
+/dev/block/(.*/)?by-name/efs                                                            u:object_r:efs_block_device:s0
+/dev/block/(.*/)?by-name/fat                                                            u:object_r:fat_block_device:s0
+/dev/block/(.*/)?by-name/frp                                                            u:object_r:frp_block_device:s0
+/dev/block/(.*/)?by-name/hw                                                             u:object_r:hw_block_device:s0
+/dev/block/(.*/)?by-name/keystorage(_[ab])?                                             u:object_r:keystorage_block_device:s0
+/dev/block/(.*/)?by-name/kpan                                                           u:object_r:kpan_block_device:s0
+/dev/block/(.*/)?by-name/ldfw(_[ab])?                                                   u:object_r:ldfw_block_device:s0
+/dev/block/(.*/)?by-name/logo(_[ab])?                                                   u:object_r:logo_block_device:s0
+/dev/block/(.*/)?by-name/logs                                                           u:object_r:bllogs_block_device:s0
+/dev/block/(.*/)?by-name/metadata                                                       u:object_r:metadata_block_device:s0
+/dev/block/(.*/)?by-name/misc                                                           u:object_r:misc_block_device:s0
+/dev/block/(.*/)?by-name/modem(_[ab])?                                                  u:object_r:modem_block_device:s0
+/dev/block/(.*/)?by-name/oem(_[ab])?                                                    u:object_r:oem_block_device:s0
+/dev/block/(.*/)?by-name/persist([0-9])?                                                u:object_r:persist_block_device:s0
+/dev/block/(.*/)?by-name/persist                                                        u:object_r:persist_block_device:s0
+/dev/block/(.*/)?by-name/proinfo                                                        u:object_r:proinfo_block_device:s0
+/dev/block/(.*/)?by-name/proinfo_backup                                                 u:object_r:proinfo_block_device:s0
+/dev/block/(.*/)?by-name/slotinfo                                                       u:object_r:slotinfo_block_device:s0
+/dev/block/(.*/)?by-name/sp                                                             u:object_r:bl_block_device:s0
+/dev/block/(.*/)?by-name/system(_[ab])?                                                 u:object_r:system_block_device:s0
+/dev/block/(.*/)?by-name/userdata                                                       u:object_r:userdata_block_device:s0
+/dev/block/(.*/)?by-name/utagsBackup                                                    u:object_r:utags_block_device:s0
+/dev/block/(.*/)?by-name/utags                                                          u:object_r:utags_block_device:s0
+/dev/block/(.*/)?by-name/vbmeta(_[ab])?                                                 u:object_r:vbmeta_block_device:s0
+/dev/block/(.*/)?by-name/vendor(_[ab])?                                                 u:object_r:vendor_block_device:s0
+
+/dev/block/zram0                                                                        u:object_r:swap_block_device:s0
+
+/dev/chub_dev                                                                           u:object_r:vendor_nanohub_device:s0
+
+/dev/g2d                                                                                u:object_r:graphics_device:s0
+
+/dev/gnss_ipc                                                                           u:object_r:gnss_device:s0
+
+/dev/mali[0-9]                                                                          u:object_r:gpu_device:s0
+
+/dev/nanohub                                                                            u:object_r:vendor_nanohub_device:s0
+
+/dev/s5p-smem                                                                           u:object_r:vendor_secmem_device:s0
+
+/dev/scsc_h4_0                                                                          u:object_r:bt_device:s0
+
+/dev/sec-nfc                                                                            u:object_r:nfc_device:s0
+
+/dev/ttyGS[0-3]*                                                                        u:object_r:serial_device:s0
+
+####################################
+# HIDL
+#
+
+/(vendor|system/vendor)/bin/hw/android.hardware.biometrics.fingerprint@2.1-service-rbs  u:object_r:hal_fingerprint_default_exec:s0
+/(vendor|system/vendor)/bin/hw/android.hardware.drm@1.3-service.clearkey                u:object_r:hal_drm_clearkey_exec:s0
+/(vendor|system/vendor)/bin/hw/android.hardware.drm@1.2-service.widevine                u:object_r:hal_drm_widevine_exec:s0
+/(vendor|system/vendor)/bin/hw/android.hardware.light@2.0-service.exynos9610            u:object_r:hal_light_default_exec:s0
+/(vendor|system/vendor)/bin/hw/android.hardware.nfc@1.2-service.samsung                 u:object_r:hal_nfc_default_exec:s0
+/(vendor|system/vendor)/bin/hw/android.hardware.secure_element@1.1-service-uicc         u:object_r:hal_secure_element_default_exec:s0
+/(vendor|system/vendor)/bin/hw/android.hardware.usb@1.1-service.exynos9610              u:object_r:hal_usb_default_exec:s0
+/(vendor|system/vendor)/bin/hw/android.hardware.vibrator@1.0-service.exynos9610         u:object_r:hal_vibrator_default_exec:s0
+/(vendor|system/vendor)/bin/hw/vendor.samsung.hardware.gnss@1.0-service                 u:object_r:hal_gnss_default_exec:s0
+
+####################################
+# Persist Files
+
+/mnt/vendor/persist(/.*)?                                                               u:object_r:persist_file:s0
+/mnt/vendor/persist/camera(/.*)?                                                        u:object_r:persist_camera_file:s0
+/mnt/vendor/persist/factory/audio(/.*)?                                                 u:object_r:persist_audio_file:s0
+/mnt/vendor/persist/gk(/.*)?                                                            u:object_r:persist_gk_file:s0
+/mnt/vendor/persist/mobicore(/.*)?                                                      u:object_r:persist_mobicore_file:s0
+/mnt/vendor/persist/security(/.*)?                                                      u:object_r:persist_security_file:s0
+/mnt/vendor/persist/sensor(/.*)?                                                        u:object_r:persist_sensor_file:s0
+/mnt/vendor/persist/sensortype                                                          u:object_r:persist_sensor_file:s0
+/mnt/vendor/persist/sensorcal.json                                                      u:object_r:persist_sensor_file:s0
+/mnt/vendor/persist/security/attest_keybox.so                                           u:object_r:persist_keymaster_file:s0
+/mnt/vendor/persist/wv.keys                                                             u:object_r:persist_security_file:s0
+
+####################################
+# Same-process HAL files and their dependencies
+#
+
+(vendor|system/vendor)/lib(64)?/hw/[a-zA-Z0-9_\-.]+\.exynos[0-9]*\.so                   u:object_r:same_process_hal_file:s0
+/(vendor|system/vendor)/lib(64)?/libion_exynos.so                                       u:object_r:same_process_hal_file:s0
