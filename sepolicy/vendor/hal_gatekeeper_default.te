@@ -1,0 +1,10 @@
+allow hal_gatekeeper_default {
+    mnt_vendor_file
+    persist_file
+    persist_gk_file
+}:dir search;
+
+allow hal_gatekeeper_default {
+    mnt_vendor_file
+    persist_gk_file
+}:file rw_file_perms;

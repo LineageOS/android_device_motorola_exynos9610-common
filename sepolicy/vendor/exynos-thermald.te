@@ -1,0 +1,18 @@
+type exynos-thermald, domain, mlstrustedsubject;
+type exynos-thermald_exec, exec_type, file_type, vendor_file_type;
+init_daemon_domain(exynos-thermald)
+
+r_dir_file(exynos-thermald, sysfs_battery)
+r_dir_file(exynos-thermald, sysfs_thermal)
+
+allow exynos-thermald {
+    sysfs_backlight_writable
+    sysfs_battery_writable
+    sysfs_cpuhotplug_writable
+    sysfs_devices_system_cpu
+    sysfs_fimc_writable
+    sysfs_mali_writable
+}:file rw_file_perms;
+
+allow exynos-thermald log_vendor_data_file:dir ra_dir_perms;
+allow exynos-thermald log_vendor_data_file:file create_file_perms;
