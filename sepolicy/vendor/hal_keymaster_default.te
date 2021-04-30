@@ -1,0 +1,10 @@
+allow hal_keymaster_default {
+    mnt_vendor_file
+    persist_file
+    persist_security_file
+}:dir search;
+
+allow hal_keymaster_default {
+    persist_keymaster_file
+    persist_security_file
+}:file r_file_perms;
