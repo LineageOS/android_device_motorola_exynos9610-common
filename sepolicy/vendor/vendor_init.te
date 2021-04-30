@@ -1,0 +1,24 @@
+allow vendor_init {
+    debugfs_trace_marker
+    functionfs
+}:file r_file_perms;
+
+allow vendor_init {
+    proc_printk
+    proc_reap_mem_on_sigkill
+    proc_swappiness
+}:file rw_file_perms;
+
+allow vendor_init block_device:lnk_file relabelfrom;
+allow vendor_init proinfo_block_device:lnk_file relabelto;
+
+# symlink /storage/sdcard /mnt/ext_sd
+allow vendor_init tmpfs:dir ra_dir_perms;
+allow vendor_init tmpfs:lnk_file create_file_perms;
+
+allow vendor_init system_data_root_file:dir { relabelto setattr };
+
+allow vendor_init unlabeled:{ dir file } { read getattr relabelfrom };
+
+set_prop(vendor_init, moto_boot_prop)
+set_prop(vendor_init, rmnet_mux_prop)
