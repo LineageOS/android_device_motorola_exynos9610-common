@@ -1,0 +1,1 @@
+dontaudit otapreopt_chroot system_file:dir mounton;
