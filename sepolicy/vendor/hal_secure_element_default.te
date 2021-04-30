@@ -1,0 +1,5 @@
+allow hal_secure_element_default hal_exynos_rild_hwservice:hwservice_manager find;
+
+binder_call(hal_secure_element_default, rild)
+
+get_prop(hal_secure_element_default, exported3_radio_prop)
