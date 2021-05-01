@@ -262,14 +262,6 @@ on boot
    chmod 0666 sys/devices/system/cpu/cpufreq/policy0/scaling_max_freq
    chmod 0666 sys/devices/system/cpu/cpufreq/policy4/scaling_max_freq
 
-# For not to impact boot completed broadcast, set cpusets after broadcast.
-on property:sys.bootbroadcast_completed=1
-    write /dev/cpuset/foreground/cpus 0-7
-    write /dev/cpuset/top-app/cpus 0-7
-    write /dev/cpuset/background/cpus 0-3
-    write /dev/cpuset/system-background/cpus 0-7
-    write /dev/cpuset/restricted/cpus 0-3
-
 on charger
     trigger early-fs
     trigger fs
