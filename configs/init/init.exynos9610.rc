@@ -224,7 +224,6 @@ on post-fs-data
     write /sys/class/net/wlan0/queues/rx-0/rps_cpus fe
 
 # Permissions Camera
-    mkdir /data/camera 0770 system camera
     rm /data/vendor/camera/dump_12a10_eeprom_data.bin
     rm /data/vendor/camera/dump_12a10ff_eeprom_data.bin
     rm /data/vendor/camera/dump_16885c_eeprom_data.bin
