@@ -466,11 +466,11 @@ service abox /vendor/bin/main_abox 14a50000.abox /data/vendor/log/abox
     group system
 
 # GPS daemon
-    service gpsd /vendor/bin/hw/gpsd
+service gpsd /vendor/bin/hw/gpsd
     class main
     user gps
     group system inet net_raw wakelock
-    capabilities BLOCK_SUSPEND
+    capabilities BLOCK_SUSPEND NET_RAW
     ioprio be 0
 
 #service charger /system/bin/charger
