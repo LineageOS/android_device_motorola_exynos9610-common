@@ -1,0 +1,113 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "43fe6ebd_3c254c25",
+        "filename": "sepolicy/private/file_contexts",
+        "patchSetId": 7
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 16185
+      },
+      "writtenOn": "2021-05-03T00:11:01Z",
+      "side": 1,
+      "message": "if you\u0027re alphabetizing, these go after r",
+      "range": {
+        "startLine": 12,
+        "startChar": 0,
+        "endLine": 13,
+        "endChar": 66
+      },
+      "revId": "729cdd3497efa11b8b079e2aa48f330fe12337d4",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "7a6250c2_5bc801c2",
+        "filename": "sepolicy/private/file_contexts",
+        "patchSetId": 7
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 16185
+      },
+      "writtenOn": "2021-05-03T00:11:01Z",
+      "side": 1,
+      "message": "excess newline",
+      "revId": "729cdd3497efa11b8b079e2aa48f330fe12337d4",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "cab287c3_d606cc30",
+        "filename": "sepolicy/private/property_contexts",
+        "patchSetId": 7
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 16185
+      },
+      "writtenOn": "2021-05-03T00:11:01Z",
+      "side": 1,
+      "message": "unfamiliar, and a bit curious, what does this do?",
+      "range": {
+        "startLine": 1,
+        "startChar": 76,
+        "endLine": 1,
+        "endChar": 88
+      },
+      "revId": "729cdd3497efa11b8b079e2aa48f330fe12337d4",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "8ad94863_46dd275c",
+        "filename": "sepolicy/vendor/domain.te",
+        "patchSetId": 7
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 16185
+      },
+      "writtenOn": "2021-05-03T00:11:01Z",
+      "side": 1,
+      "message": "alphabetize",
+      "range": {
+        "startLine": 2,
+        "startChar": 0,
+        "endLine": 5,
+        "endChar": 13
+      },
+      "revId": "729cdd3497efa11b8b079e2aa48f330fe12337d4",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "c74c174b_b6c4db3e",
+        "filename": "sepolicy/vendor/tee.te",
+        "patchSetId": 7
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 16185
+      },
+      "writtenOn": "2021-05-03T00:11:01Z",
+      "side": 1,
+      "message": "random newline",
+      "range": {
+        "startLine": 10,
+        "startChar": 0,
+        "endLine": 10,
+        "endChar": 0
+      },
+      "revId": "729cdd3497efa11b8b079e2aa48f330fe12337d4",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
+    }
+  ]
+}
