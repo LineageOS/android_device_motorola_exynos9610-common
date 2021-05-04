@@ -191,7 +191,7 @@ PRODUCT_PACKAGES += \
 
 # Lights
 PRODUCT_PACKAGES += \
-    android.hardware.light@2.0-service.exynos9610
+    android.hardware.light@2.0-service.samsung
 
 # MotoActions
 PRODUCT_PACKAGES += \
