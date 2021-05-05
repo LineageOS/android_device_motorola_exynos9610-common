@@ -53,8 +53,26 @@ struct audio_route {
     struct mixer_path *mixer_path;
 };
 
-extern "C" int mixer_read_event(struct mixer *mixer, struct snd_ctl_event *ev) {
-    ssize_t count = read(mixer->fd, ev, sizeof(*ev));
+extern "C" int * mixer_read_event(struct mixer *mixer, uint param_2) {
+    struct snd_ctl_event *ev = NULL;
+    ssize_t count;
 
-    return (count >= 0) ? 0 : -errno;
+    if (mixer && mixer->fd >= 0) {
+        ev = (struct snd_ctl_event *)calloc(1, sizeof(*ev));
+
+        if (ev) {
+            count = read(mixer->fd, ev, sizeof(*ev));
+
+            while (0 < count) {
+                if (ev->type == 0 && (ev->data.elem.mask & param_2) != 0) {
+                    return (int *)ev;
+                }
+
+                count = read(mixer->fd, ev, sizeof(*ev));
+            }
+            free(ev);
+        }
+    }
+
+    return NULL;
 }
