@@ -31,7 +31,7 @@ extern "C" int audio_route_missing_ctl(int *param_1) {
     //__android_log_print(6,"audio_route","invalid audio_route");
     return 0;
   }
-  int a = *(int *)(param_1 + 0x18);
+  int a = *(int *)(param_1 + 6);
   return a;
 }
 
