@@ -14,6 +14,7 @@
 # Data Files
 
 /data/vendor/camera(/.*)?                                                               u:object_r:camera_vendor_data_file:s0
+/data/vendor/display(/.*)?                                                              u:object_r:display_vendor_data_file:s0
 /data/vendor/mediadrm(/.*)?                                                             u:object_r:mediadrm_vendor_data_file:s0
 /data/vendor/misc(/.*)?                                                                 u:object_r:misc_vendor_data_file:s0
 /data/vendor/sensor(/.*)?                                                               u:object_r:sensor_vendor_data_file:s0
@@ -90,6 +91,7 @@
 /(vendor|system/vendor)/bin/hw/android.hardware.nfc@1.2-service.samsung                 u:object_r:hal_nfc_default_exec:s0
 /(vendor|system/vendor)/bin/hw/android.hardware.secure_element@1.1-service-uicc         u:object_r:hal_secure_element_default_exec:s0
 /(vendor|system/vendor)/bin/hw/android.hardware.vibrator@1.0-service.exynos9610         u:object_r:hal_vibrator_default_exec:s0
+/(vendor|system/vendor)/bin/hw/vendor.lineage.livedisplay@2.0-service.exynos9610        u:object_r:hal_lineage_livedisplay_exynos_exec:s0
 /(vendor|system/vendor)/bin/hw/vendor.samsung.hardware.gnss@1.0-service                 u:object_r:hal_gnss_default_exec:s0
 
 ####################################
