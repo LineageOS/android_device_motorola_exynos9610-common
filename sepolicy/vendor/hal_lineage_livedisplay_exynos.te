@@ -1,0 +1,12 @@
+allow hal_lineage_livedisplay_exynos {
+    sysfs_panel
+    sysfs_dqe
+    sysfs_hbm
+}:dir search;
+
+allow hal_lineage_livedisplay_exynos {
+    sysfs_panel
+    sysfs_dqe
+    sysfs_hbm
+}:file rw_file_perms;
+
