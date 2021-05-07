@@ -1,6 +1,7 @@
 # data types
 type camera_vendor_data_file, file_type, data_file_type;
 type chargeonly_data_file, file_type, data_file_type;
+type display_vendor_data_file, file_type, data_file_type;
 type mediadrm_vendor_data_file, file_type, data_file_type;
 type misc_vendor_data_file, file_type, data_file_type;
 type mobicore_data_registry_file, file_type, data_file_type;
@@ -36,9 +37,12 @@ type sysfs_chipid, sysfs_type, r_fs_type, fs_type;
 type sysfs_cpuhotplug_writable, sysfs_type, rw_fs_type, fs_type;
 type sysfs_decon, sysfs_type, r_fs_type, fs_type;
 type sysfs_decon_writable, sysfs_type, rw_fs_type, fs_type;
+type sysfs_dqe, sysfs_type, rw_fs_type, fs_type;
 type sysfs_fimc_writable, sysfs_type, rw_fs_type, fs_type;
+type sysfs_hbm, sysfs_type, rw_fs_type, fs_type;
 type sysfs_mali_writable, sysfs_type, rw_fs_type, fs_type;
 type sysfs_nanohub, sysfs_type, r_fs_type, fs_type;
+type sysfs_panel, sysfs_type, rw_fs_type, fs_type;
 type sysfs_rbs, fs_type, sysfs_type;
 type sysfs_scheduler, fs_type, sysfs_type;
 type sysfs_socinfo, fs_type, sysfs_type;
