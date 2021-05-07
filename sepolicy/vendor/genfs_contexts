@@ -55,8 +55,10 @@ genfscon sysfs /devices/platform/13840000.i2c/i2c-9/9-003d/s2mu00x-battery/power
 genfscon sysfs /devices/platform/13840000.i2c/i2c-9/9-003d/s2mu106-charger/power_supply                                 u:object_r:sysfs_battery:s0
 genfscon sysfs /devices/platform/13840000.i2c/i2c-9/9-003d/s2mu106-powermeter/power_supply/s2mu106_pmeter/type          u:object_r:sysfs_battery:s0
 genfscon sysfs /devices/platform/14490000.fimc_is/debug/fixed_sensor_fps                                                u:object_r:sysfs_fimc_writable:s0
+genfscon sysfs /devices/platform/148b0000.decon_f/dqe/dqe                                                               u:object_r:sysfs_dqe:s0
 genfscon sysfs /devices/platform/148b0000.decon_f/psr_info                                                              u:object_r:sysfs_decon:s0
 genfscon sysfs /devices/platform/148b0000.decon_f/vsync                                                                 u:object_r:sysfs_decon_writable:s0
+genfscon sysfs /devices/platform/148e0000.dsim/panel/panel                                                              u:object_r:sysfs_panel:s0
 genfscon sysfs /devices/platform/148e0000.dsim/panel/panel/max_brightness                                               u:object_r:sysfs_backlight_writable:s0
 genfscon sysfs /devices/platform/14a50000.abox/service                                                                  u:object_r:sysfs_abox_writable:s0
 genfscon sysfs /devices/platform/egis_input/navigation_event                                                            u:object_r:sysfs_rbs:s0
@@ -65,6 +67,7 @@ genfscon sysfs /devices/soc0/revision                                           
 genfscon sysfs /devices/system/chip-id/revision                                                                         u:object_r:sysfs_chipid:s0
 genfscon sysfs /devices/virtual/backlight/backlight_0/brightness                                                        u:object_r:sysfs_backlight_writable:s0
 genfscon sysfs /devices/virtual/backlight/backlight_0/max_brightness                                                    u:object_r:sysfs_backlight_writable:s0
+genfscon sysfs /devices/virtual/backlight/hbm                                                                           u:object_r:sysfs_hbm:s0
 genfscon sysfs /devices/virtual/nanohub/nanohub/sensortype                                                              u:object_r:sysfs_nanohub:s0
 genfscon sysfs /module/scsc_bt/parameters/bluetooth_address                                                             u:object_r:sysfs_bt_writable:s0
 genfscon sysfs /power/cpuhp/set_online_cpu                                                                              u:object_r:sysfs_cpuhotplug_writable:s0
