@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5cab947c_1b45d84a",
+        "filename": "hidl/livedisplay/AdaptiveBacklight.cpp",
+        "patchSetId": 1
+      },
+      "lineNbr": 48,
+      "author": {
+        "id": 17401
+      },
+      "writtenOn": "2021-05-07T18:32:32Z",
+      "side": 1,
+      "message": "need to determine which option is the best\npossible values:\nenum power_mode {\n\tPOWER_SAVE_OFF \u003d 0,\n\tPOWER_SAVE_LOW \u003d 1,\n\tPOWER_SAVE_MEDIUM \u003d 2,\n\tPOWER_SAVE_HIGH \u003d 3,\n\tPOWER_SAVE_MAX \u003d 4,\n};",
+      "range": {
+        "startLine": 48,
+        "startChar": 40,
+        "endLine": 48,
+        "endChar": 41
+      },
+      "revId": "71226cd8d49ce254a03ec868bbd8c5091f7bfe21",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
+    }
+  ]
+}
