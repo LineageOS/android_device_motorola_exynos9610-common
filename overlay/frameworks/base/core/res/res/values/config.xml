@@ -102,7 +102,7 @@
         <item>450</item>
         <item>562</item>
     </array>
-    <array name="config_autoBrightnessLevels">
+    <integer-array name="config_autoBrightnessLevels">
         <item>5</item>
         <item>10</item>
         <item>50</item>
@@ -124,22 +124,22 @@
         <item>4000</item>
         <item>8000</item>
         <item>10000</item>
-    </array>
-    <array name="config_availableColorModes">
-        <item>@null</item>
+    </integer-array>
+    <integer-array name="config_availableColorModes">
+        <item>0</item>
         <item>1</item>
         <item>2</item>
-    </array>
-    <array name="config_defaultPinnerServiceFiles">
+    </integer-array>
+    <string-array name="config_defaultPinnerServiceFiles">
         <item>/system/framework/arm64/boot-framework.art</item>
         <item>/system/framework/oat/arm64/services.odex</item>
         <item>/vendor/lib64/egl/libGLES_mali.so</item>
-    </array>
-    <array name="config_mobile_tcp_buffers">
+    </string-array>
+    <string-array name="config_mobile_tcp_buffers">
         <item>1xrtt:16384,32768,32768,4096,8096,65536</item>
         <item>lte:2097152,4194304,8388608,262144,524288,1048576</item>
-    </array>
-    <array name="config_oemUsbModeOverride">
+    </string-array>
+    <string-array name="config_oemUsbModeOverride">
         <item>bp-tools:adb:rndis,acm,dm,adb:adb</item>
         <item>bp-tools:mtp:rndis,acm,dm:mtp</item>
         <item>bp-tools:mtp,adb:rndis,acm,dm,adb:mtp,adb</item>
@@ -152,9 +152,9 @@
         <item>mot-factory:mtp:usbnet:mtp</item>
         <item>mot-factory:mtp,adb:usbnet,adb:mtp,adb</item>
         <item>mot-factory:adb:usbnet,adb:adb</item>
-    </array>
-    <array name="config_screenBrightnessBacklight">
-        <item>@null</item>
+    </string-array>
+    <integer-array name="config_screenBrightnessBacklight">
+        <item>0</item>
         <item>2</item>
         <item>18</item>
         <item>36</item>
@@ -171,9 +171,9 @@
         <item>204</item>
         <item>227</item>
         <item>255</item>
-    </array>
-    <array name="config_screenBrightnessNits">
-        <item>@null</item>
+    </integer-array>
+    <integer-array name="config_screenBrightnessNits">
+        <item>0</item>
         <item>3</item>
         <item>32</item>
         <item>64</item>
@@ -190,22 +190,22 @@
         <item>360</item>
         <item>400</item>
         <item>450</item>
-    </array>
-    <array name="config_tether_bluetooth_regexs">
+    </integer-array>
+    <string-array name="config_tether_bluetooth_regexs">
         <item>bt-pan</item>
-    </array>
-    <array name="config_tether_usb_regexs">
+    </string-array>
+    <string-array name="config_tether_usb_regexs">
         <item>"usb\\d"</item>
         <item>"rndis\\d"</item>
-    </array>
+    </string-array>
     <string-array translatable="false" name="config_tether_wifi_regexs">
         <item>"wlan0"</item>
         <item>"softap.*"</item>
     </string-array>
-    <array name="config_virtualKeyVibePattern">
-        <item>@null</item>
+    <integer-array name="config_virtualKeyVibePattern">
+        <item>0</item>
         <item>26</item>
-    </array>
+    </integer-array>
 
     <bool name="config_bluetooth_hfp_inband_ringing_support">true</bool>
     <bool name="config_dynamic_bind_ims">true</bool>
