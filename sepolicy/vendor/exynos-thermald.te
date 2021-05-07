@@ -3,6 +3,7 @@ type exynos-thermald_exec, exec_type, file_type, vendor_file_type;
 init_daemon_domain(exynos-thermald)
 
 r_dir_file(exynos-thermald, sysfs_battery)
+r_dir_file(exynos-thermald, sysfs_panel)
 r_dir_file(exynos-thermald, sysfs_thermal)
 
 allow exynos-thermald {
