@@ -135,6 +135,8 @@ BOARD_VNDK_VERSION := current
 USE_XML_AUDIO_POLICY_CONF := 1
 
 # sepolicy
+include device/lineage/sepolicy/exynos/sepolicy.mk
+
 BOARD_SEPOLICY_TEE_FLAVOR := mobicore
 include device/samsung_slsi/sepolicy/sepolicy.mk
 
