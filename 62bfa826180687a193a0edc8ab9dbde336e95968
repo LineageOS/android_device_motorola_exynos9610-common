@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "e0338791_2f12b066",
+        "filename": "hidl/livedisplay/DisplayModes.cpp",
+        "patchSetId": 2
+      },
+      "lineNbr": 181,
+      "author": {
+        "id": 17401
+      },
+      "writtenOn": "2021-05-08T04:18:14Z",
+      "side": 1,
+      "message": "need to find a way to store the correct active mode",
+      "range": {
+        "startLine": 168,
+        "startChar": 0,
+        "endLine": 181,
+        "endChar": 2
+      },
+      "revId": "62bfa826180687a193a0edc8ab9dbde336e95968",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
+    }
+  ]
+}
