@@ -28,3 +28,4 @@ vendor.wlan.                        u:object_r:vendor_wifi_prop:s0
 
 persist.data.wda.enable             u:object_r:vendor_default_prop:s0
 persist.data.df.                    u:object_r:vendor_default_prop:s0
+ro.vendor.cscsupported              u:object_r:vendor_default_prop:s0

@@ -65,6 +65,8 @@
 
 /dev/gnss_ipc                                                                           u:object_r:gnss_device:s0
 
+/dev/m2m1shot_scaler0                                                                   u:object_r:m2m1shot_device:s0
+
 /dev/mali[0-9]                                                                          u:object_r:gpu_device:s0
 
 /dev/nanohub                                                                            u:object_r:vendor_nanohub_device:s0

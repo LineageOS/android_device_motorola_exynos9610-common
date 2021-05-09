@@ -10,6 +10,7 @@ type keystorage_block_device, dev_type;
 type kpan_block_device, dev_type;
 type ldfw_block_device, dev_type;
 type logo_block_device, dev_type;
+type m2m1shot_device, dev_type;
 type oem_block_device, dev_type;
 type persist_block_device, dev_type;
 type proinfo_block_device, dev_type;
