@@ -1,14 +1,33 @@
-persist.demo.hdmirotationlock=false
-qemu.hw.mainkeys=0
+## Audio
+persist.audio.endcall.delay=250
 persist.sys.bootanim.play_sound=true
-init.svc.vendor.pktrouter=1
+
+## CSC
 ro.vendor.cscsupported=1
+
+## Display
+ro.surface_flinger.use_color_management=1
+
+## Encryption
+ro.crypto.allow_encrypt_override
+ro.crypto.volume.filenames_mode=aes-256-cts
+
+## Media
+media.settings.xml=/vendor/etc/media_profiles_vendor.xml
+
+## Rotation
+persist.demo.hdmirotationlock=false
+
+## Navigation Bar
+qemu.hw.mainkeys=0
+
+## Net
+init.svc.vendor.pktrouter=1
+
+## RIL
 ril.ecclist=911,112
 ril.ecclist1=911,112
-ro.crypto.volume.filenames_mode=aes-256-cts
-ro.crypto.allow_encrypt_override=true
-ro.surface_flinger.use_color_management=1
-media.settings.xml=/vendor/etc/media_profiles_vendor.xml
-persist.audio.endcall.delay=250
-wifi.direct.interface=p2p0
+
+## Wi-Fi
 ro.boot.wificountrycode=00
+wifi.direct.interface=p2p0
