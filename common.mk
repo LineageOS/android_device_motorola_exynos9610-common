@@ -42,7 +42,6 @@ AB_OTA_POSTINSTALL_CONFIG += \
     FILESYSTEM_TYPE_system=ext4 \
     POSTINSTALL_OPTIONAL_system=true
 
-
 # Audio
 PRODUCT_PACKAGES += \
     android.hardware.audio.effect@5.0-impl \
@@ -71,12 +70,10 @@ PRODUCT_COPY_FILES += \
 
 # Update engine
 PRODUCT_PACKAGES += \
+    otapreopt_script \
     update_engine \
     update_engine_sideload \
     update_verifier
-
-PRODUCT_PACKAGES += \
-    otapreopt_script
 
 # Bluetooth
 PRODUCT_COPY_FILES += \
@@ -87,7 +84,7 @@ PRODUCT_PACKAGES += \
     android.hardware.bluetooth@1.0-service \
     libbt-vendor
 
-# Boot animation
+# Boot Animation
 TARGET_BOOTANIMATION_PRELOAD := true
 TARGET_BOOTANIMATION_TEXTURE_CACHE := true
 TARGET_SCREEN_HEIGHT := 2520
@@ -100,24 +97,23 @@ PRODUCT_PACKAGES += \
     android.hardware.boot@1.0-impl.exynos9610 \
     android.hardware.boot@1.0-impl.exynos9610.recovery
 
-# camera
+# Camera
 PRODUCT_PACKAGES += \
     android.hardware.camera.provider@2.4-impl \
     android.hardware.camera.provider@2.4-service \
     libsensorndkbridge \
     Snap
 
-# configstore
+# ConfigStore
 PRODUCT_PACKAGES += \
     android.hardware.configstore@1.1-service
-
 
 # Display
 PRODUCT_PACKAGES += \
     android.hardware.graphics.allocator@2.0-impl \
     android.hardware.graphics.allocator@2.0-service \
     android.hardware.graphics.composer@2.2-service \
-    android.hardware.graphics.mapper@2.0-impl \
+    android.hardware.graphics.mapper@2.0-impl
 
 # DRM
 PRODUCT_PACKAGES += \
@@ -147,7 +143,6 @@ PRODUCT_PACKAGES += \
 # GPS
 PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/configs/gps/gps.cfg:$(TARGET_COPY_OUT_VENDOR)/etc/gnss/gps.cfg
-
 
 # Graphics
 # Device uses high-density artwork where available
@@ -293,8 +288,7 @@ PRODUCT_PACKAGES += \
     android.hardware.radio@1.2 \
     android.hardware.radio@1.3 \
     android.hardware.radio@1.4 \
-    android.hardware.radio.deprecated@1.0 \
-    
+    android.hardware.radio.deprecated@1.0
 
 # RenderScript HAL
 PRODUCT_PACKAGES += \
@@ -322,7 +316,7 @@ PRODUCT_PACKAGES += \
 # Thermal
 PRODUCT_PACKAGES += \
     android.hardware.thermal@1.0-impl \
-    android.hardware.thermal@1.0-service \
+    android.hardware.thermal@1.0-service
 
 PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/configs/thermal/exynos-thermal.conf:$(TARGET_COPY_OUT_VENDOR)/exynos-thermal.conf \
