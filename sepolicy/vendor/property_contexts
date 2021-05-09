@@ -7,11 +7,16 @@ ro.boot.carrier                     u:object_r:moto_boot_prop:s0
 # Camera
 persist.vendor.sys.camera.          u:object_r:vendor_camera_prop:s0
 
+# Charon
+vendor.charon                       u:object_r:vendor_ims_prop:s0
+vendor.charon.route                 u:object_r:vendor_ims_prop:s0
+custom.charon.status                u:object_r:vendor_ims_prop:s0
+
 # HWC
 ro.vendor.ddk.set.afbc              u:object_r:vendor_hwc_prop:s0
 
 # Radio
-persist.vendor.radio.cp.            u:object_r:vendor_radio_prop:s0
+persist.vendor.radio.               u:object_r:vendor_radio_prop:s0
 persist.vendor.ril.                 u:object_r:vendor_radio_prop:s0
 ro.product.model.dm                 u:object_r:vendor_radio_prop:s0
 ro.radio.imei.sv                    u:object_r:vendor_radio_prop:s0

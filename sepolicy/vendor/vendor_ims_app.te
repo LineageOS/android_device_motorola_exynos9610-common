@@ -1,0 +1,23 @@
+type vendor_ims_app, domain;
+app_domain(vendor_ims_app)
+
+allow vendor_ims_app {
+    app_api_service
+    radio_service
+    registry_service
+}:service_manager find;
+
+allow vendor_ims_app hal_exynos_rild_hwservice:hwservice_manager find;
+
+allow vendor_ims_app radio_data_file:dir rw_dir_perms;
+allow vendor_ims_app radio_data_file:file create_file_perms;
+
+allow vendor_ims_app misc_vendor_data_file:dir create_dir_perms;
+allow vendor_ims_app misc_vendor_data_file:file create_file_perms;
+
+allow vendor_ims_app misc_vendor_data_file:sock_file create_file_perms;
+
+set_prop(vendor_ims_app, vendor_ims_prop)
+set_prop(vendor_ims_app, vendor_radio_prop)
+
+binder_call(vendor_ims_app, rild)
