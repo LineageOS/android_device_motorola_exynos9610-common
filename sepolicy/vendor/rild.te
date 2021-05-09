@@ -6,6 +6,7 @@ add_hwservice(rild, hal_exynos_rild_hwservice)
 binder_call(rild, gpsd)
 binder_call(rild, hal_audio_default)
 binder_call(rild, hal_secure_element_default)
+binder_call(rild, vendor_ims_app)
 
 get_prop(rild, system_boot_reason_prop)
 set_prop(rild, vendor_radio_prop)

@@ -1,0 +1,37 @@
+type vendor_ims_app, domain;
+app_domain(vendor_ims_app)
+
+allow vendor_ims_app {
+    app_api_service
+    radio_service
+    registry_service
+}:service_manager find;
+
+allow vendor_ims_app hal_exynos_rild_hwservice:hwservice_manager find;
+allow vendor_ims_app audioserver_service:service_manager find;
+
+allow vendor_ims_app radio_data_file:dir rw_dir_perms;
+allow vendor_ims_app radio_data_file:file create_file_perms;
+
+allow vendor_ims_app misc_vendor_data_file:dir create_dir_perms;
+allow vendor_ims_app misc_vendor_data_file:file create_file_perms;
+
+allow vendor_ims_app misc_vendor_data_file:sock_file create_file_perms;
+
+allow vendor_ims_app dnsproxyd_socket:sock_file write;
+allow vendor_ims_app self:udp_socket create_socket_perms;
+
+allow vendor_ims_app netd:unix_stream_socket connectto;
+allow vendor_ims_app node:udp_socket node_bind;
+
+allow vendor_ims_app charonservice:unix_stream_socket connectto;
+allow vendor_ims_app self:netlink_route_socket { create_socket_perms_no_ioctl nlmsg_read };
+
+# no idea why, /system/etc/hosts
+dontaudit vendor_ims_app system_file:file lock;
+
+set_prop(vendor_ims_app, radio_prop)
+set_prop(vendor_ims_app, vendor_ims_prop)
+set_prop(vendor_ims_app, vendor_radio_prop)
+
+binder_call(vendor_ims_app, rild)
