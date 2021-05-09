@@ -1,15 +1,15 @@
-# Common proprietary files - from motorola/troika_retail/troika_sprout:10/QSBS30.62-29-11-5/db5cb, unless pinned
+## Common proprietary files - from motorola/troika_retail/troika_sprout:10/QSBS30.62-29-11-5/db5cb, unless pinned
 
-# Bluetooth (aptX)
+## Bluetooth (aptX)
 lib64/libaptXHD_encoder.so
 lib64/libaptX_encoder.so
 
-# HotwordEnrollment
+## HotwordEnrollment
 -priv-app/HotwordEnrollmentOKGoogleCS47L35/HotwordEnrollmentOKGoogleCS47L35.apk
 -priv-app/HotwordEnrollmentTGoogleCS47L35/HotwordEnrollmentTGoogleCS47L35.apk
 -priv-app/HotwordEnrollmentXGoogleCS47L35/HotwordEnrollmentXGoogleCS47L35.apk
 
-# IMS
+## IMS
 # ShannonIms.apk is modified to include IEPdgConnection* classes from stock's framework.jar
 # and removed libmediaadaptor dependency
 -app/ShannonIms/ShannonIms.apk|6be75e9e3ccae883c17265927646d9c508ae44b0
