@@ -10,9 +10,9 @@ lib64/libaptX_encoder.so
 -priv-app/HotwordEnrollmentXGoogleCS47L35/HotwordEnrollmentXGoogleCS47L35.apk
 
 # IMS
-# ShannonIms.apk is modified to include IEPdgConnection* classes from stock's framework.jar,
-# from motorola/troika_retail/troika_sprout:10/QSBS30.62-29-9/d809e
--app/ShannonIms/ShannonIms.apk|23664039975228d5708ed7c08b5efb02a51bc6f7
+# ShannonIms.apk is modified to include IEPdgConnection* classes from stock's framework.jar
+# and removed libmediaadaptor dependency
+-app/ShannonIms/ShannonIms.apk|6be75e9e3ccae883c17265927646d9c508ae44b0
 bin/wfc-pkt-router
 lib64/libmediaadaptor.so
 lib64/libmedia.so:lib64/libmedia_ims.so
