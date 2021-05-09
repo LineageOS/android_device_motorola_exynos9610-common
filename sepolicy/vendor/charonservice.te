@@ -1,3 +1,24 @@
 type charonservice, domain, mlstrustedsubject;
 type charonservice_exec, exec_type, file_type, vendor_file_type;
 init_daemon_domain(charonservice)
+
+allow charonservice misc_vendor_data_file:dir create_dir_perms;
+allow charonservice misc_vendor_data_file:file create_file_perms;
+
+allow charonservice misc_vendor_data_file:sock_file create_file_perms;
+
+allow charonservice self:netlink_route_socket { create_socket_perms_no_ioctl nlmsg_read nlmsg_write };
+allow charonservice self:netlink_xfrm_socket { create_socket_perms_no_ioctl nlmsg_read nlmsg_write };
+allow charonservice self:udp_socket create_socket_perms_no_ioctl;
+
+allow charonservice port:udp_socket name_bind;
+allow charonservice node:udp_socket node_bind;
+
+allow charonservice self:capability { chown net_admin net_bind_service net_raw };
+allow charonservice self:capability2 wake_alarm;
+
+allow charonservice proc_net:file rw_file_perms;
+
+unix_socket_connect(charonservice, property, init)
+
+set_prop(charonservice, vendor_ims_prop)
