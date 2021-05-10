@@ -3,10 +3,6 @@ aaudio.hw_burst_min_usec=2000
 aaudio.mmap_exclusive_policy=1
 aaudio.mmap_policy=1
 persist.vendor.audio.endcall.delay=250
-ro.config.alarm_alert=Oxygen.ogg
-ro.config.notification_sound=Moto.ogg
-ro.config.ringtone=Moto.ogg
-ro.config.ringtone_2=Moto.ogg
 ro.config.vc_call_vol_steps=8
 ro.vendor.ddk.set.afbc=1
 
@@ -50,14 +46,10 @@ persist.dbg.wfc_avail_ovr=1
 persist.vendor.radio.dual.volte=1
 ro.telephony.iwlan_operation_mode=legacy
 
-## Keyguard
-keyguard.no_require_sim=true
-
 ## Logging
 persist.vendor.wlbtlog.maxfilesize=50
 persist.vendor.wlbtlog.maxfiles=5
 ro.debug_level=0x494d
-ro.logd.size=2M
 
 ## Media
 media.settings.xml=/vendor/etc/media_profiles_vendor_V1.xml
@@ -71,11 +63,6 @@ ro.oem_unlock_supported=1
 ## Platform
 debug.slsi_platform=1
 ro.hardware.soc.manufacturer=slsi
-ro.mot.android_one=true
-ro.vendor.config.release_version=20190525
-
-## Privapp Permissions
-ro.control_privapp_permissions=enforce
 
 ## Radio
 persist.radio.multisim.config=dsds
@@ -83,7 +70,6 @@ persist.vendor.ril.crash_handling_mode=2
 persist.vendor.ril.emergencynumber.sim=1
 radio.smsdomain=0
 ro.carrier=europen
-ro.ril.ecclist=911,112
 ro.vendor.config.build_carrier=europen
 telephony.lteOnCdmaDevice=1
 vendor.radio.smsdomain=2
