@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ee3bf847_29c00e73",
+        "filename": "vendor.prop",
+        "patchSetId": 6
+      },
+      "lineNbr": 61,
+      "author": {
+        "id": 17401
+      },
+      "writtenOn": "2021-05-10T18:08:36Z",
+      "side": 1,
+      "message": "we probably can remove this too, its greyed out anyway",
+      "revId": "cee6febf096cf70e679dd304b3295cc5c5495c8b",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
+    }
+  ]
+}
