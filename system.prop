@@ -1,6 +1,5 @@
 ## Audio
 persist.audio.endcall.delay=250
-persist.sys.bootanim.play_sound=true
 
 ## CSC
 ro.vendor.cscsupported=1
@@ -23,10 +22,6 @@ qemu.hw.mainkeys=0
 
 ## Net
 init.svc.vendor.pktrouter=1
-
-## RIL
-ril.ecclist=911,112
-ril.ecclist1=911,112
 
 ## Wi-Fi
 ro.boot.wificountrycode=00
