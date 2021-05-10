@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "05513818_5b49c81f",
+        "filename": "common.mk",
+        "patchSetId": 6
+      },
+      "lineNbr": 114,
+      "author": {
+        "id": 17401
+      },
+      "writtenOn": "2021-05-10T15:43:18Z",
+      "side": 1,
+      "message": "typo",
+      "range": {
+        "startLine": 114,
+        "startChar": 5,
+        "endLine": 114,
+        "endChar": 6
+      },
+      "revId": "25fa7cca5c28f03cc53834a07f3422b581236240",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
+    }
+  ]
+}
