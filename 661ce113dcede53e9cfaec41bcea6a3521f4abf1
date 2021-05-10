@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "7e008eb0_8b7c4ffe",
+        "filename": "BoardConfigCommon.mk",
+        "patchSetId": 8
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 17401
+      },
+      "writtenOn": "2021-05-10T15:47:07Z",
+      "side": 1,
+      "message": "2020-2021",
+      "range": {
+        "startLine": 2,
+        "startChar": 16,
+        "endLine": 2,
+        "endChar": 20
+      },
+      "revId": "661ce113dcede53e9cfaec41bcea6a3521f4abf1",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "d4197d7f_0cbbfc79",
+        "filename": "common.mk",
+        "patchSetId": 8
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 17401
+      },
+      "writtenOn": "2021-05-10T15:47:07Z",
+      "side": 1,
+      "message": "2020-2021",
+      "range": {
+        "startLine": 2,
+        "startChar": 16,
+        "endLine": 2,
+        "endChar": 20
+      },
+      "revId": "661ce113dcede53e9cfaec41bcea6a3521f4abf1",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
+    }
+  ]
+}
