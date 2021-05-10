@@ -16,6 +16,24 @@
       "revId": "cee6febf096cf70e679dd304b3295cc5c5495c8b",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "e7a7ed4b_04f0b652",
+        "filename": "vendor.prop",
+        "patchSetId": 6
+      },
+      "lineNbr": 61,
+      "author": {
+        "id": 16185
+      },
+      "writtenOn": "2021-05-10T20:08:29Z",
+      "side": 1,
+      "message": "discussed this one in slack - on the edge case a user locks BL and boots, they should be able to unlock again",
+      "parentUuid": "ee3bf847_29c00e73",
+      "revId": "cee6febf096cf70e679dd304b3295cc5c5495c8b",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
     }
   ]
 }
