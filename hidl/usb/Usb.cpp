@@ -17,7 +17,7 @@
  * limitations under the License.
  */
 
-#define LOG_TAG "android.hardware.usb@1.2-service-qti"
+#define LOG_TAG "android.hardware.usb@1.2-service-exynos9610"
 
 #include <android-base/logging.h>
 #include <assert.h>
