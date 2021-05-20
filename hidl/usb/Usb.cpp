@@ -645,14 +645,14 @@ static void handle_typec_uevent(Usb *usb, const char *msg)
     if (usb->mPowerOpMode == power_operation_mode) {
       ALOGI("uevent recieved for same device %s", power_operation_mode.c_str());
     } else if(power_operation_mode == "usb_power_delivery") {
-      readFile("/config/usb_gadget/g1/configs/b.1/MaxPower", &usb->mMaxPower);
-      readFile("/config/usb_gadget/g1/configs/b.1/bmAttributes", &usb->mAttributes);
-      writeFile("/config/usb_gadget/g1/configs/b.1/MaxPower", "0");
-      writeFile("/config/usb_gadget/g1/configs/b.1/bmAttributes", "0xc0");
+      readFile("/config/usb_gadget/g1/configs/c.1/MaxPower", &usb->mMaxPower);
+      readFile("/config/usb_gadget/g1/configs/c.1/bmAttributes", &usb->mAttributes);
+      writeFile("/config/usb_gadget/g1/configs/c.1/MaxPower", "0");
+      writeFile("/config/usb_gadget/g1/configs/c.1/bmAttributes", "0xc0");
     } else {
       if(!usb->mMaxPower.empty()) {
-        writeFile("/config/usb_gadget/g1/configs/b.1/MaxPower", usb->mMaxPower.c_str());
-        writeFile("/config/usb_gadget/g1/configs/b.1/bmAttributes", usb->mAttributes.c_str());
+        writeFile("/config/usb_gadget/g1/configs/c.1/MaxPower", usb->mMaxPower.c_str());
+        writeFile("/config/usb_gadget/g1/configs/c.1/bmAttributes", usb->mAttributes.c_str());
         usb->mMaxPower = "";
       }
     }
@@ -1064,9 +1064,9 @@ int main() {
     return 1;
   }
 
-  ALOGI("QTI USB HAL Ready.");
+  ALOGI("USB HAL Ready.");
   joinRpcThreadpool();
   // Under normal cases, execution will not reach this line.
-  ALOGI("QTI USB HAL failed to join thread pool.");
+  ALOGI("USB HAL failed to join thread pool.");
   return 1;
 }

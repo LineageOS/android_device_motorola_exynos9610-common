@@ -20,7 +20,6 @@ cc_binary {
     name: "android.hardware.usb@1.2-service-exynos9610",
     defaults: [
         "exynos9610_usb_hal_defaults",
-        "qti_usb_hal_supported_modes_defaults"
     ],
     shared_libs: [
         "android.hardware.usb@1.0",

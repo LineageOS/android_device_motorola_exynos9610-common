@@ -44,26 +44,12 @@ constexpr int DISCONNECT_WAIT_US = 10000;
 #define DEVICE_SUB_CLASS_PATH GADGET_PATH "bDeviceSubClass"
 #define DEVICE_PROTOCOL_PATH GADGET_PATH "bDeviceProtocol"
 #define DESC_USE_PATH GADGET_PATH "os_desc/use"
-#define OS_DESC_PATH GADGET_PATH "os_desc/b.1"
-#define CONFIG_PATH GADGET_PATH "configs/b.1/"
+#define OS_DESC_PATH GADGET_PATH "os_desc/c.1"
+#define CONFIG_PATH GADGET_PATH "configs/c.1/"
 #define FUNCTIONS_PATH GADGET_PATH "functions/"
 #define FUNCTION_NAME "function"
 #define FUNCTION_PATH CONFIG_PATH FUNCTION_NAME
-#define ESOC_DEVICE_PATH "/sys/bus/esoc/devices"
-#define SOC_MACHINE_PATH "/sys/devices/soc0/machine"
 #define USB_CONTROLLER_PROP "vendor.usb.controller"
-#define RNDIS_FUNC_NAME_PROP "vendor.usb.rndis.func.name"
-#define RMNET_FUNC_NAME_PROP "vendor.usb.rmnet.func.name"
-#define RMNET_INST_NAME_PROP "vendor.usb.rmnet.inst.name"
-#define DPL_INST_NAME_PROP "vendor.usb.dpl.inst.name"
-#define PERSIST_VENDOR_USB_PROP "persist.vendor.usb.config"
-
-enum mdmType {
-  INTERNAL,
-  EXTERNAL,
-  INTERNAL_EXTERNAL,
-  NONE,
-};
 
 namespace android {
 namespace hardware {
@@ -355,45 +341,6 @@ static V1_0::Status validateAndSetVidPid(uint64_t functions) {
   return ret;
 }
 
-static enum mdmType getModemType() {
-  struct dirent* entry;
-  enum mdmType mtype = INTERNAL;
-  size_t pos_sda, pos_p, length;
-  std::unique_ptr<DIR, int(*)(DIR*)> dir(opendir(ESOC_DEVICE_PATH), closedir);
-  std::string esoc_name, path, soc_machine, esoc_dev_path = ESOC_DEVICE_PATH;
-
- /* On some platforms, /sys/bus/esoc/ director may not exists.*/
-  if (dir == NULL)
-      return mtype;
-
-  while ((entry = readdir(dir.get())) != NULL) {
-    if (entry->d_name[0] == '.')
-      continue;
-    path = esoc_dev_path + "/" + entry->d_name + "/esoc_name";
-    if (ReadFileToString(path, &esoc_name)) {
-      if (esoc_name.find("MDM") != std::string::npos ||
-        esoc_name.find("SDX") != std::string::npos) {
-        mtype = EXTERNAL;
-        break;
-      }
-    }
-  }
-  if (ReadFileToString(SOC_MACHINE_PATH, &soc_machine)) {
-    pos_sda = soc_machine.find("SDA");
-    pos_p = soc_machine.find_last_of('P');
-    length = soc_machine.length();
-    if (pos_sda != std::string::npos || pos_p == length - 1) {
-      mtype = mtype ? mtype : NONE;
-      goto done;
-    }
-    if (mtype)
-      mtype = INTERNAL_EXTERNAL;
-  }
-done:
-  ALOGI("getModemType %d", mtype);
-  return mtype;
-}
-
 V1_0::Status UsbGadget::setupFunctions(
     uint64_t functions, const sp<V1_0::IUsbGadgetCallback> &callback,
     uint64_t timeout) {
@@ -407,31 +354,12 @@ V1_0::Status UsbGadget::setupFunctions(
 
   bool ffsEnabled = false;
   int i = 0;
-  enum mdmType mtype;
   std::string gadgetName = GetProperty(USB_CONTROLLER_PROP, "");
-  std::string rndisFunc = GetProperty(RNDIS_FUNC_NAME_PROP, "");
-  std::string rmnetFunc = GetProperty(RMNET_FUNC_NAME_PROP, "");
-  std::string rmnetInst = GetProperty(RMNET_INST_NAME_PROP, "");
-  std::string dplInst = GetProperty(DPL_INST_NAME_PROP, "");
-  std::string vendorProp = GetProperty(PERSIST_VENDOR_USB_PROP, "");
 
   if (gadgetName.empty()) {
     ALOGE("UDC name not defined");
     return Status::ERROR;
   }
-
-  if (rmnetInst.empty()) {
-    ALOGE("rmnetinstance not defined");
-    rmnetInst = "rmnet";
-  }
-
-  if (dplInst.empty()) {
-    ALOGE("dplinstance not defined");
-    dplInst = "dpl";
-  }
-
-  rmnetInst = rmnetFunc + "." + rmnetInst;
-  dplInst = rmnetFunc + "." + dplInst;
 
   if ((functions & GadgetFunction::MTP) != 0) {
     ALOGI("setCurrentUsbFunctions mtp");
@@ -458,77 +386,6 @@ V1_0::Status UsbGadget::setupFunctions(
   if ((functions & GadgetFunction::AUDIO_SOURCE) != 0) {
     ALOGI("setCurrentUsbFunctions Audio Source");
     if (linkFunction("audio_source.gs3", i++)) return Status::ERROR;
-  }
-
-  mtype = getModemType();
-  if ((functions & GadgetFunction::RNDIS) != 0) {
-    ALOGI("setCurrentUsbFunctions rndis");
-    if (linkFunction((rndisFunc + ".rndis").c_str(), i++))
-      return Status::ERROR;
-    if (functions & GadgetFunction::ADB) {
-      if (mtype == EXTERNAL || mtype == INTERNAL_EXTERNAL) {
-        ALOGI("esoc RNDIS default composition");
-        if (linkFunction("diag.diag", i++)) return Status::ERROR;
-        if (linkFunction("diag.diag_mdm", i++)) return Status::ERROR;
-        if (linkFunction("qdss.qdss", i++)) return Status::ERROR;
-        if (linkFunction("qdss.qdss_mdm", i++)) return Status::ERROR;
-        if (linkFunction("cser.dun.0", i++)) return Status::ERROR;
-        if (linkFunction(dplInst.c_str(), i++))
-          return Status::ERROR;
-        if (setVidPid("0x05c6", "0x90e7") != Status::SUCCESS)
-          return Status::ERROR;
-      } else if (mtype == INTERNAL) {
-        ALOGI("RNDIS default composition");
-        if (linkFunction("diag.diag", i++)) return Status::ERROR;
-        if (linkFunction("qdss.qdss", i++)) return Status::ERROR;
-        if (linkFunction("cser.dun.0", i++)) return Status::ERROR;
-        if (linkFunction(dplInst.c_str(), i++))
-          return Status::ERROR;
-        if (setVidPid("0x05c6", "0x90e9") != Status::SUCCESS)
-          return Status::ERROR;
-      }
-    }
-  }
-
-  /* override adb-only with additional QTI functions */
-  if (i == 0 && functions & GadgetFunction::ADB) {
-    /* vendor defined functions if any run from vendor rc file */
-    if (!vendorProp.empty()) {
-      ALOGI("enable vendor usb config composition");
-      SetProperty("vendor.usb.config", vendorProp);
-      return Status::SUCCESS;
-    }
-
-    if (mtype == EXTERNAL || mtype == INTERNAL_EXTERNAL) {
-      ALOGI("esoc default composition");
-      if (linkFunction("diag.diag", i++)) return Status::ERROR;
-      if (linkFunction("diag.diag_mdm", i++)) return Status::ERROR;
-      if (linkFunction("qdss.qdss", i++)) return Status::ERROR;
-      if (linkFunction("qdss.qdss_mdm", i++)) return Status::ERROR;
-      if (linkFunction("cser.dun.0", i++)) return Status::ERROR;
-      if (linkFunction(dplInst.c_str(), i++))
-        return Status::ERROR;
-      if (linkFunction(rmnetInst.c_str(), i++))
-        return Status::ERROR;
-      if (setVidPid("0x05c6", "0x90e5") != Status::SUCCESS)
-        return Status::ERROR;
-    } else if (mtype == NONE) {
-      ALOGI("enable APQ default composition");
-      if (linkFunction("diag.diag", i++)) return Status::ERROR;
-      if (setVidPid("0x05c6", "0x901d") != Status::SUCCESS)
-        return Status::ERROR;
-    } else {
-      ALOGI("enable QC default composition");
-      if (linkFunction("diag.diag", i++)) return Status::ERROR;
-      if (linkFunction("cser.dun.0", i++)) return Status::ERROR;
-      if (linkFunction(rmnetInst.c_str(), i++))
-        return Status::ERROR;
-      if (linkFunction(dplInst.c_str(), i++))
-        return Status::ERROR;
-      if (linkFunction("qdss.qdss", i++)) return Status::ERROR;
-      if (setVidPid("0x05c6", "0x90db") != Status::SUCCESS)
-        return Status::ERROR;
-    }
   }
 
   if ((functions & GadgetFunction::ADB) != 0) {
@@ -670,9 +527,9 @@ int main() {
     return 1;
   }
 
-  ALOGI("QTI USB Gadget HAL Ready.");
+  ALOGI("USB Gadget HAL Ready.");
   joinRpcThreadpool();
   // Under normal cases, execution will not reach this line.
-  ALOGI("QTI USB Gadget HAL failed to join thread pool.");
+  ALOGI("USB Gadget HAL failed to join thread pool.");
   return 1;
 }
