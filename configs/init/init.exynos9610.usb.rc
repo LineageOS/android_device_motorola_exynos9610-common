@@ -13,10 +13,11 @@ on init
     mkdir /config/usb_gadget/g1/functions/mass_storage.0
     mkdir /config/usb_gadget/g1/functions/accessory.gs2
     mkdir /config/usb_gadget/g1/functions/ffs.adb 0770 shell shell
-    mkdir /dev/usb-ffs 0770 shell shell
-    mkdir /dev/usb-ffs/adb 0770 shell shell
-    mount functionfs adb /dev/usb-ffs/adb uid=2000,gid=2000
+    mkdir /dev/usb-ffs 0770 shell system
+    mkdir /dev/usb-ffs/adb 0770 shell system
+    mount functionfs adb /dev/usb-ffs/adb uid=2000,gid=1000,rmode=0770,fmode=0660
     restorecon_recursive /dev/usb-ffs/adb
+    write /sys/class/android_usb/android0/f_ffs/aliases adb
     chown system system /sys/class/android_usb/android0/secure
     chmod 0660 /sys/class/android_usb/android0/secure
 
@@ -27,21 +28,10 @@ on boot
     write /config/usb_gadget/g1/configs/c.1/strings/0x409/configuration "default"
     write /config/usb_gadget/g1/configs/c.1/MaxPower 0x3f
     write /config/usb_gadget/g1/bcdDevice "0x0409"
-    symlink /config/usb_gadget/g1/functions/mtp.mtp /config/usb_gadget/g1/configs/c.1/mtp.mtp
-    symlink /config/usb_gadget/g1/functions/ptp.ptp /config/usb_gadget/g1/configs/c.1/ptp.ptp
-    symlink /config/usb_gadget/g1/functions/acm.acm /config/usb_gadget/g1/configs/c.1/acm.acm
-    symlink /config/usb_gadget/g1/functions/dm.dm /config/usb_gadget/g1/configs/c.1/dm.dm
-    symlink /config/usb_gadget/g1/functions/rndis.rndis /config/usb_gadget/g1/configs/c.1/rndis.rndis
-    symlink /config/usb_gadget/g1/functions/midi.midi /config/usb_gadget/g1/configs/c.1/midi.midi
-    symlink /config/usb_gadget/g1/functions/usbnet.usbnet /config/usb_gadget/g1/configs/c.1/usbnet.usbnet
-    symlink /config/usb_gadget/g1/functions/ffs.adb /config/usb_gadget/g1/configs/c.1/ffs.adb
-    symlink /config/usb_gadget/g1/functions/mass_storage.0 /config/usb_gadget/g1/configs/c.1/mass_storage.0
-    symlink /config/usb_gadget/g1/functions/accessory.gs2 /config/usb_gadget/g1/configs/c.1/accessory.gs2
     write /config/usb_gadget/g1/os_desc/b_vendor_code 0x1
     write /config/usb_gadget/g1/os_desc/qw_sign "MSFT100"
     write /config/usb_gadget/g1/os_desc/use  1
-    symlink /config/usb_gadget/g1/configs/c.1 /config/usb_gadget/g1/os_desc/c.1
-    write /config/usb_gadget/g1/functions/mtp.mtp/os_desc/interface.MTP/compatible_id "MTP"
+
     chmod 444 /sys/class/android_usb/android0/f_midi/alsa
 
 on property:sys.usb.config=none

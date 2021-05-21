@@ -80,7 +80,9 @@ vendor.sys.exynos.modempath=/dev/block/platform/13520000.ufs/by-name/modem
 ro.vendor.sensors.mot_ltv=true
 
 ## USB
+sys.usb.configfs=1
 dev.usbsetting.embedded=on
+vendor.usb.controller=13200000.dwc3
 
 ## Wi-Fi
 wifi.interface=wlan0
