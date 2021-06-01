@@ -4,4 +4,3 @@ type vendor_hwc_prop, property_type;
 type vendor_ims_prop, property_type;
 type moto_boot_prop, property_type;
 type rmnet_mux_prop, property_type;
-type vendor_wifi_prop, property_type;
