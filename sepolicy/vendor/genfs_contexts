@@ -11,7 +11,6 @@ genfscon debugfs /dma_buf                                                       
 # Proc
 #
 
-genfscon proc /last_kmsg                                                                                                u:object_r:proc_last_kmsg:s0
 genfscon proc /sys/kernel/printk                                                                                        u:object_r:proc_printk:s0
 genfscon proc /sys/vm/reap_mem_on_sigkill                                                                               u:object_r:proc_reap_mem_on_sigkill:s0
 genfscon proc /sys/vm/swappiness                                                                                        u:object_r:proc_swappiness:s0
