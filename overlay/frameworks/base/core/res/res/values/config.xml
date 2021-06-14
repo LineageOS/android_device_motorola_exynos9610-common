@@ -86,6 +86,9 @@
         <item>0:2:15</item> <!-- ID0:Fingerprint:Strong -->
     </string-array>
 
+    <!-- Specify if the fingerprint hardware support gestures-->
+    <bool name="config_fingerprintSupportsGestures">true</bool>
+
     <array name="config_autoBrightnessDisplayValuesNits">
         <item>3</item>
         <item>32</item>
