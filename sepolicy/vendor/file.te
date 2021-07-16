@@ -4,7 +4,6 @@ type chargeonly_data_file, file_type, data_file_type;
 type display_vendor_data_file, file_type, data_file_type;
 type mediadrm_vendor_data_file, file_type, data_file_type;
 type misc_vendor_data_file, file_type, data_file_type;
-type mobicore_data_registry_file, file_type, data_file_type;
 type rild_vendor_data_file, file_type, data_file_type;
 type sensor_vendor_data_file, file_type, data_file_type;
 type thermal_vendor_data_file, file_type, data_file_type;

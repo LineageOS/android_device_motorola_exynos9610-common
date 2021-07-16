@@ -7,8 +7,5 @@ allow tee {
 
 r_dir_file(tee, persist_mobicore_file)
 
-allow tee mobicore_data_registry_file:dir create_dir_perms;
-allow tee mobicore_data_registry_file:file create_file_perms;
-
 allow tee log_vendor_data_file:file create_file_perms;
 allow tee log_vendor_data_file:dir rw_dir_perms;
