@@ -24,13 +24,14 @@
          appended after the path string to interpret coordinates in dp instead of px units.
          Note that a physical cutout should be configured in pixels for the best results.
          -->
-    <string translatable="false" name="config_mainBuiltInDisplayCutout">M 0,0 H 49.25 V 41.25  H 0 V 0 Z @dp @left</string>
+    <string translatable="false" name="config_mainBuiltInDisplayCutout">M 0,0 H 57.58 V 55.0  H 0 V 0 Z @dp @left</string>
 
     <dimen name="quick_qs_offset_height">165px</dimen>
     <dimen name="status_bar_height">165px</dimen>
     <dimen name="status_bar_height_landscape">24dp</dimen>
     <dimen name="status_bar_height_portrait">165px</dimen>
     <dimen name="status_bar_icon_size">24dp</dimen>
+    <dimen name="rounded_corner_radius_bottom">36dp</dimen>
 
     <!-- ComponentName of a dream to show whenever the system would otherwise have
          gone to sleep.  When the PowerManager is asked to go to sleep, it will instead
@@ -89,7 +90,7 @@
     <!-- Specify if the fingerprint hardware support gestures-->
     <bool name="config_fingerprintSupportsGestures">true</bool>
 
-    <array name="config_autoBrightnessDisplayValuesNits">
+    <integer-array name="config_autoBrightnessDisplayValuesNits">
         <item>3</item>
         <item>32</item>
         <item>64</item>
@@ -112,7 +113,7 @@
         <item>450</item>
         <item>450</item>
         <item>562</item>
-    </array>
+    </integer-array>
     <integer-array name="config_autoBrightnessLevels">
         <item>5</item>
         <item>10</item>
