@@ -242,4 +242,7 @@
 
     <bool translatable="false" name="config_wifi_softap_ieee80211ac_supported">true</bool>
     <bool name="config_enableWifiDisplay">true</bool>
+    
+    <!-- Boolean indicating if current platform supports BLE peripheral mode -->
+    <bool name="config_bluetooth_le_peripheral_mode_supported">true</bool>
 </resources>
