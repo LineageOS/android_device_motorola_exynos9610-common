@@ -16,6 +16,24 @@
       "revId": "6e6464a4b43af85e97aea3e6005359f19309394b",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "163b151a_9555a542",
+        "filename": "bluetooth/bdroid_buildcfg.h",
+        "patchSetId": 1
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 17401
+      },
+      "writtenOn": "2021-08-12T16:55:29Z",
+      "side": 1,
+      "message": "i dont think one has anything to do with the other\n\n```\n/*  This is used to work around a controller bug that report supporting\n *  enhanced synchronous commands */\n#ifndef BTM_SCO_ENHANCED_SYNC_ENABLED\n#define BTM_SCO_ENHANCED_SYNC_ENABLED TRUE\n#endif\n```\n\n```\n/*  This is used to work around an uncompliant AOSP implementation regarding\n *  eSCO Transport Unit Size parameter defined as 0x00 (HCI) which is not\n *  suitable for all devices. This sets this parameter to 16 bits (PCM)\n */\n#ifdef BTM_ESCO_TRANSPORT_UNIT_SIZE_PCM16\n#define ESCO_TRANSPORT_UNIT_SIZE 16\n#else\n#define ESCO_TRANSPORT_UNIT_SIZE 0x00\n#endif\n```",
+      "parentUuid": "0f595b2b_153112a2",
+      "revId": "6e6464a4b43af85e97aea3e6005359f19309394b",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
     }
   ]
 }
