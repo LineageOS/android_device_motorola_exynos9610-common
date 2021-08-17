@@ -1,19 +1,24 @@
-## Common proprietary files - from motorola/troika_retail/troika_sprout:10/QSBS30.62-29-11-5/db5cb, unless pinned
+## Common proprietary files - from motorola/troika_retail/troika_sprout:11/RSB31.Q1-48-36-11/7365d8c, unless pinned
 
 ## Bluetooth (aptX)
 lib64/libaptXHD_encoder.so
 lib64/libaptX_encoder.so
 
 ## HotwordEnrollment
--priv-app/HotwordEnrollmentOKGoogleCS47L35/HotwordEnrollmentOKGoogleCS47L35.apk
--priv-app/HotwordEnrollmentTGoogleCS47L35/HotwordEnrollmentTGoogleCS47L35.apk
--priv-app/HotwordEnrollmentXGoogleCS47L35/HotwordEnrollmentXGoogleCS47L35.apk
+-product/priv-app/HotwordEnrollmentOKGoogleWM8280/HotwordEnrollmentOKGoogleWM8280.apk
+-product/priv-app/HotwordEnrollmentXGoogleWM8280/HotwordEnrollmentXGoogleWM8280.apk
 
 ## IMS
-# ShannonIms.apk is modified to include IEPdgConnection* classes from stock's framework.jar
-# and removed libmediaadaptor dependency
--app/ShannonIms/ShannonIms.apk|6be75e9e3ccae883c17265927646d9c508ae44b0
-bin/wfc-pkt-router
-lib64/libmediaadaptor.so
-lib64/libmedia.so:lib64/libmedia_ims.so
-lib64/libePdgJni.so
+-app/ShannonIms/ShannonIms.apk
+-priv-app/OemRilService/OemRilService.apk
+-system_ext/app/ShannonDataService/ShannonDataService.apk
+-system_ext/app/ShannonNetworkService/ShannonNetworkService.apk
+-system_ext/app/ShannonQualifiedNetworksService/ShannonQualifiedNetworksService.apk
+system_ext/lib/vendor.samsung_slsi.telephony.hardware.oemservice@1.0.so
+system_ext/lib/vendor.samsung_slsi.telephony.hardware.radio@1.0.so
+system_ext/lib/vendor.samsung_slsi.telephony.hardware.radio@1.1.so
+system_ext/lib/vendor.samsung_slsi.telephony.hardware.radioExternal@1.0.so
+system_ext/lib64/vendor.samsung_slsi.telephony.hardware.oemservice@1.0.so
+system_ext/lib64/vendor.samsung_slsi.telephony.hardware.radio@1.0.so
+system_ext/lib64/vendor.samsung_slsi.telephony.hardware.radio@1.1.so
+system_ext/lib64/vendor.samsung_slsi.telephony.hardware.radioExternal@1.0.so
