@@ -78,7 +78,6 @@ Only the three quirks included above are recognized at this point:
 -->
 
 <MediaCodecs>
-    <Include href="media_codecs_google_audio.xml" />
     <Include href="media_codecs_google_telephony.xml" />
     <Settings>
         <Setting name="supports-multiple-secure-codecs" value="true" />
@@ -97,6 +96,7 @@ Only the three quirks included above are recognized at this point:
             <Limit name="performance-point-1920x1080" range="120" />
             <Limit name="concurrent-instances" max="16" />
             <Feature name="adaptive-playback" />
+            <Feature name="low-latency" />
         </MediaCodec>
         <MediaCodec name="OMX.Exynos.H263.Decoder" type="video/3gpp" >
             <Quirk name="requires-allocate-on-input-ports" />
@@ -109,6 +109,7 @@ Only the three quirks included above are recognized at this point:
             <Limit name="performance-point-1920x1080" range="120" />
             <Limit name="concurrent-instances" max="16" />
             <Feature name="adaptive-playback" />
+            <Feature name="low-latency" />
         </MediaCodec>
         <MediaCodec name="OMX.Exynos.AVC.Decoder" type="video/avc" >
             <Quirk name="requires-allocate-on-input-ports" />
@@ -121,6 +122,7 @@ Only the three quirks included above are recognized at this point:
             <Limit name="performance-point-3840x2160" range="120" />
             <Limit name="concurrent-instances" max="16" />
             <Feature name="adaptive-playback" />
+            <Feature name="low-latency" />
         </MediaCodec>
         <MediaCodec name="OMX.Exynos.AVC.Decoder.secure" type="video/avc" >
             <Quirk name="requires-allocate-on-input-ports" />
@@ -134,6 +136,7 @@ Only the three quirks included above are recognized at this point:
             <Limit name="concurrent-instances" max="2" />
             <Feature name="adaptive-playback" />
             <Feature name="secure-playback" required="true" />
+            <Feature name="low-latency" />
         </MediaCodec>
         <MediaCodec name="OMX.Exynos.VP8.Decoder" type="video/x-vnd.on2.vp8" >
             <Quirk name="requires-allocate-on-input-ports" />
@@ -146,6 +149,7 @@ Only the three quirks included above are recognized at this point:
             <Limit name="performance-point-3840x2160" range="120" />
             <Limit name="concurrent-instances" max="16" />
             <Feature name="adaptive-playback" />
+            <Feature name="low-latency" />
         </MediaCodec>
         <MediaCodec name="OMX.Exynos.HEVC.Decoder" type="video/hevc" >
             <Quirk name="requires-allocate-on-input-ports" />
@@ -158,6 +162,7 @@ Only the three quirks included above are recognized at this point:
             <Limit name="performance-point-3840x2160" range="120" />
             <Limit name="concurrent-instances" max="16" />
             <Feature name="adaptive-playback" />
+            <Feature name="low-latency" />
         </MediaCodec>
         <MediaCodec name="OMX.Exynos.HEVC.Decoder.secure" type="video/hevc" >
             <Quirk name="requires-allocate-on-input-ports" />
@@ -171,6 +176,7 @@ Only the three quirks included above are recognized at this point:
             <Limit name="concurrent-instances" max="2" />
             <Feature name="adaptive-playback" />
             <Feature name="secure-playback" required="true" />
+            <Feature name="low-latency" />
         </MediaCodec>
         <MediaCodec name="OMX.Exynos.VP9.Decoder" type="video/x-vnd.on2.vp9" >
             <Quirk name="requires-allocate-on-input-ports" />
@@ -267,6 +273,5 @@ Only the three quirks included above are recognized at this point:
             <Limit name="concurrent-instances" max="16" />
         </MediaCodec>
     </Encoders>
-    <Include href="media_codecs_google_video.xml" />
     <Include href="media_codecs_dolby_audio.xml" />
 </MediaCodecs>
