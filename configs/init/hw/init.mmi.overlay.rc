@@ -24,4 +24,3 @@ on property:ro.carrier=tmo
 
 on property:ro.carrier=metropcs
   write /sys/class/power_supply/battery/device/force_max_chrg_temp 55
-

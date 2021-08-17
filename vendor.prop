@@ -60,6 +60,9 @@ qemu.hw.mainkeys=0
 ## OEM Unlock
 ro.oem_unlock_supported=1
 
+# Packet Router
+vendor.pktrouter=1
+
 ## Platform
 debug.slsi_platform=1
 ro.hardware.soc.manufacturer=slsi
@@ -71,6 +74,7 @@ persist.vendor.ril.emergencynumber.sim=1
 radio.smsdomain=0
 ro.carrier=europen
 ro.vendor.config.build_carrier=europen
+ro.vendor.radio.imei.sv=25
 telephony.lteOnCdmaDevice=1
 vendor.radio.smsdomain=2
 vendor.rild.libpath=libsitril.so
