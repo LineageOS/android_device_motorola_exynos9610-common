@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
 /**
- * Copyright 2020, The LineageOS Project
+ * Copyright 2021, The LineageOS Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -16,9 +16,20 @@
  * limitations under the License.
  */
 -->
-<resources>
-    <bool name="def_mobile_data_always_on">false</bool>
-    <!-- Set the automatic brightness mode on by default -->
-    <bool name="def_screen_brightness_automatic_mode">true</bool>
-    <bool name="def_sound_effects_enabled">false</bool>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+    <string-array name="config_tether_bluetooth_regexs">
+        <item>bt-pan</item>
+    </string-array>
+    <string-array name="config_tether_ncm_regexs">
+        <item>ncm\\d</item>
+    </string-array>
+    <string-array name="config_tether_usb_regexs">
+        <item>"rndis\\d"</item>
+    </string-array>
+    <string-array translatable="false" name="config_tether_wifi_regexs">
+        <item>"wlan0"</item>
+        <item>"softap.*"</item>
+    </string-array>
+
 </resources>

@@ -11,6 +11,7 @@ persist.vendor.sys.camera.          u:object_r:vendor_camera_prop:s0
 vendor.charon                       u:object_r:vendor_ims_prop:s0
 vendor.charon.route                 u:object_r:vendor_ims_prop:s0
 custom.charon.status                u:object_r:vendor_ims_prop:s0
+vendor.pktrouter                    u:object_r:vendor_ims_prop:s0
 
 # HWC
 ro.vendor.ddk.set.afbc              u:object_r:vendor_hwc_prop:s0
