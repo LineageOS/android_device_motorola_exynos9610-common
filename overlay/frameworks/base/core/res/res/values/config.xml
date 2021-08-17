@@ -242,4 +242,16 @@
 
     <bool translatable="false" name="config_wifi_softap_ieee80211ac_supported">true</bool>
     <bool name="config_enableWifiDisplay">true</bool>
+
+    <!-- IWLAN data service package name to bind to by default. If none is specified in an overlay, an
+         empty string is passed in -->
+    <string name="config_wlan_data_service_package">com.shannon.dataservice</string>
+
+    <!-- IWLAN network service package name to bind to by default. If none is specified in an overlay, an
+         empty string is passed in -->
+    <string name="config_wlan_network_service_package">com.shannon.networkservice</string>
+
+    <!-- Telephony qualified networks service package name to bind to by default. -->
+    <string name="config_qualified_networks_service_package">com.shannon.qualifiednetworksservice</string>
+
 </resources>

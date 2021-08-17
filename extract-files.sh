@@ -76,54 +76,14 @@ done
 
 # Remove libhidltransport dependency
 "${PATCHELF}" --remove-needed "libhidltransport.so" "${BLOB_ROOT}"/vendor/bin/hw/android.hardware.biometrics.fingerprint@2.1-service-rbs
-"${PATCHELF}" --remove-needed "libhidltransport.so" "${BLOB_ROOT}"/vendor/bin/hw/android.hardware.drm@1.2-service.widevine
-"${PATCHELF}" --remove-needed "libhidltransport.so" "${BLOB_ROOT}"/vendor/bin/hw/android.hardware.secure_element@1.1-service-uicc
-"${PATCHELF}" --remove-needed "libhidltransport.so" "${BLOB_ROOT}"/vendor/bin/hw/vendor.samsung.hardware.gnss@1.0-service
-"${PATCHELF}" --remove-needed "libhidltransport.so" "${BLOB_ROOT}"/vendor/lib/hw/vendor.egistec.hardware.fingerprint@4.0-impl.so
-"${PATCHELF}" --remove-needed "libhidltransport.so" "${BLOB_ROOT}"/vendor/lib/libGrallocWrapper.so
-"${PATCHELF}" --remove-needed "libhidltransport.so" "${BLOB_ROOT}"/vendor/lib/libsitril-client.so
-"${PATCHELF}" --remove-needed "libhidltransport.so" "${BLOB_ROOT}"/vendor/lib/libwvhidl.so
-"${PATCHELF}" --remove-needed "libhidltransport.so" "${BLOB_ROOT}"/vendor/lib/vendor.egistec.hardware.fingerprint@4.0.so
-"${PATCHELF}" --remove-needed "libhidltransport.so" "${BLOB_ROOT}"/vendor/lib/vendor.samsung_slsi.telephony.hardware.oemservice@1.0.so
-"${PATCHELF}" --remove-needed "libhidltransport.so" "${BLOB_ROOT}"/vendor/lib/vendor.samsung_slsi.telephony.hardware.radio@1.0.so
-"${PATCHELF}" --remove-needed "libhidltransport.so" "${BLOB_ROOT}"/vendor/lib/vendor.samsung_slsi.telephony.hardware.radio@1.1.so
-"${PATCHELF}" --remove-needed "libhidltransport.so" "${BLOB_ROOT}"/vendor/lib/vendor.samsung_slsi.telephony.hardware.radioExternal@1.0.so
 "${PATCHELF}" --remove-needed "libhidltransport.so" "${BLOB_ROOT}"/vendor/lib64/hw/android.hardware.gnss@1.0-impl.samsung.so
 "${PATCHELF}" --remove-needed "libhidltransport.so" "${BLOB_ROOT}"/vendor/lib64/hw/android.hardware.gnss@1.1-impl.samsung.so
 "${PATCHELF}" --remove-needed "libhidltransport.so" "${BLOB_ROOT}"/vendor/lib64/hw/android.hardware.gnss@2.0-impl.samsung.so
-"${PATCHELF}" --remove-needed "libhidltransport.so" "${BLOB_ROOT}"/vendor/lib64/hw/vendor.egistec.hardware.fingerprint@4.0-impl.so
 "${PATCHELF}" --remove-needed "libhidltransport.so" "${BLOB_ROOT}"/vendor/lib64/hw/vendor.samsung.hardware.gnss@1.0-impl.so
-"${PATCHELF}" --remove-needed "libhidltransport.so" "${BLOB_ROOT}"/vendor/lib64/libGrallocWrapper.so
-"${PATCHELF}" --remove-needed "libhidltransport.so" "${BLOB_ROOT}"/vendor/lib64/libsitril-client.so
-"${PATCHELF}" --remove-needed "libhidltransport.so" "${BLOB_ROOT}"/vendor/lib64/vendor.egistec.hardware.fingerprint@4.0.so
-"${PATCHELF}" --remove-needed "libhidltransport.so" "${BLOB_ROOT}"/vendor/lib64/vendor.samsung.hardware.gnss@1.0.so
-"${PATCHELF}" --remove-needed "libhidltransport.so" "${BLOB_ROOT}"/vendor/lib64/vendor.samsung_slsi.telephony.hardware.oemservice@1.0.so
-"${PATCHELF}" --remove-needed "libhidltransport.so" "${BLOB_ROOT}"/vendor/lib64/vendor.samsung_slsi.telephony.hardware.radio@1.0.so
-"${PATCHELF}" --remove-needed "libhidltransport.so" "${BLOB_ROOT}"/vendor/lib64/vendor.samsung_slsi.telephony.hardware.radio@1.1.so
-"${PATCHELF}" --remove-needed "libhidltransport.so" "${BLOB_ROOT}"/vendor/lib64/vendor.samsung_slsi.telephony.hardware.radioExternal@1.0.so
 
 # Remove libhwbinder dependency
-"${PATCHELF}" --remove-needed "libhwbinder.so" "${BLOB_ROOT}"/vendor/bin/hw/android.hardware.drm@1.2-service.widevine
-"${PATCHELF}" --remove-needed "libhwbinder.so" "${BLOB_ROOT}"/vendor/bin/hw/android.hardware.secure_element@1.1-service-uicc
-"${PATCHELF}" --remove-needed "libhwbinder.so" "${BLOB_ROOT}"/vendor/lib/libsitril-client.so
-"${PATCHELF}" --remove-needed "libhwbinder.so" "${BLOB_ROOT}"/vendor/lib/libwvhidl.so
-"${PATCHELF}" --remove-needed "libhwbinder.so" "${BLOB_ROOT}"/vendor/lib/vendor.egistec.hardware.fingerprint@4.0.so
-"${PATCHELF}" --remove-needed "libhwbinder.so" "${BLOB_ROOT}"/vendor/lib/vendor.samsung_slsi.telephony.hardware.oemservice@1.0.so
-"${PATCHELF}" --remove-needed "libhwbinder.so" "${BLOB_ROOT}"/vendor/lib/vendor.samsung_slsi.telephony.hardware.radio@1.0.so
-"${PATCHELF}" --remove-needed "libhwbinder.so" "${BLOB_ROOT}"/vendor/lib/vendor.samsung_slsi.telephony.hardware.radio@1.1.so
-"${PATCHELF}" --remove-needed "libhwbinder.so" "${BLOB_ROOT}"/vendor/lib/vendor.samsung_slsi.telephony.hardware.radioExternal@1.0.so
 "${PATCHELF}" --remove-needed "libhwbinder.so" "${BLOB_ROOT}"/vendor/lib64/hw/android.hardware.gnss@1.0-impl.samsung.so
 "${PATCHELF}" --remove-needed "libhwbinder.so" "${BLOB_ROOT}"/vendor/lib64/hw/android.hardware.gnss@1.1-impl.samsung.so
 "${PATCHELF}" --remove-needed "libhwbinder.so" "${BLOB_ROOT}"/vendor/lib64/hw/android.hardware.gnss@2.0-impl.samsung.so
-"${PATCHELF}" --remove-needed "libhwbinder.so" "${BLOB_ROOT}"/vendor/lib64/hw/vendor.samsung.hardware.gnss@1.0-impl.so
-"${PATCHELF}" --remove-needed "libhwbinder.so" "${BLOB_ROOT}"/vendor/lib64/libsitril-client.so
-"${PATCHELF}" --remove-needed "libhwbinder.so" "${BLOB_ROOT}"/vendor/lib64/vendor.egistec.hardware.fingerprint@4.0.so
-"${PATCHELF}" --remove-needed "libhwbinder.so" "${BLOB_ROOT}"/vendor/lib64/vendor.samsung.hardware.gnss@1.0.so
-"${PATCHELF}" --remove-needed "libhwbinder.so" "${BLOB_ROOT}"/vendor/lib64/vendor.samsung_slsi.telephony.hardware.oemservice@1.0.so
-"${PATCHELF}" --remove-needed "libhwbinder.so" "${BLOB_ROOT}"/vendor/lib64/vendor.samsung_slsi.telephony.hardware.radio@1.0.so
-"${PATCHELF}" --remove-needed "libhwbinder.so" "${BLOB_ROOT}"/vendor/lib64/vendor.samsung_slsi.telephony.hardware.radio@1.1.so
-"${PATCHELF}" --remove-needed "libhwbinder.so" "${BLOB_ROOT}"/vendor/lib64/vendor.samsung_slsi.telephony.hardware.radioExternal@1.0.so
-
-"${PATCHELF}" --replace-needed libprotobuf-cpp-lite.so libprotobuf-cpp-lite-v29.so "${BLOB_ROOT}"/vendor/lib/libwvhidl.so
 
 "${MY_DIR}/setup-makefiles.sh"

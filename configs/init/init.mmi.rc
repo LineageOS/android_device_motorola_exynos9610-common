@@ -82,7 +82,8 @@ on post-fs
     mkdir /mnt/vendor/persist/factory/wlan 0755 vendor_tcmd vendor_tcmd
     mkdir /mnt/vendor/persist/factory/regulatory 0755 vendor_tcmd system
     mkdir /mnt/vendor/persist/public 0755 vendor_tcmd vendor_tcmd
-    mkdir /persist/public/atvc 0770 vendor_mot_atvc shell
+    #MMI_STOPSHIP
+    #mkdir /persist/public/atvc 0770 mot_atvc shell
     mkdir /mnt/vendor/persist/public/att_dm 0775 radio vendor_tcmd
     mkdir /mnt/vendor/persist/public/hiddenmenu 0775 radio vendor_tcmd
     mkdir /mnt/vendor/persist/public/hiddenmenu/data 0775 system vendor_tcmd
@@ -174,6 +175,9 @@ on post-fs-data
     # Create directory for cutback
     mkdir /data/vendor/misc/cutback 0770 radio wifi
 
+    # Create directory for fm_radio
+    mkdir /data/misc/fm_radio 0770 system system
+
     # mkdir IPLog folder
     mkdir /data/vendor/misc/iplog 0770 system system
 
@@ -259,6 +263,14 @@ on boot
    chmod 0666 sys/devices/system/cpu/cpufreq/policy0/scaling_max_freq
    chmod 0666 sys/devices/system/cpu/cpufreq/policy4/scaling_max_freq
 
+# For not to impact boot completed broadcast, set cpusets after broadcast.
+on property:sys.bootbroadcast_completed=1
+    write /dev/cpuset/foreground/cpus 0-7
+    write /dev/cpuset/top-app/cpus 0-7
+    write /dev/cpuset/background/cpus 0-3
+    write /dev/cpuset/system-background/cpus 0-7
+    write /dev/cpuset/restricted/cpus 0-3
+
 on charger
     trigger early-fs
     trigger fs
@@ -275,6 +287,8 @@ on moto-charger
     chmod 0660 /sys/power/wake_lock
     chmod 0660 /sys/power/wake_unlock
 #    setprop ro.board.platform msm8953
+    #MMI_STOPSHIP load_system_props is not allowed
+    # load_system_props
     trigger firmware_mounts_complete
     setprop sys.usb.configfs 1
     setprop sys.usb.config charging
