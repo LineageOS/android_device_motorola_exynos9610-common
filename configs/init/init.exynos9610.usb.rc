@@ -217,7 +217,6 @@ on property:sys.usb.config=rndis,acm,dm
     setprop sys.usb.state ${sys.usb.config}
 
 on property:sys.usb.config=rndis,acm,dm,adb
-    stop adbd
     start adbd
 
 on property:sys.usb.ffs.ready=1 && property:sys.usb.config=rndis,acm,dm,adb
@@ -317,8 +316,20 @@ on property:sys.usb.ffs.ready=1 && property:sys.usb.config=accessory,adb
     write /config/usb_gadget/g1/UDC "13200000.dwc3"
     setprop sys.usb.state ${sys.usb.config}
 
+on load_persist_props_action
+    setprop vendor.usb.config  ${sys.usb.config}
+    setprop persist.vendor.mot.usb.config  ${persist.sys.usb.config:-" "}
+    setprop persist.sys.usb.config "  "
+    setprop persist.vendor.usb.config ${persist.sys.usb.config}
+
 on property:sys.boot_completed=*
     setprop vendor.boot_completed ${sys.boot_completed}
+
+on property:persist.vendor.usb.config=*
+    setprop persist.sys.usb.config ${persist.vendor.usb.config}
+
+on property:vendor.usb.config=*
+    setprop sys.usb.config ${vendor.usb.config}
 
 on property:vendor.usb.controller=*
     setprop sys.usb.controller ${vendor.usb.controller}

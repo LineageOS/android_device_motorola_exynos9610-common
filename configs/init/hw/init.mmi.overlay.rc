@@ -19,9 +19,17 @@ on boot
    chmod 0664 /mnt/vendor/persist/camera/dualcal/dual_cal_data.bin
    chmod 0664 /mnt/vendor/persist/camera/dualcal/module_id.bin
 
+service capsense_reset /vendor/bin/capsense_reset
+    class core
+    user system
+    group system input
+    disabled
+
+on property:sys.boot_completed=1
+  start capsense_reset
+
 on property:ro.carrier=tmo
   write /sys/class/power_supply/battery/device/force_max_chrg_temp 55
 
 on property:ro.carrier=metropcs
   write /sys/class/power_supply/battery/device/force_max_chrg_temp 55
-
