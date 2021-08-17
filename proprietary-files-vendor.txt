@@ -1,4 +1,4 @@
-## Common proprietary files - from motorola/troika_retail/troika_sprout:10/QSBS30.62-29-11-5/db5cb, unless pinned
+## Common proprietary files - from motorola/troika_retail/troika_sprout:11/RSB31.Q1-48-36-11/7365d8c, unless pinned
 
 ## Audio
 vendor/bin/main_abox
@@ -43,8 +43,8 @@ vendor/bin/charge_only_mode
 vendor/lib/liboemcrypto.so
 
 ## DRM - Widevine
-vendor/bin/hw/android.hardware.drm@1.2-service.widevine
-vendor/etc/init/android.hardware.drm@1.2-service.widevine.rc
+vendor/bin/hw/android.hardware.drm@1.3-service.widevine
+vendor/etc/init/android.hardware.drm@1.3-service.widevine.rc
 vendor/lib/libwvhidl.so
 
 ## Fingerprint
@@ -58,11 +58,8 @@ vendor/lib64/vendor.egistec.hardware.fingerprint@4.0.so
 
 ## Firmware
 vendor/firmware/AP_AUDIO_SLSI.bin
-vendor/firmware/CC_DRAM_CODE_FLASH.bin
 vendor/firmware/CC_DRAM_CODE_FLASH_HIFI.bin
-vendor/firmware/CC_DTCM_CODE_FLASH.bin
 vendor/firmware/CC_DTCM_CODE_FLASH_HIFI.bin
-vendor/firmware/CC_ITCM_CODE_FLASH.bin
 vendor/firmware/CC_ITCM_CODE_FLASH_HIFI.bin
 vendor/firmware/CP_AUDIO_SLSI.bin
 vendor/firmware/WithLightFixNoBN.SDNNmodel
@@ -101,9 +98,6 @@ vendor/firmware/cs35l41-dsp1-spk-prot-ringtone-qisheng.bin
 vendor/firmware/cs35l41-dsp1-spk-prot-voice-aac.bin
 vendor/firmware/cs35l41-dsp1-spk-prot-voice-qisheng.bin
 vendor/firmware/default_configuration.hfd.cfg.json
-vendor/firmware/kernel_bin_enf.bin
-vendor/firmware/kernel_bin_inception.bin
-vendor/firmware/kernel_bin_mobile_vgg.bin
 vendor/firmware/marley-dsp2-aov-frontend.wmfw
 vendor/firmware/marley-dsp2-aov-vrgain.bin
 vendor/firmware/marley-dsp3-aov-control.wmfw
@@ -138,6 +132,7 @@ vendor/lib/libacryl.so
 vendor/lib/libacryl_plugin_slsi_hdr10.so
 vendor/lib/libcsc.so
 vendor/lib/libexynosdisplay.so
+vendor/lib/libexynosgraphicbuffer.so
 vendor/lib/libexynosgscaler.so
 vendor/lib/libexynosscaler.so
 vendor/lib/libexynosutils.so
@@ -152,12 +147,12 @@ vendor/lib64/libacryl.so
 vendor/lib64/libacryl_plugin_slsi_hdr10.so
 vendor/lib64/libcsc.so
 vendor/lib64/libexynosdisplay.so
+vendor/lib64/libexynosgraphicbuffer.so
 vendor/lib64/libexynosgscaler.so
 vendor/lib64/libexynosscaler.so
 vendor/lib64/libexynosutils.so
 vendor/lib64/libexynosv4l2.so
 vendor/lib64/libion_exynos.so
-vendor/lib64/libmpp.so
 
 ## Keymaster
 vendor/lib/hw/keystore.exynos9610.so
@@ -165,9 +160,13 @@ vendor/lib64/hw/keystore.exynos9610.so
 
 ## IMS
 vendor/bin/charon
-vendor/lib/libstrongswan.so
-vendor/lib/libhydra.so
-vendor/lib/libcharon.so
+vendor/bin/wfc-pkt-router
+vendor/lib64/libcharon.so
+vendor/lib64/libstrongswan.so
+
+## Media
+vendor/bin/hw/samsung.hardware.media.c2@1.1-default-service
+vendor/etc/init/samsung.hardware.media.c2@1.1-default-service.rc
 
 ## Memtrack
 vendor/lib/hw/memtrack.exynos9610.so
@@ -192,6 +191,7 @@ vendor/etc/sec_s3nrn82_rfreg.bin
 ## OMX
 vendor/lib/libExynosOMX_Core.so
 vendor/lib/libExynosOMX_Resourcemanager.so
+vendor/lib/libepicoperator.so
 vendor/lib/libstagefrighthw.so
 vendor/lib/omx/libOMX.Exynos.AVC.Decoder.so
 vendor/lib/omx/libOMX.Exynos.AVC.Encoder.so
@@ -206,6 +206,7 @@ vendor/lib/omx/libOMX.Exynos.VP9.Encoder.so
 vendor/lib/omx/libOMX.Exynos.WMV.Decoder.so
 vendor/lib64/libExynosOMX_Core.so
 vendor/lib64/libExynosOMX_Resourcemanager.so
+vendor/lib64/libepicoperator.so
 vendor/lib64/libstagefrighthw.so
 vendor/lib64/omx/libOMX.Exynos.AVC.Decoder.so
 vendor/lib64/omx/libOMX.Exynos.AVC.Encoder.so
@@ -226,62 +227,6 @@ vendor/lib64/hw/power.exynos9610.so
 ## RIL
 vendor/bin/cbd
 vendor/bin/hw/rild_exynos
-vendor/etc/database/EccTable_202.xml
-vendor/etc/database/EccTable_204.xml
-vendor/etc/database/EccTable_206.xml
-vendor/etc/database/EccTable_208.xml
-vendor/etc/database/EccTable_214.xml
-vendor/etc/database/EccTable_216.xml
-vendor/etc/database/EccTable_219.xml
-vendor/etc/database/EccTable_220.xml
-vendor/etc/database/EccTable_222.xml
-vendor/etc/database/EccTable_226.xml
-vendor/etc/database/EccTable_230.xml
-vendor/etc/database/EccTable_231.xml
-vendor/etc/database/EccTable_232.xml
-vendor/etc/database/EccTable_234.xml
-vendor/etc/database/EccTable_235.xml
-vendor/etc/database/EccTable_250.xml
-vendor/etc/database/EccTable_255.xml
-vendor/etc/database/EccTable_260.xml
-vendor/etc/database/EccTable_262.xml
-vendor/etc/database/EccTable_268.xml
-vendor/etc/database/EccTable_272.xml
-vendor/etc/database/EccTable_276.xml
-vendor/etc/database/EccTable_294.xml
-vendor/etc/database/EccTable_297.xml
-vendor/etc/database/EccTable_330.xml
-vendor/etc/database/EccTable_334.xml
-vendor/etc/database/EccTable_338.xml
-vendor/etc/database/EccTable_370.xml
-vendor/etc/database/EccTable_372.xml
-vendor/etc/database/EccTable_374.xml
-vendor/etc/database/EccTable_404.xml
-vendor/etc/database/EccTable_405.xml
-vendor/etc/database/EccTable_450.xml
-vendor/etc/database/EccTable_460.xml
-vendor/etc/database/EccTable_505.xml
-vendor/etc/database/EccTable_704.xml
-vendor/etc/database/EccTable_706.xml
-vendor/etc/database/EccTable_708.xml
-vendor/etc/database/EccTable_710.xml
-vendor/etc/database/EccTable_712.xml
-vendor/etc/database/EccTable_714.xml
-vendor/etc/database/EccTable_716.xml
-vendor/etc/database/EccTable_722.xml
-vendor/etc/database/EccTable_724.xml
-vendor/etc/database/EccTable_730.xml
-vendor/etc/database/EccTable_732.xml
-vendor/etc/database/EccTable_734.xml
-vendor/etc/database/EccTable_736.xml
-vendor/etc/database/EccTable_738.xml
-vendor/etc/database/EccTable_740.xml
-vendor/etc/database/EccTable_744.xml
-vendor/etc/database/EccTable_746.xml
-vendor/etc/database/EccTable_748.xml
-vendor/etc/database/EccTable_750.xml
-vendor/etc/database/EccTable_DEFAULT.xml
-vendor/etc/database/EccTable_ICCID.xml
 vendor/etc/sim_configuration.xml
 vendor/lib/libaudio-ril.so
 vendor/lib/libsitril-audio.so
@@ -297,6 +242,7 @@ vendor/lib/vendor.samsung_slsi.telephony.hardware.oemservice@1.0.so
 vendor/lib/vendor.samsung_slsi.telephony.hardware.radio@1.0.so
 vendor/lib/vendor.samsung_slsi.telephony.hardware.radio@1.1.so
 vendor/lib/vendor.samsung_slsi.telephony.hardware.radioExternal@1.0.so
+vendor/lib/vendor.samsung_slsi.telephony.hardware.radioExternal@1.1.so
 vendor/lib64/libadropbox.so
 vendor/lib64/libsitril-audio.so
 vendor/lib64/libsitril-client.so
@@ -311,10 +257,11 @@ vendor/lib64/vendor.samsung_slsi.telephony.hardware.oemservice@1.0.so
 vendor/lib64/vendor.samsung_slsi.telephony.hardware.radio@1.0.so
 vendor/lib64/vendor.samsung_slsi.telephony.hardware.radio@1.1.so
 vendor/lib64/vendor.samsung_slsi.telephony.hardware.radioExternal@1.0.so
+vendor/lib64/vendor.samsung_slsi.telephony.hardware.radioExternal@1.1.so
 
 ## Secure Element
-vendor/bin/hw/android.hardware.secure_element@1.1-service-uicc
-vendor/etc/init/android.hardware.secure_element@1.1-service-uicc.rc
+vendor/bin/hw/android.hardware.secure_element@1.2-uicc-service
+vendor/etc/init/android.hardware.secure_element@1.2-uicc-service.rc
 
 ## Sensors
 vendor/lib/libhubconnection.so
