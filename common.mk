@@ -298,7 +298,6 @@ PRODUCT_COPY_FILES += \
 # Shims
 PRODUCT_PACKAGES += \
     libaudioproxy_shim \
-    libmemset \
     libdemangle.vendor
 
 # Shipping API

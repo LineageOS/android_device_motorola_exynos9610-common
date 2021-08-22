@@ -67,9 +67,6 @@ BLOB_ROOT="${ANDROID_ROOT}"/vendor/"${VENDOR}"/"${DEVICE_COMMON}"/proprietary
 for LIBAUDIOPROXY_SHIM in $(grep -L "libaudioproxy_shim.so" "${BLOB_ROOT}"/vendor/lib/libaudioproxy.so); do
     "${PATCHELF}" --add-needed libaudioproxy_shim.so "${LIBAUDIOPROXY_SHIM}"
 done
-for LIBMEMSET in $(grep -L "libmemset.so" "${BLOB_ROOT}"/vendor/bin/charge_only_mode); do
-    "${PATCHELF}" --add-needed "libmemset.so" "${LIBMEMSET}"
-done
 for LIBDEMANGLE in $(grep -L "libdemangle.so" "${BLOB_ROOT}"/vendor/lib/libhifills.so); do
     "${PATCHELF}" --add-needed "libdemangle.so" "${LIBDEMANGLE}"
 done
