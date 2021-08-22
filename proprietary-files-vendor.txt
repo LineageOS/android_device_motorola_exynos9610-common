@@ -36,9 +36,6 @@ vendor/lib64/libhwjpeg.so
 vendor/lib64/libvdis.so
 vendor/lib64/libyuvrepro.so
 
-## Charger
-vendor/bin/charge_only_mode
-
 ## DRM
 vendor/lib/liboemcrypto.so
 

@@ -282,7 +282,6 @@ on moto-charger
 #    start vendor.hvdcp_opti
     start gbmodinstall
     start system_suspend
-    start vendor.charge_only_mode
     start batt_health
     start thermal-com
 
@@ -297,7 +296,8 @@ on property:ro.vendor.hw.dualsim=true
 on property:ro.vendor.hw.dualsim=false
    setprop persist.radio.multisim.config ""
 
-service vendor.charge_only_mode /vendor/bin/charge_only_mode
+service charger /system/bin/charger
+    class charger
     user root
-    group graphics system input
-    disabled
+    group system radio input
+    critical
