@@ -11,6 +11,10 @@ ro.surface_flinger.use_color_management=1
 ro.crypto.allow_encrypt_override=false
 ro.crypto.volume.filenames_mode=aes-256-cts
 
+## IMS
+persist.radio.use.legacy.emergency.stack=true
+persist.radio.use.legacy.emergency.query=true
+
 ## Media
 media.settings.xml=/vendor/etc/media_profiles_vendor.xml
 
@@ -22,6 +26,9 @@ qemu.hw.mainkeys=0
 
 ## Net
 init.svc.vendor.pktrouter=1
+
+## Tracing
+persist.traced.enable=1
 
 ## Wi-Fi
 ro.boot.wificountrycode=00
