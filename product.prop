@@ -1,0 +1,24 @@
+## Audio
+audio.record.delay=60
+
+## GMS
+ro.opa.eligible_device=true
+ro.gwfcactivation.disabled_carriers=1187,1492,1839
+ro.com.google.ime.system_lm_dir=/product/usr/share/ime/google/d3_lms/
+
+## LMK
+ro.lmk.kill_heaviest_task=true
+ro.lmk.thrashing_limit=60
+ro.lmk.swap_free_low_percentage=20
+ro.lmk.swap_util_max=80
+ro.lmk.psi_complete_stall_ms=80
+ro.lowmemdetector.psi_low_stall_us=100000
+ro.lowmemdetector.psi_medium_stall_us=150000
+ro.lowmemdetector.psi_high_stall_us=200000
+
+## Moto
+ro.mot.build.customerid=retail
+
+## RIL
+ril.subscription.types=RUIM
+
