@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "3eb6b66c_5ac65827",
+        "filename": "system.prop",
+        "patchSetId": 1
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 17401
+      },
+      "writtenOn": "2021-08-24T19:53:41Z",
+      "side": 1,
+      "message": "remove and set vendor.pktrouter\u003d1 in vendor.prop",
+      "revId": "d4674a63caf9d19e2b889f1416db44483a805c63",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
+    }
+  ]
+}
