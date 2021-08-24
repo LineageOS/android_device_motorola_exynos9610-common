@@ -178,11 +178,13 @@ on post-fs-data
     mkdir /data/vendor/log 0771 root system
     mkdir /data/vendor/log/cbd 0775 root system
     mkdir /data/vendor/gps 0771 system system
+    restorecon_recursive /data/vendor/gps
     mkdir /data/vendor/log/gps 0771 system system
     mkdir /data/vendor/log/chub 0771 root system
     mkdir /data/vendor/ramdump 0775 root system
 
     mkdir /data/vendor/rild 0771 radio system
+    restorecon_recursive /data/vendor/rild
     mkdir /data/vendor/dump 0771 radio system
     mkdir /data/vendor/slog 0771 system log
 
@@ -225,6 +227,7 @@ on post-fs-data
     mkdir /vendor/etc/wifi 0770 system system
     mkdir /data/vendor/log/wifi 0770 wifi wifi
     chown wifi wifi /sys/wifi/memdump
+    restorecon_recursive /data/vendor/wifi
 
     write /sys/class/net/wlan0/queues/rx-0/rps_cpus fe
 
