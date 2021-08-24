@@ -17,8 +17,10 @@
  */
 -->
 <resources>
-    <bool name="def_mobile_data_always_on">false</bool>
-    <!-- Set the automatic brightness mode on by default -->
-    <bool name="def_screen_brightness_automatic_mode">true</bool>
-    <bool name="def_sound_effects_enabled">false</bool>
+    <dimen name="global_actions_top_padding">650.0px</dimen>
+    <dimen name="qs_detail_margin_top">165.0px</dimen>
+    <dimen name="real_rounded_corner_radius">104.0px</dimen>
+    <dimen name="rounded_corner_content_padding">6.0px</dimen>
+
+    <bool name="doze_display_state_supported">true</bool>
 </resources>
