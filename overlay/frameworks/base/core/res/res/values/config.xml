@@ -26,6 +26,7 @@
          -->
     <string translatable="false" name="config_mainBuiltInDisplayCutout">M 0,0 H 57.58 V 55.0  H 0 V 0 Z @dp @left</string>
 
+    <dimen name="config_dialogCornerRadius">6.0dip</dimen>
     <dimen name="quick_qs_offset_height">165px</dimen>
     <dimen name="status_bar_height">165px</dimen>
     <dimen name="status_bar_height_landscape">24dp</dimen>
@@ -144,21 +145,8 @@
     </string-array>
     <string-array name="config_mobile_tcp_buffers">
         <item>1xrtt:16384,32768,32768,4096,8096,65536</item>
-        <item>lte:2097152,4194304,8388608,262144,524288,1048576</item>
-    </string-array>
-    <string-array name="config_oemUsbModeOverride">
-        <item>bp-tools:adb:rndis,acm,dm,adb:adb</item>
-        <item>bp-tools:mtp:rndis,acm,dm:mtp</item>
-        <item>bp-tools:mtp,adb:rndis,acm,dm,adb:mtp,adb</item>
-        <item>bp-tools:ptp:rndis,acm,dm:ptp</item>
-        <item>bp-tools:ptp,adb:rndis,acm,dm,adb:ptp,adb</item>
-        <item>bp-tools:rndis:rndis,acm,dm:mtp</item>
-        <item>bp-tools:rndis,adb:rndis,acm,dm,adb:mtp,adb</item>
-        <item>normal:mtp:mtp:mtp</item>
-        <item>normal:mtp,adb:mtp,adb:mtp,adb</item>
-        <item>mot-factory:mtp:usbnet:mtp</item>
-        <item>mot-factory:mtp,adb:usbnet,adb:mtp,adb</item>
-        <item>mot-factory:adb:usbnet,adb:adb</item>
+        <item>lte:2097152,8388608,33554432,524288,1048576,2097152</item>
+        <item>nr:4194304,16777216,33554432,1048576,2097152,8388608</item>
     </string-array>
     <integer-array name="config_screenBrightnessBacklight">
         <item>0</item>
@@ -198,38 +186,25 @@
         <item>400</item>
         <item>450</item>
     </integer-array>
-    <string-array name="config_tether_bluetooth_regexs">
-        <item>bt-pan</item>
-    </string-array>
-    <string-array name="config_tether_usb_regexs">
-        <item>"usb\\d"</item>
-        <item>"rndis\\d"</item>
-    </string-array>
-    <string-array translatable="false" name="config_tether_wifi_regexs">
-        <item>"wlan0"</item>
-        <item>"softap.*"</item>
-    </string-array>
     <integer-array name="config_virtualKeyVibePattern">
         <item>0</item>
         <item>26</item>
     </integer-array>
 
     <bool name="config_bluetooth_hfp_inband_ringing_support">true</bool>
+    <bool name="config_enableNewAutoSelectNetworkUI">false</bool>
     <bool name="config_hotswapCapable">true</bool>
     <bool name="config_nightDisplayAvailable">true</bool>
     <bool name="config_showNavigationBar">true</bool>
+    <bool name="config_smart_battery_available">true</bool>
     <bool name="config_supportSystemNavigationKeys">true</bool>
     <bool name="config_unplugTurnsOnScreen">true</bool>
     <bool name="config_useDevInputEventForAudioJack">true</bool>
-    <bool name="config_wifi_background_scan_support">true</bool>
-    <bool name="config_wifi_connected_mac_randomization_supported">true</bool>
-    <bool name="config_wifi_dual_band_support">true</bool>
-    <bool name="config_wifi_fast_bss_transition_enabled">true</bool>
-    <bool name="config_wifi_p2p_mac_randomization_supported">true</bool>
-    <bool name="config_wifi_softap_acs_supported">false</bool>
+    <bool name="config_wlan_data_service_conn_persistence_on_restart">false</bool>
     <bool name="skip_restoring_network_selection">true</bool>
 
     <integer name="config_cameraLaunchGestureSensorType">65540</integer>
+    <integer name="config_bluetooth_operating_voltage_mv">3300</integer>
     <integer name="config_multiuserMaximumUsers">4</integer>
     <integer name="config_safe_media_volume_index">9</integer>
     <integer name="config_screenBrightnessDark">2</integer>
@@ -238,9 +213,7 @@
 
     <string name="config_cameraLaunchGestureSensorStringType">com.motorola.sensor.camera_activate</string>
     <string name="config_radio_access_family">GSM|CDMA|EVDO|WCDMA|LTE</string>
-    <string name="config_wifi_tcp_buffers">2097152,4194304,8388608,2097152,4194304,8388608</string>
 
-    <bool translatable="false" name="config_wifi_softap_ieee80211ac_supported">true</bool>
     <bool name="config_enableWifiDisplay">true</bool>
 
     <!-- IWLAN data service package name to bind to by default. If none is specified in an overlay, an
@@ -253,5 +226,8 @@
 
     <!-- Telephony qualified networks service package name to bind to by default. -->
     <string name="config_qualified_networks_service_package">com.shannon.qualifiednetworksservice</string>
+
+    <!-- MMS user-agent -->
+    <string name="config_mms_user_agent_profile_url">http://uaprof.motorola.com/phoneconfig/motov1/Profile/motov1.rdf</string>
 
 </resources>
