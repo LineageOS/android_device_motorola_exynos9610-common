@@ -1,0 +1,15 @@
+type pktrouter, domain, mlstrustedsubject;
+type pktrouter_exec, exec_type, file_type, vendor_file_type;
+init_daemon_domain(pktrouter)
+
+allow pktrouter pktrouter_device:chr_file rw_file_perms;
+
+allow pktrouter self:packet_socket create_socket_perms_no_ioctl;
+allow pktrouter node:rawip_socket node_bind;
+allow pktrouter port:udp_socket name_bind;
+allow pktrouter node:udp_socket node_bind;
+allow pktrouter self:netlink_route_socket { create bind write nlmsg_write read };
+
+allowxperm pktrouter self:udp_socket ioctl SIOCGIFNAME;
+allow pktrouter self:capability net_raw;
+allow pktrouter self:udp_socket create_socket_perms;
