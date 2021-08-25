@@ -1,9 +1,0 @@
-init_daemon_domain(netutils_wrapper)
-allow netutils_wrapper pktrouter_device:chr_file rw_file_perms;
-
-allow netutils_wrapper self:packet_socket create_socket_perms_no_ioctl;
-allow netutils_wrapper node:rawip_socket node_bind;
-allow netutils_wrapper port:udp_socket name_bind;
-allow netutils_wrapper node:udp_socket node_bind;
-
-dontaudit netutils_wrapper self:capability dac_override;
