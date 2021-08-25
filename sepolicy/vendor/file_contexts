@@ -7,6 +7,7 @@
 /(vendor|system/vendor)/bin/charon                                                      u:object_r:charonservice_exec:s0
 /(vendor|system/vendor)/bin/exynos-thermald                                             u:object_r:exynos-thermald_exec:s0
 /(vendor|system/vendor)/bin/mcDriverDaemon                                              u:object_r:tee_exec:s0
+/(vendor|system/vendor)/bin/wfc-pkt-router                                              u:object_r:pktrouter_exec:s0
 /(vendor|system/vendor)/bin/hw/rild_exynos                                              u:object_r:rild_exec:s0
 /(vendor|system/vendor)/bin/hw/gpsd                                                     u:object_r:gpsd_exec:s0
 
@@ -80,16 +81,20 @@
 
 /dev/ttyGS[0-3]*                                                                        u:object_r:serial_device:s0
 
+/dev/umts_wfc0                                                                          u:object_r:pktrouter_device:s0
+/dev/umts_wfc1                                                                          u:object_r:pktrouter_device:s0
+
 ####################################
 # HIDL
 #
 
 /(vendor|system/vendor)/bin/hw/android.hardware.biometrics.fingerprint@2.1-service-rbs  u:object_r:hal_fingerprint_default_exec:s0
 /(vendor|system/vendor)/bin/hw/android.hardware.drm@1.3-service.clearkey                u:object_r:hal_drm_clearkey_exec:s0
-/(vendor|system/vendor)/bin/hw/android.hardware.drm@1.2-service.widevine                u:object_r:hal_drm_widevine_exec:s0
+/(vendor|system/vendor)/bin/hw/android.hardware.drm@1.3-service.widevine                u:object_r:hal_drm_widevine_exec:s0
 /(vendor|system/vendor)/bin/hw/android.hardware.nfc@1.2-service.samsung                 u:object_r:hal_nfc_default_exec:s0
-/(vendor|system/vendor)/bin/hw/android.hardware.secure_element@1.1-service-uicc         u:object_r:hal_secure_element_default_exec:s0
+/(vendor|system/vendor)/bin/hw/android.hardware.secure_element@1.2-service-uicc         u:object_r:hal_secure_element_default_exec:s0
 /(vendor|system/vendor)/bin/hw/android.hardware.vibrator@1.0-service.exynos9610         u:object_r:hal_vibrator_default_exec:s0
+/(vendor|system/vendor)/bin/hw/samsung.hardware.media.c2@1.1-default-service            u:object_r:mediacodec_exec:s0
 /(vendor|system/vendor)/bin/hw/vendor.lineage.livedisplay@2.0-service.exynos9610        u:object_r:hal_lineage_livedisplay_exynos_exec:s0
 /(vendor|system/vendor)/bin/hw/vendor.samsung.hardware.gnss@1.0-service                 u:object_r:hal_gnss_default_exec:s0
 
