@@ -16,3 +16,7 @@ allow init proc_last_kmsg:file create_file_perms;
 allow init proc_printk:file w_file_perms;
 
 allow init sysfs_scheduler:file create_file_perms;
+
+allow init hwservicemanager:binder {call transfer};
+
+allow init secure_element:binder {call transfer};
