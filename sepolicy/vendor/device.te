@@ -13,6 +13,7 @@ type logo_block_device, dev_type;
 type m2m1shot_device, dev_type;
 type oem_block_device, dev_type;
 type persist_block_device, dev_type;
+type pktrouter_device, dev_type;
 type proinfo_block_device, dev_type;
 type slotinfo_block_device, dev_type;
 type utags_block_device, dev_type;
