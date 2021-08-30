@@ -241,5 +241,5 @@
     <string name="config_wifi_tcp_buffers">2097152,4194304,8388608,2097152,4194304,8388608</string>
 
     <bool translatable="false" name="config_wifi_softap_ieee80211ac_supported">true</bool>
-    <bool name="config_enableWifiDisplay">true</bool>
+    <bool name="config_enableWifiDisplay">false</bool>
 </resources>
