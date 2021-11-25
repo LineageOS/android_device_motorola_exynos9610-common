@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "db6ded67_829fe0b9",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 30004
+      },
+      "writtenOn": "2021-11-25T13:59:52Z",
+      "side": 1,
+      "message": "https://developer.android.com/guide/playcore/feature-delivery#base_feature_relationship",
+      "revId": "99092c3714b1ca56bf0d13f18e80d6298719ec38",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
