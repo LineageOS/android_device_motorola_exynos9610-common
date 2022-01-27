@@ -88,8 +88,7 @@ PRODUCT_PACKAGES += \
     android.frameworks.cameraservice.service@2.1.vendor \
     android.hardware.camera.provider@2.4-impl \
     android.hardware.camera.provider@2.4-service \
-    libsensorndkbridge \
-    Snap
+    libsensorndkbridge
 
 # ConfigStore
 PRODUCT_PACKAGES += \
