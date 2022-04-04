@@ -77,6 +77,8 @@ for LIBDEMANGLE64 in $(grep -L "libdemangle.so" "${BLOB_ROOT}"/vendor/lib64/libh
     "${PATCHELF}" --add-needed "libdemangle.so" "${LIBDEMANGLE64}"
 done
 
+sed -i 's|/system/framework|/vendor/framework|' "${BLOB_ROOT}"/vendor/etc/permissions/com.motorola.motosignature.xml
+
 # Remove libhidltransport dependency
 "${PATCHELF}" --remove-needed "libhidltransport.so" "${BLOB_ROOT}"/vendor/bin/hw/android.hardware.biometrics.fingerprint@2.1-service-rbs
 "${PATCHELF}" --remove-needed "libhidltransport.so" "${BLOB_ROOT}"/vendor/lib64/hw/android.hardware.gnss@1.0-impl.samsung.so
