@@ -4,7 +4,6 @@ type bootloader_block_device, dev_type;
 type carrier_block_device, dev_type;
 type cid_block_device, dev_type;
 type fat_block_device, dev_type;
-type gnss_device, dev_type;
 type hw_block_device, dev_type;
 type keystorage_block_device, dev_type;
 type kpan_block_device, dev_type;

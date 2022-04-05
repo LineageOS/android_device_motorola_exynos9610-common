@@ -6,16 +6,13 @@
 /(vendor|system/vendor)/bin/charge_only_mode                                            u:object_r:charge_only_exec:s0
 /(vendor|system/vendor)/bin/charon                                                      u:object_r:charonservice_exec:s0
 /(vendor|system/vendor)/bin/exynos-thermald                                             u:object_r:exynos-thermald_exec:s0
-/(vendor|system/vendor)/bin/mcDriverDaemon                                              u:object_r:tee_exec:s0
 /(vendor|system/vendor)/bin/wfc-pkt-router                                              u:object_r:pktrouter_exec:s0
 /(vendor|system/vendor)/bin/hw/rild_exynos                                              u:object_r:rild_exec:s0
-/(vendor|system/vendor)/bin/hw/gpsd                                                     u:object_r:gpsd_exec:s0
 
 ####################################
 # Data Files
 
 /data/vendor/camera(/.*)?                                                               u:object_r:camera_vendor_data_file:s0
-/data/vendor/display(/.*)?                                                              u:object_r:display_vendor_data_file:s0
 /data/vendor/mediadrm(/.*)?                                                             u:object_r:mediadrm_vendor_data_file:s0
 /data/vendor/misc(/.*)?                                                                 u:object_r:misc_vendor_data_file:s0
 /data/vendor/sensor(/.*)?                                                               u:object_r:sensor_vendor_data_file:s0
