@@ -140,7 +140,6 @@
     </integer-array>
     <string-array name="config_defaultPinnerServiceFiles">
         <item>/system/framework/arm64/boot-framework.art</item>
-        <item>/system/framework/oat/arm64/services.odex</item>
         <item>/vendor/lib64/egl/libGLES_mali.so</item>
         <item>/system/bin/surfaceflinger</item>
     </string-array>
