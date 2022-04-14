@@ -65,7 +65,7 @@ product/priv-app/HotwordEnrollmentOKGoogleWM8280/HotwordEnrollmentOKGoogleWM8280
 product/priv-app/HotwordEnrollmentXGoogleWM8280/HotwordEnrollmentXGoogleWM8280.apk
 
 ## IMS
-app/ShannonIms/ShannonIms.apk
+app/ShannonIms/ShannonIms.apk|9ee5bb3048fd00ee0323ee83f8552cacda4aa361
 priv-app/OemRilService/OemRilService.apk
 system_ext/app/ShannonDataService/ShannonDataService.apk
 system_ext/app/ShannonNetworkService/ShannonNetworkService.apk
