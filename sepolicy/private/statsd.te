@@ -1,0 +1,2 @@
+allow statsd system_data_file:file r_file_perms;
+allow statsd system_data_file:dir { create_dir_perms link unlink };
