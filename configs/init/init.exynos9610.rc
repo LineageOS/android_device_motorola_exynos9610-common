@@ -274,6 +274,8 @@ on post-fs-data
     chown radio radio /mnt/vendor/efs/CP_AUDIO_SLSI.bin
 
 on boot
+    restorecon_recursive /data/system/users/0/fpdata/
+
     setprop wifi.interface wlan0
     write /proc/sys/vm/min_free_order_shift 4
 
@@ -461,6 +463,9 @@ chmod 664 /sys/devices/platform/11500000.mali/dvfs_max_lock
 
 #load ecd firmware
     write /proc/ecd/load_firmware 1
+
+    restorecon_recursive /data/vendor_de/0/fpdata/
+    restorecon_recursive /data/misc/keystore/
 
 service fuse_sdcard /system/bin/sdcard -u 1023 -g 1023 -d /mnt/media_rw/sdcard /storage/sdcard
     class late_start

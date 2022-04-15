@@ -3,3 +3,6 @@ allow vold {
     mnt_product_file
     mnt_vendor_file
 }:dir r_dir_perms;
+
+allow vold_prepare_subdirs fingerprint_vendor_data_file:dir { relabelfrom relabelto r_dir_perms };
+allow vold_prepare_subdirs fingerprint_vendor_data_file:dir r_dir_perms;
