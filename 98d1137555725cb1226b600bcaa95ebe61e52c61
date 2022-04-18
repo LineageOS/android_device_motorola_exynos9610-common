@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "5d98bc2f_9d6e05f9",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 17401
+      },
+      "writtenOn": "2022-04-18T05:03:04Z",
+      "side": 1,
+      "message": "i dont like it but i guess there is no way around it?",
+      "revId": "98d1137555725cb1226b600bcaa95ebe61e52c61",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
