@@ -13,6 +13,8 @@ allow vendor_ims_app audioserver_service:service_manager find;
 allow vendor_ims_app radio_data_file:dir rw_dir_perms;
 allow vendor_ims_app radio_data_file:file create_file_perms;
 
+allow vendor_ims_app system_data_file:dir search;
+
 allow vendor_ims_app misc_vendor_data_file:dir create_dir_perms;
 allow vendor_ims_app misc_vendor_data_file:file create_file_perms;
 

@@ -1,5 +1,7 @@
 allow gpsd gnss_device:chr_file rw_file_perms;
 
+allow gpsd system_data_file:dir search;
+
 allow gpsd gps_vendor_data_file:dir create_dir_perms;
 allow gpsd gps_vendor_data_file:file create_file_perms;
 allow gpsd gps_vendor_data_file:fifo_file create_file_perms;
