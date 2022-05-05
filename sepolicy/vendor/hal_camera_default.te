@@ -10,6 +10,8 @@ allow hal_camera_default sysfs_battery_writable:file r_file_perms;
 allow hal_camera_default sysfs_leds:dir search;
 allow hal_camera_default sysfs_leds:file rw_file_perms;
 
+allow hal_camera_default m2m1shot_device:chr_file rw_file_perms;
+
 allow hal_camera_default hal_graphics_mapper_hwservice:hwservice_manager find;
 
 allow hal_camera_default {
