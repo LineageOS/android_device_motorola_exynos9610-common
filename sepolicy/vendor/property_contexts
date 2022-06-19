@@ -15,6 +15,7 @@ vendor.pktrouter                    u:object_r:vendor_ims_prop:s0
 
 # HWC
 ro.vendor.ddk.set.afbc              u:object_r:vendor_hwc_prop:s0
+ro.vendor.winupdate                 u:object_r:vendor_hwc_prop:s0
 
 # Radio
 persist.vendor.radio.               u:object_r:vendor_radio_prop:s0
