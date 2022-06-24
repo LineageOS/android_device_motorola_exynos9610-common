@@ -47,8 +47,6 @@
 
     <string name="config_wifi_tcp_buffers">2097152,4194304,8388608,2097152,4194304,8388608</string>
 
-    <string name="wifi_tether_configure_ssid_default">motorola one action</string>
-
     <integer-array name="config_wifiDisconnectedScanIntervalScheduleSec">
         <item>20</item>
         <item>40</item>
