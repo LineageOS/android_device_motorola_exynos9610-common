@@ -192,7 +192,8 @@ PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/configs/init/rild.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/rild.rc \
     $(COMMON_PATH)/configs/init/ueventd.rc:$(TARGET_COPY_OUT_VENDOR)/etc/ueventd.rc \
     $(COMMON_PATH)/configs/init/vendor.mmi.carrier.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.mmi.carrier.rc \
-    $(COMMON_PATH)/configs/fstab.exynos9610:$(TARGET_COPY_OUT_VENDOR)/etc/fstab.exynos9610
+    $(COMMON_PATH)/configs/fstab.exynos9610:$(TARGET_COPY_OUT_VENDOR)/etc/fstab.exynos9610 \
+    $(COMMON_PATH)/configs/fstab.exynos9610:$(TARGET_COPY_OUT_RECOVERY)/root/first_stage_ramdisk/fstab.exynos9610
 
 # Keymaster
 PRODUCT_PACKAGES += \
