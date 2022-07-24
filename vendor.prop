@@ -1,6 +1,3 @@
-## Adoptable Storage
-ro.crypto.volume.options=aes-256-xts
-
 ## Audio
 aaudio.hw_burst_min_usec=2000
 aaudio.mmap_exclusive_policy=1
