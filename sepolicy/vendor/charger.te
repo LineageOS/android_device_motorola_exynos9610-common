@@ -1,4 +1,0 @@
-r_dir_file(charger, sysfs_battery)
-r_dir_file(charger, sysfs_battery_writable)
-r_dir_file(charger, vendor_sysfs_usb_c)
-r_dir_file(charger, vendor_sysfs_usb_supply)
