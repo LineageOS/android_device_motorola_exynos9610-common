@@ -24,7 +24,7 @@
          appended after the path string to interpret coordinates in dp instead of px units.
          Note that a physical cutout should be configured in pixels for the best results.
          -->
-    <string translatable="false" name="config_mainBuiltInDisplayCutout">M 0,0 H 57.58 V 55.0  H 0 V 0 Z @dp @left</string>
+    <string translatable="false" name="config_mainBuiltInDisplayCutout">M 0,0 H 66.0 V 69.0  H 0 V 0 Z @dp @left</string>
 
     <dimen name="config_dialogCornerRadius">6.0dip</dimen>
     <dimen name="quick_qs_offset_height">165px</dimen>
