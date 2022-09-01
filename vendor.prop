@@ -110,6 +110,9 @@ ro.vendor.sensors.mot_ltv=true
 
 ## USB
 dev.usbsetting.embedded=on
+vendor.usb.rmnet.func.name=rmnet_bam
+vendor.usb.rmnet.inst.name=rmnet
+vendor.usb.rndis.func.name=rndis_bam
 
 ## Wi-Fi
 wifi.interface=wlan0
