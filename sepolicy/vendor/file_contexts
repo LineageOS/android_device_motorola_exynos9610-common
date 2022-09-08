@@ -41,7 +41,7 @@
 /dev/block/(.*/)?by-name/metadata                                                       u:object_r:metadata_block_device:s0
 /dev/block/(.*/)?by-name/misc                                                           u:object_r:misc_block_device:s0
 /dev/block/(.*/)?by-name/modem(_[ab])?                                                  u:object_r:modem_block_device:s0
-/dev/block/(.*/)?by-name/oem(_[ab])?                                                    u:object_r:oem_block_device:s0
+/dev/block/(.*/)?by-name/oem(_[ab])?                                                    u:object_r:system_block_device:s0
 /dev/block/(.*/)?by-name/persist([0-9])?                                                u:object_r:persist_block_device:s0
 /dev/block/(.*/)?by-name/persist                                                        u:object_r:persist_block_device:s0
 /dev/block/(.*/)?by-name/proinfo                                                        u:object_r:proinfo_block_device:s0
@@ -53,7 +53,7 @@
 /dev/block/(.*/)?by-name/utagsBackup                                                    u:object_r:utags_block_device:s0
 /dev/block/(.*/)?by-name/utags                                                          u:object_r:utags_block_device:s0
 /dev/block/(.*/)?by-name/vbmeta(_[ab])?                                                 u:object_r:vbmeta_block_device:s0
-/dev/block/(.*/)?by-name/vendor(_[ab])?                                                 u:object_r:vendor_block_device:s0
+/dev/block/(.*/)?by-name/vendor(_[ab])?                                                 u:object_r:system_block_device:s0
 
 /dev/block/zram0                                                                        u:object_r:swap_block_device:s0
 
