@@ -21,7 +21,14 @@ AB_OTA_POSTINSTALL_CONFIG += \
     FILESYSTEM_TYPE_system=ext4 \
     POSTINSTALL_OPTIONAL_system=true
 
+AB_OTA_POSTINSTALL_CONFIG += \
+    RUN_POSTINSTALL_product=true \
+    POSTINSTALL_PATH_product=bin/check_dynamic_partitions \
+    FILESYSTEM_TYPE_product=ext4 \
+    POSTINSTALL_OPTIONAL_product=false
+
 PRODUCT_PACKAGES += \
+    check_dynamic_partitions \
     otapreopt_script \
     update_engine \
     update_engine_sideload \
@@ -143,6 +150,14 @@ PRODUCT_PACKAGES += \
     android.hardware.drm-service.clearkey \
     libprotobuf-cpp-lite-3.9.1-vendorcompat
 
+# Dynamic Partitions
+PRODUCT_RETROFIT_DYNAMIC_PARTITIONS := true
+PRODUCT_USE_DYNAMIC_PARTITIONS := true
+
+# fastbootd
+PRODUCT_PACKAGES += \
+    fastbootd
+
 # Fingerprint
 PRODUCT_PACKAGES += \
     android.hardware.biometrics.fingerprint@2.1 \
@@ -170,11 +185,6 @@ PRODUCT_PACKAGES += \
     android.hardware.gatekeeper@1.0-service \
     libgatekeeper.vendor \
     gatekeeper.exynos9610
-
-# GMS
-ifeq ($(WITH_GMS),true)
-GMS_MAKEFILE=gms_minimal.mk
-endif
 
 # GPS
 PRODUCT_COPY_FILES += \
