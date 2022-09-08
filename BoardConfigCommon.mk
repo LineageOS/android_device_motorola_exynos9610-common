@@ -95,6 +95,7 @@ BOARD_HAVE_SLSI_FM := true
 ## Kernel
 BOARD_KERNEL_IMAGE_NAME := Image
 TARGET_KERNEL_ARCH := arm64
+TARGET_KERNEL_LLVM_BINUTILS := false
 TARGET_KERNEL_SOURCE := kernel/motorola/exynos9610
 
 ## Manifest
