@@ -203,7 +203,6 @@
     <bool name="skip_restoring_network_selection">true</bool>
 
     <integer name="config_cameraLaunchGestureSensorType">65540</integer>
-    <integer name="config_bluetooth_operating_voltage_mv">3300</integer>
     <integer name="config_multiuserMaximumUsers">4</integer>
     <integer name="config_safe_media_volume_index">9</integer>
     <integer name="config_screenBrightnessDark">2</integer>
