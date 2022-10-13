@@ -69,7 +69,6 @@ persist.vendor.lte.pco_supported=true
 persist.dbg.volte_avail_ovr=1
 persist.dbg.wfc_avail_ovr=1
 persist.vendor.radio.dual.volte=1
-ro.telephony.iwlan_operation_mode=legacy
 
 ## Logging
 persist.vendor.wlbtlog.maxfilesize=50
