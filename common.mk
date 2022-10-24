@@ -128,9 +128,9 @@ PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/configs/keylayout/uinput-egis.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/uinput-egis.kl
 
 # FM Radio
-PRODUCT_PACKAGES += \
-    FMRadio \
-    libfmjni
+#PRODUCT_PACKAGES += \
+#    FMRadio \
+#    libfmjni
 
 # Gatekeeper
 PRODUCT_PACKAGES += \
@@ -200,7 +200,6 @@ PRODUCT_PACKAGES += \
 
 # Media
 PRODUCT_PACKAGES += \
-    libcodec2-hidl-defaults@1.1 \
     libcodec2_hidl@1.0.vendor \
     libcodec2_hidl@1.1.vendor \
     libavservices_minijail_vendor
@@ -317,8 +316,7 @@ PRODUCT_PACKAGES += \
     android.hardware.radio.deprecated@1.0 \
     android.hardware.secure_element@1.0.vendor \
     android.hardware.secure_element@1.2 \
-    android.hardware.secure_element@1.2.vendor \
-    libjson.vendor
+    android.hardware.secure_element@1.2.vendor
 
 # RenderScript HAL
 PRODUCT_PACKAGES += \
@@ -382,7 +380,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.wifi@1.0-service \
     hostapd \
-    TetheringOverlay \
     WifiOverlay \
     wpa_supplicant
 
