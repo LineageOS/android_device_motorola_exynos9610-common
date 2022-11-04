@@ -223,7 +223,8 @@ PRODUCT_PACKAGES += \
 
 # MotoActions
 PRODUCT_PACKAGES += \
-    MotoActions
+    MotoActions \
+    MotoCommonOverlay
 
 # NFC
 PRODUCT_PACKAGES += \
