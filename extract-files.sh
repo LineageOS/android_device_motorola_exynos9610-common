@@ -64,6 +64,8 @@ BLOB_ROOT="${ANDROID_ROOT}"/vendor/"${VENDOR}"/"${DEVICE_COMMON}"/proprietary
 
 "${PATCHELF}" --replace-needed "libmedia.so" "libmedia_ims.so" "${BLOB_ROOT}"/lib64/libmediaadaptor.so
 
+"${PATCHELF}" --replace-needed "libnetutils.so" "lib_ip_checksum.so" "${BLOB_ROOT}"/vendor/bin/wfc-pkt-router
+
 "${PATCHELF}" --replace-needed "libutils.so" "libutils-v32.so" "${BLOB_ROOT}"/vendor/lib/libexynosdisplay.so
 "${PATCHELF}" --replace-needed "libutils.so" "libutils-v32.so" "${BLOB_ROOT}"/vendor/lib64/libexynosdisplay.so
 "${PATCHELF}" --replace-needed "libutils.so" "libutils-v32.so" "${BLOB_ROOT}"/vendor/lib/hw/hwcomposer.exynos9610.so
