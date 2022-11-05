@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "78f06e00_152d57e1",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 16185
+      },
+      "writtenOn": "2022-11-05T05:27:11Z",
+      "side": 1,
+      "message": "Relies on: https://gitlab.com/LineageOS/issues/devrel-int/-/issues/975 \u0026 merging the patch linked there once tag is pushed.",
+      "revId": "853ce5463d5be3da952fac57a2f45b69d0407e71",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
