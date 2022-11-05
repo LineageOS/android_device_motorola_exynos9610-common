@@ -389,6 +389,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.wifi@1.0-service \
     hostapd \
+    libip_checksum_shim.vendor \
     WifiOverlay \
     wpa_supplicant
 
