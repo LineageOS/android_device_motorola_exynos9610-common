@@ -2,8 +2,8 @@
 
 ## Audio
 vendor/bin/main_abox
-vendor/etc/ap_gain_mmul.bin
 vendor/etc/dolby/dax-default.xml
+vendor/etc/ap_gain_mmul.bin
 vendor/lib/hw/audio.primary.exynos9610.so
 vendor/lib/libalsautils_sec.so
 vendor/lib/libaudioproxy.so
@@ -116,11 +116,11 @@ vendor/bin/hw/gpsd
 vendor/bin/hw/vendor.samsung.hardware.gnss@1.0-service
 vendor/etc/gnss/ca.pem
 vendor/etc/init/vendor.samsung.hardware.gnss@1.0-service.rc
-vendor/lib64/hw/vendor.samsung.hardware.gnss@1.0-impl.so
-vendor/lib64/vendor.samsung.hardware.gnss@1.0.so
 vendor/lib64/hw/android.hardware.gnss@1.0-impl.so:vendor/lib64/hw/android.hardware.gnss@1.0-impl.samsung.so
 vendor/lib64/hw/android.hardware.gnss@1.1-impl.so:vendor/lib64/hw/android.hardware.gnss@1.1-impl.samsung.so
 vendor/lib64/hw/android.hardware.gnss@2.0-impl.so:vendor/lib64/hw/android.hardware.gnss@2.0-impl.samsung.so
+vendor/lib64/hw/vendor.samsung.hardware.gnss@1.0-impl.so
+vendor/lib64/vendor.samsung.hardware.gnss@1.0.so
 
 ## Graphics
 vendor/lib/egl/libGLES_mali.so
@@ -189,10 +189,6 @@ vendor/lib64/libMcClient.so
 vendor/etc/sec_s3nrn82_rfreg.bin
 
 ## OMX
-vendor/lib/libExynosOMX_Core.so
-vendor/lib/libExynosOMX_Resourcemanager.so
-vendor/lib/libepicoperator.so
-vendor/lib/libstagefrighthw.so
 vendor/lib/omx/libOMX.Exynos.AVC.Decoder.so
 vendor/lib/omx/libOMX.Exynos.AVC.Encoder.so
 vendor/lib/omx/libOMX.Exynos.HEVC.Decoder.so
@@ -204,10 +200,10 @@ vendor/lib/omx/libOMX.Exynos.VP8.Encoder.so
 vendor/lib/omx/libOMX.Exynos.VP9.Decoder.so
 vendor/lib/omx/libOMX.Exynos.VP9.Encoder.so
 vendor/lib/omx/libOMX.Exynos.WMV.Decoder.so
-vendor/lib64/libExynosOMX_Core.so
-vendor/lib64/libExynosOMX_Resourcemanager.so
-vendor/lib64/libepicoperator.so
-vendor/lib64/libstagefrighthw.so
+vendor/lib/libExynosOMX_Core.so
+vendor/lib/libExynosOMX_Resourcemanager.so
+vendor/lib/libepicoperator.so
+vendor/lib/libstagefrighthw.so
 vendor/lib64/omx/libOMX.Exynos.AVC.Decoder.so
 vendor/lib64/omx/libOMX.Exynos.AVC.Encoder.so
 vendor/lib64/omx/libOMX.Exynos.HEVC.Decoder.so
@@ -219,14 +215,18 @@ vendor/lib64/omx/libOMX.Exynos.VP8.Encoder.so
 vendor/lib64/omx/libOMX.Exynos.VP9.Decoder.so
 vendor/lib64/omx/libOMX.Exynos.VP9.Encoder.so
 vendor/lib64/omx/libOMX.Exynos.WMV.Decoder.so
+vendor/lib64/libExynosOMX_Core.so
+vendor/lib64/libExynosOMX_Resourcemanager.so
+vendor/lib64/libepicoperator.so
+vendor/lib64/libstagefrighthw.so
 
 ## Power
 vendor/lib/hw/power.exynos9610.so
 vendor/lib64/hw/power.exynos9610.so
 
 ## RIL
-vendor/bin/cbd
 vendor/bin/hw/rild_exynos
+vendor/bin/cbd
 vendor/etc/sim_configuration.xml
 vendor/lib/libaudio-ril.so
 vendor/lib/libsitril-audio.so
@@ -275,8 +275,6 @@ vendor/lib/hw/thermal.exynos9610.so
 vendor/lib64/hw/thermal.exynos9610.so
 
 ## Wi-Fi
-vendor/etc/wifi/mx
-vendor/etc/wifi/mx140.bin
 vendor/etc/wifi/mx140/conf/leman_s620_flexi/bluetooth/bt.hcf
 vendor/etc/wifi/mx140/conf/leman_s620_flexi/bluetooth/platform.txt
 vendor/etc/wifi/mx140/conf/leman_s620_flexi/wlan/platform.txt
@@ -356,7 +354,6 @@ vendor/etc/wifi/mx140/debug/wlan/unicli.dbg
 vendor/etc/wifi/mx140/debug/wlan/unitab.dbg
 vendor/etc/wifi/mx140/debug/wlan/univif.dbg
 vendor/etc/wifi/mx140/debug/wlan/xide_mib.dbg
-vendor/etc/wifi/mx140_t.bin
 vendor/etc/wifi/mx140_t/conf/leman_s612_smdk/wlan/platform.txt
 vendor/etc/wifi/mx140_t/conf/leman_s612_smdk/wlan/wlan.hcf
 vendor/etc/wifi/mx140_t/conf/leman_s612_smdk/wlan/wlan_t.hcf
@@ -423,3 +420,6 @@ vendor/etc/wifi/mx140_t/debug/wlan/unicli.dbg
 vendor/etc/wifi/mx140_t/debug/wlan/unitab.dbg
 vendor/etc/wifi/mx140_t/debug/wlan/univif.dbg
 vendor/etc/wifi/mx140_t/debug/wlan/xide_mib.dbg
+vendor/etc/wifi/mx
+vendor/etc/wifi/mx140.bin
+vendor/etc/wifi/mx140_t.bin
