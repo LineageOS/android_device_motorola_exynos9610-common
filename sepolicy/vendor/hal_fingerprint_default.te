@@ -1,4 +1,7 @@
 allow hal_fingerprint_default fingerprint_vendor_data_file:dir create_dir_perms;
 allow hal_fingerprint_default fingerprint_vendor_data_file:file create_file_perms;
 
+allow hal_fingerprint_default vendor_data_file:dir remove_name;
+allow hal_fingerprint_default vendor_data_file:file { getattr open read unlink };
+
 allow hal_fingerprint_default sysfs_rbs:file rw_file_perms;
