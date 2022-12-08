@@ -34,6 +34,24 @@
       "parentUuid": "c063b1b3_0838d823",
       "revId": "d284afad701b5f881617f7027b657f3afbcc4524",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "22f4eaab_d28d0546",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 16185
+      },
+      "writtenOn": "2022-12-08T22:29:56Z",
+      "side": 1,
+      "message": "fair, but this authorship is neither of those - pick one, fine with either.",
+      "parentUuid": "61c6721a_21d504b6",
+      "revId": "d284afad701b5f881617f7027b657f3afbcc4524",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
