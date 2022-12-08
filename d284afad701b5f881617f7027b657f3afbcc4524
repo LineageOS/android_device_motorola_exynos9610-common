@@ -52,6 +52,24 @@
       "parentUuid": "61c6721a_21d504b6",
       "revId": "d284afad701b5f881617f7027b657f3afbcc4524",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "671f4536_cd553cf7",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 32034
+      },
+      "writtenOn": "2022-12-08T22:56:54Z",
+      "side": 1,
+      "message": "Completely missed to check the autorship :/ .. \"Considering it was a single overlay being enabled that anyone can do, I didn\u0027t see reason to provide authorship.\" But of course, jesec is the autor of this option.\n\nhttps://review.lineageos.org/c/LineageOS/android_lineage-sdk/+/216888\nhttps://review.lineageos.org/q/Ica01880ce444313ae08151e6cfdcf5ef71a523b6",
+      "parentUuid": "22f4eaab_d28d0546",
+      "revId": "d284afad701b5f881617f7027b657f3afbcc4524",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
