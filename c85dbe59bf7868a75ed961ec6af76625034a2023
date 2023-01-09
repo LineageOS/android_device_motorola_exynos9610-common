@@ -68,6 +68,24 @@
       "message": "\u003e Patch Set 2:\n\u003e \n\u003e \u003e Patch Set 2: Verified+1\n\u003e  \u003e \n\u003e  \u003e (1 comment)\n\u003e \n\u003e Does Bluetooth audio and family now work?\n\nhello, sorry for the delay in response, however absurds of real life came into my way. For this particular version BT audio is still broken, it plays directly from the speaker even if headphones are connected.",
       "revId": "c85dbe59bf7868a75ed961ec6af76625034a2023",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "2b5d4b55_f28d4775",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 32034
+      },
+      "writtenOn": "2023-01-09T20:43:43Z",
+      "side": 1,
+      "message": "probably because audio.bluetooth.default is missing?",
+      "parentUuid": "d3d95737_b7ebb29b",
+      "revId": "c85dbe59bf7868a75ed961ec6af76625034a2023",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
