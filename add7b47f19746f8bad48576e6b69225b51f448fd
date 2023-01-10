@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "cc43c2be_6cf8d01c",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 32034
+      },
+      "writtenOn": "2023-01-10T17:44:14Z",
+      "side": 1,
+      "message": "\u003e Patch Set 1:\n\u003e \n\u003e what files specifically is it reaching out to? I\u0027d prefer we just label the files\n\n/data/vendor_de/0/fpdata/*\n\nI auditd  : type\u003d1400 audit(0.0:24): avc: denied { read } for comm\u003d\"fingerprint@2.1\" name\u003d\"tp_1957747793\" dev\u003d\"sda42\" ino\u003d7144 scontext\u003du:r:hal_fingerprint_default:s0 tcontext\u003du:object_r:vendor_data_file:s0 tclass\u003dfile permissive\u003d1\nI auditd  : type\u003d1400 audit(0.0:25): avc: denied { open } for comm\u003d\"fingerprint@2.1\" path\u003d\"/data/vendor_de/0/fpdata/tp_1957747793\" dev\u003d\"sda42\" ino\u003d7144 scontext\u003du:r:hal_fingerprint_default:s0 tcontext\u003du:object_r:vendor_data_file:s0 tclass\u003dfile permissive\u003d1\nI auditd  : type\u003d1400 audit(0.0:26): avc: denied { getattr } for comm\u003d\"fingerprint@2.1\" path\u003d\"/data/vendor_de/0/fpdata/tp_1957747793\" dev\u003d\"sda42\" ino\u003d7144 scontext\u003du:r:hal_fingerprint_default:s0 tcontext\u003du:object_r:vendor_data_file:s0 tclass\u003dfile permissive\u003d1",
+      "revId": "add7b47f19746f8bad48576e6b69225b51f448fd",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
