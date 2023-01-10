@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "174b4b56_a7c9c9bc",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 31890
+      },
+      "writtenOn": "2023-01-10T18:58:49Z",
+      "side": 1,
+      "message": "We as well need `android.hardware.bluetooth.audio-impl` AIDL for the audio to function properly.",
+      "revId": "2e66f844a0ffc5dff77ba39498a240dcbeb775ee",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
