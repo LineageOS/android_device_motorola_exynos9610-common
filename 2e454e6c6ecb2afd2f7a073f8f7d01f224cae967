@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "6431808f_0100a3a8",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 16185
+      },
+      "writtenOn": "2023-01-14T21:52:39Z",
+      "side": 1,
+      "message": "this does way to much. If we need to move to audio@7.0 (not at all convinced we do) - we should use the up rev to 7.0 commit, a commit to build audio.default, the this Hal v2 commit.",
+      "revId": "2e454e6c6ecb2afd2f7a073f8f7d01f224cae967",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
