@@ -16,6 +16,24 @@
       "message": "We as well need `android.hardware.bluetooth.audio-impl` AIDL for the audio to function properly.",
       "revId": "2e66f844a0ffc5dff77ba39498a240dcbeb775ee",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "74b590c2_f6457a14",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 32034
+      },
+      "writtenOn": "2023-01-14T20:57:32Z",
+      "side": 1,
+      "message": "this is how it works for me ..but still, we dont need a2dp: Iaa1be881cfe8f8474cef0ba46e1b0a62b59e14be - APM would fail to parse the config anyway",
+      "parentUuid": "174b4b56_a7c9c9bc",
+      "revId": "2e66f844a0ffc5dff77ba39498a240dcbeb775ee",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
