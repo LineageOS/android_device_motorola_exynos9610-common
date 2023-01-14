@@ -16,6 +16,29 @@
       "message": "this does way to much. If we need to move to audio@7.0 (not at all convinced we do) - we should use the up rev to 7.0 commit, a commit to build audio.default, the this Hal v2 commit.",
       "revId": "2e454e6c6ecb2afd2f7a073f8f7d01f224cae967",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "ed7373ac_f8222e93",
+        "filename": "configs/audio/audio_policy_configuration.xml",
+        "patchSetId": 4
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 16185
+      },
+      "writtenOn": "2023-01-14T21:53:06Z",
+      "side": 1,
+      "message": "also I have no clue where you got these values or why",
+      "range": {
+        "startLine": 13,
+        "startChar": 22,
+        "endLine": 16,
+        "endChar": 0
+      },
+      "revId": "2e454e6c6ecb2afd2f7a073f8f7d01f224cae967",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
