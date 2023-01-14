@@ -18,6 +18,24 @@
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "9ac136ad_78fad1a7",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 31890
+      },
+      "writtenOn": "2023-01-14T21:55:44Z",
+      "side": 1,
+      "message": "Yeah, there\u0027s no need to move to 7.0 audio HAL. We only need the two HALs mentioned previously.",
+      "parentUuid": "6431808f_0100a3a8",
+      "revId": "2e454e6c6ecb2afd2f7a073f8f7d01f224cae967",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "ed7373ac_f8222e93",
