@@ -34,6 +34,24 @@
       "parentUuid": "cc43c2be_6cf8d01c",
       "revId": "add7b47f19746f8bad48576e6b69225b51f448fd",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "97bd4552_943c7d35",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 16185
+      },
+      "writtenOn": "2023-01-17T21:04:32Z",
+      "side": 1,
+      "message": "I just enrolled an fp, not sure why you\u0027re hitting this: -rw------- 1 system system u:object_r:fingerprint_vendor_data_file:s0  245868 2023-01-17 16:03 tp_1714636915",
+      "parentUuid": "8e15fcdf_e21e03dd",
+      "revId": "add7b47f19746f8bad48576e6b69225b51f448fd",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
