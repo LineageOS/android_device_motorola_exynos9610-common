@@ -52,6 +52,24 @@
       "parentUuid": "8e15fcdf_e21e03dd",
       "revId": "add7b47f19746f8bad48576e6b69225b51f448fd",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "bac90bf2_cbc33acb",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 32034
+      },
+      "writtenOn": "2023-01-18T18:08:56Z",
+      "side": 1,
+      "message": "Some users told me about dying fingerprint sensors including me on one of my test devices. Without this denials it stops working after some weeks. I dont really know why but this \"fixed\" it. Read this problem on XDA too ..so, then I thought it wouldn\u0027t be bad if I add this denials here as well.",
+      "parentUuid": "97bd4552_943c7d35",
+      "revId": "add7b47f19746f8bad48576e6b69225b51f448fd",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ],
   "submitRequirementResults": []
