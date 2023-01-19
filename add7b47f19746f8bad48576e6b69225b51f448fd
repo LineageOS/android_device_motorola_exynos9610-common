@@ -70,6 +70,24 @@
       "parentUuid": "97bd4552_943c7d35",
       "revId": "add7b47f19746f8bad48576e6b69225b51f448fd",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "51e82309_22bedfb8",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 16185
+      },
+      "writtenOn": "2023-01-19T17:22:12Z",
+      "side": 1,
+      "message": "the issue here is that these files should be labeled already - and we restorecon them. It should by all accounts be fine.",
+      "parentUuid": "bac90bf2_cbc33acb",
+      "revId": "add7b47f19746f8bad48576e6b69225b51f448fd",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ],
   "submitRequirementResults": []
