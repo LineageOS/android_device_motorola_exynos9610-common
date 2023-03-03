@@ -169,6 +169,9 @@
 /sys/devices/system/cpu/cpu*	cpufreq/interactive/boostpulse_duration		0660	system	system
 /sys/devices/system/cpu/cpu*	cpufreq/interactive/io_is_busy			0660	system	system
 
+# Charger
+/sys/class/power_supply/battery charging_enabled                                0660    system  system
+
 # Vision
 /dev/vertex0             0660   cameraserver   camera
 /dev/vertex1             0660   media      media
