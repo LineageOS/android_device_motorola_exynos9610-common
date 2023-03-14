@@ -1,9 +1,5 @@
 ## Common proprietary files - from motorola/troika_retail/troika_sprout:11/RSBS31.Q1-48-36-20/3e578:user/release-keys, unless pinned
 
-## Bluetooth (aptX)
-lib64/libaptXHD_encoder.so
-lib64/libaptX_encoder.so
-
 ## Camera
 app/MotoSignatureApp/MotoSignatureApp.apk;PRESIGNED
 etc/permissions/com.motorola.motosignature.xml:vendor/etc/permissions/com.motorola.motosignature.xml
