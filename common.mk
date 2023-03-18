@@ -132,9 +132,9 @@ PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/configs/keylayout/uinput-egis.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/uinput-egis.kl
 
 # FM Radio
-#PRODUCT_PACKAGES += \
-#    FMRadio \
-#    libfmjni
+PRODUCT_PACKAGES += \
+    FMRadio \
+    libfmjni
 
 # Gatekeeper
 PRODUCT_PACKAGES += \
