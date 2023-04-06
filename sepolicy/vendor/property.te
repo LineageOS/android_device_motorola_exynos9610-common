@@ -1,6 +1,5 @@
 vendor_public_prop(vendor_audio_prop)
 vendor_public_prop(vendor_camera_prop)
-vendor_public_prop(vendor_hwc_prop)
 vendor_public_prop(vendor_ims_prop)
 vendor_public_prop(moto_boot_prop)
 vendor_public_prop(rmnet_mux_prop)
