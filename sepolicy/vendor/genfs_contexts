@@ -20,6 +20,8 @@ genfscon proc /sys/vm/swappiness                                                
 #
 
 genfscon sysfs /class/power_supply/battery/charge_temp                                                                  u:object_r:sysfs_battery_writable:s0
+genfscon sysfs /class/power_supply/battery/charging_enabled                                                             u:object_r:sysfs_battery_writable:s0
+genfscon sysfs /devices/platform/13840000.i2c/i2c-9/9-003d/s2mu00x-battery/power_supply/battery/charging_enabled        u:object_r:sysfs_battery_writable:s0
 genfscon sysfs /devices/platform/11500000.mali/dvfs_max_lock                                                            u:object_r:sysfs_mali_writable:s0
 genfscon sysfs /devices/platform/11500000.mali/dvfs_min_lock                                                            u:object_r:sysfs_mali_writable:s0
 genfscon sysfs /devices/platform/11a10000.speedy/i2c-6/6-0000/s2mpu09-rtc/rtc/rtc0/hctosys                              u:object_r:sysfs_rtc:s0
