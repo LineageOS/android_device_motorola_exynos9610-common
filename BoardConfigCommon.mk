@@ -22,9 +22,10 @@ TARGET_SPECIFIC_HEADER_PATH := $(COMMON_PATH)/include
 ## Inherit proprietary vendor configuartion
 include vendor/motorola/exynos9610-common/BoardConfigVendor.mk
 
-# BUILD_BROKEN_*
+## BUILD_BROKEN_*
 BUILD_BROKEN_DUP_RULES := true
 BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
+BUILD_BROKEN_INCORRECT_PARTITION_IMAGES := true
 
 ## A/B
 AB_OTA_UPDATER := true
