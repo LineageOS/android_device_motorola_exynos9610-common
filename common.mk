@@ -407,7 +407,7 @@ PRODUCT_PACKAGES += \
 
 # WiFi
 PRODUCT_PACKAGES += \
-    android.hardware.wifi-service \
+    android.hardware.wifi@1.0-service.legacy \
     hostapd \
     libip_checksum_shim.vendor \
     WifiOverlay \
