@@ -115,7 +115,8 @@ PRODUCT_PACKAGES += \
 # DRM
 PRODUCT_PACKAGES += \
     android.hardware.drm-service.clearkey \
-    android.hardware.drm@1.3.vendor
+    android.hardware.drm@1.3.vendor \
+    libprotobuf-cpp-lite-3.9.1-vendorcompat
 
 # FastCharge
 PRODUCT_PACKAGES += \
