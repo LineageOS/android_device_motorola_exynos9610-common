@@ -11,7 +11,7 @@ product/etc/permissions/deviceowner-configuration-com.motorola.camera2.xml
 product/etc/permissions/privapp-permissions-com.motorola.camera2.xml
 product/etc/permissions/privapp-permissions-com.motorola.camera2.xml
 product/etc/sysconfig/hiddenapi-whitelist-com.motorola.camera2.xml
-product/priv-app/MotCamera2/MotCamera2.apk;OVERRIDES=Aperture|372f8942f990edb14261a01b090d55aaac2ce6a7
+product/priv-app/MotCamera2/MotCamera2.apk|372f8942f990edb14261a01b090d55aaac2ce6a7
 
 ## Camera - MotCamera2 - libs
 product/lib64/libFNVfbEngineHAL.so|8d6a887566576d65dd4b902bbec17d05463a0ccb
