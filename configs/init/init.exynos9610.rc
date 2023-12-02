@@ -402,7 +402,7 @@ on fs
     wait /dev/block/platform/${ro.boot.bootdevice}
     symlink /dev/block/platform/${ro.boot.bootdevice} /dev/block/bootdevice
 
-    mount_all /vendor/etc/fstab.exynos9610
+    mount_all /vendor/etc/fstab.exynos9610 --early
 
     restorecon_recursive /mnt/vendor/efs
     restorecon_recursive /mnt/vendor/efsbk
@@ -656,6 +656,9 @@ service exynos-thermald /vendor/bin/exynos-thermald nolog
 	group system root
 #	oneshot
 	file /sys/class/thermal/thermal_zone0 "r"
+
+on late-fs
+    mount_all /vendor/etc/fstab.exynos9610 --late
 
 # Set watchdog timer to 30 seconds and pet it every 10 seconds to get a 20 second margin
 service watchdogd /sbin/watchdogd 10 20
