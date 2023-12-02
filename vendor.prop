@@ -1,5 +1,5 @@
 ## Adoptable Storage
-ro.crypto.volume.options=aes-256-xts
+ro.crypto.volume.options=aes-256-xts:aes-256-cts:v2
 
 ## Audio
 aaudio.hw_burst_min_usec=2000
