@@ -37,7 +37,7 @@ vendor/lib64/libvdis.so
 vendor/lib64/libyuvrepro.so
 
 ## Charger
-vendor/bin/charge_only_mode
+vendor/bin/charge_only_mode|aa277db47fd537f95ca5bf15c5f1b95d4b893258
 
 ## DRM
 vendor/lib/liboemcrypto.so
@@ -161,7 +161,7 @@ vendor/lib64/hw/keystore.exynos9610.so
 ## IMS
 vendor/bin/charon
 vendor/bin/wfc-pkt-router
-vendor/lib64/libcharon.so
+vendor/lib64/libcharon.so|2a7474566b35693bb8557201b7a63cb0db490208
 vendor/lib64/libstrongswan.so
 
 ## Media
