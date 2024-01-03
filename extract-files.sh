@@ -1,15 +1,12 @@
 #!/bin/bash
 #
 # Copyright (C) 2016 The CyanogenMod Project
-# Copyright (C) 2017-2020 The LineageOS Project
+# Copyright (C) 2017-2023 The LineageOS Project
 #
 # SPDX-License-Identifier: Apache-2.0
 #
 
 set -e
-
-DEVICE_COMMON=exynos9610-common
-VENDOR=motorola
 
 # Load extract_utils and do some sanity checks
 MY_DIR="${BASH_SOURCE%/*}"
@@ -27,11 +24,23 @@ source "${HELPER}"
 # Default to sanitizing the vendor folder before extraction
 CLEAN_VENDOR=true
 
+ONLY_COMMON=
+ONLY_FIRMWARE=
+ONLY_TARGET=
 KANG=
 SECTION=
 
 while [ "${#}" -gt 0 ]; do
     case "${1}" in
+        --only-common )
+                ONLY_COMMON=true
+                ;;
+        --only-firmware )
+                ONLY_FIRMWARE=true
+                ;;
+        --only-target )
+                ONLY_TARGET=true
+                ;;
         -n | --no-cleanup )
                 CLEAN_VENDOR=false
                 ;;
@@ -53,51 +62,71 @@ if [ -z "${SRC}" ]; then
     SRC="adb"
 fi
 
-# Initialize the helper
-setup_vendor "${DEVICE_COMMON}" "${VENDOR}" "${ANDROID_ROOT}" true "${CLEAN_VENDOR}"
+function blob_fixup() {
+    case "${1}" in
+        # libmedia symbols moved
+        lib64/libmediaadaptor.so)
+            "${PATCHELF}" --replace-needed "libmedia.so" "libmedia_ims.so" "${2}"
+            ;;
+        # libnetutils shim
+        vendor/bin/wfc-pkt-router)
+            "${PATCHELF}" --replace-needed "libnetutils.so" "libip_checksum_shim.so" "${2}"
+            ;;
+        # Missing libutils symbols
+        vendor/lib*/libexynosdisplay.so|vendor/lib*/hw/hwcomposer.exynos9610.so|vendor/lib*/sensors.rp.so)
+            "${PATCHELF}" --replace-needed "libutils.so" "libutils-v32.so" "${2}"
+            ;;
+        vendor/lib/libaudioproxy.so)
+            for LIBAUDIOPROXY_SHIM in $(grep -L "libaudioproxy_shim.so" "${2}"); do
+                "${PATCHELF}" --add-needed "libaudioproxy_shim.so" "${LIBAUDIOPROXY_SHIM}"
+            done
+            ;;
+        vendor/bin/charge_only_mode)
+            for LIBMEMSET in $(grep -L "libmemset_shim.so" "${2}"); do
+                "${PATCHELF}" --add-needed "libmemset_shim.so" "${LIBMEMSET}"
+            done
+            ;;
+        vendor/lib*/libhifills.so)
+            for LIBDEMANGLE in $(grep -L "libdemangle.so" "${2}"); do
+                "${PATCHELF}" --add-needed "libdemangle.so" "${LIBDEMANGLE}"
+            done
+            ;;
+        # Remove libhidltransport/libhwbinder references
+        vendor/bin/hw/android.hardware.biometrics.fingerprint@2.1-service-rbs|vendor/lib64/hw/android.hardware.gnss@1.0-impl.samsung.so|vendor/lib64/hw/android.hardware.gnss@1.1-impl.samsung.so|vendor/lib64/hw/android.hardware.gnss@2.0-impl.samsung.so|vendor/lib64/hw/vendor.samsung.hardware.gnss@1.0-impl.so)
+            "${PATCHELF}" --remove-needed "libhidltransport.so" "${2}"
+            "${PATCHELF}" --remove-needed "libhwbinder.so" "${2}"
+            ;;
+        # Remove libhwbinder references
+        vendor/etc/permissions/com.motorola.motosignature.xml)
+            sed -i 's|/system/framework|/vendor/framework|' "${2}"
+            ;;
+    esac
+}
 
-extract "${MY_DIR}/proprietary-files.txt" "${SRC}" "${KANG}" --section "${SECTION}"
-extract "${MY_DIR}/proprietary-files-vendor.txt" "${SRC}" "${KANG}" --section "${SECTION}"
+if [ -z "${ONLY_FIRMWARE}" ] && [ -z "${ONLY_TARGET}" ]; then
+    # Initialize the helper for common device
+    setup_vendor "${DEVICE_COMMON}" "${VENDOR_COMMON:-$VENDOR}" "${ANDROID_ROOT}" true "${CLEAN_VENDOR}"
 
-# Fix proprietary blobs
-BLOB_ROOT="${ANDROID_ROOT}"/vendor/"${VENDOR}"/"${DEVICE_COMMON}"/proprietary
+    extract "${MY_DIR}/proprietary-files.txt" "${SRC}" "${KANG}" --section "${SECTION}"
+    extract "${MY_DIR}/proprietary-files-vendor.txt" "${SRC}" "${KANG}" --section "${SECTION}"
 
-"${PATCHELF}" --replace-needed "libmedia.so" "libmedia_ims.so" "${BLOB_ROOT}"/lib64/libmediaadaptor.so
+    # Reinitialize the helper for device
+    source "${MY_DIR}/../../${VENDOR}/${DEVICE}/extract-files.sh"
+    setup_vendor "${DEVICE}" "${VENDOR}" "${ANDROID_ROOT}" false "${CLEAN_VENDOR}"
+fi
 
-"${PATCHELF}" --replace-needed "libnetutils.so" "libip_checksum_shim.so" "${BLOB_ROOT}"/vendor/bin/wfc-pkt-router
+if [ -z "${ONLY_COMMON}" ] && [ -s "${MY_DIR}/../../${VENDOR}/${DEVICE}/proprietary-files.txt" ]; then
+    # Reinitialize the helper for device
+    source "${MY_DIR}/../../${VENDOR}/${DEVICE}/extract-files.sh"
+    setup_vendor "${DEVICE}" "${VENDOR}" "${ANDROID_ROOT}" false "${CLEAN_VENDOR}"
 
-"${PATCHELF}" --replace-needed "libutils.so" "libutils-v32.so" "${BLOB_ROOT}"/vendor/lib/libexynosdisplay.so
-"${PATCHELF}" --replace-needed "libutils.so" "libutils-v32.so" "${BLOB_ROOT}"/vendor/lib64/libexynosdisplay.so
-"${PATCHELF}" --replace-needed "libutils.so" "libutils-v32.so" "${BLOB_ROOT}"/vendor/lib/hw/hwcomposer.exynos9610.so
-"${PATCHELF}" --replace-needed "libutils.so" "libutils-v32.so" "${BLOB_ROOT}"/vendor/lib64/hw/hwcomposer.exynos9610.so
-"${PATCHELF}" --replace-needed "libutils.so" "libutils-v32.so" "${BLOB_ROOT}"/vendor/lib/sensors.rp.so
-"${PATCHELF}" --replace-needed "libutils.so" "libutils-v32.so" "${BLOB_ROOT}"/vendor/lib64/sensors.rp.so
+    if [ -z "${ONLY_FIRMWARE}" ]; then
+        extract "${MY_DIR}/../../${VENDOR}/${DEVICE}/proprietary-files.txt" "${SRC}" "${KANG}" --section "${SECTION}"
+    fi
 
-for LIBAUDIOPROXY_SHIM in $(grep -L "libaudioproxy_shim.so" "${BLOB_ROOT}"/vendor/lib/libaudioproxy.so); do
-    "${PATCHELF}" --add-needed libaudioproxy_shim.so "${LIBAUDIOPROXY_SHIM}"
-done
-for LIBMEMSET in $(grep -L "libmemset_shim.so" "${BLOB_ROOT}"/vendor/bin/charge_only_mode); do
-    "${PATCHELF}" --add-needed "libmemset_shim.so" "${LIBMEMSET}"
-done
-for LIBDEMANGLE in $(grep -L "libdemangle.so" "${BLOB_ROOT}"/vendor/lib/libhifills.so); do
-    "${PATCHELF}" --add-needed "libdemangle.so" "${LIBDEMANGLE}"
-done
-for LIBDEMANGLE64 in $(grep -L "libdemangle.so" "${BLOB_ROOT}"/vendor/lib64/libhifills.so); do
-    "${PATCHELF}" --add-needed "libdemangle.so" "${LIBDEMANGLE64}"
-done
-
-sed -i 's|/system/framework|/vendor/framework|' "${BLOB_ROOT}"/vendor/etc/permissions/com.motorola.motosignature.xml
-
-# Remove libhidltransport dependency
-"${PATCHELF}" --remove-needed "libhidltransport.so" "${BLOB_ROOT}"/vendor/bin/hw/android.hardware.biometrics.fingerprint@2.1-service-rbs
-"${PATCHELF}" --remove-needed "libhidltransport.so" "${BLOB_ROOT}"/vendor/lib64/hw/android.hardware.gnss@1.0-impl.samsung.so
-"${PATCHELF}" --remove-needed "libhidltransport.so" "${BLOB_ROOT}"/vendor/lib64/hw/android.hardware.gnss@1.1-impl.samsung.so
-"${PATCHELF}" --remove-needed "libhidltransport.so" "${BLOB_ROOT}"/vendor/lib64/hw/android.hardware.gnss@2.0-impl.samsung.so
-"${PATCHELF}" --remove-needed "libhidltransport.so" "${BLOB_ROOT}"/vendor/lib64/hw/vendor.samsung.hardware.gnss@1.0-impl.so
-
-# Remove libhwbinder dependency
-"${PATCHELF}" --remove-needed "libhwbinder.so" "${BLOB_ROOT}"/vendor/lib64/hw/android.hardware.gnss@1.0-impl.samsung.so
-"${PATCHELF}" --remove-needed "libhwbinder.so" "${BLOB_ROOT}"/vendor/lib64/hw/android.hardware.gnss@1.1-impl.samsung.so
-"${PATCHELF}" --remove-needed "libhwbinder.so" "${BLOB_ROOT}"/vendor/lib64/hw/android.hardware.gnss@2.0-impl.samsung.so
+    if [ -z "${SECTION}" ] && [ -f "${MY_DIR}/../../${VENDOR}/${DEVICE}/proprietary-firmware.txt" ]; then
+        extract_firmware "${MY_DIR}/../../${VENDOR}/${DEVICE}/proprietary-firmware.txt" "${SRC}"
+    fi
+fi
 
 "${MY_DIR}/setup-makefiles.sh"
