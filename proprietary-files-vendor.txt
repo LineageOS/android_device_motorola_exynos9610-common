@@ -19,9 +19,7 @@ vendor/lib/libexynoscamera_hifills_plugin.so
 vendor/lib/libexynoscamera_plugin.so
 vendor/lib/libexynoscamera_plugin_utils.so
 vendor/lib/libexynoscamera_vdis_plugin.so
-vendor/lib/libgiantmscl.so
 vendor/lib/libhifills.so
-vendor/lib/libhwjpeg.so
 vendor/lib/libvdis.so
 vendor/lib/libyuvrepro.so
 vendor/lib64/libENF.so
@@ -30,9 +28,7 @@ vendor/lib64/libexynoscamera_hifills_plugin.so
 vendor/lib64/libexynoscamera_plugin.so
 vendor/lib64/libexynoscamera_plugin_utils.so
 vendor/lib64/libexynoscamera_vdis_plugin.so
-vendor/lib64/libgiantmscl.so
 vendor/lib64/libhifills.so
-vendor/lib64/libhwjpeg.so
 vendor/lib64/libvdis.so
 vendor/lib64/libyuvrepro.so
 
@@ -124,35 +120,9 @@ vendor/lib64/vendor.samsung.hardware.gnss@1.0.so
 
 ## Graphics
 vendor/lib/egl/libGLES_mali.so
-vendor/lib/hw/gralloc.exynos9610.so
-vendor/lib/hw/hwcomposer.exynos9610.so
-vendor/lib/libExynosHWCService.so
-vendor/lib/libGrallocWrapper.so
-vendor/lib/libacryl.so
-vendor/lib/libacryl_plugin_slsi_hdr10.so
-vendor/lib/libcsc.so
-vendor/lib/libexynosdisplay.so
-vendor/lib/libexynosgraphicbuffer.so
 vendor/lib/libexynosgscaler.so
-vendor/lib/libexynosscaler.so
-vendor/lib/libexynosutils.so
-vendor/lib/libexynosv4l2.so
-vendor/lib/libion_exynos.so
 vendor/lib64/egl/libGLES_mali.so
-vendor/lib64/hw/gralloc.exynos9610.so
-vendor/lib64/hw/hwcomposer.exynos9610.so
-vendor/lib64/libExynosHWCService.so
-vendor/lib64/libGrallocWrapper.so
-vendor/lib64/libacryl.so
-vendor/lib64/libacryl_plugin_slsi_hdr10.so
-vendor/lib64/libcsc.so
-vendor/lib64/libexynosdisplay.so
-vendor/lib64/libexynosgraphicbuffer.so
 vendor/lib64/libexynosgscaler.so
-vendor/lib64/libexynosscaler.so
-vendor/lib64/libexynosutils.so
-vendor/lib64/libexynosv4l2.so
-vendor/lib64/libion_exynos.so
 
 ## Keymaster
 vendor/lib/hw/keystore.exynos9610.so
@@ -167,10 +137,6 @@ vendor/lib64/libstrongswan.so
 ## Media
 vendor/bin/hw/samsung.hardware.media.c2@1.1-default-service
 vendor/etc/init/samsung.hardware.media.c2@1.1-default-service.rc
-
-## Memtrack
-vendor/lib/hw/memtrack.exynos9610.so
-vendor/lib64/hw/memtrack.exynos9610.so
 
 ## Mobicore
 vendor/app/mcRegistry/00060308060501020000000000000000.tlbin
@@ -187,38 +153,6 @@ vendor/lib64/libMcClient.so
 
 ## NFC
 vendor/etc/sec_s3nrn82_rfreg.bin
-
-## OMX
-vendor/lib/libExynosOMX_Core.so
-vendor/lib/libExynosOMX_Resourcemanager.so
-vendor/lib/libepicoperator.so
-vendor/lib/libstagefrighthw.so
-vendor/lib/omx/libOMX.Exynos.AVC.Decoder.so
-vendor/lib/omx/libOMX.Exynos.AVC.Encoder.so
-vendor/lib/omx/libOMX.Exynos.HEVC.Decoder.so
-vendor/lib/omx/libOMX.Exynos.HEVC.Encoder.so
-vendor/lib/omx/libOMX.Exynos.MPEG4.Decoder.so
-vendor/lib/omx/libOMX.Exynos.MPEG4.Encoder.so
-vendor/lib/omx/libOMX.Exynos.VP8.Decoder.so
-vendor/lib/omx/libOMX.Exynos.VP8.Encoder.so
-vendor/lib/omx/libOMX.Exynos.VP9.Decoder.so
-vendor/lib/omx/libOMX.Exynos.VP9.Encoder.so
-vendor/lib/omx/libOMX.Exynos.WMV.Decoder.so
-vendor/lib64/libExynosOMX_Core.so
-vendor/lib64/libExynosOMX_Resourcemanager.so
-vendor/lib64/libepicoperator.so
-vendor/lib64/libstagefrighthw.so
-vendor/lib64/omx/libOMX.Exynos.AVC.Decoder.so
-vendor/lib64/omx/libOMX.Exynos.AVC.Encoder.so
-vendor/lib64/omx/libOMX.Exynos.HEVC.Decoder.so
-vendor/lib64/omx/libOMX.Exynos.HEVC.Encoder.so
-vendor/lib64/omx/libOMX.Exynos.MPEG4.Decoder.so
-vendor/lib64/omx/libOMX.Exynos.MPEG4.Encoder.so
-vendor/lib64/omx/libOMX.Exynos.VP8.Decoder.so
-vendor/lib64/omx/libOMX.Exynos.VP8.Encoder.so
-vendor/lib64/omx/libOMX.Exynos.VP9.Decoder.so
-vendor/lib64/omx/libOMX.Exynos.VP9.Encoder.so
-vendor/lib64/omx/libOMX.Exynos.WMV.Decoder.so
 
 ## Power
 vendor/lib/hw/power.exynos9610.so
