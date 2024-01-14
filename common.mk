@@ -47,8 +47,12 @@ PRODUCT_PACKAGES += \
     audio.r_submix.default \
     audio.usb.default \
     libtinycompress \
+    libaudio-ril \
+    libaudioproxy \
     libaudioroute \
-    libgui_vendor
+    libgui_vendor \
+    main_abox \
+    mcDriverDaemon
 
 PRODUCT_COPY_FILES += \
     frameworks/av/services/audiopolicy/config/a2dp_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/a2dp_audio_policy_configuration.xml \
@@ -113,7 +117,23 @@ PRODUCT_PACKAGES += \
     android.hardware.graphics.allocator@2.0-impl \
     android.hardware.graphics.allocator@2.0-service \
     android.hardware.graphics.composer@2.4-service \
-    android.hardware.graphics.mapper@2.0-impl-2.1
+    android.hardware.graphics.mapper@2.0-impl-2.1 \
+    libacryl \
+    libacryl_plugin_slsi_hdr10 \
+    libcsc \
+    libexynosdisplay \
+    libexynosgraphicbuffer \
+    libexynosgscaler \
+    libexynosscaler \
+    libexynosutils \
+    libexynosv4l2 \
+    libgiantmscl \
+    libhifills \
+    libhwjpeg \
+    libion_exynos \
+    libstagefrighthw \
+    libvdis \
+    libyuvrepro
 
 # DRM
 PRODUCT_PACKAGES += \
@@ -159,6 +179,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/configs/gps/gps.cfg:$(TARGET_COPY_OUT_VENDOR)/etc/gnss/gps.cfg
 
+# Gralloc
+PRODUCT_PACKAGES += \
+    gralloc.exynos9610
+
 # Graphics
 # Device uses high-density artwork where available
 PRODUCT_AAPT_CONFIG := xlarge
@@ -178,6 +202,10 @@ PRODUCT_PACKAGES += \
 # HotwordEnrollement
 PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/configs/privapp-permissions-hotword.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/privapp-permissions-hotword.xml
+
+# HWC
+PRODUCT_PACKAGES += \
+    hwcomposer.exynos9610
 
 # init
 PRODUCT_COPY_FILES += \
@@ -237,7 +265,8 @@ PRODUCT_COPY_FILES += \
 # Memtrack
 PRODUCT_PACKAGES += \
     android.hardware.memtrack@1.0-impl \
-    android.hardware.memtrack@1.0-service
+    android.hardware.memtrack@1.0-service \
+    memtrack.exynos9610
 
 # MotoActions
 PRODUCT_PACKAGES += \
@@ -257,6 +286,23 @@ PRODUCT_COPY_FILES += \
 # OMX
 PRODUCT_PACKAGES += \
     android.hardware.media.omx@1.0-service \
+    libENF \
+    libExynosHWCService \
+    libExynosOMX_Core \
+    libExynosOMX_Resourcemanager \
+    libGrallocWrapper \
+    libMcClient \
+    libOMX.Exynos.AVC.Decoder \
+    libOMX.Exynos.AVC.Encoder \
+    libOMX.Exynos.HEVC.Decoder \
+    libOMX.Exynos.HEVC.Encoder \
+    libOMX.Exynos.MPEG4.Decoder \
+    libOMX.Exynos.MPEG4.Encoder \
+    libOMX.Exynos.VP8.Decoder \
+    libOMX.Exynos.VP8.Encoder \
+    libOMX.Exynos.VP9.Decoder \
+    libOMX.Exynos.VP9.Encoder \
+    libOMX.Exynos.WMV.Decoder \
     libstagefright_softomx
 
 # Overlays
@@ -380,7 +426,8 @@ PRODUCT_SYSTEM_SERVER_COMPILER_FILTER := speed-profile
 # Thermal
 PRODUCT_PACKAGES += \
     android.hardware.thermal@1.0-impl \
-    android.hardware.thermal@1.0-service
+    android.hardware.thermal@1.0-service \
+    exynos-thermald
 
 PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/configs/thermal/exynos-thermal.conf:$(TARGET_COPY_OUT_VENDOR)/exynos-thermal.conf \
