@@ -423,3 +423,4 @@ vendor/etc/wifi/mx140_t/debug/wlan/unicli.dbg
 vendor/etc/wifi/mx140_t/debug/wlan/unitab.dbg
 vendor/etc/wifi/mx140_t/debug/wlan/univif.dbg
 vendor/etc/wifi/mx140_t/debug/wlan/xide_mib.dbg
+
