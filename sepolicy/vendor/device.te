@@ -16,7 +16,6 @@ type pktrouter_device, dev_type;
 type proinfo_block_device, dev_type;
 type slotinfo_block_device, dev_type;
 type utags_block_device, dev_type;
-type vbmeta_block_device, dev_type;
 type vendor_block_device, dev_type;
 type vendor_nanohub_device, dev_type;
 type vendor_secmem_device, dev_type;
