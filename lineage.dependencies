@@ -35,7 +35,7 @@
         "repository": "android_hardware_samsung_slsi-linaro_graphics",
         "target_path": "hardware/samsung_slsi-linaro/graphics"
     },
-    {   
+    {
         "repository": "android_hardware_samsung_slsi-linaro_interfaces",
         "target_path": "hardware/samsung_slsi-linaro/interfaces"
     },
