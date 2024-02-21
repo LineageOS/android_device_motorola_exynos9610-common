@@ -20,6 +20,7 @@ vendor/lib/libexynoscamera_plugin.so
 vendor/lib/libexynoscamera_plugin_utils.so
 vendor/lib/libexynoscamera_vdis_plugin.so
 vendor/lib/libhifills.so
+vendor/lib/libhwjpeg.so
 vendor/lib/libvdis.so
 vendor/lib/libyuvrepro.so
 vendor/lib64/libENF.so
@@ -29,6 +30,7 @@ vendor/lib64/libexynoscamera_plugin.so
 vendor/lib64/libexynoscamera_plugin_utils.so
 vendor/lib64/libexynoscamera_vdis_plugin.so
 vendor/lib64/libhifills.so
+vendor/lib64/libhwjpeg.so
 vendor/lib64/libvdis.so
 vendor/lib64/libyuvrepro.so
 
