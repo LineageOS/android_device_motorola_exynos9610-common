@@ -1,6 +1,6 @@
 # data types
 type camera_vendor_data_file, file_type, data_file_type;
-type chargeonly_data_file, file_type, data_file_type;
+type chargeonly_vendor_data_file, file_type, data_file_type;
 type mediadrm_vendor_data_file, file_type, data_file_type;
 type misc_vendor_data_file, file_type, data_file_type;
 type rild_vendor_data_file, file_type, data_file_type;
