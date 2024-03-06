@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "20c1c207_2a97b824",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 2644
+      },
+      "writtenOn": "2024-03-06T00:57:10Z",
+      "side": 1,
+      "message": "I don\u0027t like doing this but I don\u0027t know any other way to get rid of the new build error:\nThe following types on /data/ must be associated with the \"core_data_file_type\" attribute: chargeonly_data_file\nThis error just started appearing in the build. I don\u0027t know why. Nothing related seems to have changed.",
+      "revId": "e8be01a80754826b1a991bb82adfdc9329455fd9",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
