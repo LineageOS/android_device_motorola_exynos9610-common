@@ -18,7 +18,7 @@
 /data/vendor/sensor(/.*)?                                                               u:object_r:sensor_vendor_data_file:s0
 /data/vendor/rild(/.*)?                                                                 u:object_r:rild_vendor_data_file:s0
 /data/nfc(/.*)?                                                                         u:object_r:nfc_data_file:s0
-/data/chargeonlymode(/.*)?                                                              u:object_r:chargeonly_data_file:s0
+/data/vendor/chargeonlymode(/.*)?                                                              u:object_r:chargeonly_vendor_data_file:s0
 
 ##########################
 # Devices
