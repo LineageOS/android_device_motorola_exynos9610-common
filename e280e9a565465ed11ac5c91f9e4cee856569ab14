@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "fdd117b9_ab5c1490",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 2644
+      },
+      "writtenOn": "2024-03-06T00:54:25Z",
+      "side": 1,
+      "message": "I don\u0027t like these changes with ALLOW_NEVERALLOWS. I know of no other way to get rid of the new build error: \nThe following types on /data/ must be associated with the \"core_data_file_type\" attribute: chargeonly_data_file\nThis error just started appearing in the build. I don\u0027t know why.",
+      "revId": "e280e9a565465ed11ac5c91f9e4cee856569ab14",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
