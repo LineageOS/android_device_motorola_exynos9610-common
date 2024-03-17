@@ -176,6 +176,7 @@ on post-fs-data
    exec u:r:vendor_toolbox:s0 -- /vendor/bin/toybox_vendor find /data/vendor -type d \
         -exec /vendor/bin/toybox_vendor setfattr -x security.sehash {} \;
    restorecon_recursive /data/vendor
+   restorecon_recursive /data/vendor/wifi
 
 # Exynos Data folder
     mkdir /data/vendor 0775 root system
