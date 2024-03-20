@@ -19,9 +19,6 @@ COMMON_PATH := device/motorola/exynos9610-common
 # Get non-open-source specific aspects
 $(call inherit-product, vendor/motorola/exynos9610-common/exynos9610-common-vendor.mk)
 
-# Enable updating of APEXes
-$(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
-
 # Soong namespaces
 $(call inherit-product, hardware/samsung_slsi-linaro/config/config.mk)
 
