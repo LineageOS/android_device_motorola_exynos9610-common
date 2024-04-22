@@ -92,8 +92,6 @@ BOARD_HAVE_SLSI_FM := true
 
 ## Kernel
 BOARD_KERNEL_IMAGE_NAME := Image
-TARGET_KERNEL_CLANG_VERSION := r416183b
-TARGET_KERNEL_CLANG_PATH := $(abspath .)/prebuilts/clang/kernel/$(HOST_PREBUILT_TAG)/clang-$(TARGET_KERNEL_CLANG_VERSION)
 TARGET_KERNEL_SOURCE := kernel/motorola/exynos9610
 
 ## Lineage Health
