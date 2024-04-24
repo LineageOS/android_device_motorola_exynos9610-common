@@ -22,6 +22,7 @@ persist.vendor.radio.               u:object_r:vendor_radio_prop:s0
 persist.vendor.ril.                 u:object_r:vendor_radio_prop:s0
 ro.product.model.dm                 u:object_r:vendor_radio_prop:s0
 ro.radio.imei.sv                    u:object_r:vendor_radio_prop:s0
+vendor.radio.smsdomain              u:object_r:vendor_radio_prop:s0
 vendor.radio.ril.                   u:object_r:vendor_radio_prop:s0
 vendor.radio.cp.                    u:object_r:vendor_radio_prop:s0
 vendor.ril.                         u:object_r:vendor_radio_prop:s0

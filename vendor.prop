@@ -73,10 +73,6 @@ persist.vendor.radio.dual.volte=1
 ## Logging
 persist.vendor.wlbtlog.maxfilesize=50
 persist.vendor.wlbtlog.maxfiles=5
-ro.debug_level=0x494d
-
-## Media
-media.settings.xml=/vendor/etc/media_profiles_vendor_V1.xml
 
 ## Navigation Bar
 qemu.hw.mainkeys=0
@@ -95,7 +91,6 @@ ro.hardware.soc.manufacturer=slsi
 persist.radio.multisim.config=dsds
 persist.vendor.ril.crash_handling_mode=2
 persist.vendor.ril.emergencynumber.sim=1
-radio.smsdomain=0
 ro.carrier=europen
 ro.vendor.config.build_carrier=europen
 ro.vendor.radio.imei.sv=25

@@ -34,6 +34,7 @@ genfscon sysfs /devices/platform/11d40000.hsi2c/i2c-1/1-005a/leds/vibrator      
 genfscon sysfs /devices/platform/12c30000.mfc0/video4linux/video6/name                                                  u:object_r:sysfs_v4l:s0
 genfscon sysfs /devices/platform/12c30000.mfc0/video4linux/video7/name                                                  u:object_r:sysfs_v4l:s0
 genfscon sysfs /devices/platform/13520000.ufs/host0/target0:0:0/0:0:0:0/block/sda/queue/scheduler                       u:object_r:sysfs_scheduler:s0
+genfscon sysfs /devices/platform/13520000.ufs/host0/target0:0:0/0:0:0:0/block/sda/sda42/partition                       u:object_r:sysfs_scheduler:s0
 genfscon sysfs /devices/platform/13830000.i2c/i2c-7/7-003b/power_supply                                                 u:object_r:sysfs_battery:s0
 genfscon sysfs /devices/platform/13830000.i2c/i2c-7/7-003c/power_supply                                                 u:object_r:sysfs_battery:s0
 genfscon sysfs /devices/platform/13830000.i2c/i2c-8/8-003b/power_supply                                                 u:object_r:sysfs_battery:s0
@@ -56,6 +57,8 @@ genfscon sysfs /devices/platform/13840000.i2c/i2c-9/9-003d/s2mu00x-battery/power
 genfscon sysfs /devices/platform/13840000.i2c/i2c-9/9-003d/s2mu00x-battery/power_supply/battery/temp                    u:object_r:sysfs_battery_writable:s0
 genfscon sysfs /devices/platform/13840000.i2c/i2c-9/9-003d/s2mu106-charger/power_supply                                 u:object_r:sysfs_battery:s0
 genfscon sysfs /devices/platform/13840000.i2c/i2c-9/9-003d/s2mu106-powermeter/power_supply/s2mu106_pmeter/type          u:object_r:sysfs_battery:s0
+genfscon sysfs /devices/platform/13940000.spi/spi_master/spi9/spi9.0/madera-extcon/extcon/extcon0/cable.1/name          u:object_r:sysfs_extcon:s0
+genfscon sysfs /devices/platform/13940000.spi/spi_master/spi9/spi9.0/madera-extcon/extcon/extcon0/cable.3/name          u:object_r:sysfs_extcon:s0
 genfscon sysfs /devices/platform/14490000.fimc_is/debug/fixed_sensor_fps                                                u:object_r:sysfs_fimc_writable:s0
 genfscon sysfs /devices/platform/148b0000.decon_f/dqe/dqe                                                               u:object_r:sysfs_dqe:s0
 genfscon sysfs /devices/platform/148b0000.decon_f/psr_info                                                              u:object_r:sysfs_decon:s0

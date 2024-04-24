@@ -18,9 +18,12 @@ allow vendor_init tmpfs:lnk_file create_file_perms;
 
 allow vendor_init system_data_root_file:dir { relabelto setattr };
 allow vendor_init fingerprint_vendor_data_file:dir r_dir_perms;
+allow vendor_init vendor_userdir_file:dir getattr;
 
 allow vendor_init unlabeled:{ dir file } { read getattr relabelfrom };
 
 set_prop(vendor_init, moto_boot_prop)
 set_prop(vendor_init, rmnet_mux_prop)
+set_prop(vendor_init, vendor_ims_prop)
+set_prop(vendor_init, vendor_hwc_prop)
 set_prop(vendor_init, vendor_radio_prop)
