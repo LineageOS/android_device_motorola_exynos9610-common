@@ -1,4 +1,4 @@
-allow kernel self:capability mknod;
+allow kernel self:capability { kill mknod };
 
 # macros would grant too many perms which run into neverallows
 allow kernel device:chr_file { create getattr setattr unlink };
