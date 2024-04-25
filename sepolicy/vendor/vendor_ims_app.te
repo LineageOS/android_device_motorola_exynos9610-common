@@ -1,4 +1,4 @@
-type vendor_ims_app, domain;
+type vendor_ims_app, domain, mlstrustedobject;
 app_domain(vendor_ims_app)
 
 allow vendor_ims_app {
