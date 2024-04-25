@@ -102,9 +102,6 @@ vendor.sys.exynos.modempath=/dev/block/platform/13520000.ufs/by-name/modem
 ## Sensors
 ro.vendor.sensors.mot_ltv=true
 
-## USB
-dev.usbsetting.embedded=on
-
 ## Wi-Fi
 wifi.interface=wlan0
 
