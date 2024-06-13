@@ -197,7 +197,8 @@ PRODUCT_COPY_FILES += \
 
 # HWC
 PRODUCT_PACKAGES += \
-    hwcomposer.exynos9610
+    hwcomposer.exynos9610 \
+    libion.vendor
 
 # init
 PRODUCT_COPY_FILES += \
