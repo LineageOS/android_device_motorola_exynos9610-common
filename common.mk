@@ -48,6 +48,7 @@ PRODUCT_PACKAGES += \
     audio.usb.default \
     libtinycompress \
     libaudioroute \
+    libaudioroute.vendor \
     libgui_vendor
 
 PRODUCT_COPY_FILES += \
@@ -156,7 +157,8 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.gatekeeper@1.0.vendor \
     android.hardware.gatekeeper@1.0-impl \
-    android.hardware.gatekeeper@1.0-service
+    android.hardware.gatekeeper@1.0-service \
+    libgatekeeper.vendor
 
 # GMS
 ifeq ($(WITH_GMS),true)
@@ -197,7 +199,8 @@ PRODUCT_COPY_FILES += \
 
 # HWC
 PRODUCT_PACKAGES += \
-    hwcomposer.exynos9610
+    hwcomposer.exynos9610 \
+    libion.vendor
 
 # init
 PRODUCT_COPY_FILES += \
@@ -293,7 +296,8 @@ PRODUCT_PACKAGES += \
     libOMX.Exynos.VP9.Encoder \
     libOMX.Exynos.WMV.Decoder \
     libepicoperator \
-    libstagefright_softomx
+    libstagefright_softomx \
+    libstagefright_softomx_plugin.vendor
 
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += $(COMMON_PATH)/overlay
@@ -369,7 +373,9 @@ PRODUCT_PACKAGES += \
     android.hardware.radio.deprecated@1.0 \
     android.hardware.secure_element@1.0.vendor \
     android.hardware.secure_element@1.2 \
-    android.hardware.secure_element@1.2.vendor
+    android.hardware.secure_element@1.2.vendor \
+    libnetutils.vendor \
+    libsqlite.vendor
 
 # RenderScript HAL
 PRODUCT_PACKAGES += \
