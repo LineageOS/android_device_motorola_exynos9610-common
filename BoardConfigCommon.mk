@@ -107,6 +107,7 @@ TARGET_HEALTH_CHARGING_CONTROL_SUPPORTS_DEADLINE := false
 ## Manifest
 DEVICE_MANIFEST_FILE := $(COMMON_PATH)/manifest.xml
 DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE := \
+    $(COMMON_PATH)/framework_compatibility_matrix.xml \
     vendor/lineage/config/device_framework_matrix.xml
 
 ## Partitions
