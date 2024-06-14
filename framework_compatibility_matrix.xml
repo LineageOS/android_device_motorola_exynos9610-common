@@ -1,0 +1,77 @@
+<compatibility-matrix version="2.0" type="framework">
+    <hal format="hidl">
+        <name>android.hardware.light</name>
+        <transport>hwbinder</transport>
+        <version>2.0</version>
+        <interface>
+            <name>ILight</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl">
+        <name>android.hardware.power</name>
+        <transport>hwbinder</transport>
+        <version>1.0</version>
+        <interface>
+            <name>IPower</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl">
+        <name>android.hardware.vibrator</name>
+        <transport>hwbinder</transport>
+        <version>1.0</version>
+        <interface>
+            <name>IVibrator</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl">
+        <name>vendor.egistec.hardware.fingerprint</name>
+        <transport>hwbinder</transport>
+        <version>4.0</version>
+        <interface>
+            <name>IBiometricsFingerprintRbs</name>
+            <instance>default</instance>  
+        </interface>
+    </hal>
+    <hal format="hidl">
+        <name>vendor.samsung.hardware.gnss</name>
+        <transport>hwbinder</transport>
+        <version>1.0</version>
+        <interface>
+            <name>ISlsiGnss</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl">
+        <name>vendor.samsung_slsi.telephony.hardware.oemservice</name>
+        <transport>hwbinder</transport>
+        <version>1.0</version>
+        <interface>
+            <name>IOemService</name>
+            <instance>dm0</instance>
+            <instance>dm1</instance>
+            <instance>sced0</instance>
+        </interface>
+    </hal>
+    <hal format="hidl">
+        <name>vendor.samsung_slsi.telephony.hardware.radio</name>
+        <transport>hwbinder</transport>
+        <version>1.1</version>
+        <interface>
+            <name>IOemSamsungslsi</name>
+            <instance>slot1</instance>
+            <instance>slot2</instance>
+        </interface>
+    </hal>
+    <hal format="hidl">
+        <name>vendor.samsung_slsi.telephony.hardware.radioExternal</name>
+        <transport>hwbinder</transport>
+        <version>1.1</version>
+        <interface>
+            <name>IOemSlsiRadioExternal</name>
+            <instance>rilExternal</instance>
+        </interface>
+    </hal>
+</compatibility-matrix>
