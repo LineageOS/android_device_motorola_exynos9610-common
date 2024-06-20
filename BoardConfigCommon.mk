@@ -16,9 +16,6 @@
 
 COMMON_PATH := device/motorola/exynos9610-common
 
-## Include path
-TARGET_SPECIFIC_HEADER_PATH := $(COMMON_PATH)/include
-
 ## Inherit proprietary vendor configuartion
 include vendor/motorola/exynos9610-common/BoardConfigVendor.mk
 
@@ -96,6 +93,9 @@ TARGET_KERNEL_CLANG_VERSION := r416183b
 TARGET_KERNEL_CLANG_PATH := $(abspath .)/prebuilts/clang/kernel/$(HOST_PREBUILT_TAG)/clang-$(TARGET_KERNEL_CLANG_VERSION)
 TARGET_KERNEL_LLVM_BINUTILS := false
 TARGET_KERNEL_SOURCE := kernel/motorola/exynos9610
+
+## Lights
+$(call soong_config_set,SAMSUNG_LIGHTS_HAL,INCLUDE_DIR,$(COMMON_PATH)/include)
 
 ## Lineage Health
 TARGET_HEALTH_CHARGING_CONTROL_CHARGING_ENABLED := 0
