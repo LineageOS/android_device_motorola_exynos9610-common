@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "91f65454_f627aec4",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 2644
+      },
+      "writtenOn": "2024-06-21T18:45:42Z",
+      "side": 1,
+      "message": "This plus your or Tim",
+      "revId": "f2baf74a0e06a3ca40a5a51199e8bedc464ef11e",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "8dc3c4bd_94825871",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 2644
+      },
+      "writtenOn": "2024-06-21T18:45:42Z",
+      "side": 1,
+      "message": "This plus your or Tim\u0027s hardware/samsung change fix the build system derpage caused by the TARGET_SPECIFIC_HEADER_PATH variable.",
+      "revId": "f2baf74a0e06a3ca40a5a51199e8bedc464ef11e",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
