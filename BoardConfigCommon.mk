@@ -95,7 +95,7 @@ TARGET_KERNEL_LLVM_BINUTILS := false
 TARGET_KERNEL_SOURCE := kernel/motorola/exynos9610
 
 ## Lights
-$(call soong_config_set,SAMSUNG_HEADER_PATH,INCLUDE_DIR,$(COMMON_PATH)/include)
+$(call soong_config_set,samsungVars,target_specific_header_path,$(COMMON_PATH)/include)
 
 ## Lineage Health
 TARGET_HEALTH_CHARGING_CONTROL_CHARGING_ENABLED := 0
