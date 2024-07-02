@@ -73,7 +73,7 @@ function blob_fixup() {
             "${PATCHELF}" --replace-needed "libnetutils.so" "libip_checksum_shim.so" "${2}"
             ;;
         # Missing libutils symbols
-        vendor/lib*/libexynosdisplay.so|vendor/lib*/hw/hwcomposer.exynos9610.so|vendor/lib*/sensors.rp.so)
+        vendor/lib*/sensors.rp.so)
             "${PATCHELF}" --replace-needed "libutils.so" "libutils-v32.so" "${2}"
             ;;
         vendor/lib/libaudioproxy.so)
