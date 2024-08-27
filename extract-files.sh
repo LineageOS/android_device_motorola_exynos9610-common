@@ -1,7 +1,7 @@
 #!/bin/bash
 #
-# Copyright (C) 2016 The CyanogenMod Project
-# Copyright (C) 2017-2023 The LineageOS Project
+# SPDX-FileCopyrightText: 2016 The CyanogenMod Project
+# SPDX-FileCopyrightText: 2017-2024 The LineageOS Project
 #
 # SPDX-License-Identifier: Apache-2.0
 #
@@ -48,7 +48,8 @@ while [ "${#}" -gt 0 ]; do
                 KANG="--kang"
                 ;;
         -s | --section )
-                SECTION="${2}"; shift
+                SECTION="${2}"
+                shift
                 CLEAN_VENDOR=false
                 ;;
         * )
@@ -66,41 +67,58 @@ function blob_fixup() {
     case "${1}" in
         # libmedia symbols moved
         lib64/libmediaadaptor.so)
+            [ "$2" = "" ] && return 0
             "${PATCHELF}" --replace-needed "libmedia.so" "libmedia_ims.so" "${2}"
             ;;
         # libnetutils shim
         vendor/bin/wfc-pkt-router)
+            [ "$2" = "" ] && return 0
             "${PATCHELF}" --replace-needed "libnetutils.so" "libip_checksum_shim.so" "${2}"
             ;;
         # Missing libutils symbols
         vendor/lib*/sensors.rp.so)
+            [ "$2" = "" ] && return 0
             "${PATCHELF}" --replace-needed "libutils.so" "libutils-v32.so" "${2}"
             ;;
         vendor/lib/libaudioproxy.so)
+            [ "$2" = "" ] && return 0
             for LIBAUDIOPROXY_SHIM in $(grep -L "libaudioproxy_shim.so" "${2}"); do
                 "${PATCHELF}" --add-needed "libaudioproxy_shim.so" "${LIBAUDIOPROXY_SHIM}"
             done
             ;;
         vendor/bin/charge_only_mode)
+            [ "$2" = "" ] && return 0
             for LIBMEMSET in $(grep -L "libmemset_shim.so" "${2}"); do
                 "${PATCHELF}" --add-needed "libmemset_shim.so" "${LIBMEMSET}"
             done
             ;;
         vendor/lib*/libhifills.so)
+            [ "$2" = "" ] && return 0
             for LIBDEMANGLE in $(grep -L "libdemangle.so" "${2}"); do
                 "${PATCHELF}" --add-needed "libdemangle.so" "${LIBDEMANGLE}"
             done
             ;;
         # Remove libhidltransport/libhwbinder references
         vendor/bin/hw/android.hardware.biometrics.fingerprint@2.1-service-rbs|vendor/lib64/hw/android.hardware.gnss@1.0-impl.samsung.so|vendor/lib64/hw/android.hardware.gnss@1.1-impl.samsung.so|vendor/lib64/hw/android.hardware.gnss@2.0-impl.samsung.so|vendor/lib64/hw/vendor.samsung.hardware.gnss@1.0-impl.so)
+            [ "$2" = "" ] && return 0
             "${PATCHELF}" --remove-needed "libhidltransport.so" "${2}"
             "${PATCHELF}" --remove-needed "libhwbinder.so" "${2}"
             ;;
         # Remove libhwbinder references
         vendor/etc/permissions/com.motorola.motosignature.xml)
+            [ "$2" = "" ] && return 0
             sed -i 's|/system/framework|/vendor/framework|' "${2}"
             ;;
+        *)
+            return 1
+            ;;
     esac
+
+    return 0
+}
+
+function blob_fixup_dry() {
+    blob_fixup "$1" ""
 }
 
 if [ -z "${ONLY_FIRMWARE}" ] && [ -z "${ONLY_TARGET}" ]; then
