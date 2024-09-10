@@ -98,6 +98,10 @@ function blob_fixup() {
                 "${PATCHELF}" --add-needed "libdemangle.so" "${LIBDEMANGLE}"
             done
             ;;
+        vendor/lib64/libstrongswan.so)
+            [ "$2" = "" ] && return 0
+            "${PATCHELF}" --add-needed "libcrypto_shim.so" "${2}"
+            ;;
         # Remove libhidltransport/libhwbinder references
         vendor/bin/hw/android.hardware.biometrics.fingerprint@2.1-service-rbs|vendor/lib64/hw/android.hardware.gnss@1.0-impl.samsung.so|vendor/lib64/hw/android.hardware.gnss@1.1-impl.samsung.so|vendor/lib64/hw/android.hardware.gnss@2.0-impl.samsung.so|vendor/lib64/hw/vendor.samsung.hardware.gnss@1.0-impl.so)
             [ "$2" = "" ] && return 0
