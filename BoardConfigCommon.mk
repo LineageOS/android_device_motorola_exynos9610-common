@@ -168,9 +168,6 @@ BOARD_VENDOR_SEPOLICY_DIRS += $(COMMON_PATH)/sepolicy/vendor
 ## Soong Namespace
 PRODUCT_SOONG_NAMESPACES += $(COMMON_PATH)
 
-## Treble
-BOARD_VNDK_VERSION := current
-
 ## Verified Boot
 BOARD_AVB_ENABLE := true
 BOARD_AVB_MAKE_VBMETA_IMAGE_ARGS += --flags 3
