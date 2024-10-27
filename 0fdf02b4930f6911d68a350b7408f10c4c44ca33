@@ -39,6 +39,30 @@
       },
       "revId": "0fdf02b4930f6911d68a350b7408f10c4c44ca33",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "35cbe566_18bf0186",
+        "filename": "proprietary-files-vendor.txt",
+        "patchSetId": 1
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 16185
+      },
+      "writtenOn": "2024-10-27T21:21:41Z",
+      "side": 1,
+      "message": "meh, damnit: https://review.lineageos.org/c/LineageOS/android_device_motorola_exynos9610-common/+/407039",
+      "parentUuid": "d5a9d21a_9a85bb88",
+      "range": {
+        "startLine": 17,
+        "startChar": 0,
+        "endLine": 17,
+        "endChar": 2
+      },
+      "revId": "0fdf02b4930f6911d68a350b7408f10c4c44ca33",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ],
   "submitRequirementResults": []
