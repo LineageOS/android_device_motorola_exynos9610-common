@@ -408,8 +408,7 @@ PRODUCT_COPY_FILES += \
 # Shims
 PRODUCT_PACKAGES += \
     libaudioproxy_shim \
-    libmemset_shim \
-    libdemangle.vendor
+    libmemset_shim
 
 # Shipping API
 $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_p.mk)
