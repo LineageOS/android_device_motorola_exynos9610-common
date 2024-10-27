@@ -14,7 +14,6 @@ vendor/lib64/libdapparamstorage.so
 
 ## Camera
 vendor/lib/libENF.so
-vendor/lib/libdemangle.so|d3fc0883a09a0debbf79ddd4bba922e79cb3d9ee
 vendor/lib/libexynoscamera_hifi_plugin.so
 vendor/lib/libexynoscamera_hifills_plugin.so
 vendor/lib/libexynoscamera_plugin.so
