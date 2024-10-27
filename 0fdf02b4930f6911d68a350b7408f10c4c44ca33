@@ -16,6 +16,29 @@
       "message": "meh, can always revert",
       "revId": "0fdf02b4930f6911d68a350b7408f10c4c44ca33",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "d5a9d21a_9a85bb88",
+        "filename": "proprietary-files-vendor.txt",
+        "patchSetId": 1
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 4550
+      },
+      "writtenOn": "2024-10-27T21:14:46Z",
+      "side": 1,
+      "message": "Duplicate?",
+      "range": {
+        "startLine": 17,
+        "startChar": 0,
+        "endLine": 17,
+        "endChar": 2
+      },
+      "revId": "0fdf02b4930f6911d68a350b7408f10c4c44ca33",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ],
   "submitRequirementResults": []
