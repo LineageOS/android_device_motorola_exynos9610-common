@@ -132,7 +132,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.drm-service.clearkey \
     android.hardware.drm@1.3.vendor \
-    libcrypto_shim \
+    libcrypto_shim.vendor \
     libprotobuf-cpp-lite-3.9.1-vendorcompat
 
 # FastCharge
@@ -227,8 +227,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     android.hardware.keymaster@3.0.vendor \
     android.hardware.keymaster@3.0-impl \
-    android.hardware.keymaster@3.0-service \
-    libcrypto_shim
+    android.hardware.keymaster@3.0-service
 
 # Lights
 PRODUCT_PACKAGES += \
