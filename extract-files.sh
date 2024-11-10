@@ -14,7 +14,7 @@ if [[ ! -d "${MY_DIR}" ]]; then MY_DIR="${PWD}"; fi
 
 ANDROID_ROOT="${MY_DIR}/../../.."
 
-export TARGET_ENABLE_CHECKELF=false
+export PATCHELF_VERSION=0_18
 
 HELPER="${ANDROID_ROOT}/tools/extract-utils/extract_utils.sh"
 if [ ! -f "${HELPER}" ]; then
@@ -82,12 +82,6 @@ function blob_fixup() {
             [ "$2" = "" ] && return 0
             "${PATCHELF}" --replace-needed "libutils.so" "libutils-v32.so" "${2}"
             ;;
-        vendor/lib/libaudioproxy.so)
-            [ "$2" = "" ] && return 0
-            for LIBAUDIOPROXY_SHIM in $(grep -L "libaudioproxy_shim.so" "${2}"); do
-                "${PATCHELF}" --add-needed "libaudioproxy_shim.so" "${LIBAUDIOPROXY_SHIM}"
-            done
-            ;;
         vendor/bin/charge_only_mode)
             [ "$2" = "" ] && return 0
             for LIBMEMSET in $(grep -L "libmemset_shim.so" "${2}"); do
@@ -98,6 +92,9 @@ function blob_fixup() {
             [ "$2" = "" ] && return 0
             for LIBDEMANGLE in $(grep -L "libdemangle.so" "${2}"); do
                 "${PATCHELF}" --add-needed "libdemangle.so" "${LIBDEMANGLE}"
+            done
+            for LIBPROCESSGROUP in $(grep -L "libprocessgroup.so" "${2}"); do
+                "${PATCHELF}" --add-needed "libprocessgroup.so" "${LIBPROCESSGROUP}"
             done
             ;;
         vendor/lib64/libstrongswan.so)
