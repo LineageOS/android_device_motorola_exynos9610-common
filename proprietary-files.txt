@@ -7,7 +7,7 @@ framework/com.motorola.motosignature.jar:vendor/framework/com.motorola.motosigna
 product/app/MotCamera2AI/MotCamera2AI.apk
 product/etc/permissions/com.motorola.camera2.content.ai.xml
 product/etc/permissions/com.motorola.camera2.hallasan.xml
-product/etc/permissions/deviceowner-configuration-com.motorola.camera2.xml
+product/etc/permissions/deviceowner-configuration-com.motorola.camera2.xml;FIX_XML
 product/etc/permissions/privapp-permissions-com.motorola.camera2.xml
 product/etc/permissions/privapp-permissions-com.motorola.camera2.xml
 product/etc/sysconfig/hiddenapi-whitelist-com.motorola.camera2.xml

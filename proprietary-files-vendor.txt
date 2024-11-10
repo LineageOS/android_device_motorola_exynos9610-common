@@ -35,7 +35,7 @@ vendor/lib64/libvdis.so
 vendor/lib64/libyuvrepro.so
 
 ## Charger
-vendor/bin/charge_only_mode|aa277db47fd537f95ca5bf15c5f1b95d4b893258|4ba1390cb8ff9257879be773b96e568e0c7e0421
+vendor/bin/charge_only_mode|9347f40361c40df19037e06bb4efb8290c2c448c|aa277db47fd537f95ca5bf15c5f1b95d4b893258
 
 ## DRM
 vendor/lib/liboemcrypto.so
