@@ -1,5 +1,10 @@
 ## Common proprietary files - from motorola/troika_retail/troika_sprout:11/RSBS31.Q1-48-36-20/3e578:user/release-keys, unless pinned
 
+# Current blobs with ELF checks disabled:
+# libexynoscamera_hifi_plugin,libexynoscamera_hifills_plugin, libexynoscamera_vdis_plugin, libvdis.so: Depend on Android.mk only libexynosutils
+# libmedia_ims, libmediaadaptor: IMS stack depends on libmediaadaptor.so which depends on proprietary libmedia.so from stock, which depends on libandroidicu, which is not visible
+# samsung.hardware.media.c2@1.1-default-service: ?
+
 ## Camera
 product/app/MotCamera2AI/MotCamera2AI.apk
 product/etc/permissions/com.motorola.camera2.content.ai.xml
@@ -13,22 +18,22 @@ system/app/MotoSignatureApp/MotoSignatureApp.apk;PRESIGNED
 system/etc/permissions/com.motorola.motosignature.xml:vendor/etc/permissions/com.motorola.motosignature.xml
 system/framework/com.motorola.motosignature.jar:vendor/framework/com.motorola.motosignature.jar
 vendor/lib/libENF.so
-vendor/lib/libexynoscamera_hifi_plugin.so
-vendor/lib/libexynoscamera_hifills_plugin.so
+vendor/lib/libexynoscamera_hifi_plugin.so;DISABLE_CHECKELF
+vendor/lib/libexynoscamera_hifills_plugin.so;DISABLE_CHECKELF
 vendor/lib/libexynoscamera_plugin.so
 vendor/lib/libexynoscamera_plugin_utils.so
-vendor/lib/libexynoscamera_vdis_plugin.so
+vendor/lib/libexynoscamera_vdis_plugin.so;DISABLE_CHECKELF
 vendor/lib/libhifills.so
-vendor/lib/libvdis.so
+vendor/lib/libvdis.so;DISABLE_CHECKELF
 vendor/lib/libyuvrepro.so
 vendor/lib64/libENF.so
-vendor/lib64/libexynoscamera_hifi_plugin.so
-vendor/lib64/libexynoscamera_hifills_plugin.so
+vendor/lib64/libexynoscamera_hifi_plugin.so;DISABLE_CHECKELF
+vendor/lib64/libexynoscamera_hifills_plugin.so;DISABLE_CHECKELF
 vendor/lib64/libexynoscamera_plugin.so
 vendor/lib64/libexynoscamera_plugin_utils.so
-vendor/lib64/libexynoscamera_vdis_plugin.so
+vendor/lib64/libexynoscamera_vdis_plugin.so;DISABLE_CHECKELF
 vendor/lib64/libhifills.so
-vendor/lib64/libvdis.so
+vendor/lib64/libvdis.so;DISABLE_CHECKELF
 vendor/lib64/libyuvrepro.so
 
 # Camera - Shims - Built in lineage-21, and prebuilt here.
@@ -115,10 +120,10 @@ vendor/bin/hw/gpsd
 vendor/bin/hw/vendor.samsung.hardware.gnss@1.0-service
 vendor/etc/gnss/ca.pem
 vendor/etc/init/vendor.samsung.hardware.gnss@1.0-service.rc
-vendor/lib64/hw/android.hardware.gnss@1.0-impl.so:vendor/lib64/hw/android.hardware.gnss@1.0-impl.samsung.so
-vendor/lib64/hw/android.hardware.gnss@1.1-impl.so:vendor/lib64/hw/android.hardware.gnss@1.1-impl.samsung.so
-vendor/lib64/hw/android.hardware.gnss@2.0-impl.so:vendor/lib64/hw/android.hardware.gnss@2.0-impl.samsung.so
-vendor/lib64/hw/vendor.samsung.hardware.gnss@1.0-impl.so
+vendor/lib64/hw/android.hardware.gnss@1.0-impl.so:vendor/lib64/hw/android.hardware.gnss@1.0-impl.samsung.so;FIX_SONAME
+vendor/lib64/hw/android.hardware.gnss@1.1-impl.so:vendor/lib64/hw/android.hardware.gnss@1.1-impl.samsung.so;FIX_SONAME
+vendor/lib64/hw/android.hardware.gnss@2.0-impl.so:vendor/lib64/hw/android.hardware.gnss@2.0-impl.samsung.so;FIX_SONAME
+vendor/lib64/hw/vendor.samsung.hardware.gnss@1.0-impl.so;FIX_SONAME
 vendor/lib64/vendor.samsung.hardware.gnss@1.0.so
 
 ## Graphics
@@ -135,8 +140,8 @@ vendor/lib64/hw/keystore.exynos9610.so
 
 ## IMS
 system/app/ShannonIms/ShannonIms.apk
-system/lib64/libmedia.so:system/lib64/libmedia_ims.so
-system/lib64/libmediaadaptor.so
+system/lib64/libmedia.so:system/lib64/libmedia_ims.so;DISABLE_CHECKELF
+system/lib64/libmediaadaptor.so;DISABLE_CHECKELF
 system/priv-app/OemRilService/OemRilService.apk
 system_ext/app/ShannonDataService/ShannonDataService.apk
 system_ext/app/ShannonNetworkService/ShannonNetworkService.apk
@@ -149,7 +154,7 @@ vendor/lib64/libcharon.so
 vendor/lib64/libstrongswan.so
 
 ## Media
-vendor/bin/hw/samsung.hardware.media.c2@1.1-default-service
+vendor/bin/hw/samsung.hardware.media.c2@1.1-default-service;DISABLE_CHECKELF
 vendor/etc/init/samsung.hardware.media.c2@1.1-default-service.rc
 
 ## Mobicore
