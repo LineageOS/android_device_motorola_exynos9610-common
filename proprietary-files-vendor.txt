@@ -112,9 +112,7 @@ vendor/lib64/vendor.samsung.hardware.gnss@1.0.so
 
 ## Graphics
 vendor/lib/egl/libGLES_mali.so
-vendor/lib/libexynosgscaler.so
 vendor/lib64/egl/libGLES_mali.so
-vendor/lib64/libexynosgscaler.so
 
 ## Keymaster
 vendor/lib/hw/keystore.exynos9610.so
