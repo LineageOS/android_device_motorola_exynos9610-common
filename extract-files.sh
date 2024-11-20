@@ -82,12 +82,6 @@ function blob_fixup() {
             [ "$2" = "" ] && return 0
             "${PATCHELF}" --replace-needed "libutils.so" "libutils-v32.so" "${2}"
             ;;
-        vendor/lib/libaudioproxy.so)
-            [ "$2" = "" ] && return 0
-            for LIBAUDIOPROXY_SHIM in $(grep -L "libaudioproxy_shim.so" "${2}"); do
-                "${PATCHELF}" --add-needed "libaudioproxy_shim.so" "${LIBAUDIOPROXY_SHIM}"
-            done
-            ;;
         vendor/bin/charge_only_mode)
             [ "$2" = "" ] && return 0
             for LIBMEMSET in $(grep -L "libmemset_shim.so" "${2}"); do
