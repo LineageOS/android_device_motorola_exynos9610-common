@@ -93,6 +93,9 @@ function blob_fixup() {
             for LIBDEMANGLE in $(grep -L "libdemangle.so" "${2}"); do
                 "${PATCHELF}" --add-needed "libdemangle.so" "${LIBDEMANGLE}"
             done
+            for LIBPROCESSGROUP in $(grep -L "libprocessgroup.so" "${2}"); do
+                "${PATCHELF}" --add-needed "libprocessgroup.so" "${LIBPROCESSGROUP}"
+            done
             ;;
         vendor/lib64/libstrongswan.so)
             [ "$2" = "" ] && return 0
