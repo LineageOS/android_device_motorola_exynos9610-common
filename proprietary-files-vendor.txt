@@ -25,7 +25,7 @@ vendor/lib/libdemangle.so|d3fc0883a09a0debbf79ddd4bba922e79cb3d9ee
 vendor/lib64/libdemangle.so|ac9a52ac9146d0eceaeaba5e0c47f0d2c14e4428
 
 ## Charger
-vendor/bin/charge_only_mode|9347f40361c40df19037e06bb4efb8290c2c448c|aa277db47fd537f95ca5bf15c5f1b95d4b893258
+vendor/bin/charge_only_mode
 
 ## DRM
 vendor/lib/liboemcrypto.so
@@ -121,7 +121,7 @@ vendor/lib64/hw/keystore.exynos9610.so
 ## IMS
 vendor/bin/charon
 vendor/bin/wfc-pkt-router
-vendor/lib64/libcharon.so|2a7474566b35693bb8557201b7a63cb0db490208
+vendor/lib64/libcharon.so
 vendor/lib64/libstrongswan.so
 
 ## Media
