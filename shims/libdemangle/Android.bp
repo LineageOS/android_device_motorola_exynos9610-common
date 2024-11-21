@@ -1,0 +1,7 @@
+cc_library {
+    name: "libdemangle",
+    vendor_available: true,
+    whole_static_libs: [
+        "libc++demangle",
+    ]
+}
