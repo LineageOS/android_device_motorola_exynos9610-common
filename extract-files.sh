@@ -70,7 +70,7 @@ fi
 function blob_fixup() {
     case "${1}" in
         # libmedia symbols moved
-        lib64/libmediaadaptor.so)
+        system/lib64/libmediaadaptor.so)
             [ "$2" = "" ] && return 0
             "${PATCHELF}" --replace-needed "libmedia.so" "libmedia_ims.so" "${2}"
             ;;
