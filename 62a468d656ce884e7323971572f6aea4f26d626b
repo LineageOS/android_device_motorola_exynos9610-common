@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c66335d4_dca7c51c",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 15
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 16185
+      },
+      "writtenOn": "2024-11-21T06:55:54Z",
+      "side": 1,
+      "message": "This builds and boots, 99% of things work but something related to the GNSS fixups breaks GNSS",
+      "revId": "62a468d656ce884e7323971572f6aea4f26d626b",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
