@@ -31,10 +31,6 @@ vendor/lib64/libhifills.so
 vendor/lib64/libvdis.so
 vendor/lib64/libyuvrepro.so
 
-# Camera - Shims - Built in lineage-21, and prebuilt here.
-vendor/lib/libdemangle.so|d3fc0883a09a0debbf79ddd4bba922e79cb3d9ee
-vendor/lib64/libdemangle.so|ac9a52ac9146d0eceaeaba5e0c47f0d2c14e4428
-
 ## Charger
 vendor/bin/charge_only_mode
 
