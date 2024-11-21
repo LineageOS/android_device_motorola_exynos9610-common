@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "2a50076c_33485ad4",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 17401
+      },
+      "writtenOn": "2024-11-21T07:46:40Z",
+      "side": 1,
+      "message": "compiles and seems to result in a libdemangle.so that contains the expected symbols, needs a full build and test",
+      "revId": "0b02066299221cf548f533c354160b458e05f958",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
