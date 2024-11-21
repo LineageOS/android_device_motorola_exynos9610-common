@@ -31,7 +31,6 @@ write_headers "kane troika"
 
 # The standard common blobs
 write_makefiles "${MY_DIR}/proprietary-files.txt"
-write_makefiles "${MY_DIR}/proprietary-files-vendor.txt" true
 
 # Finish
 write_footers
