@@ -133,6 +133,8 @@ vendor/lib64/egl/libGLES_mali.so
 ## HotwordEnrollment
 product/priv-app/HotwordEnrollmentOKGoogleWM8280/HotwordEnrollmentOKGoogleWM8280.apk
 product/priv-app/HotwordEnrollmentXGoogleWM8280/HotwordEnrollmentXGoogleWM8280.apk
+system_ext/etc/permissions/com.android.hotwordenrollment.common.util.xml
+system_ext/framework/com.android.hotwordenrollment.common.util.jar
 
 ## Keymaster
 vendor/lib/hw/keystore.exynos9610.so
@@ -146,15 +148,13 @@ system/priv-app/OemRilService/OemRilService.apk
 system_ext/app/ShannonDataService/ShannonDataService.apk
 system_ext/app/ShannonNetworkService/ShannonNetworkService.apk
 system_ext/app/ShannonQualifiedNetworksService/ShannonQualifiedNetworksService.apk
-system_ext/etc/permissions/com.android.hotwordenrollment.common.util.xml
-system_ext/framework/com.android.hotwordenrollment.common.util.jar
 vendor/bin/charon
 vendor/bin/wfc-pkt-router
 vendor/lib64/libcharon.so
 vendor/lib64/libstrongswan.so
 
 ## Media
-vendor/bin/hw/samsung.hardware.media.c2@1.1-default-service;DISABLE_CHECKELF
+vendor/bin/hw/samsung.hardware.media.c2@1.1-default-service
 vendor/etc/init/samsung.hardware.media.c2@1.1-default-service.rc
 
 ## Mobicore
