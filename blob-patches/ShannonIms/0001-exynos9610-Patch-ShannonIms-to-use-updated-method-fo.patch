@@ -1,0 +1,29 @@
+From 2a5c0c559a020289bb7782a5822ae065ff64c794 Mon Sep 17 00:00:00 2001
+From: Jan Altensen <info@stricted.net>
+Date: Thu, 14 Apr 2022 11:45:22 -0400
+Subject: [PATCH] exynos9610: Patch ShannonIms to use updated method for
+ Android S
+
+* `sed -i 's/getDataConnectionNetworkType/getNetworkType/g' ShannonIms/smali/com/shannon/imsservice/conn/proxy/ImsConnectivityProxyListener*`
+
+Change-Id: Ief3ffd2a13e4e263240017e9a60d626e00853a6d
+---
+ .../ImsConnectivityProxyListener$ImsPhoneStateListener.smali    | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/smali/com/shannon/imsservice/conn/proxy/ImsConnectivityProxyListener$ImsPhoneStateListener.smali b/smali/com/shannon/imsservice/conn/proxy/ImsConnectivityProxyListener$ImsPhoneStateListener.smali
+index a6c7d71..8eb6882 100644
+--- a/smali/com/shannon/imsservice/conn/proxy/ImsConnectivityProxyListener$ImsPhoneStateListener.smali
++++ b/smali/com/shannon/imsservice/conn/proxy/ImsConnectivityProxyListener$ImsPhoneStateListener.smali
+@@ -434,7 +434,7 @@
+ 
+     .line 353
+     .local v4, "failCause":Lcom/shannon/imsservice/constants/PdnFailCause;
+-    invoke-virtual {p1}, Landroid/telephony/PreciseDataConnectionState;->getDataConnectionNetworkType()I
++    invoke-virtual {p1}, Landroid/telephony/PreciseDataConnectionState;->getNetworkType()I
+ 
+     move-result v5
+ 
+-- 
+2.43.0
+

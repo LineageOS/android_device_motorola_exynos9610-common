@@ -134,13 +134,13 @@ vendor/lib/hw/keystore.exynos9610.so
 vendor/lib64/hw/keystore.exynos9610.so
 
 ## IMS
-system/app/ShannonIms/ShannonIms.apk|e85ce47d7cdfc7dbf0b68eb8ee5ed1bc3de2841a
+system/app/ShannonIms/ShannonIms.apk
 system/lib64/libmedia.so:system/lib64/libmedia_ims.so
 system/lib64/libmediaadaptor.so
 system/priv-app/OemRilService/OemRilService.apk
-system_ext/app/ShannonDataService/ShannonDataService.apk|2d3856523a463738bff9cffd12f4c5a94de28e44
-system_ext/app/ShannonNetworkService/ShannonNetworkService.apk|507e83f2e419866cac9c5c750c92bf4bd126e249
-system_ext/app/ShannonQualifiedNetworksService/ShannonQualifiedNetworksService.apk|be7a4a6ce5534fcc7bcde7018bf7f060c2b0f2ed
+system_ext/app/ShannonDataService/ShannonDataService.apk
+system_ext/app/ShannonNetworkService/ShannonNetworkService.apk
+system_ext/app/ShannonQualifiedNetworksService/ShannonQualifiedNetworksService.apk
 system_ext/etc/permissions/com.android.hotwordenrollment.common.util.xml
 system_ext/framework/com.android.hotwordenrollment.common.util.jar
 vendor/bin/charon

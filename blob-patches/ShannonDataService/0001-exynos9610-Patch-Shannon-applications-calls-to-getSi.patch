@@ -1,0 +1,49 @@
+From 01fd69a4fb0f908690c7b288a1104097cdc8cd47 Mon Sep 17 00:00:00 2001
+From: Nolen Johnson <johnsonnolen@gmail.com>
+Date: Mon, 1 Jan 2024 02:41:10 -0500
+Subject: [PATCH] exynos9610: Patch Shannon applications calls to
+ getSimStateForSlotIndex
+
+* Account for getSimStateForSlotIndex moving from SubscriptionManager to
+  TelephonyManager.
+* Simply apktool d *.apk, then grep for `getSimStateForSlotIndex`, and
+  then replace all references to that to call from `TelephonyManager`
+  instead of the existing call to `SubscriptionManager`.
+* apktool b *.apk, and boom - functional IMS.
+
+Reference: https://android-review.googlesource.com/c/platform/frameworks/base/+/2484178
+Change-Id: I7574369d2a73d8751db8bef940fe8c3271c002ea
+---
+ .../dataservice/SimManager$SimStateBroadcastReceiver.smali      | 2 +-
+ smali/com/shannon/dataservice/SimManager.smali                  | 2 +-
+ 2 files changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/smali/com/shannon/dataservice/SimManager$SimStateBroadcastReceiver.smali b/smali/com/shannon/dataservice/SimManager$SimStateBroadcastReceiver.smali
+index 0f50a72..987fa20 100644
+--- a/smali/com/shannon/dataservice/SimManager$SimStateBroadcastReceiver.smali
++++ b/smali/com/shannon/dataservice/SimManager$SimStateBroadcastReceiver.smali
+@@ -141,7 +141,7 @@
+ 
+     .line 80
+     :cond_4
+-    invoke-static {p1}, Landroid/telephony/SubscriptionManager;->getSimStateForSlotIndex(I)I
++    invoke-static {p1}, Landroid/telephony/TelephonyManager;->getSimStateForSlotIndex(I)I
+ 
+     move-result p2
+ 
+diff --git a/smali/com/shannon/dataservice/SimManager.smali b/smali/com/shannon/dataservice/SimManager.smali
+index d70605d..d31854e 100644
+--- a/smali/com/shannon/dataservice/SimManager.smali
++++ b/smali/com/shannon/dataservice/SimManager.smali
+@@ -188,7 +188,7 @@
+     if-ge p1, v0, :cond_1
+ 
+     .line 134
+-    invoke-static {p1}, Landroid/telephony/SubscriptionManager;->getSimStateForSlotIndex(I)I
++    invoke-static {p1}, Landroid/telephony/TelephonyManager;->getSimStateForSlotIndex(I)I
+ 
+     move-result v0
+ 
+-- 
+2.43.0
+

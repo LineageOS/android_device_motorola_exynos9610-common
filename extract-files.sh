@@ -69,10 +69,22 @@ fi
 
 function blob_fixup() {
     case "${1}" in
+        system/app/ShannonIms/ShannonIms.apk)
+            apktool_patch "${2}" "${MY_DIR}/blob-patches/ShannonIms" -r
+            ;;
         # libmedia symbols moved
         system/lib64/libmediaadaptor.so)
             [ "$2" = "" ] && return 0
             "${PATCHELF}" --replace-needed "libmedia.so" "libmedia_ims.so" "${2}"
+            ;;
+        system_ext/app/ShannonDataService/ShannonDataService.apk)
+            apktool_patch "${2}" "${MY_DIR}/blob-patches/ShannonDataService" -r
+            ;;
+        system_ext/app/ShannonNetworkService/ShannonNetworkService.apk)
+            apktool_patch "${2}" "${MY_DIR}/blob-patches/ShannonNetworkService" -r
+            ;;
+        system_ext/app/ShannonQualifiedNetworksService/ShannonQualifiedNetworksService.apk)
+            apktool_patch "${2}" "${MY_DIR}/blob-patches/ShannonQualifiedNetworksService" -r
             ;;
         # libnetutils shim
         vendor/bin/wfc-pkt-router)

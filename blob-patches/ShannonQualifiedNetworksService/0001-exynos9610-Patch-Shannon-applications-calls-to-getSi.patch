@@ -1,0 +1,72 @@
+From a731271d37977f777f1f9e3bc6c48070a63cbfc6 Mon Sep 17 00:00:00 2001
+From: Nolen Johnson <johnsonnolen@gmail.com>
+Date: Mon, 1 Jan 2024 02:41:10 -0500
+Subject: [PATCH] exynos9610: Patch Shannon applications calls to
+ getSimStateForSlotIndex
+
+* Account for getSimStateForSlotIndex moving from SubscriptionManager to
+  TelephonyManager.
+* Simply apktool d *.apk, then grep for `getSimStateForSlotIndex`, and
+  then replace all references to that to call from `TelephonyManager`
+  instead of the existing call to `SubscriptionManager`.
+* apktool b *.apk, and boom - functional IMS.
+
+Reference: https://android-review.googlesource.com/c/platform/frameworks/base/+/2484178
+Change-Id: I7574369d2a73d8751db8bef940fe8c3271c002ea
+---
+ .../SimManager$SimBroadcastReceiver.smali                     | 2 +-
+ smali/com/shannon/qualifiednetworksservice/SimManager.smali   | 2 +-
+ ...ShannonVendorCarrierConfig$SimStateBroadcastReceiver.smali | 4 ++--
+ 3 files changed, 4 insertions(+), 4 deletions(-)
+
+diff --git a/smali/com/shannon/qualifiednetworksservice/SimManager$SimBroadcastReceiver.smali b/smali/com/shannon/qualifiednetworksservice/SimManager$SimBroadcastReceiver.smali
+index 9920a63..1bbf9ab 100644
+--- a/smali/com/shannon/qualifiednetworksservice/SimManager$SimBroadcastReceiver.smali
++++ b/smali/com/shannon/qualifiednetworksservice/SimManager$SimBroadcastReceiver.smali
+@@ -122,7 +122,7 @@
+ 
+     .line 49
+     :cond_4
+-    invoke-static {p1}, Landroid/telephony/SubscriptionManager;->getSimStateForSlotIndex(I)I
++    invoke-static {p1}, Landroid/telephony/TelephonyManager;->getSimStateForSlotIndex(I)I
+ 
+     move-result p2
+ 
+diff --git a/smali/com/shannon/qualifiednetworksservice/SimManager.smali b/smali/com/shannon/qualifiednetworksservice/SimManager.smali
+index 8a0d1f0..05296b9 100644
+--- a/smali/com/shannon/qualifiednetworksservice/SimManager.smali
++++ b/smali/com/shannon/qualifiednetworksservice/SimManager.smali
+@@ -186,7 +186,7 @@
+     if-ge p1, v0, :cond_1
+ 
+     .line 128
+-    invoke-static {p1}, Landroid/telephony/SubscriptionManager;->getSimStateForSlotIndex(I)I
++    invoke-static {p1}, Landroid/telephony/TelephonyManager;->getSimStateForSlotIndex(I)I
+ 
+     move-result v0
+ 
+diff --git a/smali/com/shannon/vendorcarrierconfig/ShannonVendorCarrierConfig$SimStateBroadcastReceiver.smali b/smali/com/shannon/vendorcarrierconfig/ShannonVendorCarrierConfig$SimStateBroadcastReceiver.smali
+index 608b9db..b4657b7 100644
+--- a/smali/com/shannon/vendorcarrierconfig/ShannonVendorCarrierConfig$SimStateBroadcastReceiver.smali
++++ b/smali/com/shannon/vendorcarrierconfig/ShannonVendorCarrierConfig$SimStateBroadcastReceiver.smali
+@@ -242,7 +242,7 @@
+ 
+     .line 266
+     :cond_4
+-    invoke-static {p1}, Landroid/telephony/SubscriptionManager;->getSimStateForSlotIndex(I)I
++    invoke-static {p1}, Landroid/telephony/TelephonyManager;->getSimStateForSlotIndex(I)I
+ 
+     move-result v0
+ 
+@@ -475,7 +475,7 @@
+     if-ge v2, v3, :cond_5
+ 
+     .line 326
+-    invoke-static {v2}, Landroid/telephony/SubscriptionManager;->getSimStateForSlotIndex(I)I
++    invoke-static {v2}, Landroid/telephony/TelephonyManager;->getSimStateForSlotIndex(I)I
+ 
+     move-result v3
+ 
+-- 
+2.43.0
+

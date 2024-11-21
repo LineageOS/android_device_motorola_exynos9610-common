@@ -1,0 +1,49 @@
+From f37abd56ccfb6c9f1a0182410e65b0a45c62e3b7 Mon Sep 17 00:00:00 2001
+From: Nolen Johnson <johnsonnolen@gmail.com>
+Date: Mon, 1 Jan 2024 02:41:10 -0500
+Subject: [PATCH] exynos9610: Patch Shannon applications calls to
+ getSimStateForSlotIndex
+
+* Account for getSimStateForSlotIndex moving from SubscriptionManager to
+  TelephonyManager.
+* Simply apktool d *.apk, then grep for `getSimStateForSlotIndex`, and
+  then replace all references to that to call from `TelephonyManager`
+  instead of the existing call to `SubscriptionManager`.
+* apktool b *.apk, and boom - functional IMS.
+
+Reference: https://android-review.googlesource.com/c/platform/frameworks/base/+/2484178
+Change-Id: I7574369d2a73d8751db8bef940fe8c3271c002ea
+---
+ .../networkservice/SimManager$SimStateBroadcastReceiver.smali   | 2 +-
+ smali/com/shannon/networkservice/SimManager.smali               | 2 +-
+ 2 files changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/smali/com/shannon/networkservice/SimManager$SimStateBroadcastReceiver.smali b/smali/com/shannon/networkservice/SimManager$SimStateBroadcastReceiver.smali
+index 84e2714..b67f2eb 100644
+--- a/smali/com/shannon/networkservice/SimManager$SimStateBroadcastReceiver.smali
++++ b/smali/com/shannon/networkservice/SimManager$SimStateBroadcastReceiver.smali
+@@ -149,7 +149,7 @@
+     invoke-static {v0, p2}, Lcom/shannon/networkservice/SimManager;->access$100(Lcom/shannon/networkservice/SimManager;Ljava/lang/String;)V
+ 
+     .line 123
+-    invoke-static {p1}, Landroid/telephony/SubscriptionManager;->getSimStateForSlotIndex(I)I
++    invoke-static {p1}, Landroid/telephony/TelephonyManager;->getSimStateForSlotIndex(I)I
+ 
+     move-result p2
+ 
+diff --git a/smali/com/shannon/networkservice/SimManager.smali b/smali/com/shannon/networkservice/SimManager.smali
+index 63e269b..e95a1b8 100644
+--- a/smali/com/shannon/networkservice/SimManager.smali
++++ b/smali/com/shannon/networkservice/SimManager.smali
+@@ -132,7 +132,7 @@
+     if-ge v1, v2, :cond_3
+ 
+     .line 176
+-    invoke-static {v1}, Landroid/telephony/SubscriptionManager;->getSimStateForSlotIndex(I)I
++    invoke-static {v1}, Landroid/telephony/TelephonyManager;->getSimStateForSlotIndex(I)I
+ 
+     move-result v2
+ 
+-- 
+2.43.0
+
