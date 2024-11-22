@@ -59,7 +59,7 @@ blob_fixups: blob_fixups_user_type = {
         .apktool_patch('blob-patches/ShannonDataService', '-r'),
     'system_ext/app/ShannonNetworkService/ShannonNetworkService.apk': blob_fixup()
         .apktool_patch('blob-patches/ShannonNetworkService', '-r'),
-    'system_ext/app/ShannonQualifiedNetworksService/ShannonQualifiedNetworksService': blob_fixup()
+    'system_ext/app/ShannonQualifiedNetworksService/ShannonQualifiedNetworksService.apk': blob_fixup()
         .apktool_patch('blob-patches/ShannonQualifiedNetworksService', '-r'),
     ('vendor/bin/hw/android.hardware.biometrics.fingerprint@2.1-service-rbs', 'vendor/lib64/hw/android.hardware.gnss@1.0-impl.samsung.so', 'vendor/lib64/hw/android.hardware.gnss@1.1-impl.samsung.so', 'vendor/lib64/hw/android.hardware.gnss@2.0-impl.samsung.so', 'vendor/lib64/hw/vendor.samsung.hardware.gnss@1.0-impl.so'): blob_fixup()
         .patchelf_version('0_18')
