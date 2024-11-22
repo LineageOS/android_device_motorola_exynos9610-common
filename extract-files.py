@@ -53,7 +53,6 @@ blob_fixups: blob_fixups_user_type = {
     'system/app/ShannonIms/ShannonIms.apk': blob_fixup()
         .apktool_patch('blob-patches/ShannonIms', '-r'),
     'system/lib64/libmediaadaptor.so': blob_fixup()
-        .patchelf_version('0_18')
         .replace_needed('libmedia.so', 'libmedia_ims.so'),
     'system_ext/app/ShannonDataService/ShannonDataService.apk': blob_fixup()
         .apktool_patch('blob-patches/ShannonDataService', '-r'),
@@ -62,26 +61,20 @@ blob_fixups: blob_fixups_user_type = {
     'system_ext/app/ShannonQualifiedNetworksService/ShannonQualifiedNetworksService.apk': blob_fixup()
         .apktool_patch('blob-patches/ShannonQualifiedNetworksService', '-r'),
     ('vendor/bin/hw/android.hardware.biometrics.fingerprint@2.1-service-rbs', 'vendor/lib64/hw/android.hardware.gnss@1.0-impl.samsung.so', 'vendor/lib64/hw/android.hardware.gnss@1.1-impl.samsung.so', 'vendor/lib64/hw/android.hardware.gnss@2.0-impl.samsung.so', 'vendor/lib64/hw/vendor.samsung.hardware.gnss@1.0-impl.so'): blob_fixup()
-        .patchelf_version('0_18')
         .remove_needed('libhidltransport.so')
         .remove_needed('libhwbinder.so'),
     'vendor/bin/charge_only_mode': blob_fixup()
-        .patchelf_version('0_18')
         .add_needed('libmemset_shim.so'),
     'vendor/bin/wfc-pkt-router': blob_fixup()
-        .patchelf_version('0_18')
         .replace_needed('libnetutils.so', 'libip_checksum_shim.so'),
     'vendor/etc/permissions/com.motorola.motosignature.xml': blob_fixup()
         .regex_replace('system', 'vendor'),
     ('vendor/lib/libhifills.so', 'vendor/lib64/libhifills.so'): blob_fixup()
-        .patchelf_version('0_18')
         .add_needed('libdemangle.so')
         .add_needed('libprocessgroup.so'),
     ('vendor/lib/libwvhidl.so', 'vendor/lib64/libstrongswan.so'): blob_fixup()
-        .patchelf_version('0_18')
         .add_needed('libcrypto_shim.so'),
     ('vendor/lib/sensors.rp.so', 'vendor/lib64/sensors.rp.so'): blob_fixup()
-        .patchelf_version('0_18')
         .replace_needed('libutils.so', 'libutils-v32.so'),
 }  # fmt: skip
 
