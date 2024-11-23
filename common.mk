@@ -46,9 +46,6 @@ PRODUCT_PACKAGES += \
     audio.bluetooth.default \
     audio.r_submix.default \
     audio.usb.default \
-    libtinycompress \
-    libaudioroute \
-    libaudioroute.vendor \
     libgui_vendor
 
 PRODUCT_COPY_FILES += \
@@ -96,9 +93,7 @@ PRODUCT_PACKAGES += \
     android.frameworks.cameraservice.service@2.1.vendor \
     android.hardware.camera.provider@2.4-impl \
     android.hardware.camera.provider@2.4-service \
-    libgiantmscl \
-    libhwjpeg \
-    libsensorndkbridge
+    libgiantmscl
 
 # ConfigStore
 PRODUCT_PACKAGES += \
@@ -117,7 +112,6 @@ PRODUCT_PACKAGES += \
     android.hardware.graphics.allocator@2.0-service \
     android.hardware.graphics.composer@2.4-service \
     android.hardware.graphics.mapper@2.0-impl-2.1 \
-    libacryl \
     libacryl_plugin_slsi_hdr10 \
     libcsc \
     libexynosdisplay \
@@ -125,14 +119,11 @@ PRODUCT_PACKAGES += \
     libexynosscaler \
     libexynosutils \
     libexynosv4l2 \
-    libion_exynos \
     libstagefrighthw
 
 # DRM
 PRODUCT_PACKAGES += \
     android.hardware.drm-service.clearkey \
-    android.hardware.drm@1.3.vendor \
-    libcrypto_shim.vendor \
     libprotobuf-cpp-lite-3.9.1-vendorcompat
 
 # FastCharge
@@ -167,10 +158,6 @@ GMS_MAKEFILE=gms_minimal.mk
 endif
 
 # GPS
-PRODUCT_PACKAGES += \
-    android.hardware.gnss@2.0.vendor \
-    android.hardware.gnss@2.1.vendor
-
 PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/configs/gps/gps.cfg:$(TARGET_COPY_OUT_VENDOR)/etc/gnss/gps.cfg
 
@@ -192,8 +179,7 @@ PRODUCT_PACKAGES += \
 
 # HIDL
 PRODUCT_PACKAGES += \
-    android.hidl.allocator@1.0.vendor \
-    android.hidl.memory@1.0.vendor
+    android.hidl.allocator@1.0.vendor
 
 # HotwordEnrollement
 PRODUCT_COPY_FILES += \
@@ -201,8 +187,7 @@ PRODUCT_COPY_FILES += \
 
 # HWC
 PRODUCT_PACKAGES += \
-    hwcomposer.exynos9610 \
-    libion.vendor
+    hwcomposer.exynos9610
 
 # init
 PRODUCT_COPY_FILES += \
@@ -242,11 +227,6 @@ PRODUCT_PACKAGES += \
     vendor.lineage.livedisplay@2.0-service.exynos9610
 
 # Media
-PRODUCT_PACKAGES += \
-    libcodec2_hidl@1.0.vendor \
-    libcodec2_hidl@1.1.vendor \
-    libavservices_minijail_vendor
-
 PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/configs/media/media_codecs.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs.xml \
     $(COMMON_PATH)/configs/media/media_codecs_dolby_audio.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_dolby_audio.xml \
@@ -349,7 +329,6 @@ PRODUCT_COPY_FILES += \
 
 # Power
 PRODUCT_PACKAGES += \
-    android.hardware.power@1.2.vendor \
     android.hardware.power@1.0-impl \
     android.hardware.power@1.0-service
 
@@ -357,37 +336,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/configs/public.libraries.txt:$(TARGET_COPY_OUT_VENDOR)/etc/public.libraries.txt
 
-# ril
-PRODUCT_PACKAGES += \
-    android.hardware.radio.config@1.2.vendor \
-    android.hardware.radio.config@1.0 \
-    android.hardware.radio.config@1.1 \
-    android.hardware.radio.config@1.2 \
-    android.hardware.radio@1.4.vendor \
-    android.hardware.radio@1.5.vendor \
-    android.hardware.radio@1.0 \
-    android.hardware.radio@1.1 \
-    android.hardware.radio@1.2 \
-    android.hardware.radio@1.3 \
-    android.hardware.radio@1.4 \
-    android.hardware.radio@1.5 \
-    android.hardware.radio.deprecated@1.0.vendor \
-    android.hardware.radio.deprecated@1.0 \
-    android.hardware.secure_element@1.0.vendor \
-    android.hardware.secure_element@1.2 \
-    android.hardware.secure_element@1.2.vendor \
-    libnetutils.vendor \
-    libsqlite.vendor
-
 # RenderScript HAL
 PRODUCT_PACKAGES += \
     android.hardware.renderscript@1.0-impl
-
-# secure_element
-PRODUCT_PACKAGES += \
-    android.hardware.secure_element@1.0 \
-    android.hardware.secure_element@1.1 \
-    android.hardware.secure_element@1.2
 
 # Seccomp
 PRODUCT_COPY_FILES += \
@@ -403,12 +354,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/configs/sensors/hals.conf:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/hals.conf \
     $(COMMON_PATH)/configs/sensors/mot_sensor_settings.json:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/mot_sensor_settings.json
-
-# Shims
-PRODUCT_PACKAGES += \
-    libaudioproxy_shim \
-    libmemset_shim \
-    libdemangle.vendor
 
 # Shipping API
 $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_p.mk)
@@ -441,15 +386,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.vibrator@1.0-service.exynos9610
 
-# VNDK
-PRODUCT_PACKAGES += \
-    libutils-v32
-
 # WiFi
 PRODUCT_PACKAGES += \
     android.hardware.wifi-service \
     hostapd \
-    libip_checksum_shim.vendor \
     WifiOverlay \
     wpa_supplicant
 
