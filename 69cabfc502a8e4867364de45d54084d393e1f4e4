@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "75a6fdcc_c7916d26",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 16185
+      },
+      "writtenOn": "2024-11-24T00:48:15Z",
+      "side": 1,
+      "message": "troika / # ls /vendor/lib*/hw/vulkan* -alh\nlrw-r--r-- 1 root root 31 2008-12-31 19:00 /vendor/lib/hw/vulkan.exynos9610.so -\u003e /vendor/lib/egl/libGLES_mali.so\nlrw-r--r-- 1 root root 33 2008-12-31 19:00 /vendor/lib64/hw/vulkan.exynos9610.so -\u003e /vendor/lib64/egl/libGLES_mali.so\ntroika / # ls /vendor/lib*/libCL* -alh\nls: /vendor/lib*/libCL*: No such file or directory\ntroika / # ls /vendor/lib*/libOpenCL* -alh\nlrw-r--r-- 1 root root 31 2008-12-31 19:00 /vendor/lib/libOpenCL.so -\u003e /vendor/lib/egl/libGLES_mali.so\nlrw-r--r-- 1 root root 31 2008-12-31 19:00 /vendor/lib/libOpenCL.so.1 -\u003e /vendor/lib/egl/libGLES_mali.so\nlrw-r--r-- 1 root root 31 2008-12-31 19:00 /vendor/lib/libOpenCL.so.1.1 -\u003e /vendor/lib/egl/libGLES_mali.so\nlrw-r--r-- 1 root root 33 2008-12-31 19:00 /vendor/lib64/libOpenCL.so -\u003e /vendor/lib64/egl/libGLES_mali.so\nlrw-r--r-- 1 root root 33 2008-12-31 19:00 /vendor/lib64/libOpenCL.so.1 -\u003e /vendor/lib64/egl/libGLES_mali.so\nlrw-r--r-- 1 root root 33 2008-12-31 19:00 /vendor/lib64/libOpenCL.so.1.1 -\u003e /vendor/lib64/egl/libGLES_mali.so",
+      "revId": "69cabfc502a8e4867364de45d54084d393e1f4e4",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
