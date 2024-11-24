@@ -17,22 +17,22 @@ system/app/MotoSignatureApp/MotoSignatureApp.apk;PRESIGNED
 system/etc/permissions/com.motorola.motosignature.xml:vendor/etc/permissions/com.motorola.motosignature.xml
 system/framework/com.motorola.motosignature.jar:vendor/framework/com.motorola.motosignature.jar
 vendor/lib/libENF.so
-vendor/lib/libexynoscamera_hifi_plugin.so;DISABLE_CHECKELF
-vendor/lib/libexynoscamera_hifills_plugin.so;DISABLE_CHECKELF
+vendor/lib/libexynoscamera_hifi_plugin.so
+vendor/lib/libexynoscamera_hifills_plugin.so
 vendor/lib/libexynoscamera_plugin.so
 vendor/lib/libexynoscamera_plugin_utils.so
-vendor/lib/libexynoscamera_vdis_plugin.so;DISABLE_CHECKELF
+vendor/lib/libexynoscamera_vdis_plugin.so
 vendor/lib/libhifills.so
-vendor/lib/libvdis.so;DISABLE_CHECKELF
+vendor/lib/libvdis.so
 vendor/lib/libyuvrepro.so
 vendor/lib64/libENF.so
-vendor/lib64/libexynoscamera_hifi_plugin.so;DISABLE_CHECKELF
-vendor/lib64/libexynoscamera_hifills_plugin.so;DISABLE_CHECKELF
+vendor/lib64/libexynoscamera_hifi_plugin.so
+vendor/lib64/libexynoscamera_hifills_plugin.so
 vendor/lib64/libexynoscamera_plugin.so
 vendor/lib64/libexynoscamera_plugin_utils.so
-vendor/lib64/libexynoscamera_vdis_plugin.so;DISABLE_CHECKELF
+vendor/lib64/libexynoscamera_vdis_plugin.so
 vendor/lib64/libhifills.so
-vendor/lib64/libvdis.so;DISABLE_CHECKELF
+vendor/lib64/libvdis.so
 vendor/lib64/libyuvrepro.so
 
 ## Charger
