@@ -1,8 +1,5 @@
 ## Common proprietary files - from motorola/troika_retail/troika_sprout:11/RSBS31.Q1-48-36-20/3e578:user/release-keys, unless pinned
 
-# Current blobs with ELF checks disabled:
-# libmedia_ims, libmediaadaptor: IMS stack depends on libmediaadaptor.so which depends on proprietary libmedia.so from stock, which depends on libandroidicu, which is not visible
-
 ## Audio
 vendor/bin/main_abox
 vendor/etc/ap_gain_mmul.bin
@@ -140,8 +137,6 @@ vendor/lib64/hw/keystore.exynos9610.so
 
 ## IMS
 system/app/ShannonIms/ShannonIms.apk
-system/lib64/libmedia.so:system/lib64/libmedia_ims.so;DISABLE_CHECKELF
-system/lib64/libmediaadaptor.so;DISABLE_CHECKELF
 system/priv-app/OemRilService/OemRilService.apk
 system_ext/app/ShannonDataService/ShannonDataService.apk
 system_ext/app/ShannonNetworkService/ShannonNetworkService.apk

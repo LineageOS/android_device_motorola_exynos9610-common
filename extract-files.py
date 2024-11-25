@@ -54,8 +54,6 @@ lib_fixups: lib_fixups_user_type = {
 blob_fixups: blob_fixups_user_type = {
     'system/app/ShannonIms/ShannonIms.apk': blob_fixup()
         .apktool_patch('blob-patches/ShannonIms', '-r'),
-    'system/lib64/libmediaadaptor.so': blob_fixup()
-        .replace_needed('libmedia.so', 'libmedia_ims.so'),
     'system_ext/app/ShannonDataService/ShannonDataService.apk': blob_fixup()
         .apktool_patch('blob-patches/ShannonDataService', '-r'),
     'system_ext/app/ShannonNetworkService/ShannonNetworkService.apk': blob_fixup()
