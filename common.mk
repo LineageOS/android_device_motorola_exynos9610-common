@@ -245,6 +245,10 @@ PRODUCT_PACKAGES += \
     android.hardware.memtrack@1.0-service \
     memtrack.exynos9610
 
+# MobiCore
+PRODUCT_PACKAGES += \
+    mcDriverDaemon
+
 # MotoActions
 PRODUCT_PACKAGES += \
     MotoActions \

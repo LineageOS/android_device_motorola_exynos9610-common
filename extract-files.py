@@ -33,6 +33,7 @@ from extract_utils.utils import (
 namespace_imports = [
     'device/motorola/exynos9610-common',
     'hardware/samsung_slsi-linaro/graphics',
+    'hardware/samsung_slsi-linaro/exynos/tee/kinibi410',
 ]
 
 libs_remove = (

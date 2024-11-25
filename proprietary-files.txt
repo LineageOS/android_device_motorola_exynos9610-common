@@ -161,9 +161,6 @@ vendor/app/mcRegistry/09090000070100010000000000000000.tlbin
 vendor/app/mcRegistry/FFFFFFFFD00000000000000000000016.tlbin
 vendor/app/mcRegistry/ffffffff00000000000000000000000e.tlbin
 vendor/app/mcRegistry/ffffffffd0000000000000000000000e.tlbin
-vendor/bin/mcDriverDaemon
-vendor/lib/libMcClient.so
-vendor/lib64/libMcClient.so
 
 ## NFC
 vendor/etc/sec_s3nrn82_rfreg.bin
