@@ -34,15 +34,12 @@ namespace_imports = [
     'device/motorola/exynos9610-common',
     'hardware/samsung_slsi-linaro/graphics',
     'hardware/samsung_slsi-linaro/interfaces',
+    'hardware/samsung_slsi-linaro/exynos',
     'hardware/samsung_slsi-linaro/exynos/tee/kinibi410',
 ]
 
 libs_remove = (
-     'libandroidicu',
      'libcsc',
-     'libexynosutils',
-     'libexynosv4l2',
-     'libGrallocWrapper',
 )
 
 lib_fixups: lib_fixups_user_type = {
