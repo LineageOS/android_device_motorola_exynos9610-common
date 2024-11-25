@@ -141,10 +141,6 @@ vendor/bin/wfc-pkt-router
 vendor/lib64/libcharon.so
 vendor/lib64/libstrongswan.so
 
-## Media
-vendor/bin/hw/samsung.hardware.media.c2@1.1-default-service;DISABLE_CHECKELF
-vendor/etc/init/samsung.hardware.media.c2@1.1-default-service.rc
-
 ## Mobicore
 vendor/app/mcRegistry/00060308060501020000000000000000.tlbin
 vendor/app/mcRegistry/07010000000000000000000000000000.tlbin
