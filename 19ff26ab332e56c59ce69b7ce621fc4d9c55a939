@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "fee6f320_7715b4ac",
+        "filename": "proprietary-files.txt",
+        "patchSetId": 11
+      },
+      "lineNbr": 137,
+      "author": {
+        "id": 4550
+      },
+      "writtenOn": "2024-11-25T21:59:03Z",
+      "side": 1,
+      "message": "Is this really part of this commit?",
+      "range": {
+        "startLine": 137,
+        "startChar": 32,
+        "endLine": 137,
+        "endChar": 48
+      },
+      "revId": "19ff26ab332e56c59ce69b7ce621fc4d9c55a939",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
