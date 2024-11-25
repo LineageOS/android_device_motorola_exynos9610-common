@@ -219,11 +219,6 @@ vendor/lib/sensors.rp.so
 vendor/lib64/libhubconnection.so
 vendor/lib64/sensors.rp.so
 
-## Thermal
-vendor/bin/exynos-thermald
-vendor/lib/hw/thermal.exynos9610.so
-vendor/lib64/hw/thermal.exynos9610.so
-
 ## Wi-Fi
 vendor/etc/wifi/mx
 vendor/etc/wifi/mx140.bin
