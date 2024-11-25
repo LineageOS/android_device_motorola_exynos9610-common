@@ -13,3 +13,6 @@ allow pktrouter self:netlink_route_socket { create bind write nlmsg_write read }
 allowxperm pktrouter self:udp_socket ioctl SIOCGIFNAME;
 allow pktrouter self:capability net_raw;
 allow pktrouter self:udp_socket create_socket_perms;
+
+allow pktrouter self:rawip_socket { write create };
+allow pktrouter self:netlink_route_socket { nlmsg_readpriv nlmsg_read };
