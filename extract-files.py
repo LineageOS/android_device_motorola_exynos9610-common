@@ -11,7 +11,6 @@ from extract_utils.fixups_blob import (
     blob_fixups_user_type,
 )
 from extract_utils.fixups_lib import (
-    lib_fixup_remove,
     lib_fixup_remove_arch_suffix,
     lib_fixups,
     lib_fixups_user_type,
@@ -37,18 +36,9 @@ namespace_imports = [
     'hardware/samsung_slsi-linaro/exynos/tee/kinibi410',
 ]
 
-libs_remove = (
-     'libandroidicu',
-     'libcsc',
-     'libexynosutils',
-     'libexynosv4l2',
-     'libGrallocWrapper',
-)
-
 lib_fixups: lib_fixups_user_type = {
     libs_clang_rt_ubsan: lib_fixup_remove_arch_suffix,
     libs_proto_3_9_1: lib_fixup_vendorcompat,
-    libs_remove: lib_fixup_remove,
 }
 
 blob_fixups: blob_fixups_user_type = {
