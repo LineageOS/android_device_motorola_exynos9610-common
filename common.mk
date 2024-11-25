@@ -230,6 +230,9 @@ PRODUCT_PACKAGES += \
     vendor.lineage.livedisplay@2.0-service.exynos9610
 
 # Media
+PRODUCT_PACKAGES += \
+    samsung.hardware.media.c2@1.1-default-service
+
 PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/configs/media/media_codecs.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs.xml \
     $(COMMON_PATH)/configs/media/media_codecs_dolby_audio.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_dolby_audio.xml \
@@ -349,8 +352,7 @@ PRODUCT_PACKAGES += \
 
 # Seccomp
 PRODUCT_COPY_FILES += \
-    $(COMMON_PATH)/configs/seccomp/mediacodec.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/mediacodec.policy \
-    $(COMMON_PATH)/configs/seccomp/samsung.hardware.media.c2@1.1-default-seccomp-policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/samsung.hardware.media.c2@1.1-default-seccomp-policy
+    $(COMMON_PATH)/configs/seccomp/mediacodec.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/mediacodec.policy
 
 # Sensors
 PRODUCT_PACKAGES += \
