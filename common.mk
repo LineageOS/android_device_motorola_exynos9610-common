@@ -162,6 +162,9 @@ endif
 PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/configs/gps/gps.cfg:$(TARGET_COPY_OUT_VENDOR)/etc/gnss/gps.cfg
 
+PRODUCT_PACKAGES += \
+    vendor.samsung.hardware.gnss@1.0-service
+
 # Gralloc
 PRODUCT_PACKAGES += \
     gralloc.exynos9610
