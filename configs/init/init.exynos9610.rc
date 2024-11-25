@@ -191,6 +191,9 @@ on post-fs-data
     mkdir /data/vendor/dump 0771 radio system
     mkdir /data/vendor/slog 0771 system log
 
+    mkdir /data/vendor/thermal 0771 root system
+    mkdir /data/vendor/thermal/config 0771 root system
+
 # IPSEC PIDDIR for VoWiFi
     mkdir /data/vendor/misc 0771 root system
     mkdir /data/vendor/misc/vpn 0777 root system

@@ -17,3 +17,7 @@ allow exynos-thermald {
 
 allow exynos-thermald log_vendor_data_file:dir ra_dir_perms;
 allow exynos-thermald log_vendor_data_file:file create_file_perms;
+
+# /data/vendor/thermal/
+allow exynos-thermald thermal_vendor_data_file:dir ra_dir_perms;
+allow exynos-thermald thermal_vendor_data_file:file create_file_perms;
