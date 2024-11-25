@@ -1,9 +1,7 @@
 ## Common proprietary files - from motorola/troika_retail/troika_sprout:11/RSBS31.Q1-48-36-20/3e578:user/release-keys, unless pinned
 
 # Current blobs with ELF checks disabled:
-# libexynoscamera_hifi_plugin,libexynoscamera_hifills_plugin, libexynoscamera_vdis_plugin, libvdis.so: Depend on Android.mk only libexynosutils
 # libmediaadaptor: Has unresolved symbol: jniThrowException@LIBNATIVEHELPER_1 - https://android.googlesource.com/platform/libnativehelper/+/c4cf377fd4bd8f5822a5c8271bbf5a6a874e6284%5E!/#F1
-# samsung.hardware.media.c2@1.1-default-service: _ZN7android13SetUpMinijailERKNSt3__112basic_stringIcNS0_11char_traitsIcEENS0_9allocatorIcEEEES8_ is missing, which on stock is in libavservices_minijail which lineage builds as libavservices_minijail_vendor, but elfchecks cannot see it for some reason.
 
 ## Audio
 vendor/bin/main_abox
@@ -29,22 +27,22 @@ system/app/MotoSignatureApp/MotoSignatureApp.apk;PRESIGNED
 system/etc/permissions/com.motorola.motosignature.xml:vendor/etc/permissions/com.motorola.motosignature.xml
 system/framework/com.motorola.motosignature.jar:vendor/framework/com.motorola.motosignature.jar
 vendor/lib/libENF.so
-vendor/lib/libexynoscamera_hifi_plugin.so;DISABLE_CHECKELF
-vendor/lib/libexynoscamera_hifills_plugin.so;DISABLE_CHECKELF
+vendor/lib/libexynoscamera_hifi_plugin.so
+vendor/lib/libexynoscamera_hifills_plugin.so
 vendor/lib/libexynoscamera_plugin.so
 vendor/lib/libexynoscamera_plugin_utils.so
-vendor/lib/libexynoscamera_vdis_plugin.so;DISABLE_CHECKELF
+vendor/lib/libexynoscamera_vdis_plugin.so
 vendor/lib/libhifills.so
-vendor/lib/libvdis.so;DISABLE_CHECKELF
+vendor/lib/libvdis.so
 vendor/lib/libyuvrepro.so
 vendor/lib64/libENF.so
-vendor/lib64/libexynoscamera_hifi_plugin.so;DISABLE_CHECKELF
-vendor/lib64/libexynoscamera_hifills_plugin.so;DISABLE_CHECKELF
+vendor/lib64/libexynoscamera_hifi_plugin.so
+vendor/lib64/libexynoscamera_hifills_plugin.so
 vendor/lib64/libexynoscamera_plugin.so
 vendor/lib64/libexynoscamera_plugin_utils.so
-vendor/lib64/libexynoscamera_vdis_plugin.so;DISABLE_CHECKELF
+vendor/lib64/libexynoscamera_vdis_plugin.so
 vendor/lib64/libhifills.so
-vendor/lib64/libvdis.so;DISABLE_CHECKELF
+vendor/lib64/libvdis.so
 vendor/lib64/libyuvrepro.so
 
 ## DRM
