@@ -140,8 +140,6 @@ vendor/lib64/hw/keystore.exynos9610.so
 
 ## IMS
 system/app/ShannonIms/ShannonIms.apk
-system/lib64/libmedia.so:system/lib64/libmedia_ims.so;DISABLE_CHECKELF
-system/lib64/libmediaadaptor.so;DISABLE_CHECKELF
 system/priv-app/OemRilService/OemRilService.apk
 system_ext/app/ShannonDataService/ShannonDataService.apk
 system_ext/app/ShannonNetworkService/ShannonNetworkService.apk
