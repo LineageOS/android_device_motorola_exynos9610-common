@@ -5,6 +5,18 @@
 # libmedia_ims, libmediaadaptor: IMS stack depends on libmediaadaptor.so which depends on proprietary libmedia.so from stock, which depends on libandroidicu, which is not visible
 # samsung.hardware.media.c2@1.1-default-service: _ZN7android13SetUpMinijailERKNSt3__112basic_stringIcNS0_11char_traitsIcEENS0_9allocatorIcEEEES8_ is missing, which on stock is in libavservices_minijail which lineage builds as libavservices_minijail_vendor, but elfchecks cannot see it for some reason.
 
+## Audio
+vendor/bin/main_abox
+vendor/etc/ap_gain_mmul.bin
+vendor/etc/dolby/dax-default.xml
+vendor/lib/hw/audio.primary.exynos9610.so
+vendor/lib/libalsautils_sec.so
+vendor/lib/libaudioproxy.so
+vendor/lib/libdapparamstorage.so
+vendor/lib/libmotaudioutils.so
+vendor/lib/libunshorten.so
+vendor/lib64/libdapparamstorage.so
+
 ## Camera
 product/app/MotCamera2AI/MotCamera2AI.apk
 product/etc/permissions/com.motorola.camera2.content.ai.xml
@@ -168,6 +180,45 @@ vendor/etc/sec_s3nrn82_rfreg.bin
 ## Power
 vendor/lib/hw/power.exynos9610.so
 vendor/lib64/hw/power.exynos9610.so
+
+## RIL
+vendor/bin/cbd
+vendor/bin/hw/rild_exynos
+vendor/etc/sim_configuration.xml
+vendor/lib/libaudio-ril.so
+vendor/lib/libril_sitril.so
+vendor/lib/libsitril-audio.so
+vendor/lib/libsitril-client.so
+vendor/lib/libsitril-gps.so
+vendor/lib/libsitril-ims.so
+vendor/lib/libsitril-nr.so
+vendor/lib/libsitril-psensor.so
+vendor/lib/libsitril-sar.so
+vendor/lib/libsitril-se.so
+vendor/lib/libsitril-wlan.so
+vendor/lib/libsitril.so
+vendor/lib/vendor.samsung_slsi.telephony.hardware.oemservice@1.0.so
+vendor/lib/vendor.samsung_slsi.telephony.hardware.radio@1.0.so
+vendor/lib/vendor.samsung_slsi.telephony.hardware.radio@1.1.so
+vendor/lib/vendor.samsung_slsi.telephony.hardware.radioExternal@1.0.so
+vendor/lib/vendor.samsung_slsi.telephony.hardware.radioExternal@1.1.so
+vendor/lib64/libadropbox.so
+vendor/lib64/libril_sitril.so
+vendor/lib64/libsitril-audio.so
+vendor/lib64/libsitril-client.so
+vendor/lib64/libsitril-gps.so
+vendor/lib64/libsitril-ims.so
+vendor/lib64/libsitril-nr.so
+vendor/lib64/libsitril-psensor.so
+vendor/lib64/libsitril-sar.so
+vendor/lib64/libsitril-se.so
+vendor/lib64/libsitril-wlan.so
+vendor/lib64/libsitril.so
+vendor/lib64/vendor.samsung_slsi.telephony.hardware.oemservice@1.0.so
+vendor/lib64/vendor.samsung_slsi.telephony.hardware.radio@1.0.so
+vendor/lib64/vendor.samsung_slsi.telephony.hardware.radio@1.1.so
+vendor/lib64/vendor.samsung_slsi.telephony.hardware.radioExternal@1.0.so
+vendor/lib64/vendor.samsung_slsi.telephony.hardware.radioExternal@1.1.so
 
 ## Secure Element
 vendor/bin/hw/android.hardware.secure_element@1.2-uicc-service
