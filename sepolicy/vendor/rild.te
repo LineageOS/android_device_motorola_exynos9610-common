@@ -1,6 +1,8 @@
 allow rild rild_vendor_data_file:dir create_dir_perms;
 allow rild rild_vendor_data_file:file create_file_perms;
 
+binder_call(rild, platform_app)
+
 add_hwservice(rild, hal_exynos_rild_hwservice)
 
 binder_call(rild, gpsd)
