@@ -46,9 +46,6 @@ vendor/lib64/libhifills.so
 vendor/lib64/libvdis.so;DISABLE_CHECKELF
 vendor/lib64/libyuvrepro.so
 
-## Charger
-vendor/bin/charge_only_mode
-
 ## DRM
 vendor/lib/liboemcrypto.so
 
