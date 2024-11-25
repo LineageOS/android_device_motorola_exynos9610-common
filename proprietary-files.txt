@@ -106,10 +106,6 @@ vendor/firmware/sec_s3nrn81_firmware.bin
 vendor/firmware/sec_s3nrn82_firmware.bin
 vendor/firmware/tracker_cfg.json
 
-## Gatekeeper
-vendor/lib/hw/gatekeeper.exynos9610.so
-vendor/lib64/hw/gatekeeper.exynos9610.so
-
 ## GPS
 vendor/bin/hw/gpsd
 vendor/bin/hw/vendor.samsung.hardware.gnss@1.0-service
