@@ -53,8 +53,6 @@ blob_fixups: blob_fixups_user_type = {
     ('vendor/bin/hw/android.hardware.biometrics.fingerprint@2.1-service-rbs', 'vendor/lib64/hw/android.hardware.gnss@1.0-impl.samsung.so', 'vendor/lib64/hw/android.hardware.gnss@1.1-impl.samsung.so', 'vendor/lib64/hw/android.hardware.gnss@2.0-impl.samsung.so', 'vendor/lib64/hw/vendor.samsung.hardware.gnss@1.0-impl.so'): blob_fixup()
         .remove_needed('libhidltransport.so')
         .remove_needed('libhwbinder.so'),
-    'vendor/bin/charge_only_mode': blob_fixup()
-        .add_needed('libmemset_shim.so'),
     'vendor/bin/wfc-pkt-router': blob_fixup()
         .replace_needed('libnetutils.so', 'libip_checksum_shim.so'),
     'vendor/etc/permissions/com.motorola.motosignature.xml': blob_fixup()

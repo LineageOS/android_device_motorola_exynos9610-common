@@ -3,7 +3,6 @@
 #
 
 /(vendor|system/vendor)/bin/main_abox                                                   u:object_r:abox_exec:s0
-/(vendor|system/vendor)/bin/charge_only_mode                                            u:object_r:charge_only_exec:s0
 /(vendor|system/vendor)/bin/charon                                                      u:object_r:charonservice_exec:s0
 /(vendor|system/vendor)/bin/exynos-thermald                                             u:object_r:exynos-thermald_exec:s0
 /(vendor|system/vendor)/bin/wfc-pkt-router                                              u:object_r:pktrouter_exec:s0
