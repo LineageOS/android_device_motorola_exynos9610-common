@@ -150,7 +150,8 @@ PRODUCT_PACKAGES += \
     android.hardware.gatekeeper@1.0.vendor \
     android.hardware.gatekeeper@1.0-impl \
     android.hardware.gatekeeper@1.0-service \
-    libgatekeeper.vendor
+    libgatekeeper.vendor \
+    gatekeeper.exynos9610
 
 # GMS
 ifeq ($(WITH_GMS),true)
