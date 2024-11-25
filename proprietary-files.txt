@@ -108,14 +108,11 @@ vendor/firmware/tracker_cfg.json
 
 ## GPS
 vendor/bin/hw/gpsd
-vendor/bin/hw/vendor.samsung.hardware.gnss@1.0-service
 vendor/etc/gnss/ca.pem
-vendor/etc/init/vendor.samsung.hardware.gnss@1.0-service.rc
 vendor/lib64/hw/android.hardware.gnss@1.0-impl.so:vendor/lib64/hw/android.hardware.gnss@1.0-impl.samsung.so;FIX_SONAME
 vendor/lib64/hw/android.hardware.gnss@1.1-impl.so:vendor/lib64/hw/android.hardware.gnss@1.1-impl.samsung.so;FIX_SONAME
 vendor/lib64/hw/android.hardware.gnss@2.0-impl.so:vendor/lib64/hw/android.hardware.gnss@2.0-impl.samsung.so;FIX_SONAME
 vendor/lib64/hw/vendor.samsung.hardware.gnss@1.0-impl.so;FIX_SONAME
-vendor/lib64/vendor.samsung.hardware.gnss@1.0.so
 
 ## Graphics
 vendor/lib/egl/libGLES_mali.so;SYMLINK=vendor/lib/hw/vulkan.exynos9610.so;SYMLINK=vendor/lib/libOpenCL.so;SYMLINK=vendor/lib/libOpenCL.so.1;SYMLINK=vendor/lib/libOpenCL.so.1.1
