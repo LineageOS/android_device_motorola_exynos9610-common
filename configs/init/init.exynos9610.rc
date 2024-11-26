@@ -606,6 +606,22 @@ on property:ro.bootmode=charger
     write /sys/class/android_usb/android0/enable 1
     setprop sys.usb.state charging
 
+on charger
+    mount configfs none /config
+    mkdir /config/usb_gadget/g1 0770
+    mkdir /config/usb_gadget/g1/strings/0x409 0770
+    write /config/usb_gadget/g1/bcdUSB 0x0200
+    write /config/usb_gadget/g1/strings/0x409/serialnumber ${ro.serialno}
+    write /config/usb_gadget/g1/strings/0x409/manufacturer ${ro.product.manufacturer}
+    mkdir /config/usb_gadget/g1/functions/mass_storage.0
+    mkdir /config/usb_gadget/g1/configs/b.1 0770
+    mkdir /config/usb_gadget/g1/configs/b.1/strings/0x409 0770
+    write /config/usb_gadget/g1/configs/b.1/MaxPower 900
+    symlink /config/usb_gadget/g1/configs/b.1 /config/usb_gadget/g1/os_desc/b.1
+    write /config/usb_gadget/g1/strings/0x409/product ${vendor.usb.product_string}
+    setprop sys.usb.config mass_storage
+    setprop sys.usb.configfs 1
+
 service exynos-thermald /vendor/bin/exynos-thermald nolog
 	class late_start
 	group system root
@@ -617,3 +633,10 @@ service watchdogd /sbin/watchdogd 10 20
     class core
     oneshot
     seclabel u:r:watchdogd:s0
+
+service vendor.charger /system/bin/charger
+    class charger
+    user system
+    group system graphics input
+    capabilities SYS_BOOT
+    seclabel u:r:charger:s0
