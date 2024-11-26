@@ -16,3 +16,5 @@ allow init proc_last_kmsg:file create_file_perms;
 allow init proc_printk:file w_file_perms;
 
 allow init sysfs_scheduler:file create_file_perms;
+
+allow init vendor_sysfs_mmc_host:file w_file_perms;

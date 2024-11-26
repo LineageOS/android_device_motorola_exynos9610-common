@@ -66,6 +66,8 @@ genfscon sysfs /devices/platform/148b0000.decon_f/vsync                         
 genfscon sysfs /devices/platform/148e0000.dsim/panel/panel                                                              u:object_r:sysfs_panel:s0
 genfscon sysfs /devices/platform/148e0000.dsim/panel/panel/max_brightness                                               u:object_r:sysfs_backlight_writable:s0
 genfscon sysfs /devices/platform/14a50000.abox/service                                                                  u:object_r:sysfs_abox_writable:s0
+genfscon sysfs /devices/platform/13520000.ufs/host0/target0:0:0/0:0:0:0/block/sda/queue/discard_max_bytes               u:object_r:vendor_sysfs_mmc_host:s0
+genfscon sysfs /devices/platform/13520000.ufs/host0/target0:0:0/0:0:0:0/block/sda/queue/zoned                           u:object_r:vendor_sysfs_mmc_host:s0
 genfscon sysfs /devices/platform/egis_input/navigation_event                                                            u:object_r:sysfs_rbs:s0
 genfscon sysfs /devices/soc0/machine                                                                                    u:object_r:sysfs_socinfo:s0
 genfscon sysfs /devices/soc0/revision                                                                                   u:object_r:sysfs_socinfo:s0

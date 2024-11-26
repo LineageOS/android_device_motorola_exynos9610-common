@@ -19,6 +19,7 @@ ro.hardware.chipname                u:object_r:deprecated_soc_prop:s0 exact stri
 # HWC
 ro.vendor.ddk.set.afbc              u:object_r:vendor_hwc_prop:s0
 ro.vendor.winupdate                 u:object_r:vendor_hwc_prop:s0
+vendor.hwc.display.                 u:object_r:vendor_hwc_prop:s0
 
 # Radio
 persist.vendor.radio.               u:object_r:vendor_radio_prop:s0

@@ -44,3 +44,4 @@ type sysfs_rbs, fs_type, sysfs_type;
 type sysfs_scheduler, fs_type, sysfs_type;
 type sysfs_socinfo, fs_type, sysfs_type;
 type sysfs_v4l, sysfs_type, r_fs_type, fs_type;
+type vendor_sysfs_mmc_host, fs_type, sysfs_type;
