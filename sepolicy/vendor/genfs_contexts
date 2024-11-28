@@ -61,6 +61,7 @@ genfscon sysfs /devices/platform/13940000.spi/spi_master/spi9/spi9.0/madera-extc
 genfscon sysfs /devices/platform/13940000.spi/spi_master/spi9/spi9.0/madera-extcon/extcon/extcon0/cable.3/name          u:object_r:sysfs_extcon:s0
 genfscon sysfs /devices/platform/14490000.fimc_is/debug/fixed_sensor_fps                                                u:object_r:sysfs_fimc_writable:s0
 genfscon sysfs /devices/platform/148b0000.decon_f/dqe/dqe                                                               u:object_r:sysfs_dqe:s0
+genfscon sysfs /devices/platform/148b0000.decon_f/idle_state                                                            u:object_r:sysfs_decon:s0
 genfscon sysfs /devices/platform/148b0000.decon_f/psr_info                                                              u:object_r:sysfs_decon:s0
 genfscon sysfs /devices/platform/148b0000.decon_f/vsync                                                                 u:object_r:sysfs_decon_writable:s0
 genfscon sysfs /devices/platform/148e0000.dsim/panel/panel                                                              u:object_r:sysfs_panel:s0

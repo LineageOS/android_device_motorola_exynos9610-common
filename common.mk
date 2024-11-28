@@ -338,8 +338,10 @@ PRODUCT_COPY_FILES += \
 
 # Power
 PRODUCT_PACKAGES += \
-    android.hardware.power@1.0-impl \
-    android.hardware.power@1.0-service
+    android.hardware.power-service.lineage-libperfmgr
+
+PRODUCT_COPY_FILES += \
+    $(COMMON_PATH)/configs/power/powerhint.json:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.json
 
 # Public Libraries
 PRODUCT_COPY_FILES += \
@@ -369,8 +371,15 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_p.mk)
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH) \
+<<<<<<< PATCH SET (815484 exynos9610: build lineage power-libperfmgr)
+    hardware/lineage/interfaces/power-libperfmgr \
+    hardware/samsung \
+    hardware/google/interfaces \
+    hardware/google/pixel
+=======
     hardware/samsung \
     hardware/samsung_slsi/libbt
+>>>>>>> BASE      (3b6f8b exynos9610: Use lineage/compat shim for libnativehelper)
 
 # Speed profile services and wifi-service to reduce RAM and storage
 PRODUCT_SYSTEM_SERVER_COMPILER_FILTER := speed-profile
