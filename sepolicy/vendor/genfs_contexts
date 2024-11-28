@@ -23,6 +23,7 @@ genfscon sysfs /class/power_supply/battery/charge_temp                          
 genfscon sysfs /class/power_supply/battery/charging_enabled                                                             u:object_r:sysfs_battery_writable:s0
 genfscon sysfs /devices/platform/11500000.mali/dvfs_max_lock                                                            u:object_r:sysfs_mali_writable:s0
 genfscon sysfs /devices/platform/11500000.mali/dvfs_min_lock                                                            u:object_r:sysfs_mali_writable:s0
+genfscon sysfs /devices/platform/11500000.mali/power_policy                                                             u:object_r:sysfs_battery_writable:s0
 genfscon sysfs /devices/platform/11a10000.speedy/i2c-6/6-0000/s2mpu09-rtc/rtc/rtc0/hctosys                              u:object_r:sysfs_rtc:s0
 genfscon sysfs /devices/platform/11a10000.speedy/i2c-7/7-0000/s2mpu09-rtc/rtc/rtc0/hctosys                              u:object_r:sysfs_rtc:s0
 genfscon sysfs /devices/platform/11c30000.adc/iio:device1/11c30000.adc:battery_thermistor/hwmon/hwmon1/temp1_input      u:object_r:sysfs_thermal:s0
@@ -63,6 +64,7 @@ genfscon sysfs /devices/platform/13940000.spi/spi_master/spi9/spi9.0/madera-extc
 genfscon sysfs /devices/platform/13940000.spi/spi_master/spi9/spi9.0/madera-extcon/extcon/extcon0/cable.3/name          u:object_r:sysfs_extcon:s0
 genfscon sysfs /devices/platform/14490000.fimc_is/debug/fixed_sensor_fps                                                u:object_r:sysfs_fimc_writable:s0
 genfscon sysfs /devices/platform/148b0000.decon_f/dqe/dqe                                                               u:object_r:sysfs_dqe:s0
+genfscon sysfs /devices/platform/148b0000.decon_f/idle_state                                                            u:object_r:sysfs_decon:s0
 genfscon sysfs /devices/platform/148b0000.decon_f/psr_info                                                              u:object_r:sysfs_decon:s0
 genfscon sysfs /devices/platform/148b0000.decon_f/vsync                                                                 u:object_r:sysfs_decon_writable:s0
 genfscon sysfs /devices/platform/148e0000.dsim/panel/panel                                                              u:object_r:sysfs_panel:s0
@@ -78,5 +80,6 @@ genfscon sysfs /devices/virtual/backlight/backlight_0/brightness                
 genfscon sysfs /devices/virtual/backlight/backlight_0/max_brightness                                                    u:object_r:sysfs_backlight_writable:s0
 genfscon sysfs /devices/virtual/backlight/hbm                                                                           u:object_r:sysfs_hbm:s0
 genfscon sysfs /devices/virtual/nanohub/nanohub/sensortype                                                              u:object_r:sysfs_nanohub:s0
+genfscon sysfs /module/cpuidle/parameters/off                                                                           u:object_r:sysfs_cpuhotplug_writable:s0
 genfscon sysfs /module/scsc_bt/parameters/bluetooth_address                                                             u:object_r:sysfs_bt_writable:s0
 genfscon sysfs /power/cpuhp/set_online_cpu                                                                              u:object_r:sysfs_cpuhotplug_writable:s0
