@@ -87,6 +87,9 @@ vendor.pktrouter=1
 debug.slsi_platform=1
 ro.hardware.soc.manufacturer=slsi
 
+## Power
+vendor.powerhal.disp.idle_support=false
+
 ## Radio
 persist.radio.multisim.config=dsds
 persist.vendor.ril.crash_handling_mode=2

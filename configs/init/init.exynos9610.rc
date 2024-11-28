@@ -109,6 +109,8 @@ on init
 
     chown system system /sys/power/cpufreq_min_limit
 
+    setprop vendor.powerhal.init 1
+
     #sensor
     chmod 0664 /dev/nanohub
     chmod 0664 /dev/nanohub_comms
