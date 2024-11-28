@@ -160,10 +160,6 @@ vendor/app/mcRegistry/ffffffffd0000000000000000000000e.tlbin
 ## NFC
 vendor/etc/sec_s3nrn82_rfreg.bin
 
-## Power
-vendor/lib/hw/power.exynos9610.so
-vendor/lib64/hw/power.exynos9610.so
-
 ## RIL
 vendor/bin/cbd
 vendor/bin/hw/rild_exynos
