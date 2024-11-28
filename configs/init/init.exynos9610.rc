@@ -23,6 +23,24 @@ on init
     symlink /storage/sdcard /mnt/ext_sd
     symlink /data/app /factory
 
+    chown system system /dev/cpuset/background/cpus
+    chown system system /dev/stune/top-app/schedtune.boost
+    chown system system /dev/stune/top-app/schedtune.prefer_perf
+    chown system system /sys/devices/platform/11500000.mali/dvfs_min_lock
+    chown system system /sys/devices/platform/11500000.mali/power_policy
+    chown system system /sys/module/cpuidle/parameters/off
+    chown system system /sys/power/cpufreq_max_limit
+    chown system system /sys/power/cpufreq_min_limit
+
+    chmod 0664 /dev/cpuset/background/cpus
+    chmod 0664 /dev/stune/top-app/schedtune.boost
+    chmod 0664 /dev/stune/top-app/schedtune.prefer_perf
+    chmod 0664 /sys/devices/platform/11500000.mali/dvfs_min_lock
+    chmod 0664 /sys/devices/platform/11500000.mali/power_policy
+    chmod 0664 /sys/module/cpuidle/parameters/off
+    chmod 0664 /sys/power/cpufreq_max_limit
+    chmod 0664 /sys/power/cpufreq_min_limit
+
     ## SCSC WLAN
     # SD-755: Increase default socket rx buffer limit
     # Apply network parameters for high data performance.
@@ -108,6 +126,8 @@ on init
     chmod 0664 /dev/cpuset/tasks
 
     chown system system /sys/power/cpufreq_min_limit
+
+    setprop vendor.powerhal.init 1
 
     #sensor
     chmod 0664 /dev/nanohub
