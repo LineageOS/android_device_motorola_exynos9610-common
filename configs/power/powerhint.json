@@ -1,0 +1,277 @@
+{
+    "Nodes": [
+        {
+            "Name": "CPUMaxFreq",
+            "Path": "/sys/power/cpufreq_max_limit",
+            "Values": [
+                "2210000",
+                "-1"
+            ],
+            "ResetOnInit": true
+        },
+        {
+            "Name": "CPUMinFreq",
+            "Path": "/sys/power/cpufreq_min_limit",
+            "Values": [
+                "2210000",
+                "1976000",
+                "1664000",
+                "1456000",
+                "1248000",
+                "1144000",
+                "0"
+            ],
+            "ResetOnInit": true
+        },
+        {
+            "Name": "LPMDisable",
+            "Path": "/sys/module/cpuidle/parameters/off",
+            "Values": [
+                "0",
+                "1"
+            ],
+            "DefaultIndex": 0,
+            "ResetOnInit": true
+        },
+        {
+            "Name": "TASchedtuneBoost",
+            "Path": "/dev/stune/top-app/schedtune.boost",
+            "Values": [
+                "50",
+                "10"
+            ],
+            "ResetOnInit": true
+        },
+        {
+            "Name": "TASchedtuneBoostPrefer",
+            "Path": "/dev/stune/top-app/schedtune.prefer_perf",
+            "Values": [
+                "0",
+                "1"
+            ],
+            "DefaultIndex": 0,
+            "ResetOnInit": true
+        },
+        {
+            "Name": "GPUMinFreq",
+            "Path": "/sys/devices/platform/11500000.mali/dvfs_min_lock",
+            "Values": [
+                "949000",
+                "764000",
+                "455000",
+                "-1"
+            ],
+            "ResetOnInit": true
+        },
+        {
+            "Name": "GPUPowerPolicy",
+            "Path": "/sys/devices/platform/11500000.mali/power_policy",
+            "Values": [
+                "always_on",
+                "coarse_demand"
+            ],
+            "ResetOnInit": true
+        },
+        {
+            "Name": "CDCpuset",
+            "Path": "/dev/cpuset/background/cpus",
+            "Values": [
+                "0-3",
+                "0-2"
+            ],
+            "ResetOnInit": true
+        },
+        {
+            "Name": "PowerHALMainState",
+            "Path": "vendor.powerhal.state",
+            "Values": [
+                "CAMERA_STREAMING_MID",
+                "SUSTAINED_PERFORMANCE",
+                ""
+            ],
+            "Type": "Property"
+        },
+        {
+            "Name": "PowerHALAudioState",
+            "Path": "vendor.powerhal.audio",
+            "Values": [
+                "AUDIO_STREAMING_LOW_LATENCY",
+                ""
+            ],
+            "Type": "Property"
+        },
+        {
+            "Name": "PowerHALRenderingState",
+            "Path": "vendor.powerhal.rendering",
+            "Values": [
+                "EXPENSIVE_RENDERING",
+                ""
+            ],
+            "Type": "Property"
+        }
+    ],
+    "Actions": [
+        {
+            "PowerHint": "SUSTAINED_PERFORMANCE",
+            "Node": "PowerHALMainState",
+            "Duration": 0,
+            "Value": "SUSTAINED_PERFORMANCE"
+        },
+        {
+            "PowerHint": "INTERACTION",
+            "Node": "CPUMaxFreq",
+            "Duration": 1000,
+            "Value": "1144000"
+        },
+        {
+            "PowerHint": "INTERACTION",
+            "Node": "CPUMinFreq",
+            "Duration": 1000,
+            "Value": "1144000"
+        },
+        {
+            "PowerHint": "INTERACTION",
+            "Node": "TASchedtuneBoost",
+            "Duration": 1000,
+            "Value": "50"
+        },
+        {
+            "PowerHint": "INTERACTION",
+            "Node": "TASchedtuneBoostPrefer",
+            "Duration": 1000,
+            "Value": "1"
+        },
+        {
+            "PowerHint": "INTERACTION",
+            "Node": "GPUMinFreq",
+            "Duration": 1000,
+            "Value": "455000"
+        },
+        {
+            "PowerHint": "LAUNCH",
+            "Node": "CPUMaxFreq",
+            "Duration": 5000,
+            "Value": "2210000"
+        },
+        {
+            "PowerHint": "LAUNCH",
+            "Node": "CPUMinFreq",
+            "Duration": 5000,
+            "Value": "2210000"
+        },
+        {
+            "PowerHint": "LAUNCH",
+            "Node": "LPMDisable",
+            "Duration": 5000,
+            "Value": "1"
+        },
+        {
+            "PowerHint": "LAUNCH",
+            "Node": "TASchedtuneBoost",
+            "Duration": 0,
+            "Value": "50"
+        },
+        {
+            "PowerHint": "LAUNCH",
+            "Node": "TASchedtuneBoostPrefer",
+            "Duration": 0,
+            "Value": "1"
+        },
+        {
+            "PowerHint": "LAUNCH",
+            "Node": "GPUMinFreq",
+            "Duration": 1000,
+            "Value": "949000"
+        },
+        {
+            "PowerHint": "LAUNCH",
+            "Node": "GPUPowerPolicy",
+            "Duration": 5000,
+            "Value": "always_on"
+        },
+        {
+            "PowerHint": "CAMERA_LAUNCH",
+            "Node": "CPUMaxFreq",
+            "Duration": 1000,
+            "Value": "2210000"
+        },
+        {
+            "PowerHint": "CAMERA_LAUNCH",
+            "Node": "CPUMinFreq",
+            "Duration": 1000,
+            "Value": "2210000"
+        },
+        {
+            "PowerHint": "CAMERA_LAUNCH",
+            "Node": "LPMDisable",
+            "Duration": 1000,
+            "Value": "1"
+        },
+        {
+            "PowerHint": "CAMERA_STREAMING_MID",
+            "Node": "PowerHALMainState",
+            "Duration": 0,
+            "Value": "CAMERA_STREAMING_MID"
+        },
+        {
+            "PowerHint": "CAMERA_STREAMING_MID",
+            "Node": "CDCpuset",
+            "Duration": 0,
+            "Value": "0-3"
+        },
+        {
+            "PowerHint": "CAMERA_SHOT",
+            "Node": "CPUMaxFreq",
+            "Duration": 1000,
+            "Value": "2210000"
+        },
+        {
+            "PowerHint": "CAMERA_SHOT",
+            "Node": "CPUMinFreq",
+            "Duration": 1000,
+            "Value": "1976000"
+        },
+        {
+            "PowerHint": "CAMERA_SHOT",
+            "Node": "LPMDisable",
+            "Duration": 1000,
+            "Value": "1"
+        },
+        {
+            "PowerHint": "AUDIO_LAUNCH",
+            "Node": "LPMDisable",
+            "Duration": 0,
+            "Value": "1"
+        },
+        {
+            "PowerHint": "AUDIO_STREAMING_LOW_LATENCY",
+            "Node": "PowerHALAudioState",
+            "Duration": 0,
+            "Value": "AUDIO_STREAMING_LOW_LATENCY"
+        },
+        {
+            "PowerHint": "AUDIO_STREAMING_LOW_LATENCY",
+            "Node": "LPMDisable",
+            "Duration": 0,
+            "Value": "1"
+        },
+        {
+            "PowerHint": "EXPENSIVE_RENDERING",
+            "Node": "PowerHALRenderingState",
+            "Duration": 0,
+            "Value": "EXPENSIVE_RENDERING"
+        },
+        {
+            "PowerHint": "INTERACTIVE",
+            "Node": "CPUMaxFreq",
+            "Duration": 1000,
+            "Value": "2210000"
+        },
+        {
+            "PowerHint": "INTERACTIVE",
+            "Node": "CPUMinFreq",
+            "Duration": 1000,
+            "Value": "1976000"
+        }
+    ]
+}
