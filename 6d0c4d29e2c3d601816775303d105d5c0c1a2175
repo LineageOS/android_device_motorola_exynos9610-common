@@ -33,6 +33,24 @@
       "message": "I vote we use the more extensible one at hardware/lineage/interfaces",
       "revId": "6d0c4d29e2c3d601816775303d105d5c0c1a2175",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "dc201c10_28dde176",
+        "filename": "common.mk",
+        "patchSetId": 4
+      },
+      "lineNbr": 342,
+      "author": {
+        "id": 17401
+      },
+      "writtenOn": "2024-11-30T06:22:17Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "f088bc92_efacd2bb",
+      "revId": "6d0c4d29e2c3d601816775303d105d5c0c1a2175",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
