@@ -5,7 +5,6 @@ type mediadrm_vendor_data_file, file_type, data_file_type;
 type misc_vendor_data_file, file_type, data_file_type;
 type rild_vendor_data_file, file_type, data_file_type;
 type sensor_vendor_data_file, file_type, data_file_type;
-type thermal_vendor_data_file, file_type, data_file_type;
 
 # debug types
 type debugfs_mali, fs_type, debugfs_type;
