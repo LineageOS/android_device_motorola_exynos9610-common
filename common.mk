@@ -370,6 +370,9 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_p.mk)
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH) \
     hardware/samsung \
+    hardware/samsung_slsi-linaro/exynos/c2service \
+    hardware/samsung_slsi-linaro/exynos/gralloc/gralloc3 \
+    hardware/samsung_slsi-linaro/exynos/tee/kinibi410 \
     hardware/samsung_slsi/libbt
 
 # Speed profile services and wifi-service to reduce RAM and storage
