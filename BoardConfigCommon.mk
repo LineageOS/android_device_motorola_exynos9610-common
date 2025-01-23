@@ -68,6 +68,28 @@ BOARD_MKBOOTIMG_ARGS := --base $(BOARD_KERNEL_BASE) --pagesize $(BOARD_KERNEL_PA
 ## Bootloader
 TARGET_BOOTLOADER_IS_2ND := true
 
+## Camera
+$(call soong_config_set,exynos_camera,back_camera_rotation,90)
+$(call soong_config_set,exynos_camera,front_camera_rotation,270)
+$(call soong_config_set,exynos_camera,secure_camera_rotation,0)
+
+$(call soong_config_set,exynos_camera,use_dual_camera,true)
+$(call soong_config_set,exynos_camera,uses_camera_solution_vdis,true)
+$(call soong_config_set,exynos_camera,uses_slsi_plugin,true)
+$(call soong_config_set,exynos_camera,use_pipe_handler,true)
+$(call soong_config_set,exynos_camera,uses_hifi_lls_capture,true)
+$(call soong_config_set,exynos_camera,uses_hifi_capture,true)
+$(call soong_config_set,exynos_camera,uses_slsi_vendor_tags,true)
+$(call soong_config_set,exynos_camera,uses_remosaic_sensor,true)
+$(call soong_config_set,exynos_camera,uses_sensor_listener,true)
+
+$(call soong_config_set,exynos_camera,target_soc_base,exynos9610)
+
+$(call soong_config_set,exynos_camera,libvdis,//vendor/motorola/exynos9610-common:libvdis)
+$(call soong_config_set,exynos_camera,libhifills,//vendor/motorola/exynos9610-common:libhifills)
+$(call soong_config_set,exynos_camera,libenf,//vendor/motorola/exynos9610-common:libENF)
+$(call soong_config_set,exynos_camera,libyuvrepro,//vendor/motorola/exynos9610-common:libyuvrepro)
+
 ## Display
 TARGET_SCREEN_DENSITY := 420
 
