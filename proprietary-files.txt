@@ -12,31 +12,11 @@ vendor/lib/libunshorten.so
 vendor/lib64/libdapparamstorage.so
 
 ## Camera
-product/app/MotCamera2AI/MotCamera2AI.apk
-product/etc/permissions/com.motorola.camera2.content.ai.xml
-product/etc/permissions/com.motorola.camera2.hallasan.xml
-product/etc/permissions/deviceowner-configuration-com.motorola.camera2.xml
-product/etc/permissions/privapp-permissions-com.motorola.camera2.xml
-product/etc/sysconfig/hiddenapi-whitelist-com.motorola.camera2.xml
-product/priv-app/MotCamera2/MotCamera2.apk
-system/app/MotoSignatureApp/MotoSignatureApp.apk;PRESIGNED
-system/etc/permissions/com.motorola.motosignature.xml:vendor/etc/permissions/com.motorola.motosignature.xml
-system/framework/com.motorola.motosignature.jar:vendor/framework/com.motorola.motosignature.jar
 vendor/lib/libENF.so
-vendor/lib/libexynoscamera_hifi_plugin.so
-vendor/lib/libexynoscamera_hifills_plugin.so
-vendor/lib/libexynoscamera_plugin.so
-vendor/lib/libexynoscamera_plugin_utils.so
-vendor/lib/libexynoscamera_vdis_plugin.so
 vendor/lib/libhifills.so
 vendor/lib/libvdis.so
 vendor/lib/libyuvrepro.so
 vendor/lib64/libENF.so
-vendor/lib64/libexynoscamera_hifi_plugin.so
-vendor/lib64/libexynoscamera_hifills_plugin.so
-vendor/lib64/libexynoscamera_plugin.so
-vendor/lib64/libexynoscamera_plugin_utils.so
-vendor/lib64/libexynoscamera_vdis_plugin.so
 vendor/lib64/libhifills.so
 vendor/lib64/libvdis.so
 vendor/lib64/libyuvrepro.so
