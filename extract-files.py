@@ -49,8 +49,6 @@ blob_fixups: blob_fixups_user_type = {
         .remove_needed('libhwbinder.so'),
     'vendor/bin/wfc-pkt-router': blob_fixup()
         .replace_needed('libnetutils.so', 'libip_checksum_shim.so'),
-    'vendor/etc/permissions/com.motorola.motosignature.xml': blob_fixup()
-        .regex_replace('system', 'vendor'),
     'vendor/lib/libaudioproxy.so': blob_fixup()
         .add_needed('libaudioproxy_shim.so'),
     ('vendor/lib/libhifills.so', 'vendor/lib64/libhifills.so'): blob_fixup()
