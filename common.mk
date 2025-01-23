@@ -93,7 +93,13 @@ PRODUCT_PACKAGES += \
     android.frameworks.cameraservice.service@2.1.vendor \
     android.hardware.camera.provider@2.4-impl \
     android.hardware.camera.provider@2.4-service \
-    libgiantmscl
+    camera.exynos9610 \
+    libexynoscamera_hifi_plugin \
+    libexynoscamera_hifills_plugin \
+    libexynoscamera_plugin \
+    libexynoscamera_plugin_utils \
+    libexynoscamera_vdis_plugin \
+    libgiantmscl \
 
 # ConfigStore
 PRODUCT_PACKAGES += \
@@ -376,6 +382,7 @@ PRODUCT_SOONG_NAMESPACES += \
     hardware/google/pixel \
     hardware/lineage/interfaces/power-libperfmgr \
     hardware/samsung \
+    hardware/samsung_slsi-linaro/camera/N23 \
     hardware/samsung_slsi-linaro/exynos/c2service \
     hardware/samsung_slsi-linaro/exynos/gralloc/gralloc3 \
     hardware/samsung_slsi-linaro/exynos/tee/kinibi410 \
