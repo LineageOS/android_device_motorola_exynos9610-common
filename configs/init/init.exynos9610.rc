@@ -5,6 +5,24 @@ on early-init
     mount debugfs /sys/kernel/debug /sys/kernel/debug
     mount proc proc /proc remount hidepid=2,gid=3009
 
+    chown system system /dev/cpuset/background/cpus
+    chown system system /dev/stune/top-app/schedtune.boost
+    chown system system /dev/stune/top-app/schedtune.prefer_perf
+    chown system system /sys/devices/platform/11500000.mali/dvfs_min_lock
+    chown system system /sys/devices/platform/11500000.mali/power_policy
+    chown system system /sys/module/cpuidle/parameters/off
+    chown system system /sys/power/cpufreq_max_limit
+    chown system system /sys/power/cpufreq_min_limit
+
+    chmod 660 /dev/cpuset/background/cpus
+    chmod 660 /dev/stune/top-app/schedtune.boost
+    chmod 660 /dev/stune/top-app/schedtune.prefer_perf
+    chmod 660 /sys/devices/platform/11500000.mali/dvfs_min_lock
+    chmod 660 /sys/devices/platform/11500000.mali/power_policy
+    chmod 660 /sys/module/cpuidle/parameters/off
+    chmod 660 /sys/power/cpufreq_max_limit
+    chmod 660 /sys/power/cpufreq_min_limit
+
 on init
     # Set permissions for persist partition
     mkdir /persist 0771 system system
