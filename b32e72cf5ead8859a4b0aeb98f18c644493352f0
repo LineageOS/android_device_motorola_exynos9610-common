@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "8615127e_97b45fea",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 17401
+      },
+      "writtenOn": "2025-01-27T20:54:25Z",
+      "side": 1,
+      "message": "@tim can you make a similar change for your devices to import the gralloc3 namespace so we can get all the blueprint conversions merged?",
+      "revId": "b32e72cf5ead8859a4b0aeb98f18c644493352f0",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
