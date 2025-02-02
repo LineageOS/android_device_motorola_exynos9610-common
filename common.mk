@@ -46,6 +46,7 @@ PRODUCT_PACKAGES += \
     audio.bluetooth.default \
     audio.r_submix.default \
     audio.usb.default \
+    audio_abox \
     libgui_vendor
 
 PRODUCT_COPY_FILES += \
