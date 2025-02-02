@@ -1,7 +1,6 @@
 ## Common proprietary files - from motorola/troika_retail/troika_sprout:11/RSBS31.Q1-48-36-20/3e578:user/release-keys, unless pinned
 
 ## Audio
-vendor/bin/main_abox
 vendor/etc/ap_gain_mmul.bin
 vendor/etc/dolby/dax-default.xml
 vendor/lib/hw/audio.primary.exynos9610.so
