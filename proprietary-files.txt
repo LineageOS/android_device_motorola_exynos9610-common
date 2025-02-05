@@ -96,10 +96,6 @@ product/priv-app/HotwordEnrollmentXGoogleWM8280/HotwordEnrollmentXGoogleWM8280.a
 system_ext/etc/permissions/com.android.hotwordenrollment.common.util.xml
 system_ext/framework/com.android.hotwordenrollment.common.util.jar
 
-## Keymaster
-vendor/lib/hw/keystore.exynos9610.so
-vendor/lib64/hw/keystore.exynos9610.so
-
 ## IMS
 system/app/ShannonIms/ShannonIms.apk
 system/lib64/libmediaadaptor.so
