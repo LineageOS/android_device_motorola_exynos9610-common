@@ -220,9 +220,7 @@ PRODUCT_COPY_FILES += \
 
 # Keymaster
 PRODUCT_PACKAGES += \
-    android.hardware.keymaster@3.0.vendor \
-    android.hardware.keymaster@3.0-impl \
-    android.hardware.keymaster@3.0-service
+    android.hardware.keymaster@3.0_tee-service
 
 # Lights
 PRODUCT_PACKAGES += \
@@ -388,6 +386,7 @@ PRODUCT_SOONG_NAMESPACES += \
     hardware/samsung_slsi-linaro/exynos/gralloc/gralloc3 \
     hardware/samsung_slsi-linaro/exynos/libaudio/audiohal \
     hardware/samsung_slsi-linaro/exynos/tee/kinibi410 \
+    hardware/samsung_slsi-linaro/exynos/tee/TlcTeeKeymaster4 \
     hardware/samsung_slsi/libbt
 
 # Speed profile services and wifi-service to reduce RAM and storage
