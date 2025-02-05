@@ -48,6 +48,10 @@ TARGET_2ND_CPU_ABI2 := armeabi
 TARGET_2ND_CPU_VARIANT := generic
 TARGET_2ND_CPU_VARIANT_RUNTIME := cortex-a53
 
+## Audio
+$(call soong_config_set,exynos_audio,USE_SITRIL,true)
+$(call soong_config_set,exynos_audio,PROXY_LIBRARY,//device/motorola/exynos9610-common:libaudioproxy)
+
 ## Bluetooth
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(COMMON_PATH)/bluetooth
 BOARD_HAVE_BLUETOOTH_SLSI := true
