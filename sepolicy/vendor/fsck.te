@@ -1,3 +1,4 @@
 allow fsck self:capability kill;
 
 allow fsck sysfs_scheduler:file r_file_perms;
+allow fsck vendor_sysfs_mmc_host:file r_file_perms;
