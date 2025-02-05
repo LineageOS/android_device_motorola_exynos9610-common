@@ -44,6 +44,7 @@ PRODUCT_PACKAGES += \
     android.hardware.bluetooth.audio-impl \
     android.hardware.soundtrigger@2.0-impl \
     audio.bluetooth.default \
+    audio.primary.exynos9610 \
     audio.r_submix.default \
     audio.usb.default \
     libgui_vendor \
@@ -385,6 +386,7 @@ PRODUCT_SOONG_NAMESPACES += \
     hardware/samsung_slsi-linaro/camera/N23 \
     hardware/samsung_slsi-linaro/exynos/c2service \
     hardware/samsung_slsi-linaro/exynos/gralloc/gralloc3 \
+    hardware/samsung_slsi-linaro/exynos/libaudio/audiohal \
     hardware/samsung_slsi-linaro/exynos/tee/kinibi410 \
     hardware/samsung_slsi/libbt
 

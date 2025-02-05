@@ -1,16 +1,5 @@
 ## Common proprietary files - from motorola/troika_retail/troika_sprout:11/RSBS31.Q1-48-36-20/3e578:user/release-keys, unless pinned
 
-## Audio
-vendor/etc/ap_gain_mmul.bin
-vendor/etc/dolby/dax-default.xml
-vendor/lib/hw/audio.primary.exynos9610.so
-vendor/lib/libalsautils_sec.so
-vendor/lib/libaudioproxy.so
-vendor/lib/libdapparamstorage.so
-vendor/lib/libmotaudioutils.so
-vendor/lib/libunshorten.so
-vendor/lib64/libdapparamstorage.so
-
 ## Camera
 vendor/lib/libENF.so
 vendor/lib/libhifills.so
@@ -140,7 +129,6 @@ vendor/etc/sec_s3nrn82_rfreg.bin
 vendor/bin/cbd
 vendor/bin/hw/rild_exynos
 vendor/etc/sim_configuration.xml
-vendor/lib/libaudio-ril.so
 vendor/lib/libril_sitril.so
 vendor/lib/libsitril-audio.so
 vendor/lib/libsitril-client.so
