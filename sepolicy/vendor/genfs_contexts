@@ -57,7 +57,9 @@ genfscon sysfs /devices/platform/13840000.i2c/i2c-9/9-003d/s2mu00x-battery/power
 genfscon sysfs /devices/platform/13840000.i2c/i2c-9/9-003d/s2mu00x-battery/power_supply/battery/temp                    u:object_r:sysfs_battery_writable:s0
 genfscon sysfs /devices/platform/13840000.i2c/i2c-9/9-003d/s2mu106-charger/power_supply                                 u:object_r:sysfs_battery:s0
 genfscon sysfs /devices/platform/13840000.i2c/i2c-9/9-003d/s2mu106-powermeter/power_supply/s2mu106_pmeter/type          u:object_r:sysfs_battery:s0
+genfscon sysfs /devices/platform/13940000.spi/spi_master/spi9/spi9.0/madera-extcon/extcon/extcon0/cable.0/name          u:object_r:sysfs_extcon:s0
 genfscon sysfs /devices/platform/13940000.spi/spi_master/spi9/spi9.0/madera-extcon/extcon/extcon0/cable.1/name          u:object_r:sysfs_extcon:s0
+genfscon sysfs /devices/platform/13940000.spi/spi_master/spi9/spi9.0/madera-extcon/extcon/extcon0/cable.2/name          u:object_r:sysfs_extcon:s0
 genfscon sysfs /devices/platform/13940000.spi/spi_master/spi9/spi9.0/madera-extcon/extcon/extcon0/cable.3/name          u:object_r:sysfs_extcon:s0
 genfscon sysfs /devices/platform/14490000.fimc_is/debug/fixed_sensor_fps                                                u:object_r:sysfs_fimc_writable:s0
 genfscon sysfs /devices/platform/148b0000.decon_f/dqe/dqe                                                               u:object_r:sysfs_dqe:s0
