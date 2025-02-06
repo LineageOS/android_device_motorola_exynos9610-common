@@ -6,6 +6,7 @@ ro.boot.carrier                     u:object_r:moto_boot_prop:s0
 
 # Camera
 persist.vendor.sys.camera.          u:object_r:vendor_camera_prop:s0
+persist.vendor.camera.privapp.list  u:object_r:vendor_persist_camera_prop:s0
 
 # Charon
 vendor.charon                       u:object_r:vendor_ims_prop:s0
