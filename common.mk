@@ -235,11 +235,8 @@ PRODUCT_PACKAGES += \
     vendor.lineage.livedisplay@2.0-service.exynos9610
 
 # Media
-PRODUCT_PACKAGES += \
-    samsung.hardware.media.c2@1.1-default-service
-
 PRODUCT_COPY_FILES += \
-    $(COMMON_PATH)/configs/media/media_codecs.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs.xml \
+    $(COMMON_PATH)/configs/media/media_codecs_c2.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_c2.xml \
     $(COMMON_PATH)/configs/media/media_codecs_dolby_audio.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_dolby_audio.xml \
     $(COMMON_PATH)/configs/media/media_codecs_google_audio.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_google_audio.xml \
     $(COMMON_PATH)/configs/media/media_codecs_google_telephony.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_google_telephony.xml \
@@ -277,24 +274,31 @@ PRODUCT_COPY_FILES += \
 
 # OMX
 PRODUCT_PACKAGES += \
-    android.hardware.media.omx@1.0-service \
-    libExynosOMX_Core \
-    libExynosOMX_Resourcemanager \
-    libGrallocWrapper \
-    libOMX.Exynos.AVC.Decoder \
-    libOMX.Exynos.AVC.Encoder \
-    libOMX.Exynos.HEVC.Decoder \
-    libOMX.Exynos.HEVC.Encoder \
-    libOMX.Exynos.MPEG4.Decoder \
-    libOMX.Exynos.MPEG4.Encoder \
-    libOMX.Exynos.VP8.Decoder \
-    libOMX.Exynos.VP8.Encoder \
-    libOMX.Exynos.VP9.Decoder \
-    libOMX.Exynos.VP9.Encoder \
-    libOMX.Exynos.WMV.Decoder \
-    libepicoperator \
-    libstagefright_softomx \
-    libstagefright_softomx_plugin.vendor
+    samsung.hardware.media.c2@1.2-service \
+    codec2.vendor.base.policy \
+    codec2.vendor.ext.policy \
+    libExynosC2ComponentStore \
+    libExynosC2H264Dec \
+    libExynosC2H264Enc \
+    libExynosC2HevcDec \
+    libExynosC2HevcEnc \
+    libExynosC2Mpeg4Dec \
+    libExynosC2Mpeg4Enc \
+    libExynosC2H263Dec \
+    libExynosC2H263Enc \
+    libExynosC2Vp8Dec \
+    libExynosC2Vp8Enc \
+    libExynosC2Vp9Dec \
+    libExynosC2Vp9Enc 
+
+
+PRODUCT_PROPERTY_OVERRIDES += \
+	debug.stagefright.ccodec_strict_type=true \
+	debug.stagefright.ccodec_lax_type=true \
+	debug.stagefright.c2-poolmask=917504 \
+	debug.stagefright.ccodec_delayed_params=1 \
+	ro.vendor.gpu.dataspace=1
+
 
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += $(COMMON_PATH)/overlay
