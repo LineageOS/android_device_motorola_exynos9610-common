@@ -16,6 +16,23 @@
       "message": "depends on topic libfmjni-rework",
       "revId": "107822e046fe66215ac7fa432347628c49ef5131",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "22feaf61_47fe9878",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 2644
+      },
+      "writtenOn": "2025-02-07T21:07:17Z",
+      "side": 1,
+      "message": "FM radio still works on troika with this (and the libfmjni-rework topic) and the feb_02 asb.",
+      "revId": "107822e046fe66215ac7fa432347628c49ef5131",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
