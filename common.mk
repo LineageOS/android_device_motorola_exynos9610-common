@@ -152,6 +152,8 @@ PRODUCT_PACKAGES += \
     FMRadio \
     libfmjni
 
+$(call soong_config_set,libfmjni,vendor,slsi)
+
 # Gatekeeper
 PRODUCT_PACKAGES += \
     android.hardware.gatekeeper@1.0.vendor \
