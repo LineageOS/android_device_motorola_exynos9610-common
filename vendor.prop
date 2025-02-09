@@ -6,7 +6,7 @@ aaudio.hw_burst_min_usec=2000
 aaudio.mmap_exclusive_policy=1
 aaudio.mmap_policy=1
 persist.vendor.audio.endcall.delay=250
-ro.config.vc_call_vol_steps=8
+ro.vendor.config.vc_call_vol_steps=8
 ro.vendor.ddk.set.afbc=1
 
 ## Bluetooth
