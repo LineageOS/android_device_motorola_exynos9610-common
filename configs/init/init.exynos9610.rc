@@ -434,8 +434,10 @@ on fs
 # Permissions for backlight
     chmod 0660 /sys/class/backlight/pwm-backlight.0/brightness
     chown system system /sys/class/backlight/pwm-backlight.0/brightness
-    chmod 0660 /sys/class/backlight/backlight_0/brightness
-    chown system system /sys/class/backlight/backlight_0/brightness
+    chmod 0660 /sys/class/backlight/backlight/brightness
+    chown system system /sys/class/backlight/backlight/brightness
+    chmod 0660 /sys/class/backlight/backlight/max_brightness
+    chown system system /sys/class/backlight/backlight/max_brightness
     chmod 0660 /sys/class/panel/panel/cabc_mode
     chown system system /sys/class/panel/panel/cabc_mode
     chmod 0660 /sys/class/backlight/hbm/hbm_mode
