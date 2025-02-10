@@ -76,8 +76,8 @@ genfscon sysfs /devices/platform/egis_input/navigation_event                    
 genfscon sysfs /devices/soc0/machine                                                                                    u:object_r:sysfs_socinfo:s0
 genfscon sysfs /devices/soc0/revision                                                                                   u:object_r:sysfs_socinfo:s0
 genfscon sysfs /devices/system/chip-id/revision                                                                         u:object_r:sysfs_chipid:s0
-genfscon sysfs /devices/virtual/backlight/backlight_0/brightness                                                        u:object_r:sysfs_backlight_writable:s0
-genfscon sysfs /devices/virtual/backlight/backlight_0/max_brightness                                                    u:object_r:sysfs_backlight_writable:s0
+genfscon sysfs /devices/virtual/backlight/backlight/brightness                                                          u:object_r:sysfs_backlight_writable:s0
+genfscon sysfs /devices/virtual/backlight/backlight/max_brightness                                                      u:object_r:sysfs_backlight_writable:s0
 genfscon sysfs /devices/virtual/backlight/hbm                                                                           u:object_r:sysfs_hbm:s0
 genfscon sysfs /devices/virtual/nanohub/nanohub/sensortype                                                              u:object_r:sysfs_nanohub:s0
 genfscon sysfs /module/cpuidle/parameters/off                                                                           u:object_r:sysfs_cpuhotplug_writable:s0
