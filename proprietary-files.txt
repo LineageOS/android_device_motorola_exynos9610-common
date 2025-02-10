@@ -160,7 +160,6 @@ vendor/lib64/libhubconnection.so
 vendor/lib64/sensors.rp.so
 
 ## Wi-Fi
-vendor/etc/wifi/mx
 vendor/etc/wifi/mx140.bin
 vendor/etc/wifi/mx140/conf/leman_s620_robusta2_dualfem/bluetooth/bt.hcf
 vendor/etc/wifi/mx140/conf/leman_s620_robusta2_dualfem/bluetooth/platform.txt
