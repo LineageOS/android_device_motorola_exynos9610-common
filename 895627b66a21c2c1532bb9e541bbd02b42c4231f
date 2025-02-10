@@ -16,6 +16,23 @@
       "message": "together with https://review.lineageos.org/c/LineageOS/android_kernel_motorola_exynos9610/+/418407",
       "revId": "895627b66a21c2c1532bb9e541bbd02b42c4231f",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "f8451e70_0ab7d8f2",
+        "filename": "configs/init/init.exynos9610.rc",
+        "patchSetId": 2
+      },
+      "lineNbr": 440,
+      "author": {
+        "id": 4550
+      },
+      "writtenOn": "2025-02-10T17:37:46Z",
+      "side": 1,
+      "message": "The chown already happens in the light hal rc, not sure if you still need the chmod as well",
+      "revId": "895627b66a21c2c1532bb9e541bbd02b42c4231f",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
