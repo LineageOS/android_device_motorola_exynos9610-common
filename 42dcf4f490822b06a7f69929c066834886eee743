@@ -1,4 +1,22 @@
 {
-  "comments": [],
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "580f9d92_3744e749",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 17401
+      },
+      "writtenOn": "2025-02-11T08:36:20Z",
+      "side": 1,
+      "message": "thats what i get for forgetting to remove the folder and then removing it before merging without testing again :( i start to hate blueprint lol",
+      "revId": "42dcf4f490822b06a7f69929c066834886eee743",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ],
   "submitRequirementResults": []
 }
