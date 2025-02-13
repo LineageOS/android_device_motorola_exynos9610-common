@@ -423,6 +423,10 @@ PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/configs/thermal/exynos-thermal-kane-retin.conf:$(TARGET_COPY_OUT_VENDOR)/etc/exynos-thermal-kane-retin.conf \
     $(COMMON_PATH)/configs/thermal/exynos-thermal-troika.conf:$(TARGET_COPY_OUT_VENDOR)/etc/exynos-thermal-troika.conf
 
+# UFFD GC
+PRODUCT_ENABLE_UFFD_GC := false
+OVERRIDE_ENABLE_UFFD_GC := false
+
 # USB
 PRODUCT_PACKAGES += \
     android.hardware.usb@1.1-service.typec
