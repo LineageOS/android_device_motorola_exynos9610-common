@@ -359,6 +359,11 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     android.hardware.renderscript@1.0-impl
 
+# RIL
+PRODUCT_PACKAGES += \
+    vendor.samsung_slsi.telephony.hardware.radio@1.1 \
+    vendor.samsung_slsi.telephony.hardware.radioExternal@1.1
+
 # Seccomp
 PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/configs/seccomp/mediacodec.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/mediacodec.policy

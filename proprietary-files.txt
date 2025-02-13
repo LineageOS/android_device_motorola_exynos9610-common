@@ -126,10 +126,6 @@ vendor/lib/libsitril-gps.so
 vendor/lib/libsitril-ims.so
 vendor/lib/libsitril-se.so
 vendor/lib/libsitril.so
-vendor/lib/vendor.samsung_slsi.telephony.hardware.radio@1.0.so
-vendor/lib/vendor.samsung_slsi.telephony.hardware.radio@1.1.so
-vendor/lib/vendor.samsung_slsi.telephony.hardware.radioExternal@1.0.so
-vendor/lib/vendor.samsung_slsi.telephony.hardware.radioExternal@1.1.so
 vendor/lib64/libadropbox.so
 vendor/lib64/libril_sitril.so
 vendor/lib64/libsitril-audio.so
@@ -138,10 +134,6 @@ vendor/lib64/libsitril-gps.so
 vendor/lib64/libsitril-ims.so
 vendor/lib64/libsitril-se.so
 vendor/lib64/libsitril.so
-vendor/lib64/vendor.samsung_slsi.telephony.hardware.radio@1.0.so
-vendor/lib64/vendor.samsung_slsi.telephony.hardware.radio@1.1.so
-vendor/lib64/vendor.samsung_slsi.telephony.hardware.radioExternal@1.0.so
-vendor/lib64/vendor.samsung_slsi.telephony.hardware.radioExternal@1.1.so
 
 ## Secure Element
 vendor/bin/hw/android.hardware.secure_element@1.2-uicc-service
