@@ -90,12 +90,6 @@ vendor/lib64/hw/vendor.samsung.hardware.gnss@1.0-impl.so;FIX_SONAME
 vendor/lib/egl/libGLES_mali.so;SYMLINK=vendor/lib/hw/vulkan.exynos9610.so;SYMLINK=vendor/lib/libOpenCL.so;SYMLINK=vendor/lib/libOpenCL.so.1;SYMLINK=vendor/lib/libOpenCL.so.1.1
 vendor/lib64/egl/libGLES_mali.so;SYMLINK=vendor/lib64/hw/vulkan.exynos9610.so;SYMLINK=vendor/lib64/libOpenCL.so;SYMLINK=vendor/lib64/libOpenCL.so.1;SYMLINK=vendor/lib64/libOpenCL.so.1.1
 
-## HotwordEnrollment
-product/priv-app/HotwordEnrollmentOKGoogleWM8280/HotwordEnrollmentOKGoogleWM8280.apk
-product/priv-app/HotwordEnrollmentXGoogleWM8280/HotwordEnrollmentXGoogleWM8280.apk
-system_ext/etc/permissions/com.android.hotwordenrollment.common.util.xml
-system_ext/framework/com.android.hotwordenrollment.common.util.jar
-
 ## IMS
 system/app/ShannonIms/ShannonIms.apk
 system/lib64/libmediaadaptor.so
