@@ -116,7 +116,6 @@ vendor/app/mcRegistry/ffffffffd0000000000000000000000e.tlbin
 vendor/etc/sec_s3nrn82_rfreg.bin
 
 ## RIL
-vendor/bin/cbd
 vendor/bin/hw/rild_exynos
 vendor/etc/sim_configuration.xml
 vendor/lib/libril_sitril.so
@@ -126,7 +125,6 @@ vendor/lib/libsitril-gps.so
 vendor/lib/libsitril-ims.so
 vendor/lib/libsitril-se.so
 vendor/lib/libsitril.so
-vendor/lib64/libadropbox.so
 vendor/lib64/libril_sitril.so
 vendor/lib64/libsitril-audio.so
 vendor/lib64/libsitril-client.so
