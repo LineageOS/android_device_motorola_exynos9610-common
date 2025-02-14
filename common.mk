@@ -361,6 +361,7 @@ PRODUCT_PACKAGES += \
 
 # RIL
 PRODUCT_PACKAGES += \
+    cbd_v3.sit.legacy \
     vendor.samsung_slsi.telephony.hardware.radio@1.1 \
     vendor.samsung_slsi.telephony.hardware.radioExternal@1.1
 

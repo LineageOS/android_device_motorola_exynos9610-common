@@ -2,3 +2,8 @@ allow cbd modem_block_device:blk_file r_file_perms;
 
 get_prop(cbd, radio_control_prop)
 set_prop(cbd, vendor_radio_prop)
+
+allow cbd self:capability2 block_suspend;
+
+dontaudit cbd self:capability dac_read_search;
+dontaudit cbd self:capability dac_override;
