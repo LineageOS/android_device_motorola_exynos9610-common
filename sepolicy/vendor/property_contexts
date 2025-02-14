@@ -32,6 +32,7 @@ vendor.radio.smsdomain              u:object_r:vendor_radio_prop:s0
 vendor.radio.ril.                   u:object_r:vendor_radio_prop:s0
 vendor.radio.cp.                    u:object_r:vendor_radio_prop:s0
 vendor.ril.                         u:object_r:vendor_radio_prop:s0
+vendor.sys.rild_reset               u:object_r:vendor_radio_prop:s0
 
 # Rmnet
 persist.rmnet.mux                   u:object_r:rmnet_mux_prop:s0
