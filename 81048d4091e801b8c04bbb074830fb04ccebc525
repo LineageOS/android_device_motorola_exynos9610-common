@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "d247da40_3e1be576",
+        "filename": "hidl/fingerprint/BiometricsFingerprint.cpp",
+        "patchSetId": 3
+      },
+      "lineNbr": 181,
+      "author": {
+        "id": 17401
+      },
+      "writtenOn": "2025-02-15T15:34:34Z",
+      "side": 0,
+      "message": "for some reason we are getting pushed into this path, ```02-15 15:40:04.646  4830  4830 D RBS     : [egis_rbs_api.c] [rbs_chk_secure_id:79] #*rbs_chk_secure_id#*#*[leave] 33#* \n02-15 15:40:04.646  4830  4913 V RBS     : [packager.c] [transfer_data:76] -- packager, process: 0, command: 20, uid: 0, fid:0 \n02-15 15:40:04.646  4830  4830 D android.hardware.biometrics.fingerprint@2.3-service.mh2lm: Secure ID check failed, error 33``` i dont see why tho, the enrollment logic seems to be the same as on the stock blob",
+      "revId": "81048d4091e801b8c04bbb074830fb04ccebc525",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
