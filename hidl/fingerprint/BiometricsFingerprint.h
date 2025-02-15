@@ -73,9 +73,6 @@ typedef struct rbs_fingerprint_device {
     int (*rbs_set_on_callback_proc)(void* callback_proc);
     int (*rbs_extra_api)(uint32_t cmd, uint32_t* param, uint32_t param_size, uint32_t* param2,
                          uint32_t* param2_size);
-    int (*rbs_get_challenge)(uint64_t* challenge);
-    int (*rbs_post_challenge)(uint64_t* challenge);
-    char* g_custom_ini_path;
 } rbs_fingerprint_device_t;
 
 struct BiometricsFingerprint : public IBiometricsFingerprint {
@@ -115,7 +112,6 @@ struct BiometricsFingerprint : public IBiometricsFingerprint {
     void onEnumerateCallback(uint32_t fid, uint32_t gid, uint32_t samples_remaining);
     void onRemovedCallback(uint32_t fid, uint32_t gid, uint32_t samples_remaining);
     static BiometricsFingerprint* sInstance;
-    static int getSecureKey(void* masterkey, uint32_t masterkey_size);
     static void setFodHbm(bool status);
 
     bool hbmFodEnabled;
