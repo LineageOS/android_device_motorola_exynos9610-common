@@ -139,13 +139,7 @@ PRODUCT_PACKAGES += \
 
 # Fingerprint
 PRODUCT_PACKAGES += \
-    android.hardware.biometrics.fingerprint@2.1 \
-    android.hardware.biometrics.fingerprint@2.1.vendor
-
-# Fingerprint Gestures
-PRODUCT_COPY_FILES += \
-    $(COMMON_PATH)/configs/idc/uinput-egis.idc:$(TARGET_COPY_OUT_VENDOR)/usr/idc/uinput-egis.idc \
-    $(COMMON_PATH)/configs/keylayout/uinput-egis.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/uinput-egis.kl
+    android.hardware.biometrics.fingerprint@2.3-service.exynos9610
 
 # FM Radio
 PRODUCT_PACKAGES += \
