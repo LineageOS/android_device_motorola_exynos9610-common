@@ -361,9 +361,12 @@ PRODUCT_PACKAGES += \
 
 # RIL
 PRODUCT_PACKAGES += \
-    cbd_v3.sit.legacy \
+    cbd \
     vendor.samsung_slsi.telephony.hardware.radio@1.1 \
     vendor.samsung_slsi.telephony.hardware.radioExternal@1.1
+
+$(call soong_config_set,cbd,protocol,sit)
+$(call soong_config_set,cbd,use_legacy_ioctl,true)
 
 # Seccomp
 PRODUCT_COPY_FILES += \
