@@ -136,8 +136,7 @@ Return<uint64_t> BiometricsFingerprint::setNotify(
 }
 
 Return<uint64_t> BiometricsFingerprint::preEnroll() {
-    mDevice->rbs_get_challenge(&mChallenge);
-    return mChallenge;
+    return (rand()|rand()<<20);
 }
 
 Return<RequestStatus> BiometricsFingerprint::enroll(const hidl_array<uint8_t, 69>& hat,
@@ -229,8 +228,6 @@ continue_enroll:
 }
 
 Return<RequestStatus> BiometricsFingerprint::postEnroll() {
-    mDevice->rbs_post_challenge(&mChallenge);
-
     return RequestStatus::SYS_OK;
 }
 
@@ -442,96 +439,15 @@ rbs_fingerprint_device_t* BiometricsFingerprint::openHal() {
     fp_device->rbs_extra_api =
             reinterpret_cast<typeof(fp_device->rbs_extra_api)>(dlsym(rbs_handle, "rbs_extra_api"));
 
-    fp_device->rbs_get_challenge = reinterpret_cast<typeof(fp_device->rbs_get_challenge)>(
-            dlsym(rbs_handle, "rbs_get_challenge"));
-
-    fp_device->rbs_post_challenge = reinterpret_cast<typeof(fp_device->rbs_post_challenge)>(
-            dlsym(rbs_handle, "rbs_post_challenge"));
-
-    fp_device->g_custom_ini_path = reinterpret_cast<typeof(fp_device->g_custom_ini_path)>(
-            dlsym(rbs_handle, "g_custom_ini_path"));
-
     fp_device->rbs_set_on_callback_proc((void*)BiometricsFingerprint::notify);
 
-    getSecureKey(masterkey, sizeof(masterkey));
-
-    if ((err = fp_device->rbs_initialize(masterkey, sizeof(masterkey))) != 0) {
+    if ((err = fp_device->rbs_initialize(0, 0)) != 0) {
         ALOGE("Can't open fingerprint, error %d", err);
         free(fp_device);
         return nullptr;
     }
 
-    // This is needed to avoid a Treble SELinux policy violation; the
-    // default path stores it in the root of /data.
-    // So we relocate it to here.
-    mkdir("/data/vendor/fpdata", 0700);
-    snprintf(fp_device->g_custom_ini_path, 21, "/data/vendor/fpdata/");
-
     return fp_device;
-}
-
-#define ETS_KEYMASTER_CMD_GET_SECURE_KEY 0x200000205ull
-
-int BiometricsFingerprint::getSecureKey(void* masterkey, uint32_t size) {
-    int rc = 0;
-    int (*qsc_start_app)(struct QSEECom_handle * *clnt_handle, const char* fname, uint32_t sb_size);
-    int (*qsc_shutdown_app)(struct QSEECom_handle * *clnt_handle);
-    int (*ets_keymaster_send_cmd)(struct QSEECom_handle * clnt_handle, void* send_buf,
-                                  uint32_t sbuf_len, void* rcv_buf, uint32_t* rbuf_len);
-    struct QSEECom_handle* mKeymasterHandle = NULL;
-    uint64_t send_cmd = ETS_KEYMASTER_CMD_GET_SECURE_KEY;
-    struct ets_masterkey_response rcv_buf;
-    uint32_t rcv_buf_size = sizeof(rcv_buf);
-    void* ets_teeclient_handle = NULL;
-
-    ets_teeclient_handle = dlopen("libets_teeclient_v2.so", RTLD_NOW);
-    if (ets_teeclient_handle == nullptr) {
-        ALOGE("Cannot load TEE client");
-        return false;
-    }
-
-    qsc_start_app =
-            reinterpret_cast<typeof(qsc_start_app)>(dlsym(ets_teeclient_handle, "qsc_start_app"));
-
-    qsc_shutdown_app = reinterpret_cast<typeof(qsc_shutdown_app)>(
-            dlsym(ets_teeclient_handle, "qsc_shutdown_app"));
-
-    ets_keymaster_send_cmd = reinterpret_cast<typeof(ets_keymaster_send_cmd)>(
-            dlsym(ets_teeclient_handle, "ets_keymaster_issue_send_modified_cmd_req"));
-
-    rc = qsc_start_app(&mKeymasterHandle, "keymaster64", 0x2400);
-    if (rc) {
-        ALOGE("Cannot load keymaster application, error %d", rc);
-        return rc;
-    }
-
-    rc = ets_keymaster_send_cmd(mKeymasterHandle, &send_cmd, 8, &rcv_buf, &rcv_buf_size);
-    if (rc) {
-        ALOGE("Cannot send keymaster cmd, error %d", rc);
-        goto shutdown;
-    }
-
-    if (rcv_buf.rc != 0) {
-        ALOGE("Get master key failed, error %d", rcv_buf.rc);
-        rc = rcv_buf.rc;
-        goto shutdown;
-    }
-
-    if (size < rcv_buf.size) {
-        ALOGE("Output buffer too short, expected size %d, got size %d", rcv_buf.size, size);
-        rc = -ENOMEM;
-        goto shutdown;
-    }
-
-    memcpy(masterkey, rcv_buf.masterkey, size);
-shutdown:
-    qsc_shutdown_app(&mKeymasterHandle);
-    dlclose(ets_teeclient_handle);
-
-    qsc_start_app = NULL;
-    qsc_shutdown_app = NULL;
-    ets_keymaster_send_cmd = NULL;
-    return rc;
 }
 
 void BiometricsFingerprint::notify(uint32_t eventId, uint32_t value1, uint32_t value2, void* buffer,
@@ -664,7 +580,7 @@ void BiometricsFingerprint::setFodHbm(bool status) {
 // ::V2_3::IBiometricsFingerprint follow.
 
 Return<bool> BiometricsFingerprint::isUdfps(uint32_t) {
-    return true;
+    return false;
 }
 
 Return<void> BiometricsFingerprint::onFingerDown(uint32_t, uint32_t, float, float) {
