@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "1111a715_c17f58b0",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 17401
+      },
+      "writtenOn": "2025-02-15T14:45:25Z",
+      "side": 1,
+      "message": "enrollment kinda works now? i can enroll a fingerprint but it leaves the hal in a non working state, after a reboot the newly enrolled fingerprint works tho, need to check the enrollment logic against stock hal",
+      "revId": "3372627f40ff2a22f39fd8570d94c54fc57da9ff",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
