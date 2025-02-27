@@ -223,6 +223,10 @@ PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/configs/fstab.exynos9610:$(TARGET_COPY_OUT_VENDOR)/etc/fstab.exynos9610 \
     $(COMMON_PATH)/configs/fstab.exynos9610:$(TARGET_COPY_OUT_RECOVERY)/root/first_stage_ramdisk/fstab.exynos9610
 
+# Kernel
+PRODUCT_ENABLE_UFFD_GC := true
+OVERRIDE_ENABLE_UFFD_GC := true
+
 # Keymaster
 PRODUCT_PACKAGES += \
     android.hardware.keymaster@3.0_tee-service
