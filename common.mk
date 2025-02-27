@@ -222,6 +222,9 @@ PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/configs/fstab.exynos9610:$(TARGET_COPY_OUT_VENDOR)/etc/fstab.exynos9610 \
     $(COMMON_PATH)/configs/fstab.exynos9610:$(TARGET_COPY_OUT_RECOVERY)/root/first_stage_ramdisk/fstab.exynos9610
 
+# Kernel
+PRODUCT_ENABLE_UFFD_GC := true
+
 # Keymaster
 PRODUCT_PACKAGES += \
     android.hardware.keymaster@3.0_tee-service
@@ -418,10 +421,6 @@ PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/configs/thermal/exynos-thermal-kane.conf:$(TARGET_COPY_OUT_VENDOR)/etc/exynos-thermal-kane.conf \
     $(COMMON_PATH)/configs/thermal/exynos-thermal-kane-retin.conf:$(TARGET_COPY_OUT_VENDOR)/etc/exynos-thermal-kane-retin.conf \
     $(COMMON_PATH)/configs/thermal/exynos-thermal-troika.conf:$(TARGET_COPY_OUT_VENDOR)/etc/exynos-thermal-troika.conf
-
-# UFFD GC
-PRODUCT_ENABLE_UFFD_GC := false
-OVERRIDE_ENABLE_UFFD_GC := false
 
 # USB
 PRODUCT_PACKAGES += \
