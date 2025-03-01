@@ -398,6 +398,7 @@ PRODUCT_SOONG_NAMESPACES += \
     hardware/samsung_slsi-linaro/exynos/gralloc/gralloc3 \
     hardware/samsung_slsi-linaro/exynos/libaudio/audiohal \
     hardware/samsung_slsi-linaro/exynos/tee/kinibi410 \
+    hardware/samsung_slsi-linaro/exynos/tee/TlcTeeGatekeeper \
     hardware/samsung_slsi-linaro/exynos/tee/TlcTeeKeymaster4 \
     hardware/samsung_slsi/libbt
 
