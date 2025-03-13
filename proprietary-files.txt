@@ -103,14 +103,14 @@ vendor/lib64/libcharon.so
 vendor/lib64/libstrongswan.so
 
 ## Mobicore
-vendor/app/mcRegistry/00060308060501020000000000000000.tlbin
-vendor/app/mcRegistry/07010000000000000000000000000000.tlbin
-vendor/app/mcRegistry/0706000000000000000000000000004d.tlbin
-vendor/app/mcRegistry/07061000000000000000000000000000.tlbin
-vendor/app/mcRegistry/09090000070100010000000000000000.tlbin
-vendor/app/mcRegistry/FFFFFFFFD00000000000000000000016.tlbin
-vendor/app/mcRegistry/ffffffff00000000000000000000000e.tlbin
-vendor/app/mcRegistry/ffffffffd0000000000000000000000e.tlbin
+vendor/app/mcRegistry/00060308060501020000000000000000.tlbin:vendor/firmware/mcRegistry/00060308060501020000000000000000.tlbin
+vendor/app/mcRegistry/07010000000000000000000000000000.tlbin:vendor/firmware/mcRegistry/07010000000000000000000000000000.tlbin
+vendor/app/mcRegistry/0706000000000000000000000000004d.tlbin:vendor/firmware/mcRegistry/0706000000000000000000000000004d.tlbin
+vendor/app/mcRegistry/07061000000000000000000000000000.tlbin:vendor/firmware/mcRegistry/07061000000000000000000000000000.tlbin
+vendor/app/mcRegistry/09090000070100010000000000000000.tlbin:vendor/firmware/mcRegistry/09090000070100010000000000000000.tlbin
+vendor/app/mcRegistry/FFFFFFFFD00000000000000000000016.tlbin:vendor/firmware/mcRegistry/FFFFFFFFD00000000000000000000016.tlbin
+vendor/app/mcRegistry/ffffffff00000000000000000000000e.tlbin:vendor/firmware/mcRegistry/ffffffff00000000000000000000000e.tlbin
+vendor/app/mcRegistry/ffffffffd0000000000000000000000e.tlbin:vendor/firmware/mcRegistry/ffffffffd0000000000000000000000e.tlbin
 
 ## NFC
 vendor/etc/sec_s3nrn82_rfreg.bin
