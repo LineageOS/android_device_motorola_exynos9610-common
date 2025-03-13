@@ -411,11 +411,11 @@ PRODUCT_PACKAGES += \
     exynos-thermald
 
 PRODUCT_COPY_FILES += \
-    $(COMMON_PATH)/configs/thermal/exynos-thermal.conf:$(TARGET_COPY_OUT_VENDOR)/exynos-thermal.conf \
-    $(COMMON_PATH)/configs/thermal/exynos-thermal.env:$(TARGET_COPY_OUT_VENDOR)/exynos-thermal.env \
-    $(COMMON_PATH)/configs/thermal/exynos-thermal-kane.conf:$(TARGET_COPY_OUT_VENDOR)/exynos-thermal-kane.conf \
-    $(COMMON_PATH)/configs/thermal/exynos-thermal-kane-retin.conf:$(TARGET_COPY_OUT_VENDOR)/exynos-thermal-kane-retin.conf \
-    $(COMMON_PATH)/configs/thermal/exynos-thermal-troika.conf:$(TARGET_COPY_OUT_VENDOR)/exynos-thermal-troika.conf
+    $(COMMON_PATH)/configs/thermal/exynos-thermal.conf:$(TARGET_COPY_OUT_VENDOR)/etc/exynos-thermal.conf \
+    $(COMMON_PATH)/configs/thermal/exynos-thermal.env:$(TARGET_COPY_OUT_VENDOR)/etc/exynos-thermal.env \
+    $(COMMON_PATH)/configs/thermal/exynos-thermal-kane.conf:$(TARGET_COPY_OUT_VENDOR)/etc/exynos-thermal-kane.conf \
+    $(COMMON_PATH)/configs/thermal/exynos-thermal-kane-retin.conf:$(TARGET_COPY_OUT_VENDOR)/etc/exynos-thermal-kane-retin.conf \
+    $(COMMON_PATH)/configs/thermal/exynos-thermal-troika.conf:$(TARGET_COPY_OUT_VENDOR)/etc/exynos-thermal-troika.conf
 
 # USB
 PRODUCT_PACKAGES += \
