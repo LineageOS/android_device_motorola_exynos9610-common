@@ -391,6 +391,7 @@ PRODUCT_SOONG_NAMESPACES += \
     hardware/google/interfaces \
     hardware/google/pixel \
     hardware/lineage/interfaces/power-libperfmgr \
+    hardware/motorola \
     hardware/samsung \
     hardware/samsung_slsi-linaro/camera/N23 \
     hardware/samsung_slsi-linaro/exynos/c2service \
