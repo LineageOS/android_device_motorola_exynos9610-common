@@ -294,9 +294,7 @@ PRODUCT_PACKAGES += \
     libOMX.Exynos.VP9.Decoder \
     libOMX.Exynos.VP9.Encoder \
     libOMX.Exynos.WMV.Decoder \
-    libepicoperator \
-    libstagefright_softomx \
-    libstagefright_softomx_plugin.vendor
+    libepicoperator
 
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += $(COMMON_PATH)/overlay
