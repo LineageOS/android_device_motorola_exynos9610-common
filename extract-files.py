@@ -58,6 +58,8 @@ blob_fixups: blob_fixups_user_type = {
         .add_needed('libcrypto_shim.so'),
     ('vendor/lib/sensors.rp.so', 'vendor/lib64/sensors.rp.so'): blob_fixup()
         .replace_needed('libutils.so', 'libutils-v32.so'),
+    'vendor/lib64/libRbsFlow.so': blob_fixup()
+        .binary_regex_replace(b'/vendor/app', b'/vendor/etc'),
 }  # fmt: skip
 
 module = ExtractUtilsModule(

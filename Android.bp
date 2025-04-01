@@ -1,2 +1,9 @@
 soong_namespace {
 }
+
+install_symlink {
+    name: "vendor_etc_mcregistry_fingerprint_symlink",
+    vendor: true,
+    installed_location: "etc/mcRegistry/ffffffff00000000000000000000000e.tlbin",
+    symlink_target: "/vendor/firmware/mcRegistry/ffffffff00000000000000000000000e.tlbin",
+}

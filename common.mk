@@ -142,6 +142,9 @@ PRODUCT_PACKAGES += \
     android.hardware.biometrics.fingerprint@2.1 \
     android.hardware.biometrics.fingerprint@2.1.vendor
 
+PRODUCT_PACKAGES += \
+    vendor_etc_mcregistry_fingerprint_symlink
+
 # Fingerprint Gestures
 PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/configs/idc/uinput-egis.idc:$(TARGET_COPY_OUT_VENDOR)/usr/idc/uinput-egis.idc \
