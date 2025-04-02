@@ -19,9 +19,6 @@ COMMON_PATH := device/motorola/exynos9610-common
 ## Inherit proprietary vendor configuartion
 include vendor/motorola/exynos9610-common/BoardConfigVendor.mk
 
-## BUILD_BROKEN_*
-BUILD_BROKEN_DUP_RULES := true
-
 ## A/B
 AB_OTA_UPDATER := true
 
