@@ -50,6 +50,24 @@
       "message": "Also, HIDL light is deprecated and you are building the AIDL HAL, why do you need this?",
       "revId": "7d94fef4e73357bb3f1ba0ebc0de9487ccd73103",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "769e5a5a_72652718",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 16185
+      },
+      "writtenOn": "2025-04-07T15:44:27Z",
+      "side": 1,
+      "message": "Yeah this doesn\u0027t make sense.",
+      "parentUuid": "3202dc6b_4cb59b04",
+      "revId": "7d94fef4e73357bb3f1ba0ebc0de9487ccd73103",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
