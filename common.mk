@@ -133,10 +133,6 @@ PRODUCT_PACKAGES += \
     android.hardware.drm-service.clearkey \
     libprotobuf-cpp-lite-3.9.1-vendorcompat
 
-# FastCharge
-PRODUCT_PACKAGES += \
-    vendor.lineage.fastcharge@1.0-service.samsung
-
 # Fingerprint
 PRODUCT_PACKAGES += \
     android.hardware.biometrics.fingerprint@2.1 \
