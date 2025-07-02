@@ -33,6 +33,24 @@
       "message": "Please stop using fixup!s in device trees for no reason.\n\nDoes it hurt to write something meaningful like:\n\n\u003e  exynos9610: overlay: Restore Tethering and WiFi overlays\n\u003e  \n\u003e  Restore mistakenly deleted rro_overlays in commit b959639aa6fda7a9c7bc20167c39efc538bbc9c3.\n\u003e  Fixes build error about PRODUCT_PACKAGES WifiOverlay missing.",
       "revId": "eb06ef8bf2f1d30920e54055ed19b639fadb0072",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "e30438f0_5568fcea",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 2644
+      },
+      "writtenOn": "2025-07-02T19:31:08Z",
+      "side": 1,
+      "message": "I changed the commit title as you requested. It more clearly explains what\nthis patch fixes.\nI thought that fixup! was the correct notation when fixing a clear error in a\nprevious commit. However, that does lead to misleading titles.",
+      "parentUuid": "fff0a307_33abb087",
+      "revId": "eb06ef8bf2f1d30920e54055ed19b639fadb0072",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
