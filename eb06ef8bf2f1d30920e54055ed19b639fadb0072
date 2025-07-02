@@ -16,6 +16,23 @@
       "message": "Picking this fixes the build.",
       "revId": "eb06ef8bf2f1d30920e54055ed19b639fadb0072",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "fff0a307_33abb087",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 13648
+      },
+      "writtenOn": "2025-07-02T18:14:07Z",
+      "side": 1,
+      "message": "Please stop using fixup!s in device trees for no reason.\n\nDoes it hurt to write something meaningful like:\n\n\u003e  exynos9610: overlay: Restore Tethering and WiFi overlays\n\u003e  \n\u003e  Restore mistakenly deleted rro_overlays in commit b959639aa6fda7a9c7bc20167c39efc538bbc9c3.\n\u003e  Fixes build error about PRODUCT_PACKAGES WifiOverlay missing.",
+      "revId": "eb06ef8bf2f1d30920e54055ed19b639fadb0072",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
