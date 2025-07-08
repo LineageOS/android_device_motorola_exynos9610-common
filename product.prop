@@ -1,6 +1,9 @@
 ## Audio
 audio.record.delay=60
 
+# eBPF
+ro.bpf.kver_override=5.10.239
+
 ## GMS
 ro.opa.eligible_device=true
 ro.gwfcactivation.disabled_carriers=1187,1492,1839
