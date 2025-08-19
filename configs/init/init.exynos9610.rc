@@ -41,6 +41,8 @@ on init
     chmod 0664 /sys/power/cpufreq_max_limit
     chmod 0664 /sys/power/cpufreq_min_limit
 
+    chown system radio /sys/class/sec/switch/afc_disable
+
     ## SCSC WLAN
     # SD-755: Increase default socket rx buffer limit
     # Apply network parameters for high data performance.
