@@ -240,7 +240,7 @@ $(call soong_config_set,lineage_health,fast_charge_value_fast_charge,0)
 
 # Livedisplay
 PRODUCT_PACKAGES += \
-    vendor.lineage.livedisplay@2.0-service.exynos9610
+    vendor.lineage.livedisplay-service.samsung-exynos
 
 # Media
 PRODUCT_PACKAGES += \

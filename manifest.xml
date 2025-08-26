@@ -230,6 +230,13 @@
         </interface>
         <fqname>@4.0::IBiometricsFingerprintRbs/default</fqname>
     </hal>
+    <hal format="aidl">
+        <name>vendor.lineage.livedisplay</name>
+        <version>1</version>
+        <fqname>IAdaptiveBacklight/default</fqname>
+        <fqname>IDisplayModes/default</fqname>
+        <fqname>ISunlightEnhancement/default</fqname>
+    </hal>
     <hal format="hidl">
         <name>vendor.samsung.hardware.gnss</name>
         <transport>hwbinder</transport>
