@@ -16,6 +16,24 @@
       "message": "Manifest is still required.",
       "revId": "ac8336de8647ae5ca7fec50b653ca517c3565c06",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "d5af7b89_f6081bfc",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 16185
+      },
+      "writtenOn": "2025-08-26T21:59:13Z",
+      "side": 1,
+      "message": "done, sorry, hadn\u0027t looked, didn\u0027t realize it was diff from how moto, Sony did it.",
+      "parentUuid": "83f288ae_09102d07",
+      "revId": "ac8336de8647ae5ca7fec50b653ca517c3565c06",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
