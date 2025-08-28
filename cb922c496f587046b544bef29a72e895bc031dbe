@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "bd15541b_d9b7adfa",
+        "filename": "hidl/livedisplay/AdaptiveBacklight.cpp",
+        "patchSetId": 5
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 13648
+      },
+      "writtenOn": "2025-08-28T21:32:36Z",
+      "side": 0,
+      "message": "Different impl compared to hw/samsung",
+      "revId": "cb922c496f587046b544bef29a72e895bc031dbe",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "8dc0b76f_02ca1905",
+        "filename": "hidl/livedisplay/DisplayModes.cpp",
+        "patchSetId": 5
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 13648
+      },
+      "writtenOn": "2025-08-28T21:32:36Z",
+      "side": 0,
+      "message": "This looks quite different from the one in hw/samsung.",
+      "revId": "cb922c496f587046b544bef29a72e895bc031dbe",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "fcee9a3b_64c25a26",
+        "filename": "hidl/livedisplay/SunlightEnhancement.cpp",
+        "patchSetId": 5
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 13648
+      },
+      "writtenOn": "2025-08-28T21:32:36Z",
+      "side": 0,
+      "message": "Also different",
+      "revId": "cb922c496f587046b544bef29a72e895bc031dbe",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
