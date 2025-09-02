@@ -365,12 +365,8 @@ PRODUCT_PACKAGES += \
 
 # RIL
 PRODUCT_PACKAGES += \
-    cbd \
     vendor.samsung_slsi.telephony.hardware.radio@1.1 \
     vendor.samsung_slsi.telephony.hardware.radioExternal@1.1
-
-$(call soong_config_set,cbd,protocol,sit)
-$(call soong_config_set,cbd,use_legacy_ioctl,true)
 
 # Seccomp
 PRODUCT_COPY_FILES += \
@@ -399,7 +395,6 @@ PRODUCT_SOONG_NAMESPACES += \
     hardware/samsung \
     hardware/samsung_slsi-linaro/camera/N23 \
     hardware/samsung_slsi-linaro/exynos/c2service \
-    hardware/samsung_slsi-linaro/exynos/cpboot_v3 \
     hardware/samsung_slsi-linaro/exynos/gralloc/gralloc3 \
     hardware/samsung_slsi-linaro/exynos/libaudio/audiohal \
     hardware/samsung_slsi-linaro/exynos/tee/kinibi410 \
