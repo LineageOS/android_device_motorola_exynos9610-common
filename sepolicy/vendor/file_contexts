@@ -73,8 +73,6 @@
 
 /dev/scsc_h4_0                                                                          u:object_r:bt_device:s0
 
-/dev/sec-nfc                                                                            u:object_r:nfc_device:s0
-
 /dev/ttyGS[0-3]*                                                                        u:object_r:serial_device:s0
 
 /dev/umts_wfc0                                                                          u:object_r:pktrouter_device:s0
