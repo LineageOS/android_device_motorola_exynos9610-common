@@ -299,8 +299,7 @@ PRODUCT_PACKAGES += \
     libOMX.Exynos.VP8.Encoder \
     libOMX.Exynos.VP9.Decoder \
     libOMX.Exynos.VP9.Encoder \
-    libOMX.Exynos.WMV.Decoder \
-    libepicoperator
+    libOMX.Exynos.WMV.Decoder
 
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += $(COMMON_PATH)/overlay
