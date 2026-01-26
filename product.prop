@@ -2,7 +2,7 @@
 audio.record.delay=60
 
 # eBPF
-ro.bpf.kver_override=5.4.239
+ro.bpf.kver_override=5.10.239
 
 ## GMS
 ro.opa.eligible_device=true
