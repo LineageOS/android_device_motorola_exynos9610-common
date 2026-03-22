@@ -292,10 +292,14 @@
     <bool name="config_sustainedPerformanceModeSupported">true</bool>
 
     <!-- Default files to pin via Pinner Service -->
-    <string-array name="config_defaultPinnerServiceFiles" translatable="false">
-        <item>/system/framework/arm64/boot-framework.art</item>
-        <item>/vendor/lib64/egl/libGLES_mali.so</item>
+    <string-array name="config_defaultPinnerServiceFiles">
+        <item>/apex/com.android.art/javalib/core-oj.jar</item>
+        <item>/apex/com.android.art/javalib/core-libart.jar</item>
+        <item>/system/framework/framework.jar</item>
+        <item>/system/framework/services.jar</item>
         <item>/system/bin/surfaceflinger</item>
+        <item>/system_ext/priv-app/SystemUI/SystemUI.apk</item>
+        <item>/vendor/lib64/egl/libGLES_mali.so</item>
     </string-array>
 
     <!-- True if the device supports system navigation keys. -->
