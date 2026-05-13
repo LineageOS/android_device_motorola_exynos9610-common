@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "79efb05e_6a322c69",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 16185
+      },
+      "writtenOn": "2026-05-13T21:32:54Z",
+      "side": 1,
+      "message": "tried this: https://review.lineageos.org/c/LineageOS/android_device_motorola_exynos9610-common/+/445790 - common HAL would need a lot of adapting...",
+      "revId": "0569546cafabcba74309bff39aa1385d8f8d42c8",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
