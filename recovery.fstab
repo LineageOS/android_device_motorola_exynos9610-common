@@ -6,6 +6,7 @@
 
 /dev/block/by-name/system                /system               ext4    ro                                                  wait,slotselect,first_stage_mount
 /dev/block/by-name/vendor                /vendor               ext4    ro                                                  wait,slotselect,avb,first_stage_mount
+/dev/block/bootdevice/by-name/metadata   /metadata             ext4    noatime,nosuid,nodev,discard,data=ordered,barrier=1  wait,formattable,first_stage_mount,check
 /dev/block/bootdevice/by-name/userdata   /data                 f2fs    noatime,nosuid,nodev,discard,reserve_root=32768,resgid=1065,fsync_mode=nobarrier,inlinecrypt latemount,wait,check,quota,formattable,checkpoint=fs,fileencryption=aes-256-xts:aes-256-cts:v2+inlinecrypt_optimized,fscompress,readahead_size_kb=128
 /dev/block/bootdevice/by-name/efs        /mnt/vendor/efs       ext4    noatime,nosuid,nodev,barrier=1,rw                   wait
 /dev/block/bootdevice/by-name/persist    /mnt/vendor/persist   ext4    noatime,nosuid,nodev,barrier=1,data=ordered,nodelalloc,nomblk_io_submit,errors=panic wait,notrim
