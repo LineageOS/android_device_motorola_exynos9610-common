@@ -14,48 +14,37 @@
  * limitations under the License.
  */
 
-#define LOG_TAG "android.hardware.vibrator@1.0-service.exynos9610"
+#define LOG_TAG "android.hardware.vibrator-service.exynos9610"
 
 #include <android-base/logging.h>
-#include <android/hardware/vibrator/1.0/IVibrator.h>
-#include <hidl/HidlSupport.h>
-#include <hidl/HidlTransportSupport.h>
-#include <utils/Errors.h>
-#include <utils/StrongPointer.h>
+#include <android/binder_manager.h>
+#include <android/binder_process.h>
 
 #include "Vibrator.h"
 
-using android::hardware::configureRpcThreadpool;
-using android::hardware::joinRpcThreadpool;
-using android::hardware::vibrator::V1_0::IVibrator;
-using android::hardware::vibrator::V1_0::implementation::Vibrator;
-
-using android::OK;
-using android::sp;
-using android::status_t;
+using aidl::android::hardware::vibrator::Vibrator;
 
 int main() {
-    status_t status;
-    sp<IVibrator> vibrator;
+    ABinderProcess_setThreadPoolMaxThreadCount(0);
 
     LOG(INFO) << "Vibrator HAL service is starting.";
 
-    vibrator = new Vibrator();
+    std::shared_ptr<Vibrator> vibrator = ndk::SharedRefBase::make<Vibrator>();
     if (vibrator == nullptr) {
         LOG(ERROR) << "Can not create an instance of Vibrator HAL IVibrator, exiting.";
         goto shutdown;
     }
 
-    configureRpcThreadpool(1, true);
-
-    status = vibrator->registerAsService();
-    if (status != OK) {
-        LOG(ERROR) << "Could not register service for Vibrator HAL";
-        goto shutdown;
+    {
+        const std::string instance = std::string(Vibrator::descriptor) + "/default";
+        if (AServiceManager_addService(vibrator->asBinder().get(), instance.c_str()) != STATUS_OK) {
+            LOG(ERROR) << "Could not register service for Vibrator HAL";
+            goto shutdown;
+        }
     }
 
     LOG(INFO) << "Vibrator HAL service is Ready.";
-    joinRpcThreadpool();
+    ABinderProcess_joinThreadPool();
 
 shutdown:
     // In normal operation, we don't expect the thread pool to shutdown
