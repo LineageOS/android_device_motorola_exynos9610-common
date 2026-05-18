@@ -27,13 +27,11 @@
 using ::android::base::ReadFileToString;
 using ::android::base::StringPrintf;
 using ::android::base::Trim;
-using ::android::hardware::Void;
 
+namespace aidl {
 namespace vendor {
 namespace lineage {
 namespace livedisplay {
-namespace V2_0 {
-namespace implementation {
 
 static constexpr const char* kDefaultPath = "/data/vendor/display/.displaymodedefault";
 
@@ -151,54 +149,54 @@ DisplayModes::DisplayModes() : mCurrentModeId(0), mDefaultModeId(0) {
     setDisplayMode(mDefaultModeId, false);
 }
 
-// Methods from ::vendor::lineage::livedisplay::V2_0::IDisplayModes follow.
-Return<void> DisplayModes::getDisplayModes(getDisplayModes_cb resultCb) {
+// Methods from ::aidl::vendor::lineage::livedisplay::BnDisplayModes follow.
+ndk::ScopedAStatus DisplayModes::getDisplayModes(std::vector<DisplayMode>* _aidl_return) {
     std::vector<DisplayMode> modes;
 
     for (const auto& entry : kModeMap) {
         if (entry.first < 3) modes.push_back({entry.first, entry.second});
     }
 
-    resultCb(modes);
-    return Void();
+    *_aidl_return = modes;
+    return ndk::ScopedAStatus::ok();
 }
 
-Return<void> DisplayModes::getCurrentDisplayMode(getCurrentDisplayMode_cb resultCb) {
+ndk::ScopedAStatus DisplayModes::getCurrentDisplayMode(DisplayMode* _aidl_return) {
     // decon_dqe_aosp_color_show always returns 0 so we have to keep track ourselves
 
-    resultCb({mCurrentModeId, kModeMap.at(mCurrentModeId)});
+    *_aidl_return = DisplayMode{mCurrentModeId, kModeMap.at(mCurrentModeId)};
 
-    return Void();
+    return ndk::ScopedAStatus::ok();
 }
 
-Return<void> DisplayModes::getDefaultDisplayMode(getDefaultDisplayMode_cb resultCb) {
-    resultCb({mDefaultModeId, kModeMap.at(mDefaultModeId)});
-    return Void();
+ndk::ScopedAStatus DisplayModes::getDefaultDisplayMode(DisplayMode* _aidl_return) {
+    *_aidl_return = DisplayMode{mDefaultModeId, kModeMap.at(mDefaultModeId)};
+    return ndk::ScopedAStatus::ok();
 }
 
-Return<bool> DisplayModes::setDisplayMode(int32_t modeID, bool makeDefault) {
+ndk::ScopedAStatus DisplayModes::setDisplayMode(int32_t modeID, bool makeDefault) {
     const auto iter = kModeMap.find(modeID);
     if (iter == kModeMap.end()) {
-        return false;
+        return ndk::ScopedAStatus::fromExceptionCode(EX_UNSUPPORTED_OPERATION);
     }
     std::ofstream modeFile(COLOR_MODE_SYSFS_PATH);
     modeFile << iter->first;
     if (modeFile.fail()) {
-        return false;
+        return ndk::ScopedAStatus::fromExceptionCode(EX_UNSUPPORTED_OPERATION);
     }
 
     if (makeDefault) {
         std::ofstream defaultFile(kDefaultPath);
         defaultFile << iter->first;
         if (defaultFile.fail()) {
-            return false;
+            return ndk::ScopedAStatus::fromExceptionCode(EX_UNSUPPORTED_OPERATION);
         }
         mDefaultModeId = iter->first;
     }
 
     mCurrentModeId = iter->first;
 
-    return true;
+    return ndk::ScopedAStatus::ok();
 }
 
 void DisplayModes::initialize() {
@@ -223,10 +221,7 @@ void DisplayModes::initialize() {
     }
 }
 
-// Methods from ::android::hidl::base::V1_0::IBase follow.
-
-}  // namespace implementation
-}  // namespace V2_0
 }  // namespace livedisplay
 }  // namespace lineage
 }  // namespace vendor
+}  // namespace aidl
