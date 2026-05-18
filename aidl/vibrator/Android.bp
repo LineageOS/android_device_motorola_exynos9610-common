@@ -13,18 +13,19 @@
 // limitations under the License.
 
 cc_binary {
-    name: "android.hardware.vibrator@1.0-service.exynos9610",
-    defaults: ["hidl_defaults"],
+    name: "android.hardware.vibrator-service.exynos9610",
+    defaults: ["default_android_hardware_vibrator_ndk"],
     vendor: true,
     relative_install_path: "hw",
-    init_rc: ["android.hardware.vibrator@1.0-service.exynos9610.rc"],
+    init_rc: ["android.hardware.vibrator-service.exynos9610.rc"],
     srcs: ["service.cpp", "Vibrator.cpp"],
     shared_libs: [
         "libbase",
-        "libhidlbase",
         "liblog",
         "libutils",
-        "libhardware",
-        "android.hardware.vibrator@1.0",
+        "libbinder_ndk",
+    ],
+    static_libs: [
+        "android.hardware.vibrator-V1-ndk",
     ],
 }
