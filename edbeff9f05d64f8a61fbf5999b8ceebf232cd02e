@@ -16,6 +16,24 @@
       "message": "needs a build smoke test",
       "revId": "edbeff9f05d64f8a61fbf5999b8ceebf232cd02e",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c74afb53_48eb309a",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 16185
+      },
+      "writtenOn": "2026-05-18T03:21:33Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "2a1bcff6_b56bb82a",
+      "revId": "edbeff9f05d64f8a61fbf5999b8ceebf232cd02e",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
