@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "fcbe3ff9_d823a4a1",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 8
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 16185
+      },
+      "writtenOn": "2026-05-18T03:23:26Z",
+      "side": 1,
+      "message": "for later - we should move all soong_config_set to common.mk as boardconfig is a lineage addition (aosp can\u0027t set them there).",
+      "revId": "e8cd626a941b1c6454ffa229bb82e5fa38b6af9a",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
