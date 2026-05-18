@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-#define LOG_TAG "android.hardware.vibrator@1.0-service.exynos9610"
+#define LOG_TAG "android.hardware.vibrator-service.exynos9610"
 
 #include <android-base/logging.h>
 #include <android/hardware/vibrator/1.0/IVibrator.h>
