@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "500e8cf6_0e3e991e",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 16185
+      },
+      "writtenOn": "2026-05-18T03:23:57Z",
+      "side": 1,
+      "message": "sepolicy as a whole needs cleanup, when we started this tree exynos support wasn\u0027t really there platform side.",
+      "revId": "4d4f6a437e089b14f39842edcf5c2926af55c0a0",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
