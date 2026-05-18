@@ -13,10 +13,9 @@
 // limitations under the License.
 
 cc_binary {
-    name: "vendor.lineage.livedisplay@2.0-service.exynos9610",
-    init_rc: ["vendor.lineage.livedisplay@2.0-service.exynos9610.rc"],
-    vintf_fragments: ["vendor.lineage.livedisplay@2.0-service.exynos9610.xml"],
-    defaults: ["hidl_defaults"],
+    name: "vendor.lineage.livedisplay-service.exynos9610",
+    init_rc: ["vendor.lineage.livedisplay-service.exynos9610.rc"],
+    vintf_fragments: ["vendor.lineage.livedisplay-service.exynos9610.xml"],
     relative_install_path: "hw",
     vendor: true,
     srcs: [
@@ -27,11 +26,9 @@ cc_binary {
     ],
     shared_libs: [
         "libbase",
+        "libbinder_ndk",
         "libbinder",
-        "libdl",
-        "libcutils",
-        "libhidlbase",
         "libutils",
-        "vendor.lineage.livedisplay@2.0",
+        "vendor.lineage.livedisplay-V1-ndk",
     ],
 }
