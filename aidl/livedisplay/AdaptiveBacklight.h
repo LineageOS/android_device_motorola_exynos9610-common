@@ -14,42 +14,22 @@
  * limitations under the License.
  */
 
-#include <android-base/file.h>
-#include <android-base/strings.h>
+#pragma once
 
-#include <fstream>
+#include <aidl/vendor/lineage/livedisplay/BnAdaptiveBacklight.h>
 
-#include "SunlightEnhancement.h"
-
-using android::base::ReadFileToString;
-using android::base::Trim;
-using android::base::WriteStringToFile;
-
+namespace aidl {
 namespace vendor {
 namespace lineage {
 namespace livedisplay {
-namespace V2_0 {
-namespace implementation {
 
-static constexpr const char* kHBMPath = "/sys/class/backlight/hbm/hbm_mode";
+class AdaptiveBacklight : public BnAdaptiveBacklight {
+  public:
+    ndk::ScopedAStatus getEnabled(bool* _aidl_return) override;
+    ndk::ScopedAStatus setEnabled(bool enabled) override;
+};
 
-Return<bool> SunlightEnhancement::isEnabled() {
-    std::string tmp;
-    int32_t contents = 0;
-
-    if (ReadFileToString(kHBMPath, &tmp)) {
-        contents = std::stoi(Trim(tmp));
-    }
-
-    return contents > 0;
-}
-
-Return<bool> SunlightEnhancement::setEnabled(bool enabled) {
-    return WriteStringToFile(enabled ? "1" : "0", kHBMPath, true);
-}
-
-}  // namespace implementation
-}  // namespace V2_0
 }  // namespace livedisplay
 }  // namespace lineage
 }  // namespace vendor
+}  // namespace aidl
