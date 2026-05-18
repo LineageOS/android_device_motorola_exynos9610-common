@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "bba12789_b124014a",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 16185
+      },
+      "writtenOn": "2026-05-18T18:20:41Z",
+      "side": 1,
+      "message": "if it introduces any lag, we need to disable by default and allow user to enable.",
+      "revId": "365b24bdd43a5b186d91b6a33f833ac2f7e89be0",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
