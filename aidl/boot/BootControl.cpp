@@ -18,10 +18,10 @@
 
 #include <fstream>
 
+namespace aidl {
 namespace android {
 namespace hardware {
 namespace boot {
-namespace V1_0 {
 namespace implementation {
 
 bool BootControl::readMetadata(bctl_metadata_t& data) {
@@ -104,20 +104,23 @@ bctl_metadata_t BootControl::resetMetadata() {
     return data;
 }
 
-// Methods from ::android::hardware::boot::V1_0::IBootControl follow.
-Return<uint32_t> BootControl::getNumberSlots() {
-    return 2;
+// Methods from ::aidl::android::hardware::boot::IBootControl follow.
+::ndk::ScopedAStatus BootControl::getNumberSlots(int32_t* _aidl_return) {
+    *_aidl_return = 2;
+    return ::ndk::ScopedAStatus::ok();
 }
 
-Return<uint32_t> BootControl::getCurrentSlot() {
+::ndk::ScopedAStatus BootControl::getCurrentSlot(int32_t* _aidl_return) {
     bctl_metadata_t data;
     std::string slot_suffix = GetProperty("ro.boot.slot_suffix", "");
 
     if (!slot_suffix.empty()) {
         if (slot_suffix.compare(SLOT_SUFFIX_A) == 0) {
-            return 0;
+            *_aidl_return = 0;
+            return ::ndk::ScopedAStatus::ok();
         } else if (slot_suffix.compare(SLOT_SUFFIX_B) == 0) {
-            return 1;
+            *_aidl_return = 1;
+            return ::ndk::ScopedAStatus::ok();
         }
     } else {
         // read current slot from metadata incase "ro.boot.slot_suffix" is empty
@@ -126,35 +129,37 @@ Return<uint32_t> BootControl::getCurrentSlot() {
             // is_active will be 0 and if slot a is active, is_active
             // will be 1. In other words, the "not" value of slot A's
             // is_active var lines up to the current active slot index.
-            return !data.slot_info[0].is_active;
+            *_aidl_return = !data.slot_info[0].is_active;
+            return ::ndk::ScopedAStatus::ok();
         }
     }
 
     // fallback to slot A
-    return 0;
+    *_aidl_return = 0;
+    return ::ndk::ScopedAStatus::ok();
 }
 
-Return<void> BootControl::markBootSuccessful(markBootSuccessful_cb _hidl_cb) {
+::ndk::ScopedAStatus BootControl::markBootSuccessful() {
     bctl_metadata_t data;
-    int active_slot = getCurrentSlot();
+    int32_t active_slot;
+
+    getCurrentSlot(&active_slot);
 
     if (readMetadata(data)) {
         data.slot_info[active_slot].boot_successful = 1;
         data.slot_info[active_slot].tries_remaining = 0;
 
         if (writeMetadata(data)) {
-            _hidl_cb(CommandResult{true, ""});
+            return ::ndk::ScopedAStatus::ok();
         } else {
-            _hidl_cb(CommandResult{false, "Failed to write metadata"});
+            return ::ndk::ScopedAStatus::fromServiceSpecificErrorWithMessage(0, "Failed to write metadata");
         }
     } else {
-        _hidl_cb(CommandResult{false, "Failed to read metadata"});
+        return ::ndk::ScopedAStatus::fromServiceSpecificErrorWithMessage(0, "Failed to read metadata");
     }
-
-    return Void();
 }
 
-Return<void> BootControl::setActiveBootSlot(uint32_t slot, setActiveBootSlot_cb _hidl_cb) {
+::ndk::ScopedAStatus BootControl::setActiveBootSlot(int32_t slot) {
     bctl_metadata_t data;
 
     if (slot < 2) {
@@ -170,21 +175,19 @@ Return<void> BootControl::setActiveBootSlot(uint32_t slot, setActiveBootSlot_cb 
             data.slot_info[!slot].tries_remaining = 7;
 
             if (writeMetadata(data)) {
-                _hidl_cb(CommandResult{true, ""});
+                return ::ndk::ScopedAStatus::ok();
             } else {
-                _hidl_cb(CommandResult{false, "Failed to write metadata"});
+                return ::ndk::ScopedAStatus::fromServiceSpecificErrorWithMessage(0, "Failed to write metadata");
             }
         } else {
-            _hidl_cb(CommandResult{false, "Failed to read metadata"});
+            return ::ndk::ScopedAStatus::fromServiceSpecificErrorWithMessage(0, "Failed to read metadata");
         }
     } else {
-        _hidl_cb(CommandResult{false, "Invalid slot"});
+        return ::ndk::ScopedAStatus::fromServiceSpecificErrorWithMessage(0, "Invalid slot");
     }
-
-    return Void();
 }
 
-Return<void> BootControl::setSlotAsUnbootable(uint32_t slot, setSlotAsUnbootable_cb _hidl_cb) {
+::ndk::ScopedAStatus BootControl::setSlotAsUnbootable(int32_t slot) {
     bctl_metadata_t data;
 
     if (slot < 2) {
@@ -192,75 +195,81 @@ Return<void> BootControl::setSlotAsUnbootable(uint32_t slot, setSlotAsUnbootable
             data.slot_info[slot].bootable = 0;
 
             if (writeMetadata(data)) {
-                _hidl_cb(CommandResult{true, ""});
+                return ::ndk::ScopedAStatus::ok();
             } else {
-                _hidl_cb(CommandResult{false, "Failed to write metadata"});
+                return ::ndk::ScopedAStatus::fromServiceSpecificErrorWithMessage(0, "Failed to write metadata");
             }
         } else {
-            _hidl_cb(CommandResult{false, "Failed to read metadata"});
+            return ::ndk::ScopedAStatus::fromServiceSpecificErrorWithMessage(0, "Failed to read metadata");
         }
     } else {
-        _hidl_cb(CommandResult{false, "Invalid slot"});
+        return ::ndk::ScopedAStatus::fromServiceSpecificErrorWithMessage(0, "Invalid slot");
     }
-
-    return Void();
 }
 
-Return<BoolResult> BootControl::isSlotBootable(uint32_t slot) {
+::ndk::ScopedAStatus BootControl::isSlotBootable(int32_t slot, bool* _aidl_return) {
     bctl_metadata_t data;
-    BoolResult ret = BoolResult::FALSE;
 
     if (slot < 2) {
         if (readMetadata(data)) {
-            ret = static_cast<BoolResult>(data.slot_info[slot].bootable);
+            *_aidl_return = data.slot_info[slot].bootable;
+            return ::ndk::ScopedAStatus::ok();
         } else {
-            ret = BoolResult::FALSE;
+            *_aidl_return = false;
+            return ::ndk::ScopedAStatus::ok();
         }
     } else {
-        ret = BoolResult::INVALID_SLOT;
+        return ::ndk::ScopedAStatus::fromServiceSpecificErrorWithMessage(0, "Invalid slot");
     }
-
-    return ret;
 }
 
-Return<BoolResult> BootControl::isSlotMarkedSuccessful(uint32_t slot) {
+::ndk::ScopedAStatus BootControl::isSlotMarkedSuccessful(int32_t slot, bool* _aidl_return) {
     bctl_metadata_t data;
-    BoolResult ret = BoolResult::FALSE;
 
     if (slot < 2) {
         if (readMetadata(data)) {
-            ret = static_cast<BoolResult>(data.slot_info[slot].boot_successful);
+            *_aidl_return = data.slot_info[slot].boot_successful;
+            return ::ndk::ScopedAStatus::ok();
         } else {
-            ret = BoolResult::FALSE;
+            *_aidl_return = false;
+            return ::ndk::ScopedAStatus::ok();
         }
     } else {
-        ret = BoolResult::INVALID_SLOT;
+        return ::ndk::ScopedAStatus::fromServiceSpecificErrorWithMessage(0, "Invalid slot");
     }
-
-    return ret;
 }
 
-Return<void> BootControl::getSuffix(uint32_t slot, getSuffix_cb _hidl_cb) {
+::ndk::ScopedAStatus BootControl::getSuffix(int32_t slot, std::string* _aidl_return) {
     if (slot < 2) {
         if (slot == 0) {
-            _hidl_cb(SLOT_SUFFIX_A);
+            *_aidl_return = SLOT_SUFFIX_A;
         } else {
-            _hidl_cb(SLOT_SUFFIX_B);
+            *_aidl_return = SLOT_SUFFIX_B;
         }
     } else {
         // default to slot A
-        _hidl_cb(SLOT_SUFFIX_A);
+        *_aidl_return = SLOT_SUFFIX_A;
     }
 
-    return Void();
+    return ::ndk::ScopedAStatus::ok();
 }
 
-IBootControl* HIDL_FETCH_IBootControl(const char* /* hal */) {
-    return new BootControl();
+::ndk::ScopedAStatus BootControl::getActiveBootSlot(int32_t* _aidl_return) {
+    return getCurrentSlot(_aidl_return);
+}
+
+::ndk::ScopedAStatus BootControl::getSnapshotMergeStatus(::aidl::android::hardware::boot::MergeStatus* _aidl_return) {
+    *_aidl_return = ::aidl::android::hardware::boot::MergeStatus::NONE;
+    return ::ndk::ScopedAStatus::ok();
+}
+
+::ndk::ScopedAStatus BootControl::setSnapshotMergeStatus(::aidl::android::hardware::boot::MergeStatus in_status) {
+    (void)in_status;
+    return ::ndk::ScopedAStatus::ok();
 }
 
 }  // namespace implementation
-}  // namespace V1_0
 }  // namespace boot
 }  // namespace hardware
 }  // namespace android
+}  // namespace aidl
