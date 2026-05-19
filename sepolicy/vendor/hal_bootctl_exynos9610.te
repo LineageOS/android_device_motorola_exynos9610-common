@@ -1,0 +1,7 @@
+type hal_bootctl_exynos9610, domain;
+type hal_bootctl_exynos9610_exec, exec_type, vendor_file_type, file_type;
+
+init_daemon_domain(hal_bootctl_exynos9610)
+hal_server_domain(hal_bootctl_exynos9610, hal_bootctl)
+
+allow hal_bootctl_exynos9610 slotinfo_block_device:blk_file rw_file_perms;
