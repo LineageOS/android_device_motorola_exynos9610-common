@@ -13,7 +13,7 @@
 // limitations under the License.
 
 cc_library_shared {
-    name: "android.hardware.boot@1.0-impl.exynos9610",
+    name: "android.hardware.boot-impl.exynos9610",
     defaults: ["hidl_defaults"],
     relative_install_path: "hw",
     vendor: true,
@@ -22,9 +22,9 @@ cc_library_shared {
 
     shared_libs: [
         "libbase",
-        "libhidlbase",
+        "libbinder_ndk",
         "libhardware",
         "libutils",
-        "android.hardware.boot@1.0",
+        "android.hardware.boot-V1-ndk",
     ],
 }
