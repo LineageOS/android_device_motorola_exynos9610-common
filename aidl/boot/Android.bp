@@ -12,19 +12,22 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-cc_library_shared {
-    name: "android.hardware.boot@1.0-impl.exynos9610",
-    defaults: ["hidl_defaults"],
+cc_binary {
+    name: "android.hardware.boot-service.exynos9610",
     relative_install_path: "hw",
     vendor: true,
     recovery_available: true,
-    srcs: ["BootControl.cpp"],
-
+    init_rc: ["android.hardware.boot-service.exynos9610.rc"],
+    vintf_fragments: ["android.hardware.boot-service.exynos9610.xml"],
+    srcs: [
+        "BootControl.cpp",
+        "service.cpp",
+    ],
     shared_libs: [
         "libbase",
-        "libhidlbase",
+        "libbinder_ndk",
         "libhardware",
         "libutils",
-        "android.hardware.boot@1.0",
+        "android.hardware.boot-V1-ndk",
     ],
 }
