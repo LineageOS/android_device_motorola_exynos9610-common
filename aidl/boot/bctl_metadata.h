@@ -14,8 +14,7 @@
  * limitations under the License.
  */
 
-#ifndef SAMSUNG_BCTL_METADATA_H
-#define SAMSUNG_BCTL_METADATA_H
+#pragma once
 
 #define BCTL_METADATA_PARTITION "/dev/block/bootdevice/by-name/slotinfo"
 #define BCTL_METADATA_OFFSET 0x800
@@ -37,5 +36,3 @@ struct slot_metadata_t {
 struct bctl_metadata_t {
     slot_metadata_t slot_info[2];
 };
-
-#endif  // SAMSUNG_BCTL_METADATA_H
