@@ -85,10 +85,8 @@ TARGET_SCREEN_WIDTH := 1080
 
 # Boot Control
 PRODUCT_PACKAGES += \
-    android.hardware.boot@1.0 \
-    android.hardware.boot@1.0-impl.exynos9610 \
-    android.hardware.boot@1.0-impl.exynos9610.recovery \
-    android.hardware.boot@1.0-service
+    android.hardware.boot-service.exynos9610 \
+    android.hardware.boot-service.exynos9610.recovery
 
 # Camera
 PRODUCT_PACKAGES += \
