@@ -288,13 +288,6 @@
          -->
     <string name="config_mainBuiltInDisplayCutout" translatable="false">M 0,0 H 66.0 V 69.0 H 0 V 0 Z @dp @left</string>
 
-    <!-- The OEM specified sensor type for the gesture to launch the camera app. -->
-    <integer name="config_cameraLaunchGestureSensorType">65540</integer>
-
-    <!-- The OEM specified sensor string type for the gesture to launch camera app, this value
-         must match the value of config_cameraLaunchGestureSensorType in OEM's HAL -->
-    <string name="config_cameraLaunchGestureSensorStringType" translatable="false">com.motorola.sensor.camera_activate</string>
-
     <!-- True if the device supports Sustained Performance Mode-->
     <bool name="config_sustainedPerformanceModeSupported">true</bool>
 
