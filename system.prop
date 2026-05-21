@@ -5,11 +5,7 @@ persist.audio.endcall.delay=250
 ro.vendor.cscsupported=1
 
 ## Display
-ro.surface_flinger.use_color_management=1
-
-## Encryption
-ro.crypto.allow_encrypt_override=false
-ro.crypto.volume.filenames_mode=aes-256-cts
+ro.surface_flinger.use_color_management=true
 
 ## IMS
 persist.radio.use.legacy.emergency.stack=true
@@ -20,12 +16,6 @@ media.settings.xml=/vendor/etc/media_profiles_vendor.xml
 
 ## Rotation
 persist.demo.hdmirotationlock=false
-
-## Navigation Bar
-qemu.hw.mainkeys=0
-
-## Tracing
-persist.traced.enable=1
 
 ## Wi-Fi
 ro.boot.wificountrycode=00
