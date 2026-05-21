@@ -116,9 +116,6 @@ include device/samsung_slsi/sepolicy/sepolicy.mk
 PRODUCT_PRIVATE_SEPOLICY_DIRS += $(COMMON_PATH)/sepolicy/private
 BOARD_VENDOR_SEPOLICY_DIRS += $(COMMON_PATH)/sepolicy/vendor
 
-## Soong Namespace
-PRODUCT_SOONG_NAMESPACES += $(COMMON_PATH)
-
 ## Verified Boot
 BOARD_AVB_ENABLE := true
 
