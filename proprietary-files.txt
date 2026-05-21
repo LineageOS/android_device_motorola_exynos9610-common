@@ -1,4 +1,5 @@
-## Common proprietary files - from motorola/troika_retail/troika_sprout:11/RSBS31.Q1-48-36-20/3e578:user/release-keys, unless pinned
+## All proprietary files from this list, unless pinned and noted otherwise are from
+## moto one action (RETAIL) - motorola/troika_retail/troika_sprout:11/RSBS31.Q1-48-36-20/3e578:user/release-keys
 
 ## Camera
 vendor/lib/libENF.so
