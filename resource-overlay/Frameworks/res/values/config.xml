@@ -25,6 +25,7 @@
     <dimen name="status_bar_height_landscape">24dp</dimen>
     <dimen name="status_bar_height_portrait">165px</dimen>
     <dimen name="status_bar_icon_size">24dp</dimen>
+    <dimen name="rounded_corner_radius">104.0px</dimen>
     <dimen name="rounded_corner_radius_bottom">36dp</dimen>
 
     <!-- ComponentName of a dream to show whenever the system would otherwise have

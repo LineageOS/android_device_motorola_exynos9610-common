@@ -5,6 +5,5 @@
 -->
 <resources>
     <dimen name="global_actions_top_padding">650.0px</dimen>
-    <dimen name="rounded_corner_radius">104.0px</dimen>
     <dimen name="rounded_corner_content_padding">6.0px</dimen>
 </resources>
