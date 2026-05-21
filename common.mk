@@ -314,7 +314,17 @@ PRODUCT_PACKAGES += \
     libOMX.Exynos.WMV.Decoder
 
 # Overlays
-DEVICE_PACKAGE_OVERLAYS += $(COMMON_PATH)/overlay
+PRODUCT_PACKAGES += \
+    ApertureOverlayCommon \
+    CarrierConfigResCommon \
+    FrameworksResCommon \
+    Launcher3ResCommon \
+    LineageSDKResCommon \
+    LineageSettingsProviderResCommon \
+    SettingsProviderResCommon \
+    TelephonyResCommon \
+    WifiResCommon
+
 PRODUCT_ENFORCE_RRO_TARGETS += *
 
 # Permissions
@@ -444,7 +454,6 @@ PRODUCT_CFI_INCLUDE_PATHS += hardware/samsung_slsi/scsc_wifibt/wpa_supplicant_li
 PRODUCT_PACKAGES += \
     android.hardware.wifi-service \
     hostapd \
-    WifiOverlay \
     wpa_supplicant
 
 PRODUCT_COPY_FILES += \
