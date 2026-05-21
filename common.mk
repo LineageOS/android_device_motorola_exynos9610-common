@@ -203,10 +203,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hidl.allocator@1.0.vendor
 
-# HotwordEnrollement
-PRODUCT_COPY_FILES += \
-    $(COMMON_PATH)/configs/privapp-permissions-hotword.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/privapp-permissions-hotword.xml
-
 # HWC
 PRODUCT_PACKAGES += \
     android.hardware.composer.hwc3-service.slsi
