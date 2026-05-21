@@ -5,7 +5,4 @@
 
 runtime_resource_overlay {
     name: "WifiResCommon",
-    resource_dirs: ["res"],
-    sdk_version: "current",
-    proprietary: true
 }

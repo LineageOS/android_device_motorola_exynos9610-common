@@ -4,6 +4,11 @@
      SPDX-License-Identifier: Apache-2.0
 -->
 <resources>
+    <dimen name="rounded_corner_content_padding">6px</dimen>
+
+    <!-- Distance from the top of screen in pixels, to position the power menu near the button. -->
+    <dimen name="global_actions_top_padding">650px</dimen>
+
     <!-- Blur radius behind Notification Shade -->
     <dimen name="max_shade_window_blur_radius">17dp</dimen>
 </resources>
