@@ -179,7 +179,6 @@
         <item>26</item>
     </integer-array>
 
-    <bool name="config_bluetooth_hfp_inband_ringing_support">true</bool>
     <bool name="config_enableNewAutoSelectNetworkUI">false</bool>
     <bool name="config_hotswapCapable">true</bool>
     <bool name="config_nightDisplayAvailable">true</bool>
@@ -205,9 +204,6 @@
 
     <!-- True if the device supports Sustained Performance Mode -->
     <bool name="config_sustainedPerformanceModeSupported">true</bool>
-
-    <!-- Boolean indicating if current platform supports BLE peripheral mode -->
-    <bool name="config_bluetooth_le_peripheral_mode_supported">true</bool>
 
     <!-- IWLAN data service package name to bind to by default. If none is specified in an overlay, an
          empty string is passed in -->
