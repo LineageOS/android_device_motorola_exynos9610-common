@@ -69,6 +69,10 @@ PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/configs/audio/mixer_paths.retin.xml:$(TARGET_COPY_OUT_VENDOR)/etc/mixer_paths.retin.xml \
     $(COMMON_PATH)/configs/audio/mixer_paths.xml:$(TARGET_COPY_OUT_VENDOR)/etc/mixer_paths.xml
 
+$(call soong_config_set,exynos_audio,PROXY_LIBRARY,//device/motorola/exynos9610-common:libaudioproxy)
+
+$(call soong_config_set_bool,exynos_audio,USE_SITRIL,true)
+
 # Bluetooth
 PRODUCT_PACKAGES += \
     android.hardware.bluetooth@1.0.vendor \
@@ -102,6 +106,26 @@ PRODUCT_PACKAGES += \
     libexynoscamera_plugin_utils \
     libexynoscamera_vdis_plugin \
     libgiantmscl \
+
+$(call soong_config_set,exynos_camera,back_camera_rotation,90)
+$(call soong_config_set,exynos_camera,front_camera_rotation,270)
+$(call soong_config_set,exynos_camera,secure_camera_rotation,0)
+$(call soong_config_set,exynos_camera,target_soc_base,exynos9610)
+
+$(call soong_config_set,exynos_camera,libenf,//vendor/motorola/exynos9610-common:libENF)
+$(call soong_config_set,exynos_camera,libhifills,//vendor/motorola/exynos9610-common:libhifills)
+$(call soong_config_set,exynos_camera,libvdis,//vendor/motorola/exynos9610-common:libvdis)
+$(call soong_config_set,exynos_camera,libyuvrepro,//vendor/motorola/exynos9610-common:libyuvrepro)
+
+$(call soong_config_set_bool,exynos_camera,uses_camera_solution_vdis,true)
+$(call soong_config_set_bool,exynos_camera,use_dual_camera,true)
+$(call soong_config_set_bool,exynos_camera,uses_hifi_capture,true)
+$(call soong_config_set_bool,exynos_camera,uses_hifi_lls_capture,true)
+$(call soong_config_set_bool,exynos_camera,use_pipe_handler,true)
+$(call soong_config_set_bool,exynos_camera,uses_remosaic_sensor,true)
+$(call soong_config_set_bool,exynos_camera,uses_sensor_listener,true)
+$(call soong_config_set_bool,exynos_camera,uses_slsi_plugin,true)
+$(call soong_config_set_bool,exynos_camera,uses_slsi_vendor_tags,true)
 
 # ConfigStore
 PRODUCT_PACKAGES += \
@@ -236,10 +260,11 @@ PRODUCT_PACKAGES += \
 
 $(call soong_config_set,lineage_health,charging_control_charging_enabled,0)
 $(call soong_config_set,lineage_health,charging_control_charging_disabled,1)
-$(call soong_config_set_bool,lineage_health,charging_control_supports_bypass,false)
 $(call soong_config_set,lineage_health,fast_charge_node,/sys/class/sec/switch/afc_disable)
 $(call soong_config_set,lineage_health,fast_charge_value_none,1)
 $(call soong_config_set,lineage_health,fast_charge_value_fast_charge,0)
+
+$(call soong_config_set_bool,lineage_health,charging_control_supports_bypass,false)
 
 # Livedisplay
 PRODUCT_PACKAGES += \
