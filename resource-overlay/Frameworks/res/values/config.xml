@@ -228,20 +228,6 @@
     -->
     <bool name="config_powerDecoupleAutoSuspendModeFromDisplay">true</bool>
 
-    <!--  Maximum number of supported switchable users (excluding Guests & Demo users).
-          Does not include profiles. See {@link UserManager#getMaxSwitchableUsers()} for details.
-
-          Setting to 1 disables multiple switchable users (e.g. secondary users).
-
-          To limit the number of any particular user type (whether switchable or not), set the
-          appropriate maximum in {@link com.android.internal.R.xml#config_user_types}.
-
-         Note: If > 1, it is expected that UserManager.USER_TYPE_FULL_SECONDARY users are supported
-         on the device (at least for testing purposes, even if in practice the UI really only allows
-         other switchable types, such as restricted profiles or guests, to be created).
-         -->
-    <integer name="config_multiuserMaximumUsers">4</integer>
-
     <!-- Safe headphone volume index. When music stream volume is below this index
     the SPL on headphone output is compliant to EN 60950 requirements for portable music
     players. -->
