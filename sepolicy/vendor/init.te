@@ -18,3 +18,6 @@ allow init proc_printk:file w_file_perms;
 allow init sysfs_scheduler:file create_file_perms;
 
 allow init vendor_sysfs_mmc_host:file w_file_perms;
+
+r_dir_file(init, functionfs)
+allow init functionfs:dir mounton;
