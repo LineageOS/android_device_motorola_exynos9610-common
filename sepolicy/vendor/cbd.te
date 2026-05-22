@@ -1,2 +1,4 @@
 get_prop(cbd, radio_control_prop)
 set_prop(cbd, vendor_radio_prop)
+
+allow cbd modem_block_device:blk_file r_file_perms;
