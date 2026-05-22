@@ -1,2 +1,0 @@
-dontaudit gmscore_app mnt_product_file:dir search;
-dontaudit gmscore_app hal_memtrack_hwservice:hwservice_manager find;

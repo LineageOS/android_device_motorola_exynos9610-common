@@ -1,11 +1,6 @@
-####################################
-# Daemons
-#
-
-/system/bin/clean_scratch_files     u:object_r:clean_scratch_files_exec:s0
-
 ##########################
-# Devices
-#
+## Devices
+##
 
+# FM Radio
 /dev/radio0                         u:object_r:fm_device:s0

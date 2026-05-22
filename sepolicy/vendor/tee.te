@@ -1,3 +1,6 @@
+# First boot encryption race
+allow tee unlabeled:dir search;
+
 allow tee log_vendor_data_file:dir search;
 
 allow tee {
