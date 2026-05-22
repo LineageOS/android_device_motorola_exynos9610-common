@@ -1,4 +1,4 @@
-# data types
+# /data
 type camera_vendor_data_file, file_type, data_file_type;
 type chargeonly_vendor_data_file, file_type, data_file_type;
 type mediadrm_vendor_data_file, file_type, data_file_type;
@@ -6,13 +6,13 @@ type misc_vendor_data_file, file_type, data_file_type;
 type rild_vendor_data_file, file_type, data_file_type;
 type sensor_vendor_data_file, file_type, data_file_type;
 
-# debug types
+# /debug
 type debugfs_mali, fs_type, debugfs_type;
 type debugfs_mali_mem, fs_type, debugfs_type;
 type debugfs_ion, fs_type, debugfs_type;
 type debugfs_ion_dma, fs_type, debugfs_type;
 
-# persist types
+# /persist
 type persist_file, file_type, vendor_persist_type;
 type persist_audio_file, file_type, vendor_persist_type;
 type persist_camera_file, file_type, vendor_persist_type;
@@ -22,12 +22,12 @@ type persist_mobicore_file, file_type, vendor_persist_type;
 type persist_security_file, file_type, vendor_persist_type;
 type persist_sensor_file, file_type, vendor_persist_type;
 
-# proc types
+# /proc
 type proc_printk, fs_type, proc_type;
 type proc_reap_mem_on_sigkill, fs_type, proc_type;
 type proc_swappiness, fs_type, proc_type;
 
-# sysfs types
+# /sysfs
 type sysfs_abox_writable, sysfs_type, rw_fs_type, fs_type;
 type sysfs_chipid, sysfs_type, r_fs_type, fs_type;
 type sysfs_cpuhotplug_writable, sysfs_type, rw_fs_type, fs_type;
@@ -43,4 +43,8 @@ type sysfs_rbs, fs_type, sysfs_type;
 type sysfs_scheduler, fs_type, sysfs_type;
 type sysfs_socinfo, fs_type, sysfs_type;
 type sysfs_v4l, sysfs_type, r_fs_type, fs_type;
+type vendor_sysfs_battery_supply, sysfs_type, fs_type;
 type vendor_sysfs_mmc_host, fs_type, sysfs_type;
+type vendor_sysfs_usb_c, sysfs_type, fs_type;
+type vendor_sysfs_usb_supply, sysfs_type, fs_type;
+

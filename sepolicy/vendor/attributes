@@ -1,1 +1,6 @@
+####################################
+## Attributes
+##
+
+# /persist
 attribute vendor_persist_type;
