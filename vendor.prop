@@ -103,6 +103,11 @@ ro.config.low_ram=1
 ## Sensors
 ro.vendor.sensors.mot_ltv=true
 
+## USB
+ro.recovery.usb.vid=18d1
+ro.recovery.usb.adb.pid=d001
+ro.recovery.usb.fastboot.pid=4ee0
+
 ## Wi-Fi
 wifi.interface=wlan0
 
