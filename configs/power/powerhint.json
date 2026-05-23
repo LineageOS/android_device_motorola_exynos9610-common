@@ -7,7 +7,7 @@
             "Values": [
                 "2210000",
                 "2080000",
-                "1144000",
+                "1144000"
             ],
             "WriteOnly": true,
             "ResetOnInit": true
@@ -27,17 +27,6 @@
                 "0"
             ],
             "WriteOnly": true,
-            "ResetOnInit": true
-        },
-        {
-            "Name": "LPMDisable",
-            "Path": "/sys/module/cpuidle/parameters/off",
-            "Values": [
-                "0",
-                "1"
-            ],
-            "WriteOnly": true,
-            "DefaultIndex": 0,
             "ResetOnInit": true
         },
         {
@@ -68,7 +57,7 @@
             "Values": [
                 "949000",
                 "764000",
-                "455000",
+                "455000"
             ],
             "WriteOnly": true,
             "ResetOnInit": true
@@ -173,12 +162,6 @@
         },
         {
             "PowerHint": "LAUNCH",
-            "Node": "LPMDisable",
-            "Duration": 5000,
-            "Value": "1"
-        },
-        {
-            "PowerHint": "LAUNCH",
             "Node": "TASchedtuneBoost",
             "Duration": 5000,
             "Value": "50"
@@ -214,12 +197,6 @@
             "Value": "2210000"
         },
         {
-            "PowerHint": "CAMERA_LAUNCH",
-            "Node": "LPMDisable",
-            "Duration": 1000,
-            "Value": "1"
-        },
-        {
             "PowerHint": "CAMERA_STREAMING_MID",
             "Node": "PowerHALMainState",
             "Duration": 0,
@@ -244,28 +221,10 @@
             "Value": "1976000"
         },
         {
-            "PowerHint": "CAMERA_SHOT",
-            "Node": "LPMDisable",
-            "Duration": 1000,
-            "Value": "1"
-        },
-        {
-            "PowerHint": "AUDIO_LAUNCH",
-            "Node": "LPMDisable",
-            "Duration": 0,
-            "Value": "1"
-        },
-        {
             "PowerHint": "AUDIO_STREAMING_LOW_LATENCY",
             "Node": "PowerHALAudioState",
             "Duration": 0,
             "Value": "AUDIO_STREAMING_LOW_LATENCY"
-        },
-        {
-            "PowerHint": "AUDIO_STREAMING_LOW_LATENCY",
-            "Node": "LPMDisable",
-            "Duration": 0,
-            "Value": "1"
         },
         {
             "PowerHint": "EXPENSIVE_RENDERING",
