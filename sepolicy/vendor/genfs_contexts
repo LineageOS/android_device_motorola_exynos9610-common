@@ -16,8 +16,11 @@ genfscon debugfs /mali/mem/                                                     
 ## Proc
 ##
 
-# VM
+# printk
 genfscon proc /sys/kernel/printk                                                                                        u:object_r:proc_printk:s0
+
+# VM
+genfscon proc /sys/vm/min_free_kbytes                                                                                   u:object_r:proc_min_free_kbytes:s0
 genfscon proc /sys/vm/reap_mem_on_sigkill                                                                               u:object_r:proc_reap_mem_on_sigkill:s0
 genfscon proc /sys/vm/swappiness                                                                                        u:object_r:proc_swappiness:s0
 
