@@ -30,17 +30,6 @@
             "ResetOnInit": true
         },
         {
-            "Name": "LPMDisable",
-            "Path": "/sys/module/cpuidle/parameters/off",
-            "Values": [
-                "0",
-                "1"
-            ],
-            "WriteOnly": true,
-            "DefaultIndex": 0,
-            "ResetOnInit": true
-        },
-        {
             "Name": "TASchedtuneBoost",
             "Path": "/dev/stune/top-app/schedtune.boost",
             "Values": [
