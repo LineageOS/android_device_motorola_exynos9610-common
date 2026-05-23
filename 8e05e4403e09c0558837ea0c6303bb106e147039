@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "bc64fe2d_11a69290",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 16185
+      },
+      "writtenOn": "2026-05-23T05:11:58Z",
+      "side": 1,
+      "message": "horridly, indescribably broken.\n\nConfigFS in recovery refuses to work and the legacy way is so touchy it won\u0027t reliably work.",
+      "revId": "8e05e4403e09c0558837ea0c6303bb106e147039",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
