@@ -69,6 +69,7 @@ TARGET_USERIMAGES_USE_F2FS := true
 
 ## Kernel
 BOARD_KERNEL_IMAGE_NAME := Image
+TARGET_KERNEL_CONFIG := moto_exynos9610_defconfig
 TARGET_KERNEL_NO_GCC := true
 TARGET_KERNEL_SOURCE := kernel/motorola/exynos9610
 
