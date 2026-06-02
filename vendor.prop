@@ -96,6 +96,9 @@ vendor.radio.smsdomain=2
 vendor.rild.libpath=libsitril.so
 vendor.sys.exynos.modempath=/dev/block/platform/13520000.ufs/by-name/modem
 
+## RAM
+ro.config.low_ram=1
+
 ## Sensors
 ro.vendor.sensors.mot_ltv=true
 
