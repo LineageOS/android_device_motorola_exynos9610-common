@@ -41,6 +41,7 @@ genfscon sysfs /devices/virtual/backlight/hbm                                   
 genfscon sysfs /class/power_supply/battery                                                                              u:object_r:sysfs_battery_writable:s0
 genfscon sysfs /devices/platform/11500000.mali/power_policy                                                             u:object_r:sysfs_battery_writable:s0
 genfscon sysfs /devices/platform/13830000.i2c/i2c-8/8-003b/power_supply/s2mu106-fuelgauge                               u:object_r:sysfs_battery_writable:s0
+genfscon sysfs /devices/platform/13840000.i2c/i2c-8/8-003d/s2mu00x-battery/power_supply/battery                         u:object_r:sysfs_battery_writable:s0
 genfscon sysfs /devices/platform/13840000.i2c/i2c-9/9-003d/s2mu00x-battery/factory_charge_upper                         u:object_r:sysfs_battery:s0
 genfscon sysfs /devices/platform/13840000.i2c/i2c-9/9-003d/s2mu00x-battery/power_supply/ac                              u:object_r:sysfs_battery_writable:s0
 genfscon sysfs /devices/platform/13840000.i2c/i2c-9/9-003d/s2mu00x-battery/power_supply/battery                         u:object_r:sysfs_battery_writable:s0
@@ -52,6 +53,8 @@ genfscon sysfs /module/scsc_bt/parameters/bluetooth_address                     
 
 # Camera
 genfscon sysfs /devices/platform/14490000.fimc_is/debug/fixed_sensor_fps                                                u:object_r:sysfs_fimc_writable:s0
+
+# Charging
 
 # CPU
 genfscon sysfs /module/cpuidle/parameters/off                                                                           u:object_r:sysfs_cpuhotplug_writable:s0
