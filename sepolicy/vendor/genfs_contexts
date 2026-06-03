@@ -133,11 +133,15 @@ genfscon sysfs /devices/platform/12c30000.mfc0/video4linux/video7/name          
 genfscon sysfs /devices/platform/11d40000.hsi2c/i2c-1/1-005a/leds/vibrator                                              u:object_r:sysfs_vibrator:s0
 
 # Wakeup
+genfscon sysfs /devices/platform/11a10000.speedy/i2c-6/6-0000/s2mpu09-rtc/rtc/rtc0/wakeup                               u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/11a10000.speedy/i2c-7/7-0000/s2mpu09-rtc/rtc/rtc0/wakeup                               u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/11a10000.speedy/i2c-7/7-0000/s2mpu09-rtc/wakeup                                        u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/11a10000.speedy/i2c-7/7-0000/wakeup                                                    u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/13830000.i2c/i2c-8/8-003b/power_supply/s2mu106-fuelgauge/wakeup                        u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/13830000.i2c/i2c-8/8-003c/power_supply/s2mu106-usbpd/wakeup                            u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/13840000.i2c/i2c-8/8-003d/s2mu00x-battery/power_supply/ac/wakeup                       u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/13840000.i2c/i2c-8/8-003d/s2mu00x-battery/power_supply/battery/wakeup                  u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/13840000.i2c/i2c-8/8-003d/s2mu00x-battery/power_supply/usb/wakeup                      u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/13840000.i2c/i2c-9/9-003d/s2mu00x-battery/power_supply/ac/wakeup                       u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/13840000.i2c/i2c-9/9-003d/s2mu00x-battery/power_supply/battery/wakeup                  u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/13840000.i2c/i2c-9/9-003d/s2mu00x-battery/power_supply/usb/wakeup                      u:object_r:sysfs_wakeup:s0
