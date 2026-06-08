@@ -2,5 +2,3 @@ allow hal_power_default sysfs_mali_writable:file rw_file_perms;
 allow hal_power_default sysfs_decon:file r_file_perms;
 allow hal_power_default sysfs_battery_writable:file rw_file_perms;
 allow hal_power_default sysfs_cpuhotplug_writable:file rw_file_perms;
-
-hal_client_domain(hal_power_default, hal_thermal)
