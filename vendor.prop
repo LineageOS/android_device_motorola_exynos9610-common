@@ -42,6 +42,8 @@ dalvik.vm.heaptargetutilization=0.75
 
 ## Display
 persist.sys.sf.native_mode=1
+vendor.display.dqe.tune_onoff=1
+vendor.display.cabc.enable=1
 
 ## DRM
 drm.service.enabled=true
