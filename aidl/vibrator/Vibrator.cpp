@@ -39,7 +39,7 @@ static uint32_t amplitudeToBrightness(float amplitude) {
 }
 
 ndk::ScopedAStatus Vibrator::getCapabilities(int32_t* _aidl_return) {
-    *_aidl_return = CAP_ON_CALLBACK | CAP_AMPLITUDE_CONTROL | CAP_PERFORM_CALLBACK;
+    *_aidl_return = CAP_ON_CALLBACK | CAP_AMPLITUDE_CONTROL | CAP_PERFORM_CALLBACK | CAP_COMPOSITION;
     return ndk::ScopedAStatus::ok();
 }
 
@@ -61,6 +61,7 @@ ndk::ScopedAStatus Vibrator::on(int32_t timeout_ms, const std::shared_ptr<IVibra
 
 ndk::ScopedAStatus Vibrator::off() {
     set("/sys/class/leds/vibrator/activate", 0);
+    set("/sys/class/leds/vibrator/state", 0);
 
     return ndk::ScopedAStatus::ok();
 }
@@ -167,25 +168,99 @@ ndk::ScopedAStatus Vibrator::perform(Effect effect, EffectStrength strength,
     return ndk::ScopedAStatus::ok();
 }
 
-ndk::ScopedAStatus Vibrator::getCompositionDelayMax(int32_t* /*_aidl_return*/) {
-    return ndk::ScopedAStatus::fromExceptionCode(EX_UNSUPPORTED_OPERATION);
-}
-
-ndk::ScopedAStatus Vibrator::getCompositionSizeMax(int32_t* /*_aidl_return*/) {
-    return ndk::ScopedAStatus::fromExceptionCode(EX_UNSUPPORTED_OPERATION);
-}
-
-ndk::ScopedAStatus Vibrator::getSupportedPrimitives(std::vector<CompositePrimitive>* _aidl_return) {
-    *_aidl_return = {};
+ndk::ScopedAStatus Vibrator::getCompositionDelayMax(int32_t* _aidl_return) {
+    *_aidl_return = 5000;
     return ndk::ScopedAStatus::ok();
 }
 
-ndk::ScopedAStatus Vibrator::getPrimitiveDuration(CompositePrimitive /*in_primitive*/, int32_t* /*_aidl_return*/) {
-    return ndk::ScopedAStatus::fromExceptionCode(EX_UNSUPPORTED_OPERATION);
+ndk::ScopedAStatus Vibrator::getCompositionSizeMax(int32_t* _aidl_return) {
+    *_aidl_return = 16;
+    return ndk::ScopedAStatus::ok();
 }
 
-ndk::ScopedAStatus Vibrator::compose(const std::vector<CompositeEffect>& /*in_composite*/, const std::shared_ptr<IVibratorCallback>& /*in_callback*/) {
-    return ndk::ScopedAStatus::fromExceptionCode(EX_UNSUPPORTED_OPERATION);
+static int32_t getPrimitiveDurationMs(CompositePrimitive primitive) {
+    switch (primitive) {
+        case CompositePrimitive::CLICK:
+            return 80;
+        case CompositePrimitive::TICK:
+            return 40;
+        case CompositePrimitive::THUD:
+            return 150;
+        case CompositePrimitive::DOUBLE_CLICK:
+            return 250;
+        default:
+            return 0;
+    }
+}
+
+ndk::ScopedAStatus Vibrator::getSupportedPrimitives(std::vector<CompositePrimitive>* _aidl_return) {
+    *_aidl_return = {
+        CompositePrimitive::CLICK,
+        CompositePrimitive::TICK,
+        CompositePrimitive::THUD,
+        CompositePrimitive::DOUBLE_CLICK,
+    };
+    return ndk::ScopedAStatus::ok();
+}
+
+ndk::ScopedAStatus Vibrator::getPrimitiveDuration(CompositePrimitive in_primitive, int32_t* _aidl_return) {
+    int32_t duration = getPrimitiveDurationMs(in_primitive);
+    if (duration == 0) {
+        return ndk::ScopedAStatus::fromExceptionCode(EX_UNSUPPORTED_OPERATION);
+    }
+    *_aidl_return = duration;
+    return ndk::ScopedAStatus::ok();
+}
+
+static void playPrimitive(CompositePrimitive primitive, float scale) {
+    int32_t duration = getPrimitiveDurationMs(primitive);
+    uint32_t brightness = static_cast<uint32_t>(scale * 255.0f);
+    
+    set("/sys/class/leds/vibrator/brightness", brightness);
+    
+    if (primitive == CompositePrimitive::DOUBLE_CLICK) {
+        set("/sys/class/leds/vibrator/duration", 80);
+        set("/sys/class/leds/vibrator/state", 1);
+        set("/sys/class/leds/vibrator/activate", 1);
+        std::this_thread::sleep_for(std::chrono::milliseconds(100));
+        set("/sys/class/leds/vibrator/activate", 0);
+        set("/sys/class/leds/vibrator/state", 0);
+        std::this_thread::sleep_for(std::chrono::milliseconds(50));
+        set("/sys/class/leds/vibrator/brightness", brightness);
+        set("/sys/class/leds/vibrator/duration", 80);
+        set("/sys/class/leds/vibrator/state", 1);
+        set("/sys/class/leds/vibrator/activate", 1);
+    } else {
+        set("/sys/class/leds/vibrator/duration", duration);
+        set("/sys/class/leds/vibrator/state", 1);
+        set("/sys/class/leds/vibrator/activate", 1);
+    }
+}
+
+ndk::ScopedAStatus Vibrator::compose(const std::vector<CompositeEffect>& in_composite,
+        const std::shared_ptr<IVibratorCallback>& in_callback) {
+    if (in_composite.empty()) {
+        return ndk::ScopedAStatus::fromExceptionCode(EX_ILLEGAL_ARGUMENT);
+    }
+
+    std::thread([in_composite, in_callback]() {
+        for (size_t i = 0; i < in_composite.size(); i++) {
+            int32_t dur = getPrimitiveDurationMs(in_composite[i].primitive);
+            if (dur == 0) continue;
+
+            playPrimitive(in_composite[i].primitive, in_composite[i].scale);
+            std::this_thread::sleep_for(std::chrono::milliseconds(dur + 20));
+            set("/sys/class/leds/vibrator/activate", 0);
+            set("/sys/class/leds/vibrator/state", 0);
+            std::this_thread::sleep_for(std::chrono::milliseconds(10));
+        }
+
+        if (in_callback) {
+            in_callback->onComplete();
+        }
+    }).detach();
+
+    return ndk::ScopedAStatus::ok();
 }
 
 ndk::ScopedAStatus Vibrator::getSupportedAlwaysOnEffects(std::vector<Effect>* _aidl_return) {
