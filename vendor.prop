@@ -100,7 +100,6 @@ vendor.sys.exynos.modempath=/dev/block/platform/13520000.ufs/by-name/modem
 
 ## RAM
 ro.config.force_multi_window=1
-ro.config.low_ram=1
 
 ## Sensors
 ro.vendor.sensors.mot_ltv=true
