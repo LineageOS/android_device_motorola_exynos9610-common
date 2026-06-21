@@ -13,7 +13,7 @@ ro.telephony.block_binder_thread_on_incoming_calls=false
 
 ## LMK
 ro.lmk.kill_heaviest_task=true
-ro.lmk.thrashing_limit=100
+ro.lmk.thrashing_limit=50
 ro.lmk.swap_free_low_percentage=20
 ro.lmk.swap_util_max=90
 ro.lmk.psi_complete_stall_ms=150
