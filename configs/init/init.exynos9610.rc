@@ -447,6 +447,8 @@ on fs
     chown system system /sys/class/panel/panel/cabc_mode
     chmod 0660 /sys/class/backlight/hbm/hbm_mode
     chown system system /sys/class/backlight/hbm/hbm_mode
+    write /sys/class/panel/panel/cabc_mode 1
+    write /sys/class/backlight/hbm/hbm_mode 0
 
 # Permissions for dqe
     chmod 0660 /sys/class/dqe/dqe/gamma
@@ -465,6 +467,8 @@ on fs
     chown system system /sys/class/dqe/dqe/tune_onoff
     chmod 0660 /sys/class/dqe/dqe/aosp_colors
     chown system system /sys/class/dqe/dqe/aosp_colors
+    write /sys/class/dqe/dqe/tune_onoff 1
+    write /sys/class/dqe/dqe/aosp_colors 1
 
 # Permissions for gnss
     chmod 0660 /dev/gnss_ipc
