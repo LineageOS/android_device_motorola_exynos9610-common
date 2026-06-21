@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "46114ae3_f6c4467d",
+        "filename": "configs/power/powerhint.json",
+        "patchSetId": 1
+      },
+      "lineNbr": 280,
+      "author": {
+        "id": 36711
+      },
+      "writtenOn": "2026-06-21T16:25:46Z",
+      "side": 1,
+      "message": "Does the POWER_SAVE hint even exist?",
+      "revId": "dd76534d3b6daa1a7baf50044f408659603e70a2",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
