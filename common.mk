@@ -406,7 +406,8 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_p.mk)
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH) \
     hardware/google/interfaces \
-    hardware/google/pixel \
+    hardware/google/pixel/power-libperfmgr \
+    hardware/google/pixel/thermal \
     hardware/lineage/interfaces/power-libperfmgr \
     hardware/motorola \
     hardware/samsung \
