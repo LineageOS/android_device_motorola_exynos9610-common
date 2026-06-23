@@ -445,6 +445,7 @@ on fs
     chown system system /sys/class/backlight/backlight/max_brightness
     chmod 0660 /sys/class/panel/panel/cabc_mode
     chown system system /sys/class/panel/panel/cabc_mode
+    write /sys/class/panel/panel/cabc_mode 1
     chmod 0660 /sys/class/backlight/hbm/hbm_mode
     chown system system /sys/class/backlight/hbm/hbm_mode
 
@@ -463,8 +464,10 @@ on fs
     chown system system /sys/class/dqe/dqe/tune_mode2
     chmod 0660 /sys/class/dqe/dqe/tune_onoff
     chown system system /sys/class/dqe/dqe/tune_onoff
+    write /sys/class/dqe/dqe/tune_onoff 1
     chmod 0660 /sys/class/dqe/dqe/aosp_colors
     chown system system /sys/class/dqe/dqe/aosp_colors
+    write /sys/class/dqe/dqe/aosp_colors 1
 
 # Permissions for gnss
     chmod 0660 /dev/gnss_ipc
