@@ -6,6 +6,9 @@ ro.vendor.cscsupported=1
 
 ## Display
 ro.surface_flinger.use_color_management=true
+ro.surface_flinger.has_HDR_display=true
+ro.surface_flinger.has_wide_color_display=true
+ro.surface_flinger.protected_contents=true
 
 ## IMS
 persist.radio.use.legacy.emergency.stack=true
