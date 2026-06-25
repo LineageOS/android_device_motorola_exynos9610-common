@@ -116,14 +116,6 @@ $(call soong_config_set_bool,exynos_camera,uses_sensor_listener,true)
 $(call soong_config_set_bool,exynos_camera,uses_slsi_plugin,true)
 $(call soong_config_set_bool,exynos_camera,uses_slsi_vendor_tags,true)
 
-# ConfigStore
-PRODUCT_PACKAGES += \
-    android.hardware.configstore@1.1-service
-
-# ConfigStore
-PRODUCT_PACKAGES += \
-    disable_configstore
-
 # Display
 PRODUCT_PACKAGES += \
     android.hardware.graphics.allocator@2.0-impl \
