@@ -183,6 +183,8 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     gralloc.exynos9610
 
+$(call soong_config_set_bool,libui,legacy_gralloc,true)
+
 # Graphics
 # Device uses high-density artwork where available
 PRODUCT_AAPT_CONFIG := xlarge
