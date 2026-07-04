@@ -223,6 +223,9 @@ PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/configs/fstab.exynos9610:$(TARGET_COPY_OUT_VENDOR)/etc/fstab.exynos9610 \
     $(COMMON_PATH)/configs/fstab.exynos9610:$(TARGET_COPY_OUT_RECOVERY)/root/first_stage_ramdisk/fstab.exynos9610
 
+# ION
+$(call soong_config_set_bool,libion,legacy_impl,true)
+
 # Kernel
 PRODUCT_ENABLE_UFFD_GC := true
 
