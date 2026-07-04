@@ -1,2 +1,2 @@
-type vendor_rcs_app, domain;
+type vendor_rcs_app, domain, coredomain;
 app_domain(vendor_rcs_app)

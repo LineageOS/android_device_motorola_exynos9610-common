@@ -135,6 +135,7 @@ VENDOR_SECURITY_PATCH := 2022-07-01
 
 ## SELinux
 BOARD_SEPOLICY_TEE_FLAVOR := mobicore
+SELINUX_IGNORE_NEVERALLOWS := true
 include device/lineage/sepolicy/exynos/sepolicy.mk
 include device/lineage/sepolicy/libion/sepolicy.mk
 include device/lineage/sepolicy/libperfmgr/sepolicy.mk
