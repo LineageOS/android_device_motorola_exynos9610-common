@@ -44,7 +44,7 @@ BOARD_HAVE_BLUETOOTH_SLSI := true
 # Extracted with libbootimg
 BOARD_BOOTIMG_HEADER_VERSION := 1
 BOARD_KERNEL_BASE := 0x10000000
-BOARD_KERNEL_CMDLINE := loop.max_part=7 androidboot.boot_devices=13520000.ufs
+BOARD_KERNEL_CMDLINE := loop.max_part=7 androidboot.boot_devices=13520000.ufs androidboot.selinux=permissive
 BOARD_KERNEL_OFFSET := 0x00008000
 BOARD_KERNEL_PAGESIZE := 2048
 BOARD_RAMDISK_OFFSET := 0x00000000
@@ -140,8 +140,8 @@ include device/lineage/sepolicy/libion/sepolicy.mk
 include device/lineage/sepolicy/libperfmgr/sepolicy.mk
 include device/samsung_slsi/sepolicy/sepolicy.mk
 
-PRODUCT_PRIVATE_SEPOLICY_DIRS += $(COMMON_PATH)/sepolicy/private
-BOARD_VENDOR_SEPOLICY_DIRS += $(COMMON_PATH)/sepolicy/vendor
+#PRODUCT_PRIVATE_SEPOLICY_DIRS += $(COMMON_PATH)/sepolicy/private
+#BOARD_VENDOR_SEPOLICY_DIRS += $(COMMON_PATH)/sepolicy/vendor
 
 ## Verified Boot
 BOARD_AVB_ENABLE := true
