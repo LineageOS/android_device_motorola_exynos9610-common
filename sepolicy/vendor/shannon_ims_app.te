@@ -1,0 +1,17 @@
+# Rules for the system_ext shannon_ims_app domain that reference
+# vendor types must live in vendor policy.
+allow shannon_ims_app hal_exynos_rild_hwservice:hwservice_manager find;
+
+allow shannon_ims_app misc_vendor_data_file:dir create_dir_perms;
+allow shannon_ims_app misc_vendor_data_file:file create_file_perms;
+
+# connect to charon's control socket; creating sock_files here is
+# neverallowed for coredomain
+allow shannon_ims_app misc_vendor_data_file:sock_file { getattr read write };
+
+allow shannon_ims_app charonservice:unix_stream_socket connectto;
+
+set_prop(shannon_ims_app, vendor_ims_prop)
+set_prop(shannon_ims_app, vendor_radio_prop)
+
+binder_call(shannon_ims_app, rild)

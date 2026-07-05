@@ -1,0 +1,2 @@
+type shannon_rcs_app, domain, coredomain;
+app_domain(shannon_rcs_app)
