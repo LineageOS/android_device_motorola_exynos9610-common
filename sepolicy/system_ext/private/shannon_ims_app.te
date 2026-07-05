@@ -1,0 +1,29 @@
+typeattribute shannon_ims_app coredomain;
+app_domain(shannon_ims_app)
+
+allow shannon_ims_app {
+    app_api_service
+    radio_service
+    registry_service
+}:service_manager find;
+
+allow shannon_ims_app audioserver_service:service_manager find;
+
+allow shannon_ims_app radio_data_file:dir create_dir_perms;
+allow shannon_ims_app radio_data_file:file create_file_perms;
+
+dontaudit shannon_ims_app system_data_file:dir search;
+dontaudit shannon_ims_app user_profile_root_file:dir r_dir_perms;
+
+allow shannon_ims_app dnsproxyd_socket:sock_file write;
+allow shannon_ims_app self:udp_socket create_socket_perms;
+
+allow shannon_ims_app netd:unix_stream_socket connectto;
+allow shannon_ims_app node:udp_socket node_bind;
+
+allow shannon_ims_app self:netlink_route_socket { create_socket_perms_no_ioctl nlmsg_read };
+
+# no idea why, /system/etc/hosts
+dontaudit shannon_ims_app system_file:file lock;
+
+set_prop(shannon_ims_app, radio_prop)

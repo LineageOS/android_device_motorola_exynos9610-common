@@ -1,2 +1,0 @@
-type vendor_rcs_app, domain;
-app_domain(vendor_rcs_app)
