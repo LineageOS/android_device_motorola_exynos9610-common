@@ -1,0 +1,12 @@
+####################################
+## Applications
+##
+
+# IMS/RCS
+user=radio seinfo=platform name=com.shannon.dataservice domain=shannon_ims_app
+user=radio seinfo=platform name=com.shannon.imsservice:remote domain=shannon_ims_app
+user=radio seinfo=platform name=com.shannon.imsservice domain=shannon_ims_app
+user=radio seinfo=platform name=com.shannon.networkservice domain=shannon_ims_app
+user=radio seinfo=platform name=com.shannon.qualifiednetworksservice domain=shannon_ims_app
+user=radio seinfo=platform name=com.shannon.rcsservice:remote domain=shannon_rcs_app
+user=radio seinfo=platform name=com.shannon.rcsservice domain=shannon_rcs_app
