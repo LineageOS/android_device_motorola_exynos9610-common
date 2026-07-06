@@ -1,5 +1,5 @@
 typeattribute shannon_ims_app coredomain;
-# Sets vendor_ims_prop/vendor_radio_prop (rules in vendor policy)
+# Sets vendor_ims_prop/vendor_moto_radio_prop (rules in vendor policy)
 typeattribute shannon_ims_app system_writes_vendor_properties_violators;
 app_domain(shannon_ims_app)
 

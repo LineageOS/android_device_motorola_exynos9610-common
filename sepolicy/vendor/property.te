@@ -4,4 +4,7 @@ vendor_public_prop(vendor_audio_prop)
 vendor_public_prop(vendor_camera_prop)
 vendor_public_prop(vendor_ims_prop)
 vendor_public_prop(moto_boot_prop)
+# Local replacement for samsung_slsi's vendor_radio_prop
+# (vendor_internal_prop, so inaccessible to shannon_ims_app)
+vendor_public_prop(vendor_moto_radio_prop)
 vendor_public_prop(rmnet_mux_prop)
