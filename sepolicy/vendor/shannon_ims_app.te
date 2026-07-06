@@ -12,6 +12,6 @@ allow shannon_ims_app misc_vendor_data_file:sock_file { getattr read write };
 allow shannon_ims_app charonservice:unix_stream_socket connectto;
 
 set_prop(shannon_ims_app, vendor_ims_prop)
-set_prop(shannon_ims_app, vendor_radio_prop)
+set_prop(shannon_ims_app, vendor_moto_radio_prop)
 
 binder_call(shannon_ims_app, rild)
