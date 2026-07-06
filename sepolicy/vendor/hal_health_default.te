@@ -5,3 +5,5 @@ r_dir_file(hal_health_default, vendor_sysfs_usb_supply);
 
 # Allow hal_power to access thermal service
 hal_client_domain(hal_power_default, hal_thermal)
+
+get_prop(hal_health_default, boot_status_prop)
