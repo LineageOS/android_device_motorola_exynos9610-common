@@ -326,6 +326,7 @@ PRODUCT_PACKAGES += \
     LineageSDKResCommon \
     LineageSettingsProviderResCommon \
     SettingsProviderResCommon \
+    SystemUIResCommon \
     TelephonyResCommon \
     WifiResCommon
 
