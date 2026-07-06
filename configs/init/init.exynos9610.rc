@@ -543,37 +543,6 @@ service shutdownanim /system/bin/bootanimation -shutdown
 on property:ro.boot.wifimacaddr=*
     write /sys/module/scsc_wlan/parameters/mac_addr_override ${ro.boot.wifimacaddr}
 
-service dhcpcd_wlan0 /vendor/bin/dhcpcd -aABDKL
-        class main
-        disabled
-        oneshot
-
-service iprenew_wlan0 /vendor/bin/dhcpcd -n
-        class main
-        disabled
-        oneshot
-
-service dhcpcd_p2p /vendor/bin/dhcpcd -aABKL
-        class main
-        disabled
-        oneshot
-
-service iprenew_p2p /vendor/bin/dhcpcd -n
-        class main
-        disabled
-        oneshot
-
-# SPE-1748: PANU DHCP Client not launched
-service dhcpcd_bt-pan /vendor/bin/dhcpcd -ABKL
-        class main
-        disabled
-        oneshot
-
-service iprenew_bt-pan /vendor/bin/dhcpcd -n
-        class main
-        disabled
-        oneshot
-
 # IMS WiFi Calling [START] #
 service charonservice /vendor/bin/charon
         class main
