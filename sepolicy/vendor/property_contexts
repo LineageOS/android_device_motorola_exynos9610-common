@@ -33,14 +33,14 @@ persist.data.wda.enable             u:object_r:vendor_default_prop:s0
 ro.vendor.cscsupported              u:object_r:vendor_default_prop:s0
 
 # Radio
-persist.vendor.radio.               u:object_r:vendor_radio_prop:s0
-persist.vendor.ril.                 u:object_r:vendor_radio_prop:s0
-ro.product.model.dm                 u:object_r:vendor_radio_prop:s0
-ro.radio.imei.sv                    u:object_r:vendor_radio_prop:s0
-vendor.radio.cp.                    u:object_r:vendor_radio_prop:s0
-vendor.radio.ril.                   u:object_r:vendor_radio_prop:s0
-vendor.radio.smsdomain              u:object_r:vendor_radio_prop:s0
-vendor.ril.                         u:object_r:vendor_radio_prop:s0
+persist.vendor.radio.               u:object_r:vendor_moto_radio_prop:s0
+persist.vendor.ril.                 u:object_r:vendor_moto_radio_prop:s0
+ro.product.model.dm                 u:object_r:vendor_moto_radio_prop:s0
+ro.radio.imei.sv                    u:object_r:vendor_moto_radio_prop:s0
+vendor.radio.cp.                    u:object_r:vendor_moto_radio_prop:s0
+vendor.radio.ril.                   u:object_r:vendor_moto_radio_prop:s0
+vendor.radio.smsdomain              u:object_r:vendor_moto_radio_prop:s0
+vendor.ril.                         u:object_r:vendor_moto_radio_prop:s0
 
 # rmnet
 persist.rmnet.data.enable           u:object_r:vendor_default_prop:s0

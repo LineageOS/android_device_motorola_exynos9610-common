@@ -11,4 +11,4 @@ binder_call(rild, hal_secure_element_default)
 binder_call(rild, shannon_ims_app)
 
 get_prop(rild, system_boot_reason_prop)
-set_prop(rild, vendor_radio_prop)
+set_prop(rild, vendor_moto_radio_prop)
