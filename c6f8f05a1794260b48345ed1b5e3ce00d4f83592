@@ -16,6 +16,23 @@
       "message": "Need to check",
       "revId": "c6f8f05a1794260b48345ed1b5e3ce00d4f83592",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "4a814f5c_2ebb8520",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 9
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 16185
+      },
+      "writtenOn": "2026-07-15T20:50:58Z",
+      "side": 1,
+      "message": "shared lib of linbion_exynos which is used by a ton of blobs.",
+      "revId": "c6f8f05a1794260b48345ed1b5e3ce00d4f83592",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
