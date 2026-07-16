@@ -16,6 +16,24 @@
       "message": "@johnsonnolen@gmail.com i faced similar on sm8150 where even i had to try with this, but seemingly it didnt require it after inclusion of https://review.lineageos.org/c/LineageOS/android_build/+/493887, similar could benefit you as well",
       "revId": "99b2ffbc5a2015f10d1cfe2ad8d95839296da6bc",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "8c8b7a03_20a17017",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 10
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 16185
+      },
+      "writtenOn": "2026-07-16T03:48:59Z",
+      "side": 1,
+      "message": "I didn\u0027t do this to fix signing... This is A/B so wouldn\u0027t hit that issue anyway.\n\nThis was done because google apps didn\u0027t fit anymore.",
+      "parentUuid": "212eb043_62cb8d2d",
+      "revId": "99b2ffbc5a2015f10d1cfe2ad8d95839296da6bc",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
