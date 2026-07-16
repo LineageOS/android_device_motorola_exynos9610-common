@@ -51,6 +51,24 @@
       "message": "Why not keep this though? What are the downsides?",
       "revId": "99b2ffbc5a2015f10d1cfe2ad8d95839296da6bc",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "4fc7847c_2e790b7e",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 10
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 16185
+      },
+      "writtenOn": "2026-07-16T15:54:08Z",
+      "side": 1,
+      "message": "fastbootd currently doesn\u0027t work in recovery and I can\u0027t really crack it, plus requires users to flash super_empty by hand on upgrade.\n\nI will probably do this, as I will have to for space, though.",
+      "parentUuid": "481f005c_155da40b",
+      "revId": "99b2ffbc5a2015f10d1cfe2ad8d95839296da6bc",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
