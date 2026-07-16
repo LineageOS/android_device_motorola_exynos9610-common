@@ -34,6 +34,23 @@
       "parentUuid": "212eb043_62cb8d2d",
       "revId": "99b2ffbc5a2015f10d1cfe2ad8d95839296da6bc",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "481f005c_155da40b",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 10
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 35850
+      },
+      "writtenOn": "2026-07-16T10:20:11Z",
+      "side": 1,
+      "message": "Why not keep this though? What are the downsides?",
+      "revId": "99b2ffbc5a2015f10d1cfe2ad8d95839296da6bc",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
