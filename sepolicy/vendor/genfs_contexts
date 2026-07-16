@@ -48,7 +48,7 @@ genfscon sysfs /devices/platform/13840000.i2c/i2c-8/8-003d/s2mu00x-battery/power
 genfscon sysfs /devices/platform/13840000.i2c/i2c-8/8-003d/s2mu00x-battery/power_supply/usb                             u:object_r:sysfs_battery_writable:s0
 genfscon sysfs /devices/platform/13840000.i2c/i2c-8/8-003d/s2mu106-charger/power_supply/otg                             u:object_r:sysfs_battery_writable:s0
 genfscon sysfs /devices/platform/13840000.i2c/i2c-8/8-003d/s2mu106-charger/power_supply/s2mu106-charger                 u:object_r:sysfs_battery_writable:s0
-genfscon sysfs /devices/platform/13840000.i2c/i2c-8/8-003d/s2mu106-powermeter/power_supply/s2mu106_pmetere              u:object_r:sysfs_battery_writable:s0
+genfscon sysfs /devices/platform/13840000.i2c/i2c-8/8-003d/s2mu106-powermeter/power_supply/s2mu106_pmeter               u:object_r:sysfs_battery_writable:s0
 genfscon sysfs /devices/platform/13840000.i2c/i2c-8/8-0041/power_supply/s2mcs02-charger                                 u:object_r:sysfs_battery_writable:s0
 genfscon sysfs /devices/platform/13840000.i2c/i2c-9/9-003d/s2mu00x-battery/factory_charge_upper                         u:object_r:sysfs_battery:s0
 genfscon sysfs /devices/platform/13840000.i2c/i2c-9/9-003d/s2mu00x-battery/power_supply/ac                              u:object_r:sysfs_battery_writable:s0
