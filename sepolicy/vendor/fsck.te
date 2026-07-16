@@ -5,3 +5,5 @@ allow fsck persist_block_device:blk_file rw_file_perms;
 
 allow fsck sysfs_scheduler:file r_file_perms;
 allow fsck vendor_sysfs_mmc_host:file r_file_perms;
+
+r_dir_file(fsck, sysfs_battery)
