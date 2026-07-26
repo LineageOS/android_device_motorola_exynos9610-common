@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "dc755607_3e21be5c",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 13
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 16185
+      },
+      "writtenOn": "2026-07-26T18:57:06Z",
+      "side": 1,
+      "message": "This works, I can\u0027t seem to avoid it either.\n\nWe /could/ move this to hardware/lineage/compat I guess.",
+      "revId": "7e118987d450356b9e0c0d1205a8c853f99679dc",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
