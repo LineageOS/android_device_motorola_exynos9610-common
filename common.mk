@@ -233,10 +233,6 @@ PRODUCT_COPY_FILES += \
 # ION
 $(call soong_config_set_bool,libion,legacy_impl,true)
 
-# Kernel
-PRODUCT_ENABLE_UFFD_GC := true
-OVERRIDE_ENABLE_UFFD_GC := true
-
 # Keymaster
 PRODUCT_PACKAGES += \
     android.hardware.keymaster@3.0_tee-service
