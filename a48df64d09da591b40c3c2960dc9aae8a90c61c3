@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "c69e2aa3_c438e86e",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 36705
+      },
+      "writtenOn": "2026-09-19T09:54:57Z",
+      "side": 1,
+      "message": "This is the diff between in tree and generated wpa_supplicant.conf\n```\ndiff --git a/configs/wifi/wpa_supplicant.conf b/home/Maja/android/lineage-24.0/out/target/product/a53x/vendor/etc/wifi/wpa_supplicant.conf\nindex 618672f..a6c4a75 100644\n--- a/configs/wifi/wpa_supplicant.conf\n+++ b/home/Maja/android/lineage-24.0/out/target/product/a53x/vendor/etc/wifi/wpa_supplicant.conf\n@@ -1,12 +1,12 @@\n update_config\u003d1\n-ctrl_interface\u003dwlan0\n eapol_version\u003d1\n ap_scan\u003d1\n fast_reauth\u003d1\n-p2p_listen_reg_class\u003d81\n-p2p_listen_channel\u003d1\n-p2p_oper_reg_class\u003d124\n-p2p_oper_channel\u003d149\n pmf\u003d1\n-bss_no_flush_when_down\u003d1\n p2p_add_cli_chan\u003d1\n+oce\u003d1\n+sae_pwe\u003d2\n+p2p_optimize_listen_chan\u003d1\n+wowlan_disconnect_on_deinit\u003d1\n+rsn_overriding\u003d1\n+wowlan_triggers\u003dmagic_pkt\n```\nI\u0027m unsure if there is something that is possibly breaking something",
+      "revId": "a48df64d09da591b40c3c2960dc9aae8a90c61c3",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
